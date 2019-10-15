@@ -6,9 +6,25 @@
 //  Copyright © 2019 AudioKit. All rights reserved.
 //
 
-#ifndef EZSpacerKernel_hpp
-#define EZSpacerKernel_hpp
+#ifdef __cplusplus
+#pragma once
 
-#include <stdio.h>
+#include "EZKernelBase.hpp"
 
-#endif /* EZSpacerKernel_hpp */
+class EZSpacerKernel : public EZKernelBase, public AKBuffered {
+   
+public:
+    void init(int channelCount, double sampleRate) override;
+    
+    void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
+    
+public:
+    sp_revsc *reverb;
+    sp_crossfade *reverbCrossfadeL;
+    sp_crossfade *reverbCrossfadeR;
+    
+    float reverbTime = 0.0f;
+    float reverbStrength = 0.0f;
+};
+
+#endif /* __cplusplus */

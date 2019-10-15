@@ -6,8 +6,12 @@
 //  Copyright © 2019 AudioKit. All rights reserved.
 //
 
-#ifndef EZSpacerAU_h
-#define EZSpacerAU_h
+#pragma once
 
+#import "EZAUBase.h"
 
-#endif /* EZSpacerAU_h */
+@interface EZSpacerAU : EZAUBase
+
+- (void)reset;
+
+@end

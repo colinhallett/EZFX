@@ -51,9 +51,9 @@ void EZKernelBase::startRamp(AUParameterAddress address, AUValue value, AUAudioF
 }
 
 void EZKernelBase::standardEZFXGetAndSteps() {
-    xValueRamper.getAndStep();
-    yValueRamper.getAndStep();
-    isActiveRamper.getAndStep();
+    xValue = xValueRamper.getAndStep();
+    yValue = yValueRamper.getAndStep();
+    isActive = isActiveRamper.getAndStep();
 }
 
 void EZKernelBase::init(int channelCount, double sampleRate)  {
@@ -67,5 +67,20 @@ void EZKernelBase::reset() {
     xValueRamper.reset();
     yValueRamper.reset();
     isActiveRamper.reset();
+}
+
+void EZKernelBase::setXValue(float value) {
+    xValue = clamp(value, 0.0f, 1.0f);
+    xValueRamper.setImmediate(xValue);
+}
+
+void EZKernelBase::setYValue(float value) {
+    yValue = clamp(value, 0.0f, 1.0f);
+    yValueRamper.setImmediate(yValue);
+}
+
+void EZKernelBase::setIsActive(float value) {
+    isActive = clamp(value, 0.0f, 1.0f);
+    isActiveRamper.setImmediate(isActive);
 }
 
