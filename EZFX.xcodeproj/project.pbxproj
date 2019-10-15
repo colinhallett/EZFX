@@ -7,23 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */; };
 		3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */; };
-		3B8CFBB72354C1BE00F146C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB62354C1BE00F146C9 /* SceneDelegate.swift */; };
 		3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB82354C1BE00F146C9 /* ViewController.swift */; };
 		3B8CFBBC2354C1BE00F146C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */; };
 		3B8CFBBE2354C1BF00F146C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
 		3B8CFBC12354C1BF00F146C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBF2354C1BF00F146C9 /* LaunchScreen.storyboard */; };
+		3B8CFBCF2354C25500F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
+		3B8CFBD02354C25500F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B8CFBDA2354C2A500F146C9 /* EZ_ChorusAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBD92354C2A500F146C9 /* EZ_ChorusAudioUnit.m */; };
+		3B8CFBDC2354C2A500F146C9 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */; };
+		3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */; };
+		3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B8CFBEA2354C35B00F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
+		3B8CFBEB2354C35B00F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3B8CFBCC2354C1FD00F146C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C42F35001C057E03000E937C;
+			remoteInfo = AudioKit;
+		};
+		3B8CFBE22354C2A500F146C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B8CFBD52354C2A500F146C9;
+			remoteInfo = "EZ Chorus";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B8CFBD12354C25500F146C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B8CFBD02354C25500F146C9 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8CFBE82354C2A500F146C9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8CFBEC2354C35B00F146C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B8CFBEB2354C35B00F146C9 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B8CFBB12354C1BE00F146C9 /* EZFX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZFX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B8CFBB62354C1BE00F146C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B8CFBB82354C1BE00F146C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B8CFBBB2354C1BE00F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B8CFBC02354C1BF00F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B8CFBC22354C1BF00F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../AudioKit for development/AudioKit/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
+		3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Chorus.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8CFBD82354C2A500F146C9 /* EZ_ChorusAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZ_ChorusAudioUnit.h; sourceTree = "<group>"; };
+		3B8CFBD92354C2A500F146C9 /* EZ_ChorusAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZ_ChorusAudioUnit.m; sourceTree = "<group>"; };
+		3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		3B8CFBDE2354C2A500F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3B8CFBE02354C2A500F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B8CFBE12354C2A500F146C9 /* EZ_Chorus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZ_Chorus-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B8CFC132354CE3100F146C9 /* EZFX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZFX-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +101,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8CFBCF2354C25500F146C9 /* AudioKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8CFBD32354C2A500F146C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8CFBEA2354C35B00F146C9 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +119,12 @@
 		3B8CFBA82354C1BE00F146C9 = {
 			isa = PBXGroup;
 			children = (
+				3B8CFC132354CE3100F146C9 /* EZFX-Bridging-Header.h */,
+				3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */,
 				3B8CFBB32354C1BE00F146C9 /* EZFX */,
+				3B8CFBD72354C2A500F146C9 /* EZ Chorus */,
 				3B8CFBB22354C1BE00F146C9 /* Products */,
+				3B8CFBCE2354C25500F146C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				3B8CFBB12354C1BE00F146C9 /* EZFX.app */,
+				3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,14 +141,42 @@
 			isa = PBXGroup;
 			children = (
 				3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */,
-				3B8CFBB62354C1BE00F146C9 /* SceneDelegate.swift */,
 				3B8CFBB82354C1BE00F146C9 /* ViewController.swift */,
+				3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */,
 				3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */,
 				3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */,
 				3B8CFBBF2354C1BF00F146C9 /* LaunchScreen.storyboard */,
 				3B8CFBC22354C1BF00F146C9 /* Info.plist */,
 			);
 			path = EZFX;
+			sourceTree = "<group>";
+		};
+		3B8CFBC92354C1FC00F146C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B8CFBCE2354C25500F146C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B8CFBD72354C2A500F146C9 /* EZ Chorus */ = {
+			isa = PBXGroup;
+			children = (
+				3B8CFBD82354C2A500F146C9 /* EZ_ChorusAudioUnit.h */,
+				3B8CFBD92354C2A500F146C9 /* EZ_ChorusAudioUnit.m */,
+				3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */,
+				3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */,
+				3B8CFBE02354C2A500F146C9 /* Info.plist */,
+				3B8CFBE12354C2A500F146C9 /* EZ_Chorus-Bridging-Header.h */,
+			);
+			path = "EZ Chorus";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +189,36 @@
 				3B8CFBAD2354C1BE00F146C9 /* Sources */,
 				3B8CFBAE2354C1BE00F146C9 /* Frameworks */,
 				3B8CFBAF2354C1BE00F146C9 /* Resources */,
+				3B8CFBD12354C25500F146C9 /* Embed Frameworks */,
+				3B8CFBE82354C2A500F146C9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */,
 			);
 			name = EZFX;
 			productName = EZFX;
 			productReference = 3B8CFBB12354C1BE00F146C9 /* EZFX.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3B8CFBD52354C2A500F146C9 /* EZ Chorus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B8CFBE52354C2A500F146C9 /* Build configuration list for PBXNativeTarget "EZ Chorus" */;
+			buildPhases = (
+				3B8CFBD22354C2A500F146C9 /* Sources */,
+				3B8CFBD32354C2A500F146C9 /* Frameworks */,
+				3B8CFBD42354C2A500F146C9 /* Resources */,
+				3B8CFBEC2354C35B00F146C9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EZ Chorus";
+			productName = "EZ Chorus";
+			productReference = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +231,10 @@
 				ORGANIZATIONNAME = ckzh;
 				TargetAttributes = {
 					3B8CFBB02354C1BE00F146C9 = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
+					};
+					3B8CFBD52354C2A500F146C9 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
@@ -113,12 +250,29 @@
 			mainGroup = 3B8CFBA82354C1BE00F146C9;
 			productRefGroup = 3B8CFBB22354C1BE00F146C9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B8CFBC92354C1FC00F146C9 /* Products */;
+					ProjectRef = 3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B8CFBB02354C1BE00F146C9 /* EZFX */,
+				3B8CFBD52354C2A500F146C9 /* EZ Chorus */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioKit.framework;
+			remoteRef = 3B8CFBCC2354C1FD00F146C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B8CFBAF2354C1BE00F146C9 /* Resources */ = {
@@ -131,6 +285,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B8CFBD42354C2A500F146C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,11 +302,28 @@
 			files = (
 				3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */,
 				3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */,
-				3B8CFBB72354C1BE00F146C9 /* SceneDelegate.swift in Sources */,
+				3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8CFBD22354C2A500F146C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8CFBDA2354C2A500F146C9 /* EZ_ChorusAudioUnit.m in Sources */,
+				3B8CFBDC2354C2A500F146C9 /* AudioUnitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B8CFBD52354C2A500F146C9 /* EZ Chorus */;
+			targetProxy = 3B8CFBE22354C2A500F146C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */ = {
@@ -161,6 +340,14 @@
 				3B8CFBC02354C1BF00F146C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B8CFBDE2354C2A500F146C9 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,16 +470,29 @@
 		3B8CFBC62354C1BF00F146C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55GAJDT49J;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/CoreAudio\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/Utilities\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/AudioKitCore\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/Soundpipe\"/**",
+				);
 				INFOPLIST_FILE = EZFX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/colin/Documents/CS/Music Apps/EZFX/EZFX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,16 +501,86 @@
 		3B8CFBC72354C1BF00F146C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55GAJDT49J;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/CoreAudio\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/Utilities\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/AudioKitCore\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/Soundpipe\"/**",
+				);
 				INFOPLIST_FILE = EZFX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/colin/Documents/CS/Music Apps/EZFX/EZFX-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B8CFBE62354C2A500F146C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/AudioKitCore\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/CoreAudio\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/Utilities\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/MIDI\"",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/Soundpipe\"/**",
+				);
+				INFOPLIST_FILE = "EZ Chorus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Chorus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EZ Chorus/EZ_Chorus-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B8CFBE72354C2A500F146C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/AudioKitCore\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/CoreAudio\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/Internals/Utilities\"/**",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Common/MIDI\"",
+					"\"$(SRCROOT)/../AudioKit for development/AudioKit/AudioKit/Core/Soundpipe\"/**",
+				);
+				INFOPLIST_FILE = "EZ Chorus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Chorus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EZ Chorus/EZ_Chorus-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +603,15 @@
 			buildConfigurations = (
 				3B8CFBC62354C1BF00F146C9 /* Debug */,
 				3B8CFBC72354C1BF00F146C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B8CFBE52354C2A500F146C9 /* Build configuration list for PBXNativeTarget "EZ Chorus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B8CFBE62354C2A500F146C9 /* Debug */,
+				3B8CFBE72354C2A500F146C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
