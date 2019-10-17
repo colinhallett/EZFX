@@ -37,6 +37,7 @@
     [self setKernelPtr:&_kernel];
     
     NSArray *children = [self standardParameters];
+    
     _parameterTree = [AUParameterTree treeWithChildren:children];
     
     EZSpacerKernel *blockKernel = &_kernel; \
@@ -55,50 +56,49 @@
 
 - (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {
     if (![super allocateRenderResourcesAndReturnError:outError]) {
+           return NO;
+       }
+
+   _outputBusBuffer.allocateRenderResources(self.maximumFramesToRender); \
+    
+    _kernel.init(self.outputBus.format.channelCount, self.outputBus.format.sampleRate); \
+    _kernel.reset();
+       return YES;
+    /*
+    if (![super allocateRenderResourcesAndReturnError:outError]) {
         return NO;
     }
     _inputBus.allocateRenderResources(self.maximumFramesToRender);
     _kernel.init(self.outputBus.format.channelCount, self.outputBus.format.sampleRate);
     _kernel.reset();
-    return YES;
+    return YES;*/
 }
 
 - (void)deallocateRenderResources {
-    _inputBus.deallocateRenderResources();
+    _outputBusBuffer.deallocateRenderResources();
     [super deallocateRenderResources];
+}
+
+- (BOOL)canProcessInPlace {
+    return NO;
 }
 
 - (AUInternalRenderBlock)internalRenderBlock {
     __block EZSpacerKernel *state = &_kernel;
-    __block BufferedInputBus *input = &_inputBus;
+    //__block BufferedInputBus *input = &_inputBus;
     
-    return ^AUAudioUnitStatus(AudioUnitRenderActionFlags *actionFlags,
-                          const AudioTimeStamp       *timestamp,
-                          AVAudioFrameCount           frameCount,
-                          NSInteger                   outputBusNumber,
-                          AudioBufferList            *outputData,
-                          const AURenderEvent        *realtimeEventListHead,
-                          AURenderPullInputBlock      pullInputBlock) {
-
-    AudioUnitRenderActionFlags pullFlags = 0;
-
-    AUAudioUnitStatus err = input->pullInput(&pullFlags, timestamp, frameCount, 0, pullInputBlock);
-
-    if (err != 0) { return err; }
-
-    AudioBufferList *inAudioBufferList = input->mutableAudioBufferList;
-        
-    AudioBufferList *outAudioBufferList = outputData;
-    if (outAudioBufferList->mBuffers[0].mData == nullptr) {
-        for (UInt32 i = 0; i < outAudioBufferList->mNumberBuffers; ++i) {
-            outAudioBufferList->mBuffers[i].mData = inAudioBufferList->mBuffers[i].mData;
-        }
-    }
-
-    state->setBuffers(inAudioBufferList, outAudioBufferList);
-    state->processWithEvents(timestamp, frameCount, realtimeEventListHead);
-
-    return noErr;
+    return ^AUAudioUnitStatus( \
+                          AudioUnitRenderActionFlags *actionFlags, \
+                          const AudioTimeStamp       *timestamp, \
+                          AVAudioFrameCount           frameCount, \
+                          NSInteger                   outputBusNumber, \
+                          AudioBufferList            *outputData, \
+                          const AURenderEvent        *realtimeEventListHead, \
+                          AURenderPullInputBlock      pullInputBlock) { \
+    _outputBusBuffer.prepareOutputBufferList(outputData, frameCount, true); \
+    state->setBuffer(outputData); \
+    state->processWithEvents(timestamp, frameCount, realtimeEventListHead); \
+    return noErr; \
     };
 }
 

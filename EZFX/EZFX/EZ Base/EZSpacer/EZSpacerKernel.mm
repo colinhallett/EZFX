@@ -8,6 +8,10 @@
 
 #include "EZSpacerKernel.hpp"
 
+EZSpacerKernel::EZSpacerKernel() {
+    EZSpacerKernel::reset();
+}
+
 void EZSpacerKernel::init(int channelCount, double sampleRate) {
     EZKernelBase::init(channelCount, sampleRate);
     

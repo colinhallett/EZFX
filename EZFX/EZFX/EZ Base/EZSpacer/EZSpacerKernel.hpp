@@ -14,6 +14,9 @@
 class EZSpacerKernel : public EZKernelBase, public AKBuffered {
    
 public:
+    
+    EZSpacerKernel();
+    
     void init(int channelCount, double sampleRate) override;
     
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;

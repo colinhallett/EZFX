@@ -17,15 +17,14 @@ private:
     
  
 public:
-    EZKernelBase();
 
     float xValue = 0.0;
     float yValue = 0.0;
     float isActive = 0.0;
     
-    ParameterRamper xValueRamper;
-    ParameterRamper yValueRamper;
-    ParameterRamper isActiveRamper;
+    ParameterRamper xValueRamper = 0.0;
+    ParameterRamper yValueRamper = 0.0;
+    ParameterRamper isActiveRamper = 0.0;
     
     enum EZAddresses {
         xValueAddress, yValueAddress, isActiveAddress

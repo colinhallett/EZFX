@@ -15,7 +15,6 @@
 		3B8CFBC12354C1BF00F146C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBF2354C1BF00F146C9 /* LaunchScreen.storyboard */; };
 		3B8CFBCF2354C25500F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B8CFBD02354C25500F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3B8CFBDA2354C2A500F146C9 /* EZ_ChorusAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBD92354C2A500F146C9 /* EZ_ChorusAudioUnit.m */; };
 		3B8CFBDC2354C2A500F146C9 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */; };
 		3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */; };
 		3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -87,8 +86,6 @@
 		3B8CFBC22354C1BF00F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../AudioKit for development/AudioKit/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 		3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Chorus.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B8CFBD82354C2A500F146C9 /* EZ_ChorusAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZ_ChorusAudioUnit.h; sourceTree = "<group>"; };
-		3B8CFBD92354C2A500F146C9 /* EZ_ChorusAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZ_ChorusAudioUnit.m; sourceTree = "<group>"; };
 		3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
 		3B8CFBDE2354C2A500F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B8CFBE02354C2A500F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 		3B8CFBD72354C2A500F146C9 /* EZ Chorus */ = {
 			isa = PBXGroup;
 			children = (
-				3B8CFBD82354C2A500F146C9 /* EZ_ChorusAudioUnit.h */,
-				3B8CFBD92354C2A500F146C9 /* EZ_ChorusAudioUnit.m */,
 				3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */,
 				3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */,
 				3B8CFBE02354C2A500F146C9 /* Info.plist */,
@@ -310,7 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B8CFBDA2354C2A500F146C9 /* EZ_ChorusAudioUnit.m in Sources */,
 				3B8CFBDC2354C2A500F146C9 /* AudioUnitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

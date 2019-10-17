@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import AudioKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print ("here")
+        let noise = AKOscillator(waveform: AKTable(.square), frequency: 500, amplitude: 1.0, detuningOffset: 0, detuningMultiplier: 0)
+        let chorus = EZSpacer(noise)
+        
+        AudioKit.output = noise
+        try! AudioKit.start()
+        noise.start()
+       // chorus.start()
     }
 
 
