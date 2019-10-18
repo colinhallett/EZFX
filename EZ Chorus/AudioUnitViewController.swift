@@ -14,7 +14,24 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     @IBAction func isActiveSwitch(_ sender: UISwitch) {
         isActive = sender.isOn ? 1 : 0
     }
-    var audioUnit: EZSpacerAU?
+    @IBAction func xValueSlider(_ sender: UISlider) {
+        xValue = Double(sender.value)
+    }
+    
+    @IBAction func yValueSlider(_ sender: UISlider) {
+        yValue = Double(sender.value)
+    }
+    var audioUnit: EZSpacerAU? {
+        didSet {
+            DispatchQueue.main.async {
+                if self.isViewLoaded {
+                    self.view.backgroundColor = .black
+                    self.audioUnit?.start()
+                    //self.audioUnit?.loadFirstPreset()
+                }
+            }
+        }
+    }
     
     fileprivate var xValueParameter: AUParameter?
     fileprivate var yValueParameter: AUParameter?
@@ -42,7 +59,7 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
             }
         }
     }
-    @objc open dynamic var isActive: Double = 0.0 {
+    @objc open dynamic var isActive: Double = 1.0 {
         willSet {
             guard isActive != newValue else { return }
             if audioUnit?.isSetUp == true {
@@ -56,11 +73,11 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print ("hello")
         if audioUnit == nil {
             return
         }
-        
+        print ("hello")
         // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
     }
     
@@ -76,6 +93,10 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         xValueParameter = tree["xValue"]
         yValueParameter = tree["yValue"]
         isActiveParameter = tree["isActive"]
+        
+        audioUnit?.xValue = 0.5
+        audioUnit?.yValue = 0.5
+        audioUnit?.isActive = 1.0
         
         return audioUnit!
     }

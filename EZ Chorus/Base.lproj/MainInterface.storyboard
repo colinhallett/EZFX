@@ -16,24 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your AudioUnit UI goes here!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5c-MY-xUb">
-                                <rect key="frame" x="92.5" y="64" width="229.5" height="20.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-wu-ZEE">
-                                <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
+                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="q0E-QW-5QO"/>
                                 </connections>
                             </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-BM-0k9">
+                                <rect key="frame" x="148" y="357.5" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Vvg-WS-zu6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="yValueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="TZm-f0-ACs"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f6V-uM-xsG">
+                                <rect key="frame" x="148" y="277.5" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Jfq-FV-Kg8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="xValueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="2q3-6F-PfA"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="j5c-MY-xUb" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="GEu-gu-ROi"/>
-                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KOf-vU-XNx"/>
-                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jvm-A6-lbX"/>
-                            <constraint firstItem="j5c-MY-xUb" firstAttribute="top" secondItem="u2v-qu-mbu" secondAttribute="top" constant="20" id="sbA-2i-4eA"/>
+                            <constraint firstItem="5Ax-BM-0k9" firstAttribute="top" secondItem="f6V-uM-xsG" secondAttribute="bottom" constant="50" id="0ZQ-5w-eT1"/>
+                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="top" secondItem="5Ax-BM-0k9" secondAttribute="bottom" constant="50" id="8D3-EV-tqk"/>
+                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerY" secondItem="u2v-qu-mbu" secondAttribute="centerY" id="BHG-kX-b20"/>
+                            <constraint firstItem="f6V-uM-xsG" firstAttribute="centerX" secondItem="5Ax-BM-0k9" secondAttribute="centerX" id="G3T-JY-3fO"/>
+                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="IIe-2g-cfw"/>
+                            <constraint firstItem="f6V-uM-xsG" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="OEc-pG-fYF"/>
+                            <constraint firstItem="5Ax-BM-0k9" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="Of2-eP-KEe"/>
+                            <constraint firstItem="5Ax-BM-0k9" firstAttribute="centerX" secondItem="6ad-wu-ZEE" secondAttribute="centerX" id="RMD-ZG-5gc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
                     </view>

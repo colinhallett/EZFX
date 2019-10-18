@@ -16,6 +16,7 @@
     EZSpacerKernel  _kernel;
     BufferedInputBus _inputBus;
     BufferedOutputBus _outputBusBuffer;
+    
 }
 
 @synthesize parameterTree = _parameterTree;
@@ -24,16 +25,17 @@
     self.rampDuration = AKSettings.rampDuration; \
     self.defaultFormat = [[AVAudioFormat alloc] initStandardFormatWithSampleRate:AKSettings.sampleRate \
                                                                         channels:AKSettings.channelCount]; \
-    _kernel.init(self.defaultFormat.channelCount, self.defaultFormat.sampleRate); \
-    _inputBus.init(self.defaultFormat, 8); \
-    self.inputBusArray = [[AUAudioUnitBusArray alloc] initWithAudioUnit:self \
-                                                                busType:AUAudioUnitBusTypeInput \
-                                                                 busses:@[_inputBus.bus]];
-    _outputBusBuffer.init(self.defaultFormat, 2); \
-    self.outputBus = _outputBusBuffer.bus; \
-    self.outputBusArray = [[AUAudioUnitBusArray alloc] initWithAudioUnit:self \
-                                                                busType:AUAudioUnitBusTypeOutput \
-                                                                 busses:@[self.outputBus]];
+    _kernel.init(self.defaultFormat.channelCount, self.defaultFormat.sampleRate);
+    _inputBus.init(self.defaultFormat, 8);
+    
+    self.inputBusArray = [[AUAudioUnitBusArray alloc] initWithAudioUnit:self busType:AUAudioUnitBusTypeInput busses:@[_inputBus.bus]];
+    
+    _outputBusBuffer.init(self.defaultFormat, 2);
+    self.outputBus = _outputBusBuffer.bus;
+    self.outputBusArray = [[AUAudioUnitBusArray alloc] initWithAudioUnit:self
+        busType:AUAudioUnitBusTypeOutput
+        busses:@[self.outputBus]];
+    
     [self setKernelPtr:&_kernel];
     
     NSArray *children = [self standardParameters];
@@ -58,23 +60,17 @@
     if (![super allocateRenderResourcesAndReturnError:outError]) {
            return NO;
        }
-
+    _inputBus.allocateRenderResources(self.maximumFramesToRender);
    _outputBusBuffer.allocateRenderResources(self.maximumFramesToRender); \
     
     _kernel.init(self.outputBus.format.channelCount, self.outputBus.format.sampleRate); \
     _kernel.reset();
        return YES;
-    /*
-    if (![super allocateRenderResourcesAndReturnError:outError]) {
-        return NO;
-    }
-    _inputBus.allocateRenderResources(self.maximumFramesToRender);
-    _kernel.init(self.outputBus.format.channelCount, self.outputBus.format.sampleRate);
-    _kernel.reset();
-    return YES;*/
+    
 }
 
 - (void)deallocateRenderResources {
+    _inputBus.deallocateRenderResources();
     _outputBusBuffer.deallocateRenderResources();
     [super deallocateRenderResources];
 }
@@ -85,20 +81,29 @@
 
 - (AUInternalRenderBlock)internalRenderBlock {
     __block EZSpacerKernel *state = &_kernel;
-    //__block BufferedInputBus *input = &_inputBus;
+    __block BufferedInputBus *input = &_inputBus;
     
-    return ^AUAudioUnitStatus( \
-                          AudioUnitRenderActionFlags *actionFlags, \
-                          const AudioTimeStamp       *timestamp, \
-                          AVAudioFrameCount           frameCount, \
-                          NSInteger                   outputBusNumber, \
-                          AudioBufferList            *outputData, \
-                          const AURenderEvent        *realtimeEventListHead, \
-                          AURenderPullInputBlock      pullInputBlock) { \
-    _outputBusBuffer.prepareOutputBufferList(outputData, frameCount, true); \
-    state->setBuffer(outputData); \
-    state->processWithEvents(timestamp, frameCount, realtimeEventListHead); \
-    return noErr; \
+    return ^AUAudioUnitStatus(
+            AudioUnitRenderActionFlags *actionFlags,
+            const AudioTimeStamp       *timestamp,
+            AVAudioFrameCount          frameCount,
+            NSInteger                outputBusNumber,
+            AudioBufferList           *outputData,
+            const AURenderEvent   *realtimeEventListHead,
+            AURenderPullInputBlock    pullInputBlock) {
+        
+        _outputBusBuffer.prepareOutputBufferList(outputData, frameCount, true);
+        AudioBufferList *inAudioBufferList = input->mutableAudioBufferList;
+        pullInputBlock(actionFlags, timestamp, frameCount, 0, inAudioBufferList);
+        AudioBufferList *outAudioBufferList = outputData;
+        if (outAudioBufferList->mBuffers[0].mData == nullptr) {
+                for (UInt32 i = 0; i < outAudioBufferList->mNumberBuffers; ++i) {
+                    outAudioBufferList->mBuffers[i].mData = inAudioBufferList->mBuffers[i].mData;
+                }
+        }
+        state->setBuffers(inAudioBufferList, outAudioBufferList);
+        state->processWithEvents(timestamp, frameCount, realtimeEventListHead);
+        return noErr;
     };
 }
 

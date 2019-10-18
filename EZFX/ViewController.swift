@@ -17,10 +17,10 @@ class ViewController: UIViewController {
         let noise = AKOscillator(waveform: AKTable(.square), frequency: 500, amplitude: 1.0, detuningOffset: 0, detuningMultiplier: 0)
         let chorus = EZSpacer(noise)
         
-        AudioKit.output = noise
+        AudioKit.output = chorus
         try! AudioKit.start()
         noise.start()
-       // chorus.start()
+        chorus.start()
     }
 
 

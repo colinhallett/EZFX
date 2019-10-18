@@ -20,5 +20,76 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "C4BCC936-98A0-4605-9410-01898D39E3A1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57712AB8-08B4-4616-9457-D64AE5CD23EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EZFX/EZFX/EZ Base/EZSpacer/EZSpacerAU.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB504A7E-D3B3-44A2-AAED-0C7D97EC6595"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EZFX/EZFX/EZ Base/EZSpacer/EZSpacerAU.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111">
+            <Locations>
+               <Location
+                  uuid = "AB504A7E-D3B3-44A2-AAED-0C7D97EC6595 - 4775462578f9f3af"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[EZSpacerAU internalRenderBlock]_block_invoke"
+                  moduleName = "EZFX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/colin/Documents/CS/Music%20Apps/EZFX/EZFX/EZFX/EZ%20Base/EZSpacer/EZSpacerAU.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "AB504A7E-D3B3-44A2-AAED-0C7D97EC6595 - 4bd97d141a242e0d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_ea8_32r40r"
+                  moduleName = "EZFX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/colin/Documents/CS/Music%20Apps/EZFX/EZFX/EZFX/EZ%20Base/EZSpacer/EZSpacerAU.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

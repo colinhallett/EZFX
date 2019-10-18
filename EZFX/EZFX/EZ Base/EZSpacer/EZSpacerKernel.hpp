@@ -21,6 +21,8 @@ public:
     
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
     
+    void resetFX();
+    
 public:
     sp_revsc *reverb;
     sp_crossfade *reverbCrossfadeL;

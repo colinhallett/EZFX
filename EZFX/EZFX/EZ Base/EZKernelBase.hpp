@@ -22,6 +22,8 @@ public:
     float yValue = 0.0;
     float isActive = 0.0;
     
+    bool fxResetted = false;
+    
     ParameterRamper xValueRamper = 0.0;
     ParameterRamper yValueRamper = 0.0;
     ParameterRamper isActiveRamper = 0.0;
