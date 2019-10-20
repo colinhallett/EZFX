@@ -9,24 +9,26 @@
 import CoreAudioKit
 import AudioKit
 
-public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
+public class EZChorusAudioUnitViewController: AUViewController, AUAudioUnitFactory {
     
+    
+    @IBOutlet weak var xyPad: XYPadView!
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        xyPad.setupPadArea()
+    }
     @IBAction func isActiveSwitch(_ sender: UISwitch) {
         isActive = sender.isOn ? 1 : 0
     }
-    @IBAction func xValueSlider(_ sender: UISlider) {
-        xValue = Double(sender.value)
-    }
-    
-    @IBAction func yValueSlider(_ sender: UISlider) {
-        yValue = Double(sender.value)
-    }
+   
     var audioUnit: EZSpacerAU? {
         didSet {
             DispatchQueue.main.async {
                 if self.isViewLoaded {
                     self.view.backgroundColor = .black
-                    self.audioUnit?.start()
+                    //self.audioUnit?.start()
+                    self.audioUnit?.rampDuration = 0.1
                     //self.audioUnit?.loadFirstPreset()
                 }
             }
@@ -73,11 +75,10 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        print ("hello")
+        xyPad.delegate = self
         if audioUnit == nil {
             return
         }
-        print ("hello")
         // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
     }
     
@@ -101,4 +102,13 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         return audioUnit!
     }
     
+}
+
+extension EZChorusAudioUnitViewController : XYPadDelegate {
+    func setXValue(value: Double) {
+        xValue = value
+    }
+    func setYValue(value: Double) {
+        yValue = value
+    }
 }

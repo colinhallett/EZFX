@@ -8,52 +8,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Audio Unit View Controller-->
+        <!--Chorus Audio Unit View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AudioUnitViewController" customModule="EZ_Chorus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EZChorusAudioUnitViewController" customModule="EZ_Chorus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBW-ga-xw1" customClass="XYPadView" customModule="EZ_Chorus" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-wu-ZEE">
                                 <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="q0E-QW-5QO"/>
                                 </connections>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-BM-0k9">
-                                <rect key="frame" x="148" y="357.5" width="118" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="Vvg-WS-zu6"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="yValueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="TZm-f0-ACs"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f6V-uM-xsG">
-                                <rect key="frame" x="148" y="277.5" width="118" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="Jfq-FV-Kg8"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="xValueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="2q3-6F-PfA"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5Ax-BM-0k9" firstAttribute="top" secondItem="f6V-uM-xsG" secondAttribute="bottom" constant="50" id="0ZQ-5w-eT1"/>
-                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="top" secondItem="5Ax-BM-0k9" secondAttribute="bottom" constant="50" id="8D3-EV-tqk"/>
                             <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerY" secondItem="u2v-qu-mbu" secondAttribute="centerY" id="BHG-kX-b20"/>
-                            <constraint firstItem="f6V-uM-xsG" firstAttribute="centerX" secondItem="5Ax-BM-0k9" secondAttribute="centerX" id="G3T-JY-3fO"/>
                             <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="IIe-2g-cfw"/>
-                            <constraint firstItem="f6V-uM-xsG" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="OEc-pG-fYF"/>
-                            <constraint firstItem="5Ax-BM-0k9" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="Of2-eP-KEe"/>
-                            <constraint firstItem="5Ax-BM-0k9" firstAttribute="centerX" secondItem="6ad-wu-ZEE" secondAttribute="centerX" id="RMD-ZG-5gc"/>
+                            <constraint firstItem="vBW-ga-xw1" firstAttribute="leading" secondItem="u2v-qu-mbu" secondAttribute="leading" id="LmU-PK-Lfb"/>
+                            <constraint firstItem="u2v-qu-mbu" firstAttribute="trailing" secondItem="vBW-ga-xw1" secondAttribute="trailing" id="Nnk-nY-suF"/>
+                            <constraint firstItem="vBW-ga-xw1" firstAttribute="top" secondItem="u2v-qu-mbu" secondAttribute="top" id="SzQ-9F-6at"/>
+                            <constraint firstItem="u2v-qu-mbu" firstAttribute="bottom" secondItem="vBW-ga-xw1" secondAttribute="bottom" id="hpr-BC-PzX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
                     </view>
+                    <connections>
+                        <outlet property="xyPad" destination="vBW-ga-xw1" id="s2H-9U-va5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -15,11 +15,18 @@
 		3B8CFBC12354C1BF00F146C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBF2354C1BF00F146C9 /* LaunchScreen.storyboard */; };
 		3B8CFBCF2354C25500F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B8CFBD02354C25500F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3B8CFBDC2354C2A500F146C9 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */; };
+		3B8CFBDC2354C2A500F146C9 /* EZChorusAudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDB2354C2A500F146C9 /* EZChorusAudioUnitViewController.swift */; };
 		3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */; };
 		3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B8CFBEA2354C35B00F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B8CFBEB2354C35B00F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BB70E8D235A119C00D99388 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
+		3BB70E8E235A119C00D99388 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
+		3BB70E8F235A3B6E00D99388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3BB70E92235A3DF700D99388 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
+		3BB70E93235A3DF700D99388 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
+		3BB70E95235CB12500D99388 /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
+		3BB70E96235CB12500D99388 /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,11 +93,14 @@
 		3B8CFBC22354C1BF00F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../AudioKit for development/AudioKit/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 		3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Chorus.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		3B8CFBDB2354C2A500F146C9 /* EZChorusAudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZChorusAudioUnitViewController.swift; sourceTree = "<group>"; };
 		3B8CFBDE2354C2A500F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B8CFBE02354C2A500F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8CFBE12354C2A500F146C9 /* EZ_Chorus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZ_Chorus-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B8CFC132354CE3100F146C9 /* EZFX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZFX-Bridging-Header.h"; sourceTree = "<group>"; };
+		3BB70E8C235A119C00D99388 /* XYPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadView.swift; sourceTree = "<group>"; };
+		3BB70E91235A3DF700D99388 /* Fader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fader.swift; sourceTree = "<group>"; };
+		3BB70E94235CB12500D99388 /* ControlPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 				3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */,
 				3B8CFBB32354C1BE00F146C9 /* EZFX */,
 				3B8CFBD72354C2A500F146C9 /* EZ Chorus */,
+				3BB70E8A235A114700D99388 /* Shared code */,
 				3B8CFBB22354C1BE00F146C9 /* Products */,
 				3B8CFBCE2354C25500F146C9 /* Frameworks */,
 			);
@@ -166,12 +177,22 @@
 		3B8CFBD72354C2A500F146C9 /* EZ Chorus */ = {
 			isa = PBXGroup;
 			children = (
-				3B8CFBDB2354C2A500F146C9 /* AudioUnitViewController.swift */,
+				3B8CFBDB2354C2A500F146C9 /* EZChorusAudioUnitViewController.swift */,
 				3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */,
 				3B8CFBE02354C2A500F146C9 /* Info.plist */,
 				3B8CFBE12354C2A500F146C9 /* EZ_Chorus-Bridging-Header.h */,
 			);
 			path = "EZ Chorus";
+			sourceTree = "<group>";
+		};
+		3BB70E8A235A114700D99388 /* Shared code */ = {
+			isa = PBXGroup;
+			children = (
+				3BB70E8C235A119C00D99388 /* XYPadView.swift */,
+				3BB70E91235A3DF700D99388 /* Fader.swift */,
+				3BB70E94235CB12500D99388 /* ControlPoint.swift */,
+			);
+			path = "Shared code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB70E8F235A3B6E00D99388 /* Assets.xcassets in Resources */,
 				3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +320,9 @@
 				3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */,
 				3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */,
 				3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */,
+				3BB70E8D235A119C00D99388 /* XYPadView.swift in Sources */,
+				3BB70E95235CB12500D99388 /* ControlPoint.swift in Sources */,
+				3BB70E92235A3DF700D99388 /* Fader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B8CFBDC2354C2A500F146C9 /* AudioUnitViewController.swift in Sources */,
+				3BB70E96235CB12500D99388 /* ControlPoint.swift in Sources */,
+				3BB70E93235A3DF700D99388 /* Fader.swift in Sources */,
+				3B8CFBDC2354C2A500F146C9 /* EZChorusAudioUnitViewController.swift in Sources */,
+				3BB70E8E235A119C00D99388 /* XYPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

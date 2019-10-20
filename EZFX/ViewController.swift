@@ -10,17 +10,16 @@ import UIKit
 import AudioKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var xyPadView: XYPadView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ("here")
-        let noise = AKOscillator(waveform: AKTable(.square), frequency: 500, amplitude: 1.0, detuningOffset: 0, detuningMultiplier: 0)
-        let chorus = EZSpacer(noise)
         
-        AudioKit.output = chorus
-        try! AudioKit.start()
-        noise.start()
-        chorus.start()
+    }
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        xyPadView.setupPadArea()
+        print ("layout")
     }
 
 
