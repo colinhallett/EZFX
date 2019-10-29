@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SpacerAU View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="EZSpacerAUViewController" customModule="EZ_Spacer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-AS-Ksh">
+                                <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="JgG-cf-HTa"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBA-MM-DUV" customClass="XYPadView" customModule="EZ_Spacer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YBA-MM-DUV" secondAttribute="bottom" id="1lB-01-TyX"/>
+                            <constraint firstItem="MoJ-AS-Ksh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ei-l9-qaQ"/>
+                            <constraint firstItem="MoJ-AS-Ksh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Enk-VK-eVy"/>
+                            <constraint firstItem="YBA-MM-DUV" firstAttribute="trailing" secondItem="u2v-qu-mbu" secondAttribute="trailing" id="k23-gq-O2X"/>
+                            <constraint firstItem="YBA-MM-DUV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pAe-9N-EMv"/>
+                            <constraint firstItem="YBA-MM-DUV" firstAttribute="leading" secondItem="u2v-qu-mbu" secondAttribute="leading" id="xf6-6a-GeL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
+                    </view>
+                    <connections>
+                        <outlet property="xyPad" destination="YBA-MM-DUV" id="6Kr-Un-LP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+</document>
