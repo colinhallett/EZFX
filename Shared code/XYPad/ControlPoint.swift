@@ -14,7 +14,8 @@ class ControlPoint : CALayer {
     init(size: CGSize, origin: CGPoint) {
         super.init()
         let circle = CAShapeLayer()
-        circle.path = CGPath(ellipseIn: CGRect(origin: origin, size: size), transform: nil)
+        let newOrigin = CGPoint(x: origin.x - size.width / 2 , y: origin.y - size.height / 2)
+        circle.path = CGPath(ellipseIn: CGRect(origin: newOrigin, size: size), transform: nil)
         circle.fillColor = UIColor.blue.cgColor
         circle.zPosition = 1
         circle.opacity = 0.7

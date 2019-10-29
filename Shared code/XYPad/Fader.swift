@@ -14,7 +14,7 @@ class Fader : CALayer {
     init(position: CGPoint, size: CGSize) {
         super.init()
         //self.position = position
-        let newPos = CGPoint(x: position.x + size.width / 2, y: position.y + size.width / 2)
+        let newPos = CGPoint(x: position.x - size.width / 2, y: position.y - size.height / 2)
         let circle = CAShapeLayer()
         let path = CGPath(ellipseIn: CGRect(origin: newPos, size: size), transform: nil)
         circle.opacity = 0.4
@@ -56,15 +56,4 @@ class Fader : CALayer {
     }
 }
 
-class LayerRemover: NSObject, CAAnimationDelegate {
-    private weak var layer: CALayer?
-    
-    init(for layer: CALayer) {
-        self.layer = layer
-        super.init()
-    }
-    
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        layer?.removeFromSuperlayer()
-    }
-}
+
