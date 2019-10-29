@@ -27,14 +27,16 @@
     kernelPtr->setIsActive(isActive);
 }
 
+- (BOOL)isSetUp { return kernelPtr->resetted; }
+
 - (NSArray *)standardParameters {
     AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
     
     _xValueAUParameter = [AUParameterTree createParameterWithIdentifier:@"xValue"
                        name:@"X Value"
                     address:EZKernelBase::xValueAddress
-                        min:0.0
-                        max:1.0
+                        min:-0.5
+                        max:0.5
                        unit:kAudioUnitParameterUnit_Generic
                    unitName:nil
                       flags:flags
@@ -43,8 +45,8 @@
     _yValueAUParameter = [AUParameterTree createParameterWithIdentifier:@"yValue"
                    name:@"Y Value"
                 address:EZKernelBase::yValueAddress
-                    min:0.0
-                    max:1.0
+                    min:-0.5
+                    max:0.5
                    unit:kAudioUnitParameterUnit_Generic
                unitName:nil
                   flags:flags

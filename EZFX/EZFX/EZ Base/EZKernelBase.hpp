@@ -12,6 +12,10 @@
 #import "AKSoundpipeKernel.hpp"
 #import "AKDSPKernel.hpp"
 
+static float distanceFromOrigin(float xPos, float yPos) {
+    return sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
+}
+
 class EZKernelBase : public AKSoundpipeKernel {
 private:
     
@@ -22,6 +26,7 @@ public:
     float yValue = 0.0;
     float isActive = 0.0;
     
+    bool resetted = false; 
     bool fxResetted = false;
     
     ParameterRamper xValueRamper = 0.0;

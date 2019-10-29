@@ -7,14 +7,15 @@
 //
 
 #include "EZKernelBase.hpp"
+#include <iostream>
 
 void EZKernelBase::setParameter(AUParameterAddress address, float value) {
         switch (address) {
                case xValueAddress:
-                xValueRamper.setUIValue(clamp(value, 0.0f, 1.0f));
+                xValueRamper.setUIValue(clamp(value, -0.5f, 0.5f));
                 break;
             case yValueAddress:
-                yValueRamper.setUIValue(clamp(value, 0.0f, 1.0f));
+                yValueRamper.setUIValue(clamp(value, -0.5f, 0.5f));
                 break;
             case isActiveAddress:
                 isActiveRamper.setUIValue(clamp(value, 0.0f, 1.0f));
@@ -37,12 +38,13 @@ float EZKernelBase::getParameter(AUParameterAddress address) {
 }
 
 void EZKernelBase::startRamp(AUParameterAddress address, AUValue value, AUAudioFrameCount duration)  {
+    
     switch (address) {
         case xValueAddress:
-            xValueRamper.startRamp(clamp(value, 0.0f, 1.0f), duration);
+            xValueRamper.startRamp(clamp(value, -0.5f, 0.5f), duration);
             break;
         case yValueAddress:
-            yValueRamper.startRamp(clamp(value, 0.0f, 1.0f), duration);
+            yValueRamper.startRamp(clamp(value, -0.5f, 0.5f), duration);
             break;
         case isActiveAddress:
             isActiveRamper.startRamp(clamp(value, 0.0f, 1.0f), duration);
@@ -51,8 +53,8 @@ void EZKernelBase::startRamp(AUParameterAddress address, AUValue value, AUAudioF
 }
 
 void EZKernelBase::standardEZFXGetAndSteps() {
-    xValue = xValueRamper.getAndStep();
-    yValue = yValueRamper.getAndStep();
+    xValue = xValueRamper.getAndStep() + 0.5;
+    yValue = yValueRamper.getAndStep() + 0.5;
     isActive = isActiveRamper.getAndStep();
 }
 
@@ -67,15 +69,16 @@ void EZKernelBase::reset() {
     xValueRamper.reset();
     yValueRamper.reset();
     isActiveRamper.reset();
+    resetted = true;
 }
 
 void EZKernelBase::setXValue(float value) {
-    xValue = clamp(value, 0.0f, 1.0f);
+    xValue = clamp(value, -0.5f, 0.5f);
     xValueRamper.setImmediate(xValue);
 }
 
 void EZKernelBase::setYValue(float value) {
-    yValue = clamp(value, 0.0f, 1.0f);
+    yValue = clamp(value, -0.5f, 0.5f);
     yValueRamper.setImmediate(yValue);
 }
 
