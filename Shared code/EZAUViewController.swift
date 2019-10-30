@@ -101,7 +101,7 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         audioUnit?.yValue = 0
         audioUnit?.isActive = 1.0
         
-        audioUnit?.rampDuration = 0.001
+        audioUnit?.rampDuration = 0.0001
     }
     
     func connectUIToAudioUnit() {

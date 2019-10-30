@@ -31,7 +31,6 @@
 
 - (NSArray *)standardParameters {
     AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
-    
     _xValueAUParameter = [AUParameterTree createParameterWithIdentifier:@"xValue"
                        name:@"X Value"
                     address:EZKernelBase::xValueAddress

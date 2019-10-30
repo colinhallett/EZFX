@@ -41,8 +41,10 @@
             filePath = "EZFX/EZFX/EZ Base/EZSpacer/EZSpacerAU.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111">
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "EZSpacerAU"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -55,8 +57,10 @@
             filePath = "EZFX/EZFX/EZ Base/EZSpacer/EZSpacerAU.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111">
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "EZSpacerAU"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "AB504A7E-D3B3-44A2-AAED-0C7D97EC6595 - 4775462578f9f3af"
