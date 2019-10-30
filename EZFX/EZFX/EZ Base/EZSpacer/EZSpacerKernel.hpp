@@ -31,7 +31,18 @@ public:
     void resetFX();
     
 public:
-
+    sp_zitarev *reverb;
+    
+    sp_phasor * lfoPhasor;
+    float lfoOne = 0;
+    
+    sp_paulstretch *stretch;
+    
+    sp_tblrec *tblrec;
+    
+    sp_ftbl *ftbl;
+    UInt32 ftbl_size = 4096;
+    
 };
 
 #endif /* __cplusplus */

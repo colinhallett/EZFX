@@ -21,6 +21,14 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     float yPos = EZKernelBase::yValue - 0.5;
     float dFromO = distanceFromOrigin(xPos, yPos);
     
+    *reverb->mix = dFromO;
+    *reverb->rt60_low = dFromO * 50.0f;
+    *reverb->rt60_mid = dFromO * 50.0f;
+    *reverb->hf_damping = dFromO * 10000.0f;
+    *reverb->in_delay = dFromO;
+    
+    lfoPhasor->freq = dFromO * 10.0f + 1.0f;
+    
     if (EZKernelBase::isActive == 0) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
             outL[i] = inL[i];
@@ -32,7 +40,22 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         fxResetted = false;
     }
     
+    
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
+        
+        sp_phasor_compute(getSpData(), lfoPhasor, nil, &lfoOne);
+        lfoOne = sin(lfoOne * M_PI * 2.f);
+        
+        float mainInL = inL[i];
+        float mainInR = inR[i];
+        
+        float reverbOutL = 0;
+        float reverbOutR = 0;
+       
+        sp_zitarev_compute(sp, reverb, &mainInL, &mainInR, &reverbOutL, &reverbOutR);
+        
+        outL[i] = reverbOutL;
+        outR[i] = reverbOutR;
         
     }
 };

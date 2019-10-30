@@ -15,16 +15,34 @@ EZSpacerKernel::EZSpacerKernel() {
 void EZSpacerKernel::init(int channelCount, double sampleRate) {
     EZKernelBase::init(channelCount, sampleRate);
     initSPAndSetValues();
+    
 };
 
 void EZSpacerKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
+        sp_zitarev_destroy(&reverb);
         
+        sp_phasor_destroy(&lfoPhasor);
+        
+        initSPAndSetValues();
         EZKernelBase::fxResetted = true;
     }
 }
 
 void EZSpacerKernel::initSPAndSetValues() {
+    
+    sp_zitarev_create(&reverb);
+    sp_zitarev_init(sp, reverb);
+    *reverb->level = 0.0;
+    *reverb->mix = 0;
+    *reverb->rt60_low = 10.0f;
+    *reverb->rt60_mid = 10.0f;
+    *reverb->hf_damping = 10000.0f;
+    *reverb->in_delay = 0;
+    
+    sp_phasor_create(&lfoPhasor);
+    sp_phasor_init(sp, lfoPhasor, 1);
+    
     
 }
    
