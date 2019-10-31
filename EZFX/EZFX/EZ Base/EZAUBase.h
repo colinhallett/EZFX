@@ -15,10 +15,12 @@
 @property AUParameter *xValueAUParameter;
 @property AUParameter *yValueAUParameter;
 @property AUParameter *isActiveAUParameter;
+@property AUParameter *mixAUParameter;
 
 @property (nonatomic) float xValue;
 @property (nonatomic) float yValue;
 @property (nonatomic) float isActive;
+@property (nonatomic) float mix;
 
 - (NSArray *)standardParameters;
 - (void)setKernelPtr:(void *)ptr;
@@ -26,5 +28,6 @@
 -(void)setXValue:(float)xValue;
 -(void)setYValue:(float)yValue;
 -(void)setIsActive:(float)isActive;
+-(void)setMix:(float)mix;
 
 @end

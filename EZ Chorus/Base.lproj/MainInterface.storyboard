@@ -12,34 +12,45 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EZChorusAUViewController" customModule="EZ_Chorus" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="CxO-V4-SXp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBW-ga-xw1" customClass="XYPadView" customModule="EZ_Chorus" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-x5-tO5" customClass="XYPadView" customModule="EZ_Spacer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="654.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-wu-ZEE">
-                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="K6P-8r-UC4">
+                                <rect key="frame" x="18.5" y="792" width="170" height="31"/>
                                 <connections>
-                                    <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="q0E-QW-5QO"/>
+                                    <action selector="mixSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="inp-dt-UD3"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PqK-Eg-ME7">
+                                <rect key="frame" x="286" y="791.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="C6d-X1-Gb3"/>
                                 </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerY" secondItem="u2v-qu-mbu" secondAttribute="centerY" id="BHG-kX-b20"/>
-                            <constraint firstItem="6ad-wu-ZEE" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="IIe-2g-cfw"/>
-                            <constraint firstItem="vBW-ga-xw1" firstAttribute="leading" secondItem="u2v-qu-mbu" secondAttribute="leading" id="LmU-PK-Lfb"/>
-                            <constraint firstItem="u2v-qu-mbu" firstAttribute="trailing" secondItem="vBW-ga-xw1" secondAttribute="trailing" id="Nnk-nY-suF"/>
-                            <constraint firstItem="vBW-ga-xw1" firstAttribute="top" secondItem="u2v-qu-mbu" secondAttribute="top" id="SzQ-9F-6at"/>
-                            <constraint firstItem="u2v-qu-mbu" firstAttribute="bottom" secondItem="vBW-ga-xw1" secondAttribute="bottom" id="hpr-BC-PzX"/>
+                            <constraint firstItem="hGA-x5-tO5" firstAttribute="height" secondItem="7nw-UW-ibz" secondAttribute="height" multiplier="0.8" id="0HO-Dk-3Nr"/>
+                            <constraint firstItem="PqK-Eg-ME7" firstAttribute="centerX" secondItem="hGA-x5-tO5" secondAttribute="centerX" multiplier="1.5" id="A1G-mq-ePe"/>
+                            <constraint firstItem="hGA-x5-tO5" firstAttribute="top" secondItem="CxO-V4-SXp" secondAttribute="top" id="COe-xb-3HC"/>
+                            <constraint firstItem="7nw-UW-ibz" firstAttribute="bottom" secondItem="K6P-8r-UC4" secondAttribute="bottom" constant="40" id="K7Z-W6-KJ4"/>
+                            <constraint firstItem="hGA-x5-tO5" firstAttribute="leading" secondItem="7nw-UW-ibz" secondAttribute="leading" id="Lrp-ez-Bs6"/>
+                            <constraint firstItem="hGA-x5-tO5" firstAttribute="trailing" secondItem="7nw-UW-ibz" secondAttribute="trailing" id="USB-HW-Skb"/>
+                            <constraint firstItem="PqK-Eg-ME7" firstAttribute="centerY" secondItem="K6P-8r-UC4" secondAttribute="centerY" id="e03-lQ-JbB"/>
+                            <constraint firstItem="K6P-8r-UC4" firstAttribute="centerX" secondItem="hGA-x5-tO5" secondAttribute="centerX" multiplier="0.5" id="gme-aX-fVp"/>
+                            <constraint firstItem="K6P-8r-UC4" firstAttribute="width" secondItem="hGA-x5-tO5" secondAttribute="width" multiplier="0.4" id="ysu-84-lhp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
+                        <viewLayoutGuide key="safeArea" id="7nw-UW-ibz"/>
                     </view>
                     <connections>
-                        <outlet property="xyPad" destination="vBW-ga-xw1" id="s2H-9U-va5"/>
+                        <outlet property="isActiveSwitchOutlet" destination="PqK-Eg-ME7" id="ukj-0g-EX6"/>
+                        <outlet property="mixSliderOutlet" destination="K6P-8r-UC4" id="0kD-Ls-CiF"/>
+                        <outlet property="xyPad" destination="hGA-x5-tO5" id="iMa-iJ-oxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,6 +17,7 @@ open class EZSpacer: AKNode, AKToggleable, AKComponent, AKInput {
     fileprivate var xValueParameter: AUParameter?
     fileprivate var yValueParameter: AUParameter?
     fileprivate var isActiveParameter: AUParameter?
+    fileprivate var mixParameter: AUParameter?
     
     public typealias AKAudioUnitType = EZSpacerAU
     
@@ -24,6 +25,18 @@ open class EZSpacer: AKNode, AKToggleable, AKComponent, AKInput {
 
     // MARK: - Properties
     private var internalAU: AKAudioUnitType?
+    
+    @objc open dynamic var mixValue: Double = 1.0 {
+        willSet {
+            guard mixValue != newValue else { return }
+            if internalAU?.isSetUp == true {
+                mixParameter?.value = AUValue(newValue)
+                return
+            } else {
+                internalAU?.mix = AUValue(newValue)
+            }
+        }
+    }
     
     @objc open dynamic var xValue: Double = 0.0 {
         willSet {
@@ -80,12 +93,14 @@ open class EZSpacer: AKNode, AKToggleable, AKComponent, AKInput {
         internalAU?.xValue = 0.5
         internalAU?.yValue = 0.5
         internalAU?.isActive = 1.0
+        internalAU?.mix = 1.0
         
         guard let tree = internalAU?.parameterTree else {return}
         
         xValueParameter = tree["xValue"]
         yValueParameter = tree["yValue"]
         isActiveParameter = tree["isActive"]
+        mixParameter = tree["mix"]
         
         
     }

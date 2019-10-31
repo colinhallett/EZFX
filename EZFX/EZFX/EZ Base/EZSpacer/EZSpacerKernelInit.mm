@@ -20,6 +20,7 @@ void EZSpacerKernel::init(int channelCount, double sampleRate) {
 
 void EZSpacerKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
+        EZKernelBase::resetCrossfade();
         sp_zitarev_destroy(&reverb);
         
         sp_phasor_destroy(&lfoPhasor);
@@ -34,7 +35,7 @@ void EZSpacerKernel::initSPAndSetValues() {
     sp_zitarev_create(&reverb);
     sp_zitarev_init(sp, reverb);
     *reverb->level = 0.0;
-    *reverb->mix = 0;
+    *reverb->mix = 1.0;
     *reverb->rt60_low = 10.0f;
     *reverb->rt60_mid = 10.0f;
     *reverb->hf_damping = 10000.0f;

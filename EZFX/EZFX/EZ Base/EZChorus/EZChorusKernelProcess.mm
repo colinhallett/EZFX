@@ -31,8 +31,7 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     delayR->feedback = 0.95 * EZKernelBase::yValue;
     filterL->freq = 15000.0f * dFromO + 5000;
     filterR->freq = 15000.0f * dFromO + 5000;
-    //crossfadeL->pos = (1 - EZKernelBase::xValue);
-    //crossfadeR->pos = EZKernelBase::xValue;
+    
     if (EZKernelBase::isActive <= 0.5) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
             outL[i] = inL[i];
@@ -102,13 +101,14 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         rightFlangeLine.setDelayMs(rightFlangeMs);
         chorusFlangeOutL = leftFlangeLine.push(chorusOneFilterL);
         chorusFlangeOutR = rightFlangeLine.push(chorusOneFilterR);
-
-        float chorusOneCrossfadeL = 0.0f;
-        float chorusOneCrossfadeR = 0.0f;
-        sp_crossfade_compute(sp, crossfadeL, &mainInL, &chorusFlangeOutL, &chorusOneCrossfadeL);
-        sp_crossfade_compute(sp, crossfadeR, &mainInR, &chorusFlangeOutR, &chorusOneCrossfadeR);
         
-        outL[i] = chorusOneCrossfadeL;
-        outR[i] = chorusOneCrossfadeR;
+        float mainOutL = 0;
+        float mainOutR = 0;
+        
+        sp_crossfade_compute(sp, mixL, &mainInL, &chorusFlangeOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &chorusFlangeOutR, &mainOutR);
+        
+        outL[i] = mainOutL;
+        outR[i] = mainOutR;
     }
 };

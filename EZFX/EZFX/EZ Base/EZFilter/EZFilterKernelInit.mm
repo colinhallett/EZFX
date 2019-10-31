@@ -19,6 +19,7 @@ void EZFilterKernel::init(int channelCount, double sampleRate) {
 
 void EZFilterKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
+        EZKernelBase::resetCrossfade();
         sp_phasor_destroy(&lfoPhasor);
         sp_moogladder_destroy(&filterL);
         sp_moogladder_destroy(&filterR);

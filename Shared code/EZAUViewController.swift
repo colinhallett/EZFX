@@ -16,14 +16,21 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     
     
     @IBOutlet weak var xyPad: XYPadView!
+    @IBAction func isActiveSwitch(_ sender: UISwitch) {
+        isActiveParameter?.setValue(sender.isOn ? 1 : 0, originator: parameterObserverToken)
+       }
+    @IBOutlet weak var isActiveSwitchOutlet: UISwitch!
+    
+    @IBAction func mixSlider(_ sender: UISlider) {
+        mixParameter?.setValue(sender.value, originator: parameterObserverToken)
+    }
+    @IBOutlet weak var mixSliderOutlet: UISlider!
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         xyPad.setupPadArea()
     }
-    @IBAction func isActiveSwitch(_ sender: UISwitch) {
-        isActive = sender.isOn ? 1 : 0
-    }
+   
    
     var audioUnit: EZAUBase? {
         didSet {
@@ -39,8 +46,21 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     private var xValueParameter: AUParameter?
     private var yValueParameter: AUParameter?
     private var isActiveParameter: AUParameter?
+    private var mixParameter: AUParameter?
     
     var parameterObserverToken: AUParameterObserverToken?
+    
+    @objc open dynamic var mixValue: Double = 1.0 {
+        willSet {
+            guard mixValue != newValue else { return }
+            if audioUnit?.isSetUp == true {
+                mixParameter?.value = AUValue(newValue)
+                return
+            } else {
+                audioUnit?.mix = AUValue(newValue)
+            }
+        }
+    }
     
     @objc open dynamic var xValue: Double = 0.0 {
         willSet {
@@ -87,19 +107,14 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     }
     
     func setupParameters () {
-        audioUnit?.xValue = 0
-        audioUnit?.yValue = 0
-        audioUnit?.isActive = 1.0
+        print ("setup params")
        
         guard let tree = audioUnit?.parameterTree else {return}
       
         xValueParameter = tree["xValue"]
         yValueParameter = tree["yValue"]
         isActiveParameter = tree["isActive"]
-       
-        audioUnit?.xValue = 0
-        audioUnit?.yValue = 0
-        audioUnit?.isActive = 1.0
+        mixParameter = tree["mix"]
         
         audioUnit?.rampDuration = 0.0001
     }
@@ -127,7 +142,11 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
                         strongSelf.xyPad.updateYPoint(newY: newValue)
                     case strongSelf.isActiveParameter!.address:
                         let newValue = Double(value)
-                        //set xypad value
+                        strongSelf.isActiveSwitchOutlet.isOn = newValue > 0.5 ? true : false
+                   case strongSelf.mixParameter!.address:
+                        let newValue = Float(value)
+                        strongSelf.mixSliderOutlet.setValue(newValue, animated: true)
+                    //set slider
                    default:
                         NSLog("address not found")
                 }

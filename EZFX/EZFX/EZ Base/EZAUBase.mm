@@ -26,6 +26,9 @@
 - (void)setIsActive:(float)isActive {
     kernelPtr->setIsActive(isActive);
 }
+-(void)setMix:(float)mix {
+    kernelPtr->setMix(mix);
+}
 
 - (BOOL)isSetUp { return kernelPtr->resetted; }
 
@@ -61,18 +64,31 @@
                   flags:flags
            valueStrings:nil
     dependentParameters:nil];
+    _mixAUParameter = [AUParameterTree createParameterWithIdentifier:@"mix"
+                   name:@"Mix"
+                address:EZKernelBase::mixAddress
+                    min:0.0
+                    max:1.0
+                   unit:kAudioUnitParameterUnit_Generic
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
     
     _xValueAUParameter.value = 0.0;
     _yValueAUParameter.value = 0.0;
-    _isActiveAUParameter.value = 0.0;
+    _isActiveAUParameter.value = 1.0;
+    _mixAUParameter.value = 1.0;
     
     kernelPtr->setParameter(EZKernelBase::xValueAddress,  _xValueAUParameter.value);
     kernelPtr->setParameter(EZKernelBase::yValueAddress,  _yValueAUParameter.value);
     kernelPtr->setParameter(EZKernelBase::isActiveAddress,  _isActiveAUParameter.value);
+    kernelPtr->setParameter(EZKernelBase::mixAddress, _mixAUParameter.value);
     
     return @[_xValueAUParameter,
             _yValueAUParameter,
-            _isActiveAUParameter];
+            _isActiveAUParameter,
+            _mixAUParameter];
     
 }
 

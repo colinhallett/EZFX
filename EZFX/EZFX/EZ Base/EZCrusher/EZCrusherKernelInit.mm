@@ -19,7 +19,7 @@ void EZCrusherKernel::init(int channelCount, double sampleRate) {
 
 void EZCrusherKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
-        
+        EZKernelBase::resetCrossfade();
         initSPAndSetValues();
         EZKernelBase::fxResetted = true;
     }
