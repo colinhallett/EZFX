@@ -64,6 +64,21 @@ public:
     void setYValue(float value);
     void setIsActive(float value);
     void setMix(float value);
+    
+public:
+    float leftAmplitude = 0.0;
+    float rightAmplitude = 0.0;
+    sp_rms *leftRMS;
+    sp_rms *rightRMS;
+    
+    void initTracker();
+    void resetTracker();
+    
+    sp_port *internalXRamper;
+    sp_port *internalYRamper;
+    
+    void initRamper();
+    void resetRamper();
 };
 
 #endif  // #ifdef __cplusplus

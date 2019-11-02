@@ -75,6 +75,8 @@ void EZKernelBase::init(int channelCount, double sampleRate)  {
     isActiveRamper.init();
     mixRamper.init();
     initCrossfade();
+    initTracker();
+    initRamper();
 }
 
 void EZKernelBase::reset() {
@@ -82,7 +84,25 @@ void EZKernelBase::reset() {
     yValueRamper.reset();
     isActiveRamper.reset();
     mixRamper.reset();
+    if (sp) {
+        resetCrossfade();
+        resetTracker();
+        resetRamper();
+    }
+    
     resetted = true;
+}
+
+void EZKernelBase::initRamper() {
+    sp_port_create(&internalXRamper);
+    sp_port_init(sp, internalXRamper, 0.1);
+    sp_port_create(&internalYRamper);
+    sp_port_init(sp, internalYRamper, 0.1);
+}
+void EZKernelBase::resetRamper() {
+    sp_port_destroy(&internalXRamper);
+    sp_port_destroy(&internalYRamper);
+    initRamper();
 }
 
 void EZKernelBase::resetCrossfade() {
@@ -95,6 +115,21 @@ void EZKernelBase::initCrossfade() {
     sp_crossfade_init(sp, mixL);
     sp_crossfade_create(&mixR);
     sp_crossfade_init(sp, mixR);
+}
+
+void EZKernelBase::initTracker() {
+    sp_rms_create(&leftRMS);
+    sp_rms_create(&rightRMS);
+    leftRMS->ihp = 10;
+    rightRMS->ihp = 10;
+    sp_rms_init(sp, leftRMS);
+    sp_rms_init(sp, rightRMS);
+}
+
+void EZKernelBase::resetTracker() {
+    sp_rms_destroy(&leftRMS);
+    sp_rms_destroy(&rightRMS);
+    initTracker();
 }
 
 void EZKernelBase::setXValue(float value) {

@@ -21,6 +21,8 @@
 @property (nonatomic) float yValue;
 @property (nonatomic) float isActive;
 @property (nonatomic) float mix;
+@property (readonly) float leftAmplitude;
+@property (readonly) float rightAmplitude;
 
 - (NSArray *)standardParameters;
 - (void)setKernelPtr:(void *)ptr;
