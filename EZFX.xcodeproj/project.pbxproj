@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5BE802236DEEC3004B5EEA /* EZDelayAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */; };
+		3B5BE805236DEEC3004B5EEA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5BE803236DEEC3004B5EEA /* MainInterface.storyboard */; };
+		3B5BE80A236DEEC3004B5EEA /* EZ Delay.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B5BE80F236DEECE004B5EEA /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
+		3B5BE810236DEECE004B5EEA /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B5BE812236DEEFF004B5EEA /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
+		3B5BE813236DEF02004B5EEA /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
+		3B5BE814236DEF02004B5EEA /* TouchHotSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */; };
+		3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
+		3B5BE816236DEF02004B5EEA /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
+		3B5BE817236DEF02004B5EEA /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
 		3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */; };
 		3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */; };
 		3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB82354C1BE00F146C9 /* ViewController.swift */; };
@@ -47,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B5BE808236DEEC3004B5EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B5BE7FB236DEEC3004B5EEA;
+			remoteInfo = "EZ Delay";
+		};
 		3B8CFBCC2354C1FD00F146C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */;
@@ -71,6 +89,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3B5BE811236DEECE004B5EEA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B5BE810236DEECE004B5EEA /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B8CFBD12354C25500F146C9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +118,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				3BADC169236861FE00A08F19 /* EZ Spacer.appex in Embed App Extensions */,
+				3B5BE80A236DEEC3004B5EEA /* EZ Delay.appex in Embed App Extensions */,
 				3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -119,6 +149,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Delay.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDelayAUViewController.swift; sourceTree = "<group>"; };
+		3B5BE804236DEEC3004B5EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3B5BE806236DEEC3004B5EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B8CFBB12354C1BE00F146C9 /* EZFX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZFX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +180,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B5BE7F9236DEEC3004B5EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5BE80F236DEECE004B5EEA /* AudioKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B8CFBAE2354C1BE00F146C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +215,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5BE7FD236DEEC3004B5EEA /* EZ Delay */ = {
+			isa = PBXGroup;
+			children = (
+				3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */,
+				3B5BE803236DEEC3004B5EEA /* MainInterface.storyboard */,
+				3B5BE806236DEEC3004B5EEA /* Info.plist */,
+			);
+			path = "EZ Delay";
+			sourceTree = "<group>";
+		};
 		3B8CFBA82354C1BE00F146C9 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +234,7 @@
 				3BB70E8A235A114700D99388 /* Shared code */,
 				3B8CFBD72354C2A500F146C9 /* EZ Chorus */,
 				3BADC15C236861FE00A08F19 /* EZ Spacer */,
+				3B5BE7FD236DEEC3004B5EEA /* EZ Delay */,
 				3B8CFBB22354C1BE00F146C9 /* Products */,
 				3B8CFBCE2354C25500F146C9 /* Frameworks */,
 			);
@@ -193,6 +246,7 @@
 				3B8CFBB12354C1BE00F146C9 /* EZFX.app */,
 				3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */,
 				3BADC15B236861FE00A08F19 /* EZ Spacer.appex */,
+				3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,6 +324,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3B5BE7FB236DEEC3004B5EEA /* EZ Delay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B5BE80E236DEEC3004B5EEA /* Build configuration list for PBXNativeTarget "EZ Delay" */;
+			buildPhases = (
+				3B5BE7F8236DEEC3004B5EEA /* Sources */,
+				3B5BE7F9236DEEC3004B5EEA /* Frameworks */,
+				3B5BE7FA236DEEC3004B5EEA /* Resources */,
+				3B5BE811236DEECE004B5EEA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EZ Delay";
+			productName = "EZ Delay";
+			productReference = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3B8CFBB02354C1BE00F146C9 /* EZFX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B8CFBC52354C1BF00F146C9 /* Build configuration list for PBXNativeTarget "EZFX" */;
@@ -285,6 +357,7 @@
 			dependencies = (
 				3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */,
 				3BADC168236861FE00A08F19 /* PBXTargetDependency */,
+				3B5BE809236DEEC3004B5EEA /* PBXTargetDependency */,
 			);
 			name = EZFX;
 			productName = EZFX;
@@ -337,6 +410,9 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = ckzh;
 				TargetAttributes = {
+					3B5BE7FB236DEEC3004B5EEA = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					3B8CFBB02354C1BE00F146C9 = {
 						CreatedOnToolsVersion = 11.1;
 						LastSwiftMigration = 1110;
@@ -371,6 +447,7 @@
 				3B8CFBB02354C1BE00F146C9 /* EZFX */,
 				3B8CFBD52354C2A500F146C9 /* EZ Chorus */,
 				3BADC15A236861FE00A08F19 /* EZ Spacer */,
+				3B5BE7FB236DEEC3004B5EEA /* EZ Delay */,
 			);
 		};
 /* End PBXProject section */
@@ -386,6 +463,14 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B5BE7FA236DEEC3004B5EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5BE805236DEEC3004B5EEA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B8CFBAF2354C1BE00F146C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +501,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B5BE7F8236DEEC3004B5EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5BE816236DEF02004B5EEA /* Fader.swift in Sources */,
+				3B5BE817236DEF02004B5EEA /* ControlPoint.swift in Sources */,
+				3B5BE802236DEEC3004B5EEA /* EZDelayAUViewController.swift in Sources */,
+				3B5BE814236DEF02004B5EEA /* TouchHotSpot.swift in Sources */,
+				3B5BE812236DEEFF004B5EEA /* EZAUViewController.swift in Sources */,
+				3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */,
+				3B5BE813236DEF02004B5EEA /* XYPadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B8CFBAD2354C1BE00F146C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +562,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B5BE809236DEEC3004B5EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B5BE7FB236DEEC3004B5EEA /* EZ Delay */;
+			targetProxy = 3B5BE808236DEEC3004B5EEA /* PBXContainerItemProxy */;
+		};
 		3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B8CFBD52354C2A500F146C9 /* EZ Chorus */;
@@ -476,6 +580,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3B5BE803236DEEC3004B5EEA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B5BE804236DEEC3004B5EEA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -511,6 +623,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B5BE80B236DEEC3004B5EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Delay/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Delay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B5BE80C236DEEC3004B5EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Delay/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Delay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3B8CFBC32354C1BF00F146C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -791,6 +947,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B5BE80E236DEEC3004B5EEA /* Build configuration list for PBXNativeTarget "EZ Delay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5BE80B236DEEC3004B5EEA /* Debug */,
+				3B5BE80C236DEEC3004B5EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B8CFBAC2354C1BE00F146C9 /* Build configuration list for PBXProject "EZFX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

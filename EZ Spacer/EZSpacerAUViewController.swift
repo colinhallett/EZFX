@@ -12,7 +12,6 @@ import AudioKit
 public class EZSpacerAUViewController: EZAUViewController {
     
     public override func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
-        
         audioUnit = try EZSpacerAU(componentDescription: componentDescription, options: [])
         
         setupParameters()

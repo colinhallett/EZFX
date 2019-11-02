@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-x5-tO5" customClass="XYPadView" customModule="EZ_Spacer" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-x5-tO5" customClass="XYPadView" customModule="EZ_Chorus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="654.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
@@ -32,6 +32,18 @@
                                     <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="C6d-X1-Gb3"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyF-n9-Vez">
+                                <rect key="frame" x="186" y="316.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-E5-SEf">
+                                <rect key="frame" x="345" y="791.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="loopingSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="aIi-VQ-P9c"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -41,8 +53,12 @@
                             <constraint firstItem="7nw-UW-ibz" firstAttribute="bottom" secondItem="K6P-8r-UC4" secondAttribute="bottom" constant="40" id="K7Z-W6-KJ4"/>
                             <constraint firstItem="hGA-x5-tO5" firstAttribute="leading" secondItem="7nw-UW-ibz" secondAttribute="leading" id="Lrp-ez-Bs6"/>
                             <constraint firstItem="hGA-x5-tO5" firstAttribute="trailing" secondItem="7nw-UW-ibz" secondAttribute="trailing" id="USB-HW-Skb"/>
+                            <constraint firstItem="SyF-n9-Vez" firstAttribute="centerX" secondItem="hGA-x5-tO5" secondAttribute="centerX" id="ZtY-5R-XrM"/>
                             <constraint firstItem="PqK-Eg-ME7" firstAttribute="centerY" secondItem="K6P-8r-UC4" secondAttribute="centerY" id="e03-lQ-JbB"/>
                             <constraint firstItem="K6P-8r-UC4" firstAttribute="centerX" secondItem="hGA-x5-tO5" secondAttribute="centerX" multiplier="0.5" id="gme-aX-fVp"/>
+                            <constraint firstItem="SyF-n9-Vez" firstAttribute="centerY" secondItem="hGA-x5-tO5" secondAttribute="centerY" id="l8f-ET-Rzw"/>
+                            <constraint firstItem="Ldx-E5-SEf" firstAttribute="centerY" secondItem="PqK-Eg-ME7" secondAttribute="centerY" id="nz1-XE-M2c"/>
+                            <constraint firstItem="Ldx-E5-SEf" firstAttribute="leading" secondItem="PqK-Eg-ME7" secondAttribute="trailing" constant="10" id="pbl-3m-8hU"/>
                             <constraint firstItem="K6P-8r-UC4" firstAttribute="width" secondItem="hGA-x5-tO5" secondAttribute="width" multiplier="0.4" id="ysu-84-lhp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7nw-UW-ibz"/>
@@ -50,12 +66,13 @@
                     <connections>
                         <outlet property="isActiveSwitchOutlet" destination="PqK-Eg-ME7" id="ukj-0g-EX6"/>
                         <outlet property="mixSliderOutlet" destination="K6P-8r-UC4" id="0kD-Ls-CiF"/>
+                        <outlet property="testLabel" destination="SyF-n9-Vez" id="fdw-9B-eEU"/>
                         <outlet property="xyPad" destination="hGA-x5-tO5" id="iMa-iJ-oxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="126"/>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
     </scenes>
 </document>
