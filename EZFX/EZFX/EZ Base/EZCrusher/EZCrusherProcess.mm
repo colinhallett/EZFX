@@ -33,6 +33,32 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
     }
     
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
+        float xVal = EZKernelBase::xValue;
+        float yVal = EZKernelBase::yValue;
+        float rampedXValue = 0;
+        float rampedYValue = 0;
+        sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
+        sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         
+        float xPos = rampedXValue - 0.5;
+        float yPos = rampedYValue - 0.5;
+        float dFromO = distanceFromOrigin(xPos, yPos);//sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
+        
+        
+        
+        float mainOutL = 0;
+        float mainOutR = 0;
+        
+      //  sp_crossfade_compute(sp, mixL, &mainInL, &reverbOutL, &mainOutL);
+     //   sp_crossfade_compute(sp, mixR, &mainInR, &reverbOutR, &mainOutR);
+        
+        outL[i] = mainOutL;
+        outR[i] = mainOutR;
+        float rmsOutL = 0;
+        float rmsOutR = 0;
+        sp_rms_compute(sp, leftRMS, &mainOutL, &rmsOutL);
+        sp_rms_compute(sp, rightRMS, &mainOutR, &rmsOutR);
+        leftAmplitude = rmsOutL;
+        rightAmplitude = rmsOutR;
     }
 };

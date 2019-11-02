@@ -15,12 +15,11 @@ EZSpacerKernel::EZSpacerKernel() {
 void EZSpacerKernel::init(int channelCount, double sampleRate) {
     EZKernelBase::init(channelCount, sampleRate);
     initSPAndSetValues();
-    
 };
 
 void EZSpacerKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
-        EZKernelBase::resetCrossfade();
+        EZKernelBase::reset();
         sp_zitarev_destroy(&reverb);
         
         sp_phasor_destroy(&lfoPhasor);
@@ -43,8 +42,6 @@ void EZSpacerKernel::initSPAndSetValues() {
     
     sp_phasor_create(&lfoPhasor);
     sp_phasor_init(sp, lfoPhasor, 1);
-    
-    
 }
    
 

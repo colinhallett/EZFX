@@ -20,7 +20,7 @@ open class EZFilter: AKNode, AKToggleable, AKComponent, AKInput {
     
     public typealias AKAudioUnitType = EZFilterAU
     
-    public static let ComponentDescription = AudioComponentDescription(effect: "ezsp")
+    public static let ComponentDescription = AudioComponentDescription(effect: "ezft")
 
     // MARK: - Properties
     private var internalAU: AKAudioUnitType?

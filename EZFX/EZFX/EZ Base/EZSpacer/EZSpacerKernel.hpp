@@ -14,6 +14,10 @@
 #include "FunctionTable.hpp"
 #include "ModulatedDelay_Defines.h"
 
+
+#include "AKVariableDelayDSP.hpp"
+#import "AKLinearParameterRamp.hpp"
+
 #include <iostream>
 
 class EZSpacerKernel : public EZKernelBase, public AKBuffered {
@@ -36,13 +40,8 @@ public:
     sp_phasor * lfoPhasor;
     float lfoOne = 0;
     
-    sp_paulstretch *stretch;
-    
-    sp_tblrec *tblrec;
-    
-    sp_ftbl *ftbl;
-    UInt32 ftbl_size = 4096;
-    
+    sp_vdelay *vDelayL;
+    sp_vdelay *vDelayR;
 };
 
 #endif /* __cplusplus */

@@ -21,7 +21,7 @@ open class EZCrusher: AKNode, AKToggleable, AKComponent, AKInput {
     
     public typealias AKAudioUnitType = EZCrusherAU
     
-    public static let ComponentDescription = AudioComponentDescription(effect: "ezsp")
+    public static let ComponentDescription = AudioComponentDescription(effect: "ezcr")
 
     // MARK: - Properties
     private var internalAU: AKAudioUnitType?

@@ -35,6 +35,17 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     }
     
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
+        float xVal = EZKernelBase::xValue;
+        float yVal = EZKernelBase::yValue;
+        float rampedXValue = 0;
+        float rampedYValue = 0;
+        sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
+        sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
+        
+        float xPos = rampedXValue - 0.5;
+        float yPos = rampedYValue - 0.5;
+        float dFromO = distanceFromOrigin(xPos, yPos);
+        
         float mainInL = inL[i];
         float mainInR = inR[i];
         float filterOutL, filterOutR = 0;
@@ -44,8 +55,20 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         sp_moogladder_compute(sp, filterL, &mainInL, &filterOutL);
         sp_moogladder_compute(sp, filterR, &mainInR, &filterOutR);
         
-        outL[i] = filterOutL;
-        outR[i] = filterOutR;
+        float mainOutL, mainOutR;
+        
+        sp_crossfade_compute(sp, mixL, &mainInL, &filterOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &filterOutR, &mainOutR);
+           
+        outL[i] = mainOutL;
+        outR[i] = mainOutR;
+        
+        float rmsOutL = 0;
+        float rmsOutR = 0;
+        sp_rms_compute(sp, leftRMS, &mainOutL, &rmsOutL);
+        sp_rms_compute(sp, rightRMS, &mainOutR, &rmsOutR);
+        leftAmplitude = rmsOutL;
+        rightAmplitude = rmsOutR;
         
     }
 };

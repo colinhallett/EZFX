@@ -19,7 +19,7 @@ void EZChorusKernel::init(int channelCount, double sampleRate) {
 
 void EZChorusKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
-        EZKernelBase::resetCrossfade();
+        EZKernelBase::reset();
         sp_revsc_destroy(&reverb);
         sp_crossfade_destroy(&reverbCrossfadeL);
         sp_crossfade_destroy(&reverbCrossfadeR);
