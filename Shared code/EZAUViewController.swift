@@ -24,7 +24,14 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     @IBAction func mixSlider(_ sender: UISlider) {
         mixParameter?.setValue(sender.value, originator: parameterObserverToken)
     }
+    
     @IBOutlet weak var mixSliderOutlet: UISlider!
+    
+    @IBAction func loopingSwitch(_ sender: UISwitch) {
+        xyPad.isLooping = sender.isOn
+    }
+    
+    @IBOutlet weak var testLabel: UILabel!
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -116,7 +123,7 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         isActiveParameter = tree["isActive"]
         mixParameter = tree["mix"]
         
-        audioUnit?.rampDuration = 0.0001
+        audioUnit?.rampDuration = 0.00001
     }
     
     func connectUIToAudioUnit() {
@@ -164,5 +171,14 @@ extension EZAUViewController : XYPadDelegate {
     func setYValue(value: Double) {
         let newValue = ((1 - value) - 0.5)
         yValueParameter?.setValue(AUValue(newValue), originator: parameterObserverToken)
+    }
+    func dLinkCallback() {
+        
+        if let lAmp = audioUnit?.leftAmplitude {
+            DispatchQueue.main.async {
+                self.xyPad.setBackgroundColor(amount: lAmp)
+            }
+            testLabel.text = String(lAmp)
+        }
     }
 }

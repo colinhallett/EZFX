@@ -39,6 +39,8 @@ class XYPadView: UIView {
     var padArea: CAShapeLayer!
     var circle: ControlPoint!
     
+    var crosshair: CAShapeLayer!
+    
     var circleDiameter: CGFloat = 40
     var circleRadius: CGFloat {
         get { return circleDiameter / 2}
@@ -83,7 +85,7 @@ class XYPadView: UIView {
     var completedPath = true
     
     @objc func displayCallback() {
-        
+        delegate?.dLinkCallback()
         let timeElapsed = displayLink.timestamp - currentTimeDuration
         
         if startPlayback {
@@ -142,11 +144,27 @@ class XYPadView: UIView {
         padArea.path = CGPath(rect: bounds, transform: nil)
         padArea.lineWidth = 20
         padArea.strokeColor = UIColor.white.cgColor
-        padArea.fillColor = UIColor.black.cgColor
+        padArea.fillColor = UIColor.white.cgColor
         padArea.zPosition = -1
         layer.addSublayer(padArea)
         width = bounds.width
         height = bounds.height
+        if crosshair != nil {
+            crosshair.removeFromSuperlayer()
+        }
+        crosshair = CAShapeLayer()
+        let crossPath = UIBezierPath()
+        crossPath.move(to: CGPoint(x: 0, y: height / 2))
+        crossPath.addLine(to: CGPoint(x: width, y: height / 2))
+        crossPath.move(to: CGPoint(x: width/2, y: 0))
+        crossPath.addLine(to: CGPoint(x: width/2, y: height))
+        crosshair.path = crossPath.cgPath
+        crosshair.lineWidth = 2
+        crosshair.strokeColor = UIColor.white.cgColor
+        crosshair.fillColor = nil
+        crosshair.zPosition = 1
+        layer.addSublayer(crosshair)
+        
         if circle != nil {
             posInView = CGPoint(x: CGFloat(xValue) * width, y:  CGFloat(yValue) * height)
             setCirclePosition(immediate: true)
@@ -183,13 +201,15 @@ class XYPadView: UIView {
     
     func updateYPoint(newY: Double) {
         posInView.y = CGFloat(newY) * height //+ circleRadius
-       // yValue = newY
-        setCirclePosition(immediate: false)
+        updateValue(point: posInView)
+        createFade(point: posInView)
+        setCirclePosition(immediate: true)
     }
     func updateXPoint(newX: Double) {
         posInView.x = CGFloat(newX) * width //+ circleRadius
-       // xValue = newX
-        setCirclePosition(immediate: false)
+       updateValue(point: posInView)
+       createFade(point: posInView)
+        setCirclePosition(immediate: true)
     }
     
     func handleTouch(point: CGPoint) {
@@ -224,15 +244,21 @@ class XYPadView: UIView {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         for touch in touches {
-            let location = touch.location(in: self)
+            var location = touch.location(in: self)
+            
+            location.x = location.x < 0 ? 0 : (location.x > width ? width : location.x)
+            location.y = location.y < 0 ? 0 : (location.y > height ? height : location.y)
             handleTouch(point: location)
+            
             //addHotSpot(point: location)
         }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         for touch in touches {
-            let location = touch.location(in: self)
+            var location = touch.location(in: self)
+            location.x = location.x < 0 ? 0 : (location.x > width ? width : location.x)
+            location.y = location.y < 0 ? 0 : (location.y > height ? height : location.y)
             handleTouch(point: location)
             
             if let pres = circle.presentation() {
@@ -246,6 +272,30 @@ class XYPadView: UIView {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
+    }
+    
+    var padOpacity: Float = 0
+    var targetOpacity: Float = 0
+    var currentTime: CFTimeInterval = -1
+    
+    func setBackgroundColor(amount: Float) {
+        if currentTime == -1 {
+            currentTime = displayLink.timestamp
+        }
+        let deltaTime = displayLink.timestamp - currentTime
+        targetOpacity = amount
+        
+        if padOpacity < targetOpacity {
+            padOpacity += 0.000001 * Float(deltaTime)
+        } else {
+            padOpacity -= 0.000001 * Float(deltaTime)
+        }
+        
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(0.01)
+        padArea.opacity = targetOpacity
+        CATransaction.commit()
+        currentTime = displayLink.timestamp
     }
     
     struct RecordedPath {
@@ -262,4 +312,5 @@ class XYPadView: UIView {
 protocol XYPadDelegate {
     func setXValue(value: Double)
     func setYValue(value: Double)
+    func dLinkCallback() 
 }
