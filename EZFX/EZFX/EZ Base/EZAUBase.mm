@@ -29,12 +29,22 @@
 -(void)setMix:(float)mix {
     kernelPtr->setMix(mix);
 }
-- (float)leftAmplitude {
-    return kernelPtr->leftAmplitude;
+- (float)lowAmplitude {
+    return kernelPtr->lowAmplitude;
 }
-- (float)rightAmplitude {
-    return kernelPtr->rightAmplitude;
+- (float)lowMidAmplitude {
+    return kernelPtr->lowMidAmplitude;
 }
+- (float)highMidAmplitude {
+    return kernelPtr->highMidAmplitude;
+}
+- (float)lowHighAmplitude {
+    return kernelPtr->lowHighAmplitude;
+}
+- (float)highHighAmplitude {
+    return kernelPtr->highHighAmplitude;
+}
+
 - (BOOL)isSetUp { return kernelPtr->resetted; }
 
 - (NSArray *)standardParameters {

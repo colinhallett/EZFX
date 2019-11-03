@@ -31,7 +31,11 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         xyPad.isLooping = sender.isOn
     }
     
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var lowLevel: UILabel!
+    @IBOutlet weak var lowMidLevel: UILabel!
+    @IBOutlet weak var highMidLevel: UILabel!
+    @IBOutlet weak var lowHighLevel: UILabel!
+    @IBOutlet weak var highHighLevel: UILabel!
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -173,12 +177,22 @@ extension EZAUViewController : XYPadDelegate {
         yValueParameter?.setValue(AUValue(newValue), originator: parameterObserverToken)
     }
     func dLinkCallback() {
+        guard let audioUnit = audioUnit else {return}
+        let lAmp = audioUnit.lowAmplitude
+        let lowMidAmp = audioUnit.lowMidAmplitude
+        let highMidAmp = audioUnit.highMidAmplitude
+        let lowHighAmp = audioUnit.lowHighAmplitude
+        let highHighAmp = audioUnit.highHighAmplitude
         
-        if let lAmp = audioUnit?.leftAmplitude {
-            DispatchQueue.main.async {
-                self.xyPad.setBackgroundColor(amount: lAmp)
-            }
-            testLabel.text = String(lAmp)
+        lowLevel.text = String(lAmp)
+        lowMidLevel.text = String(lowMidAmp)
+        highMidLevel.text = String(highMidAmp)
+        lowHighLevel.text = String(lowHighAmp)
+        highHighLevel.text = String(highHighAmp)
+        
+        DispatchQueue.main.async {
+            self.xyPad.setBackgroundColor(amount: lAmp)
         }
+        
     }
 }

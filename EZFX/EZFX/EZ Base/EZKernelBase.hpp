@@ -17,8 +17,9 @@ static float distanceFromOrigin(float xPos, float yPos) {
 }
 
 class EZKernelBase : public AKSoundpipeKernel {
-private:
-    
+public:
+    struct TrackerData;
+    std::shared_ptr<TrackerData> trackerData;
  
 public:
 
@@ -65,11 +66,9 @@ public:
     void setIsActive(float value);
     void setMix(float value);
     
+    void calculateAmplitudes(float inputL, float inputR);
+    
 public:
-    float leftAmplitude = 0.0;
-    float rightAmplitude = 0.0;
-    sp_rms *leftRMS;
-    sp_rms *rightRMS;
     
     void initTracker();
     void resetTracker();
@@ -79,6 +78,12 @@ public:
     
     void initRamper();
     void resetRamper();
+    
+    float lowAmplitude = 0.0;
+    float lowMidAmplitude = 0.0;
+    float highMidAmplitude = 0.0;
+    float lowHighAmplitude = 0.0;
+    float highHighAmplitude = 0.0;
 };
 
 #endif  // #ifdef __cplusplus

@@ -62,13 +62,7 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
            
         outL[i] = mainOutL;
         outR[i] = mainOutR;
-        
-        float rmsOutL = 0;
-        float rmsOutR = 0;
-        sp_rms_compute(sp, leftRMS, &mainOutL, &rmsOutL);
-        sp_rms_compute(sp, rightRMS, &mainOutR, &rmsOutR);
-        leftAmplitude = rmsOutL;
-        rightAmplitude = rmsOutR;
+        calculateAmplitudes(mainOutL, mainOutR);
         
     }
 };

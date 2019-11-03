@@ -143,8 +143,8 @@ class XYPadView: UIView {
         padArea = CAShapeLayer()
         padArea.path = CGPath(rect: bounds, transform: nil)
         padArea.lineWidth = 20
-        padArea.strokeColor = UIColor.white.cgColor
-        padArea.fillColor = UIColor.white.cgColor
+        padArea.strokeColor = UIColor.blue.cgColor
+        padArea.fillColor = UIColor.blue.cgColor
         padArea.zPosition = -1
         layer.addSublayer(padArea)
         width = bounds.width
@@ -283,18 +283,20 @@ class XYPadView: UIView {
             currentTime = displayLink.timestamp
         }
         let deltaTime = displayLink.timestamp - currentTime
+        
         targetOpacity = amount
+         
+         if padOpacity < targetOpacity {
+             padOpacity += 1 * Float(deltaTime)
+         } else {
+             padOpacity -= 1 * Float(deltaTime)
+         }
+         
+         CATransaction.begin()
+         CATransaction.setAnimationDuration(0)
+         padArea.opacity = padOpacity
+         CATransaction.commit()
         
-        if padOpacity < targetOpacity {
-            padOpacity += 0.000001 * Float(deltaTime)
-        } else {
-            padOpacity -= 0.000001 * Float(deltaTime)
-        }
-        
-        CATransaction.begin()
-        CATransaction.setAnimationDuration(0.01)
-        padArea.opacity = targetOpacity
-        CATransaction.commit()
         currentTime = displayLink.timestamp
     }
     
