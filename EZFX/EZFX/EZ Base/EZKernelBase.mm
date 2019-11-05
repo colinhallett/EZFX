@@ -15,23 +15,48 @@ struct EZKernelBase::TrackerData {
     sp_butlp *lowCutL;
     sp_butlp *lowCutR;
     
-    sp_rms *lowMidRMSL;
-    sp_rms *lowMidRMSR;
-    sp_butbp *lowMidBPL;
-    sp_butbp *lowMidBPR;
+  /*  sp_rms *bp1RMSL;
+    sp_rms *bp1RMSR;
+    sp_butbp *bp1L;
+    sp_butbp *bp1R;*/
     
-    sp_rms *highMidRMSL;
-    sp_rms *highMidRMSR;
-    sp_butbp *highMidBPL;
-    sp_butbp *highMidBPR;
+    /*sp_rms *bp2RMSL;
+    sp_rms *bp2RMSR;
+    sp_butbp *bp2L;
+    sp_butbp *bp2R;
     
-    sp_rms *lowHighRMSL;
-    sp_rms *lowHighRMSR;
-    sp_butbp *lowHighBPL;
-    sp_butbp *lowHighBPR;
+    sp_rms *bp3RMSL;
+    sp_rms *bp3RMSR;
+    sp_butbp *bp3L;
+    sp_butbp *bp3R;
     
-    sp_rms *highHighRMSL;
-    sp_rms *highHighRMSR;
+    sp_rms *bp4RMSL;
+    sp_rms *bp4RMSR;
+    sp_butbp *bp4L;
+    sp_butbp *bp4R;
+    
+    sp_rms *bp5RMSL;
+    sp_rms *bp5RMSR;
+    sp_butbp *bp5L;
+    sp_butbp *bp5R;
+    
+    sp_rms *bp6RMSL;
+    sp_rms *bp6RMSR;
+    sp_butbp *bp6L;
+    sp_butbp *bp6R;
+    
+    sp_rms *bp7RMSL;
+    sp_rms *bp7RMSR;
+    sp_butbp *bp7L;
+    sp_butbp *bp7R;
+    
+    sp_rms *bp8RMSL;
+    sp_rms *bp8RMSR;
+    sp_butbp *bp8L;
+    sp_butbp *bp8R;*/
+    
+    sp_rms *highCutRMSL;
+    sp_rms *highCutRMSR;
     sp_buthp *highCutL;
     sp_buthp *highCutR;
 };
@@ -145,6 +170,16 @@ void EZKernelBase::initCrossfade() {
     sp_crossfade_init(sp, mixR);
 }
 
+void EZKernelBase::initBP(sp_butbp **filL, sp_butbp **filR, sp_rms **rmsL, sp_rms **rmsR) {
+    sp_rms_create(rmsL);
+    sp_rms_create(rmsR);
+    sp_rms_init(sp, *rmsL);
+    sp_rms_init(sp, *rmsR);
+    sp_butbp_create(filL);
+    sp_butbp_create(filR);
+    sp_butbp_init(sp, *filL);
+    sp_butbp_init(sp, *filR);
+}
 void EZKernelBase::initTracker() {
     sp_rms_create(&trackerData->lowRMSL);
     sp_rms_create(&trackerData->lowRMSR);
@@ -154,82 +189,53 @@ void EZKernelBase::initTracker() {
     sp_rms_init(sp, trackerData->lowRMSR);
     sp_butlp_init(sp, trackerData->lowCutL);
     sp_butlp_init(sp, trackerData->lowCutR);
-
-    sp_rms_create(&trackerData->lowMidRMSL);
-    sp_rms_create(&trackerData->lowMidRMSR);
-    sp_butbp_create(&trackerData->lowMidBPL);
-    sp_butbp_create(&trackerData->lowMidBPR);
-    sp_rms_init(sp, trackerData->lowMidRMSL);
-    sp_rms_init(sp, trackerData->lowMidRMSR);
-    sp_butbp_init(sp, trackerData->lowMidBPL);
-    sp_butbp_init(sp, trackerData->lowMidBPR);
-    
-    sp_rms_create(&trackerData->highMidRMSL);
-    sp_rms_create(&trackerData->highMidRMSR);
-    sp_butbp_create(&trackerData->highMidBPL);
-    sp_butbp_create(&trackerData->highMidBPR);
-    sp_rms_init(sp, trackerData->highMidRMSL);
-    sp_rms_init(sp, trackerData->highMidRMSR);
-    sp_butbp_init(sp, trackerData->highMidBPL);
-    sp_butbp_init(sp, trackerData->highMidBPR);
-    
-    sp_rms_create(&trackerData->lowHighRMSL);
-    sp_rms_create(&trackerData->lowHighRMSR);
-    sp_butbp_create(&trackerData->lowHighBPL);
-    sp_butbp_create(&trackerData->lowHighBPR);
-    sp_rms_init(sp, trackerData->lowHighRMSL);
-    sp_rms_init(sp, trackerData->lowHighRMSR);
-    sp_butbp_init(sp, trackerData->lowHighBPL);
-    sp_butbp_init(sp, trackerData->lowHighBPR);
-    
-    sp_rms_create(&trackerData->highHighRMSL);
-    sp_rms_create(&trackerData->highHighRMSR);
+/*
+    initBP(&trackerData->bp1L, &trackerData->bp1R, &trackerData->bp1RMSL, &trackerData->bp1RMSR);
+    */
+    sp_rms_create(&trackerData->highCutRMSL);
+    sp_rms_create(&trackerData->highCutRMSR);
     sp_buthp_create(&trackerData->highCutL);
     sp_buthp_create(&trackerData->highCutR);
-    sp_rms_init(sp, trackerData->highHighRMSL);
-    sp_rms_init(sp, trackerData->highHighRMSR);
+    sp_rms_init(sp, trackerData->highCutRMSL);
+    sp_rms_init(sp, trackerData->highCutRMSR);
     sp_buthp_init(sp, trackerData->highCutL);
     sp_buthp_init(sp, trackerData->highCutR);
     
-    trackerData->lowCutL->freq = 100;
-    trackerData->lowCutR->freq = 100;
-    trackerData->lowMidBPL->freq = 300;
-    trackerData->lowMidBPR->freq = 300;
-    trackerData->highMidBPL->freq = 1000;
-    trackerData->highMidBPR->freq = 1000;
-    trackerData->lowHighBPL->freq = 4000;
-    trackerData->lowHighBPR->freq = 4000;
-    trackerData->highCutL->freq = 10000;
-    trackerData->highCutR->freq = 10000;
+    
+    float freqs[10] = {50.f, 100.f, 200.f, 400.f, 800.f, 1600.f, 3200.f, 6400.f, 12800.f, 15000.f};
+    
+    trackerData->lowCutL->freq = 50.f;
+    trackerData->lowCutR->freq = 50.f;
+ /*   trackerData->bp1L->freq = 100.f;
+    trackerData->bp1R->freq = 100.f;*/
+    
+    /*trackerData->bp2L->freq = freqs[2];
+    trackerData->bp2R->freq = freqs[2];
+    
+    trackerData->bp3L->freq = freqs[3];
+    trackerData->bp3R->freq = freqs[3];
+    
+    trackerData->bp4L->freq = freqs[4];
+    trackerData->bp4R->freq = freqs[4];
+    
+    trackerData->bp5L->freq = freqs[5];
+    trackerData->bp5R->freq = freqs[5];
+    
+    trackerData->bp6L->freq = freqs[6];
+    trackerData->bp6R->freq = freqs[6];
+    
+    trackerData->bp7L->freq = freqs[7];
+    trackerData->bp7R->freq = freqs[7];
+    
+    trackerData->bp8L->freq = freqs[8];
+    trackerData->bp8R->freq = freqs[8];*/
+    
+    trackerData->highCutL->freq = 15000.f;
+    trackerData->highCutR->freq = 15000.f;
 }
 
 void EZKernelBase::resetTracker() {
-    sp_rms_destroy(&trackerData->lowRMSL);
-    sp_rms_destroy(&trackerData->lowRMSR);
-    sp_butlp_destroy(&trackerData->lowCutL);
-    sp_butlp_destroy(&trackerData->lowCutR);
-    
-    sp_rms_destroy(&trackerData->lowMidRMSL);
-    sp_rms_destroy(&trackerData->lowMidRMSR);
-    sp_butbp_destroy(&trackerData->lowMidBPL);
-    sp_butbp_destroy(&trackerData->lowMidBPR);
-    
-    sp_rms_destroy(&trackerData->highMidRMSL);
-    sp_rms_destroy(&trackerData->highMidRMSR);
-    sp_butbp_destroy(&trackerData->highMidBPL);
-    sp_butbp_destroy(&trackerData->highMidBPR);
-    
-    sp_rms_destroy(&trackerData->lowHighRMSL);
-    sp_rms_destroy(&trackerData->lowHighRMSR);
-    sp_butbp_destroy(&trackerData->lowHighBPL);
-    sp_butbp_destroy(&trackerData->lowHighBPR);
-    
-    sp_rms_destroy(&trackerData->highHighRMSL);
-    sp_rms_destroy(&trackerData->highHighRMSR);
-    sp_buthp_destroy(&trackerData->highCutL);
-    sp_buthp_destroy(&trackerData->highCutR);
-    
-    initTracker();
+   
 }
 
 void EZKernelBase::setXValue(float value) {
@@ -252,45 +258,45 @@ void EZKernelBase::setMix(float value) {
     mixRamper.setImmediate(mix);
 }
 
+
+float EZKernelBase::computeLP(sp_butlp *filL, sp_butlp *filR, sp_rms *rmsL, sp_rms *rmsR, float inL, float inR) {
+    float fOutL, fOutR;
+    sp_butlp_compute(sp, filL, &inL, &fOutL);
+    sp_butlp_compute(sp, filR, &inR, &fOutR);
+    float rmsOutL, rmsOutR;
+    sp_rms_compute(sp, rmsL, &fOutL, &rmsOutL);
+    sp_rms_compute(sp, rmsL, &fOutR, &rmsOutR);
+    return ((rmsOutL + rmsOutR) / 2);
+}
+float EZKernelBase::computeHP(sp_buthp *filL, sp_buthp *filR, sp_rms *rmsL, sp_rms *rmsR, float inL, float inR) {
+    float fOutL, fOutR;
+    sp_buthp_compute(sp, filL, &inL, &fOutL);
+    sp_buthp_compute(sp, filR, &inR, &fOutR);
+    float rmsOutL, rmsOutR;
+    sp_rms_compute(sp, rmsL, &fOutL, &rmsOutL);
+    sp_rms_compute(sp, rmsL, &fOutR, &rmsOutR);
+    return ((rmsOutL + rmsOutR) / 2);
+}
+float EZKernelBase::computeBP(sp_butbp *filL, sp_butbp *filR, sp_rms *rmsL, sp_rms *rmsR, float inL, float inR) {
+    float fOutL, fOutR;
+    sp_butbp_compute(sp, filL, &inL, &fOutL);
+    sp_butbp_compute(sp, filR, &inR, &fOutR);
+    float rmsOutL, rmsOutR;
+    sp_rms_compute(sp, rmsL, &fOutL, &rmsOutL);
+    sp_rms_compute(sp, rmsL, &fOutR, &rmsOutR);
+    return ((rmsOutL + rmsOutR) / 2);
+}
+
 void EZKernelBase::calculateAmplitudes(float inputL, float inputR) {
-    float lowCutL, lowCutR;
-    sp_butlp_compute(sp, trackerData->lowCutL, &inputL, &lowCutL);
-    sp_butlp_compute(sp, trackerData->lowCutR, &inputR, &lowCutR);
-    float lowAmpL, lowAmpR;
-    sp_rms_compute(sp, trackerData->lowRMSL, &lowCutL, &lowAmpL);
-    sp_rms_compute(sp, trackerData->lowRMSR, &lowCutR, &lowAmpR);
-    lowAmplitude = (lowAmpL + lowAmpR) / 2;
-    
-    float lowMidCutL, lowMidCutR;
-    sp_butbp_compute(sp, trackerData->lowMidBPL, &inputL, &lowMidCutL);
-    sp_butbp_compute(sp, trackerData->lowMidBPR, &inputR, &lowMidCutR);
-    float lowMidAmpL, lowMidAmpR;
-    sp_rms_compute(sp, trackerData->lowMidRMSL, &lowMidCutL, &lowMidAmpL);
-    sp_rms_compute(sp, trackerData->lowMidRMSR, &lowMidCutR, &lowMidAmpR);
-    lowMidAmplitude = (lowMidAmpL + lowMidAmpR) / 2;
-    
-    float highMidCutL, highMidCutR;
-    sp_butbp_compute(sp, trackerData->highMidBPL, &inputL, &highMidCutL);
-    sp_butbp_compute(sp, trackerData->highMidBPR, &inputR, &highMidCutR);
-    float highMidAmpL, highMidAmpR;
-    sp_rms_compute(sp, trackerData->highMidRMSL, &highMidCutL, &highMidAmpL);
-    sp_rms_compute(sp, trackerData->highMidRMSR, &highMidCutR, &highMidAmpR);
-    highMidAmplitude = (highMidAmpL + highMidAmpR) / 2;
-    
-    float lowHighCutL, lowHighCutR;
-    sp_butbp_compute(sp, trackerData->lowHighBPL, &inputL, &lowHighCutL);
-    sp_butbp_compute(sp, trackerData->lowHighBPR, &inputR, &lowHighCutR);
-    float lowHighAmpL, lowHighAmpR;
-    sp_rms_compute(sp, trackerData->lowHighRMSL, &lowHighCutL, &lowHighAmpL);
-    sp_rms_compute(sp, trackerData->lowHighRMSR, &lowHighCutR, &lowHighAmpR);
-    lowHighAmplitude = (lowHighAmpL + lowHighAmpR) / 2;
-    
-    float highCutL, highCutR;
-    sp_buthp_compute(sp, trackerData->highCutL, &inputL, &highCutL);
-    sp_buthp_compute(sp, trackerData->highCutR, &inputR, &highCutR);
-    float highAmpL, highAmpR;
-    sp_rms_compute(sp, trackerData->highHighRMSL, &highCutL, &highAmpL);
-    sp_rms_compute(sp, trackerData->highHighRMSR, &highCutR, &highAmpR);
-    highHighAmplitude = (highAmpL + highAmpR) / 2;
-    
+    lowAmplitude = computeLP(trackerData->lowCutL, trackerData->lowCutR, trackerData->lowRMSL, trackerData->lowRMSR, inputL, inputR);
+   /*
+    bp1Amp = computeBP(trackerData->bp1L, trackerData->bp1R, trackerData->bp1RMSL, trackerData->bp1RMSL, inputL, inputR);*/
+   /* bp2Amp = computeBP(trackerData->bp2L, trackerData->bp2R, trackerData->bp2RMSL, trackerData->bp2RMSL, inputL, inputR);
+    bp3Amp = computeBP(trackerData->bp3L, trackerData->bp3R, trackerData->bp3RMSL, trackerData->bp3RMSL, inputL, inputR);
+    bp4Amp = computeBP(trackerData->bp4L, trackerData->bp4R, trackerData->bp4RMSL, trackerData->bp4RMSL, inputL, inputR);
+    bp5Amp = computeBP(trackerData->bp5L, trackerData->bp5R, trackerData->bp5RMSL, trackerData->bp5RMSL, inputL, inputR);
+    bp6Amp = computeBP(trackerData->bp6L, trackerData->bp6R, trackerData->bp6RMSL, trackerData->bp6RMSL, inputL, inputR);
+    bp7Amp = computeBP(trackerData->bp7L, trackerData->bp7R, trackerData->bp7RMSL, trackerData->bp7RMSL, inputL, inputR);
+    bp8Amp = computeBP(trackerData->bp8L, trackerData->bp8R, trackerData->bp8RMSL, trackerData->bp8RMSL, inputL, inputR);*/
+    highCutAmplitude = computeHP(trackerData->highCutL, trackerData->highCutR, trackerData->highCutRMSL, trackerData->highCutRMSR, inputL, inputR);
 }

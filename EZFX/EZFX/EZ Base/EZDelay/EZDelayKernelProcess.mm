@@ -66,6 +66,6 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;
-        calculateAmplitudes(mainOutL, mainOutR);
+        //calculateAmplitudes(mainOutL, mainOutR);
     }
 };

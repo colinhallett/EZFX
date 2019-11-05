@@ -32,18 +32,34 @@
 - (float)lowAmplitude {
     return kernelPtr->lowAmplitude;
 }
-- (float)lowMidAmplitude {
-    return kernelPtr->lowMidAmplitude;
+/*
+- (float)bp1Amp {
+    return kernelPtr->bp1Amp;
 }
-- (float)highMidAmplitude {
-    return kernelPtr->highMidAmplitude;
+- (float)bp2Amp {
+    return kernelPtr->bp2Amp;
 }
-- (float)lowHighAmplitude {
-    return kernelPtr->lowHighAmplitude;
+- (float)bp3Amp {
+    return kernelPtr->bp3Amp;
+}
+- (float)bp4Amp {
+    return kernelPtr->bp4Amp;
+}
+- (float)bp5Amp {
+    return kernelPtr->bp5Amp;
+}
+- (float)bp6Amp {
+    return kernelPtr->bp6Amp;
+}
+- (float)bp7Amp {
+    return kernelPtr->bp7Amp;
+}
+- (float)bp8Amp {
+    return kernelPtr->bp8Amp;
 }
 - (float)highHighAmplitude {
-    return kernelPtr->highHighAmplitude;
-}
+    return kernelPtr->highCutAmplitude;
+}*/
 
 - (BOOL)isSetUp { return kernelPtr->resetted; }
 

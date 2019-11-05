@@ -68,8 +68,15 @@ public:
     
     void calculateAmplitudes(float inputL, float inputR);
     
+    float computeLP(sp_butlp *filL, sp_butlp *filR, sp_rms *rmsL, sp_rms *rmsR, float inL, float inR);
+    float computeHP(sp_buthp *filL, sp_buthp *filR, sp_rms *rmsL, sp_rms *rmsR, float inL, float inR);
+    float computeBP(sp_butbp *filL, sp_butbp *filR, sp_rms *rmsL, sp_rms *rmsR, float inL, float inR);
+
+
+    
 public:
     
+    void initBP(sp_butbp **filL, sp_butbp **filR, sp_rms **rmsL, sp_rms **rmsR);
     void initTracker();
     void resetTracker();
     
@@ -80,10 +87,15 @@ public:
     void resetRamper();
     
     float lowAmplitude = 0.0;
-    float lowMidAmplitude = 0.0;
-    float highMidAmplitude = 0.0;
-    float lowHighAmplitude = 0.0;
-    float highHighAmplitude = 0.0;
+    float bp1Amp = 0.0;
+    float bp2Amp = 0.0;
+    float bp3Amp = 0.0;
+    float bp4Amp = 0.0;
+    float bp5Amp = 0.0;
+    float bp6Amp = 0.0;
+    float bp7Amp = 0.0;
+    float bp8Amp = 0.0;
+    float highCutAmplitude = 0.0;
 };
 
 #endif  // #ifdef __cplusplus
