@@ -17,14 +17,12 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
     float *outR = (float *)outBufferListPtr->mBuffers[1].mData + bufferOffset;
     
     EZKernelBase::standardEZFXGetAndSteps();
-    float xPos = EZKernelBase::xValue - 0.5;
-    float yPos = EZKernelBase::yValue - 0.5;
-    float dFromO = distanceFromOrigin(xPos, yPos);
-    
+  
     if (EZKernelBase::isActive == 0) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
             outL[i] = inL[i];
             outR[i] = inR[i];
+            calculateAmplitudes(outL[i], outR[i]);
         }
         resetFX();
         return;
@@ -40,32 +38,47 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         
-        float xPos = rampedXValue - 0.5;
-        float yPos = rampedYValue - 0.5;
-        float dFromO = distanceFromOrigin(xPos, yPos);
+        float expXVal = expValue(rampedXValue, 2);
+        //float yPos = rampedYValue - 0.5;
+       // float dFromO = distanceFromOrigin(xPos, yPos);
         
         float mainInL = inL[i];
         float mainInR = inR[i];
         
-        float delayFeedback = 0.8;
-        float delayTime = rampedYValue * 10;
-        float vDelayOutL = 0;
-        float vDelayOutR = 0;
-        vDelayL->feedback = delayFeedback;
-        vDelayL->del = delayTime;
-        sp_vdelay_compute(sp, vDelayL, &mainInL, &vDelayOutL);
-        vDelayR->feedback = delayFeedback;
-        vDelayR->del = delayTime;
-        sp_vdelay_compute(sp, vDelayR, &mainInR, &vDelayOutR);
+        float delayFeedback = rampedYValue;
+        float delayTime = expXVal * 5;
+        
+        float delayOutL = 0.f;
+        float delayOutR = 0.f;
+        float delayOutRR = 0.f;
+        float delayFillInOut = 0.f;
+        
+        vDelayL->del = vDelayR->del = delayTime * 2.f;
+        
+        vDelayRR->del = vDelayFillIn->del = delayTime;
+        
+        vDelayL->feedback = vDelayR->feedback = delayFeedback;
+        
+        vDelayRR->feedback = vDelayFillIn->feedback = 0;
+        
+        sp_vdelay_compute(sp, vDelayL, &mainInL, &delayOutL);
+        
+        sp_vdelay_compute(sp, vDelayR, &mainInR, &delayOutR);
+        
+   //     sp_vdelay_compute(sp, vDelayFillIn, &mainInR, &delayFillInOut);
+        
+        sp_vdelay_compute(sp, vDelayRR, &delayOutR, &delayOutRR);
+        
+       // delayOutRR += delayFillInOut;
         
         float mainOutL = 0;
         float mainOutR = 0;
         
-        sp_crossfade_compute(sp, mixL, &mainInL, &vDelayOutL, &mainOutL);
-        sp_crossfade_compute(sp, mixR, &mainInR, &vDelayOutR, &mainOutR);
+        sp_crossfade_compute(sp, mixL, &mainInL, &delayOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &delayOutRR, &mainOutR);
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;
-        //calculateAmplitudes(mainOutL, mainOutR);
+        calculateAmplitudes(mainOutL, mainOutR);
     }
 };

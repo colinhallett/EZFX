@@ -34,6 +34,8 @@ private:
 
     sp_vdelay *vDelayL;
     sp_vdelay *vDelayR;
+    sp_vdelay *vDelayRR;
+    sp_vdelay *vDelayFillIn;
     
 };
 
