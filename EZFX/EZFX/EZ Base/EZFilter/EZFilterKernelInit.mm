@@ -35,8 +35,10 @@ void EZFilterKernel::initSPAndSetValues() {
        
     sp_moogladder_create(&filterL);
     sp_moogladder_init(sp, filterL);
+    filterL->res = 0;
     
     sp_moogladder_create(&filterR);
     sp_moogladder_init(sp, filterR);
+    filterR->res = 0;
 }
    
