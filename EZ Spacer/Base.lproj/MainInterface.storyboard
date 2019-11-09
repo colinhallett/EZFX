@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="654.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-3I-frY">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-3I-frY">
                                 <rect key="frame" x="31" y="224.5" width="42" height="205"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZl-Ju-W4E">
@@ -85,38 +85,47 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m3E-41-kFB">
-                                <rect key="frame" x="18.5" y="792" width="170" height="31"/>
-                                <connections>
-                                    <action selector="mixSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="BAz-8u-Roh"/>
-                                </connections>
-                            </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APf-uO-SEJ">
-                                <rect key="frame" x="286" y="791.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="tHy-jJ-eoi"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQ9-Pb-ago">
-                                <rect key="frame" x="345" y="791.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="loopingSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="n2z-5M-Z9z"/>
-                                </connections>
-                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-IK-BSC">
+                                <rect key="frame" x="0.0" y="654.5" width="414" height="207.5"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN1-nj-ptN" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="83" height="207.5"/>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUM-2z-VKl" customClass="ToggleButton" customModule="EZ_Spacer" customModuleProvider="target">
+                                        <rect key="frame" x="228.5" y="0.0" width="82.5" height="207.5"/>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wI-oB-uGB" customClass="ToggleButton" customModule="EZ_Spacer" customModuleProvider="target">
+                                        <rect key="frame" x="311" y="0.0" width="83" height="207.5"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5wI-oB-uGB" firstAttribute="height" secondItem="bUM-2z-VKl" secondAttribute="height" id="3Gv-Zi-ikt"/>
+                                    <constraint firstItem="UN1-nj-ptN" firstAttribute="height" secondItem="0FJ-IK-BSC" secondAttribute="height" id="ACL-Rx-rkP"/>
+                                    <constraint firstItem="bUM-2z-VKl" firstAttribute="width" secondItem="UN1-nj-ptN" secondAttribute="width" id="AHk-1j-Wqb"/>
+                                    <constraint firstItem="5wI-oB-uGB" firstAttribute="leading" secondItem="bUM-2z-VKl" secondAttribute="trailing" id="Izl-2q-LCl"/>
+                                    <constraint firstItem="UN1-nj-ptN" firstAttribute="centerY" secondItem="0FJ-IK-BSC" secondAttribute="centerY" id="PdI-1m-NH7"/>
+                                    <constraint firstItem="5wI-oB-uGB" firstAttribute="width" secondItem="bUM-2z-VKl" secondAttribute="width" id="WAm-ng-fD7"/>
+                                    <constraint firstItem="bUM-2z-VKl" firstAttribute="height" secondItem="UN1-nj-ptN" secondAttribute="height" id="WNy-0F-z1u"/>
+                                    <constraint firstAttribute="trailing" secondItem="5wI-oB-uGB" secondAttribute="trailing" constant="20" id="YOA-sK-ryg"/>
+                                    <constraint firstItem="UN1-nj-ptN" firstAttribute="leading" secondItem="0FJ-IK-BSC" secondAttribute="leading" constant="20" id="ZFK-te-nmU"/>
+                                    <constraint firstItem="5wI-oB-uGB" firstAttribute="centerY" secondItem="0FJ-IK-BSC" secondAttribute="centerY" id="bax-p1-KSP"/>
+                                    <constraint firstItem="bUM-2z-VKl" firstAttribute="centerY" secondItem="0FJ-IK-BSC" secondAttribute="centerY" id="bkZ-mp-r52"/>
+                                    <constraint firstItem="UN1-nj-ptN" firstAttribute="width" secondItem="0FJ-IK-BSC" secondAttribute="width" multiplier="0.2" id="dZ6-bR-yAJ">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="-100"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="height" secondItem="u2v-qu-mbu" secondAttribute="height" multiplier="0.8" id="3PH-tq-p7B"/>
-                            <constraint firstItem="m3E-41-kFB" firstAttribute="width" secondItem="YBA-MM-DUV" secondAttribute="width" multiplier="0.4" id="94O-t8-qXx"/>
                             <constraint firstItem="6A2-3I-frY" firstAttribute="centerX" secondItem="YBA-MM-DUV" secondAttribute="centerX" multiplier="0.25" id="Kxu-a3-Oru"/>
-                            <constraint firstItem="u2v-qu-mbu" firstAttribute="bottom" secondItem="m3E-41-kFB" secondAttribute="bottom" constant="40" id="SLd-21-IOO"/>
-                            <constraint firstItem="vQ9-Pb-ago" firstAttribute="centerY" secondItem="APf-uO-SEJ" secondAttribute="centerY" id="btP-c9-qGM"/>
-                            <constraint firstItem="m3E-41-kFB" firstAttribute="centerX" secondItem="YBA-MM-DUV" secondAttribute="centerX" multiplier="0.5" id="eAM-Uu-kvw"/>
-                            <constraint firstItem="vQ9-Pb-ago" firstAttribute="leading" secondItem="APf-uO-SEJ" secondAttribute="trailing" constant="10" id="jpC-LG-a6z"/>
+                            <constraint firstAttribute="trailing" secondItem="0FJ-IK-BSC" secondAttribute="trailing" id="csM-vt-qQm"/>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="trailing" secondItem="u2v-qu-mbu" secondAttribute="trailing" id="k23-gq-O2X"/>
-                            <constraint firstItem="APf-uO-SEJ" firstAttribute="centerY" secondItem="m3E-41-kFB" secondAttribute="centerY" id="mI9-sf-kYr"/>
+                            <constraint firstItem="0FJ-IK-BSC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nQR-7e-v0E"/>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pAe-9N-EMv"/>
-                            <constraint firstItem="APf-uO-SEJ" firstAttribute="centerX" secondItem="YBA-MM-DUV" secondAttribute="centerX" multiplier="1.5" id="pQc-Le-rN6"/>
+                            <constraint firstItem="u2v-qu-mbu" firstAttribute="bottom" secondItem="0FJ-IK-BSC" secondAttribute="bottom" id="sdX-DE-Hcl"/>
+                            <constraint firstItem="0FJ-IK-BSC" firstAttribute="top" secondItem="YBA-MM-DUV" secondAttribute="bottom" id="ur3-jZ-fPw"/>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="leading" secondItem="u2v-qu-mbu" secondAttribute="leading" id="xf6-6a-GeL"/>
                             <constraint firstItem="6A2-3I-frY" firstAttribute="centerY" secondItem="YBA-MM-DUV" secondAttribute="centerY" id="zFr-tX-TFo"/>
                         </constraints>
@@ -132,9 +141,10 @@
                         <outlet property="bp7Level" destination="dfO-Ws-wuV" id="a2I-R2-15G"/>
                         <outlet property="bp8Level" destination="hsd-kC-OTf" id="iIu-9i-KwY"/>
                         <outlet property="highLevel" destination="2jB-9p-VK2" id="ewZ-7c-ntU"/>
-                        <outlet property="isActiveSwitchOutlet" destination="APf-uO-SEJ" id="b73-Jz-r0f"/>
                         <outlet property="lowLevel" destination="NZl-Ju-W4E" id="HA4-Lr-DIn"/>
-                        <outlet property="mixSliderOutlet" destination="m3E-41-kFB" id="Re9-PV-3le"/>
+                        <outlet property="mixKnob" destination="UN1-nj-ptN" id="b4A-n5-FSl"/>
+                        <outlet property="toggleFXButton" destination="bUM-2z-VKl" id="QlR-bS-mmQ"/>
+                        <outlet property="toggleLoopButton" destination="5wI-oB-uGB" id="iHJ-08-B3l"/>
                         <outlet property="xyPad" destination="YBA-MM-DUV" id="6Kr-Un-LP4"/>
                     </connections>
                 </viewController>

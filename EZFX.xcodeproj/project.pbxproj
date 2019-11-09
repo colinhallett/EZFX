@@ -7,6 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0D00012372328C00AC1843 /* XYPadViewTouches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */; };
+		3B0D00022372328C00AC1843 /* XYPadViewTouches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */; };
+		3B0D00032372328C00AC1843 /* XYPadViewTouches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */; };
+		3B0D00042372328C00AC1843 /* XYPadViewTouches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */; };
+		3B0D0006237234D300AC1843 /* XYPadViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */; };
+		3B0D0007237234D300AC1843 /* XYPadViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */; };
+		3B0D0008237234D300AC1843 /* XYPadViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */; };
+		3B0D0009237234D300AC1843 /* XYPadViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */; };
+		3B0D000F23723E4D00AC1843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3B0D001023723E4E00AC1843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3B0DFFF62372257700AC1843 /* EQCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFF52372257700AC1843 /* EQCircle.swift */; };
+		3B0DFFF72372257700AC1843 /* EQCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFF52372257700AC1843 /* EQCircle.swift */; };
+		3B0DFFF82372257700AC1843 /* EQCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFF52372257700AC1843 /* EQCircle.swift */; };
+		3B0DFFF92372257700AC1843 /* EQCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFF52372257700AC1843 /* EQCircle.swift */; };
+		3B0DFFFC2372258500AC1843 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
+		3B0DFFFD2372258500AC1843 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
+		3B0DFFFE2372258500AC1843 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
+		3B0DFFFF2372258500AC1843 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
+		3B1E03E123759D8A00DDFC03 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E03DF23759D8A00DDFC03 /* MainInterface.storyboard */; };
+		3B1E03E623759D8A00DDFC03 /* EZFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B1E03D823759D8A00DDFC03 /* EZFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B1E03EB23759D9500DDFC03 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
+		3B1E03EC23759D9500DDFC03 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B1E03FB23759DC000DDFC03 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E03F923759DC000DDFC03 /* MainInterface.storyboard */; };
+		3B1E040023759DC000DDFC03 /* EZCrusher.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B1E03F223759DC000DDFC03 /* EZCrusher.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B1E040423759DCD00DDFC03 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
+		3B1E040523759DCD00DDFC03 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B1E040723759DDD00DDFC03 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
+		3B1E040823759DDD00DDFC03 /* XYPadViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */; };
+		3B1E040923759DDD00DDFC03 /* XYPadRecordedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */; };
+		3B1E040A23759DDD00DDFC03 /* XYPadViewTouches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */; };
+		3B1E040B23759DDD00DDFC03 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
+		3B1E040C23759DDD00DDFC03 /* EQCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFF52372257700AC1843 /* EQCircle.swift */; };
+		3B1E040D23759DDD00DDFC03 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
+		3B1E040E23759DDD00DDFC03 /* TouchHotSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */; };
+		3B1E040F23759DDD00DDFC03 /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
+		3B1E041023759DDD00DDFC03 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
+		3B1E041123759DDD00DDFC03 /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
+		3B1E041223759DDD00DDFC03 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
+		3B1E041323759DDD00DDFC03 /* XYPadViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */; };
+		3B1E041423759DDD00DDFC03 /* XYPadRecordedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */; };
+		3B1E041523759DDD00DDFC03 /* XYPadViewTouches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */; };
+		3B1E041623759DDD00DDFC03 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
+		3B1E041723759DDD00DDFC03 /* EQCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFF52372257700AC1843 /* EQCircle.swift */; };
+		3B1E041823759DDD00DDFC03 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
+		3B1E041923759DDD00DDFC03 /* TouchHotSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */; };
+		3B1E041A23759DDD00DDFC03 /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
+		3B1E041B23759DDD00DDFC03 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
+		3B1E041C23759DDD00DDFC03 /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
+		3B1E041D23759DE100DDFC03 /* MLKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A223742A5A00FF23F3 /* MLKnob.swift */; };
+		3B1E041E23759DE100DDFC03 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
+		3B1E041F23759DE100DDFC03 /* EZFXStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */; };
+		3B1E042023759DE100DDFC03 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384AE237464E000FF23F3 /* ToggleButton.swift */; };
+		3B1E042123759DE200DDFC03 /* MLKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A223742A5A00FF23F3 /* MLKnob.swift */; };
+		3B1E042223759DE200DDFC03 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
+		3B1E042323759DE200DDFC03 /* EZFXStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */; };
+		3B1E042423759DE200DDFC03 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384AE237464E000FF23F3 /* ToggleButton.swift */; };
+		3B1E042523759DE400DDFC03 /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
+		3B1E042623759DE400DDFC03 /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
+		3B1E042723759DEA00DDFC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3B1E042823759DEA00DDFC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3B1E042A23759E2900DDFC03 /* EZFilterAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E042923759E2900DDFC03 /* EZFilterAUViewController.swift */; };
+		3B1E042C23759E3600DDFC03 /* EZCrusherAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E042B23759E3600DDFC03 /* EZCrusherAUViewController.swift */; };
+		3B43849E23742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
+		3B43849F23742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
+		3B4384A023742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
+		3B4384A123742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
+		3B4384A323742A5A00FF23F3 /* MLKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A223742A5A00FF23F3 /* MLKnob.swift */; };
+		3B4384A423742A5A00FF23F3 /* MLKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A223742A5A00FF23F3 /* MLKnob.swift */; };
+		3B4384A523742A5A00FF23F3 /* MLKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A223742A5A00FF23F3 /* MLKnob.swift */; };
+		3B4384A623742A5A00FF23F3 /* MLKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A223742A5A00FF23F3 /* MLKnob.swift */; };
+		3B4384A923742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */; };
+		3B4384AA23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */; };
+		3B4384AB23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */; };
+		3B4384AC23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */; };
+		3B4384AF237464E000FF23F3 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384AE237464E000FF23F3 /* ToggleButton.swift */; };
+		3B4384B0237464E000FF23F3 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384AE237464E000FF23F3 /* ToggleButton.swift */; };
+		3B4384B1237464E000FF23F3 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384AE237464E000FF23F3 /* ToggleButton.swift */; };
+		3B4384B2237464E000FF23F3 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4384AE237464E000FF23F3 /* ToggleButton.swift */; };
+		3B545A442372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */; };
+		3B545A452372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */; };
+		3B545A462372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */; };
+		3B545A472372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */; };
+		3B545A4A2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
+		3B545A4B2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
+		3B545A4C2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
+		3B545A4D2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
 		3B5BE802236DEEC3004B5EEA /* EZDelayAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */; };
 		3B5BE805236DEEC3004B5EEA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5BE803236DEEC3004B5EEA /* MainInterface.storyboard */; };
 		3B5BE80A236DEEC3004B5EEA /* EZ Delay.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -58,6 +144,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B1E03E423759D8A00DDFC03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1E03D723759D8A00DDFC03;
+			remoteInfo = EZFilter;
+		};
+		3B1E03FE23759DC000DDFC03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1E03F123759DC000DDFC03;
+			remoteInfo = EZCrusher;
+		};
 		3B5BE808236DEEC3004B5EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
@@ -89,6 +189,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3B1E03ED23759D9600DDFC03 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B1E03EC23759D9500DDFC03 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E040623759DCD00DDFC03 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B1E040523759DCD00DDFC03 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B5BE811236DEECE004B5EEA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,7 +241,9 @@
 			files = (
 				3BADC169236861FE00A08F19 /* EZ Spacer.appex in Embed App Extensions */,
 				3B5BE80A236DEEC3004B5EEA /* EZ Delay.appex in Embed App Extensions */,
+				3B1E040023759DC000DDFC03 /* EZCrusher.appex in Embed App Extensions */,
 				3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */,
+				3B1E03E623759D8A00DDFC03 /* EZFilter.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +273,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadViewTouches.swift; sourceTree = "<group>"; };
+		3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadViewSetup.swift; sourceTree = "<group>"; };
+		3B0DFFF52372257700AC1843 /* EQCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQCircle.swift; sourceTree = "<group>"; };
+		3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualiserLayer.swift; sourceTree = "<group>"; };
+		3B1E03D823759D8A00DDFC03 /* EZFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EZFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1E03E023759D8A00DDFC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3B1E03E223759D8A00DDFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1E03F223759DC000DDFC03 /* EZCrusher.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EZCrusher.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1E03FA23759DC000DDFC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3B1E03FC23759DC000DDFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1E042923759E2900DDFC03 /* EZFilterAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZFilterAUViewController.swift; sourceTree = "<group>"; };
+		3B1E042B23759E3600DDFC03 /* EZCrusherAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZCrusherAUViewController.swift; sourceTree = "<group>"; };
+		3B43849C23742A3300FF23F3 /* MLControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLControl.swift; sourceTree = "<group>"; };
+		3B4384A223742A5A00FF23F3 /* MLKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLKnob.swift; sourceTree = "<group>"; };
+		3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZFXStyleKit.swift; sourceTree = "<group>"; };
+		3B4384AE237464E000FF23F3 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadRecordedPaths.swift; sourceTree = "<group>"; };
+		3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadSetValues.swift; sourceTree = "<group>"; };
 		3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Delay.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDelayAUViewController.swift; sourceTree = "<group>"; };
 		3B5BE804236DEEC3004B5EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -180,6 +322,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B1E03D523759D8A00DDFC03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E03EB23759D9500DDFC03 /* AudioKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E03EF23759DC000DDFC03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E040423759DCD00DDFC03 /* AudioKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B5BE7F9236DEEC3004B5EEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +373,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1E03D923759D8A00DDFC03 /* EZFilter */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E042923759E2900DDFC03 /* EZFilterAUViewController.swift */,
+				3B1E03DF23759D8A00DDFC03 /* MainInterface.storyboard */,
+				3B1E03E223759D8A00DDFC03 /* Info.plist */,
+			);
+			path = EZFilter;
+			sourceTree = "<group>";
+		};
+		3B1E03F323759DC000DDFC03 /* EZCrusher */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E042B23759E3600DDFC03 /* EZCrusherAUViewController.swift */,
+				3B1E03F923759DC000DDFC03 /* MainInterface.storyboard */,
+				3B1E03FC23759DC000DDFC03 /* Info.plist */,
+			);
+			path = EZCrusher;
+			sourceTree = "<group>";
+		};
+		3B4384A723742AFA00FF23F3 /* StyleKit */ = {
+			isa = PBXGroup;
+			children = (
+				3B4384A223742A5A00FF23F3 /* MLKnob.swift */,
+				3B43849C23742A3300FF23F3 /* MLControl.swift */,
+				3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */,
+				3B4384AE237464E000FF23F3 /* ToggleButton.swift */,
+			);
+			path = StyleKit;
+			sourceTree = SOURCE_ROOT;
+		};
 		3B5BE7FD236DEEC3004B5EEA /* EZ Delay */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +417,7 @@
 		3B8CFBA82354C1BE00F146C9 = {
 			isa = PBXGroup;
 			children = (
+				3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */,
 				3B8CFC132354CE3100F146C9 /* EZFX-Bridging-Header.h */,
 				3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */,
 				3B8CFBB32354C1BE00F146C9 /* EZFX */,
@@ -235,6 +425,8 @@
 				3B8CFBD72354C2A500F146C9 /* EZ Chorus */,
 				3BADC15C236861FE00A08F19 /* EZ Spacer */,
 				3B5BE7FD236DEEC3004B5EEA /* EZ Delay */,
+				3B1E03D923759D8A00DDFC03 /* EZFilter */,
+				3B1E03F323759DC000DDFC03 /* EZCrusher */,
 				3B8CFBB22354C1BE00F146C9 /* Products */,
 				3B8CFBCE2354C25500F146C9 /* Frameworks */,
 			);
@@ -247,6 +439,8 @@
 				3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */,
 				3BADC15B236861FE00A08F19 /* EZ Spacer.appex */,
 				3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */,
+				3B1E03D823759D8A00DDFC03 /* EZFilter.appex */,
+				3B1E03F223759DC000DDFC03 /* EZCrusher.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,7 +452,6 @@
 				3B8CFBB82354C1BE00F146C9 /* ViewController.swift */,
 				3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */,
 				3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */,
-				3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */,
 				3B8CFBBF2354C1BF00F146C9 /* LaunchScreen.storyboard */,
 				3B8CFBC22354C1BF00F146C9 /* Info.plist */,
 			);
@@ -294,6 +487,12 @@
 			isa = PBXGroup;
 			children = (
 				3BB70E8C235A119C00D99388 /* XYPadView.swift */,
+				3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */,
+				3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */,
+				3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */,
+				3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */,
+				3B0DFFF52372257700AC1843 /* EQCircle.swift */,
+				3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */,
 				3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */,
 				3BB70E9C235DB73500D99388 /* LayerRemover.swift */,
 				3BB70E91235A3DF700D99388 /* Fader.swift */,
@@ -316,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				3BADC0DC2367197100A08F19 /* EZAUViewController.swift */,
+				3B4384A723742AFA00FF23F3 /* StyleKit */,
 				3BADC0DA2367196100A08F19 /* XYPad */,
 			);
 			path = "Shared code";
@@ -324,6 +524,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3B1E03D723759D8A00DDFC03 /* EZFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1E03EA23759D8A00DDFC03 /* Build configuration list for PBXNativeTarget "EZFilter" */;
+			buildPhases = (
+				3B1E03D423759D8A00DDFC03 /* Sources */,
+				3B1E03D523759D8A00DDFC03 /* Frameworks */,
+				3B1E03D623759D8A00DDFC03 /* Resources */,
+				3B1E03ED23759D9600DDFC03 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZFilter;
+			productName = EZFilter;
+			productReference = 3B1E03D823759D8A00DDFC03 /* EZFilter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3B1E03F123759DC000DDFC03 /* EZCrusher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1E040123759DC000DDFC03 /* Build configuration list for PBXNativeTarget "EZCrusher" */;
+			buildPhases = (
+				3B1E03EE23759DC000DDFC03 /* Sources */,
+				3B1E03EF23759DC000DDFC03 /* Frameworks */,
+				3B1E03F023759DC000DDFC03 /* Resources */,
+				3B1E040623759DCD00DDFC03 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZCrusher;
+			productName = EZCrusher;
+			productReference = 3B1E03F223759DC000DDFC03 /* EZCrusher.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3B5BE7FB236DEEC3004B5EEA /* EZ Delay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B5BE80E236DEEC3004B5EEA /* Build configuration list for PBXNativeTarget "EZ Delay" */;
@@ -358,6 +594,8 @@
 				3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */,
 				3BADC168236861FE00A08F19 /* PBXTargetDependency */,
 				3B5BE809236DEEC3004B5EEA /* PBXTargetDependency */,
+				3B1E03E523759D8A00DDFC03 /* PBXTargetDependency */,
+				3B1E03FF23759DC000DDFC03 /* PBXTargetDependency */,
 			);
 			name = EZFX;
 			productName = EZFX;
@@ -410,6 +648,12 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = ckzh;
 				TargetAttributes = {
+					3B1E03D723759D8A00DDFC03 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3B1E03F123759DC000DDFC03 = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					3B5BE7FB236DEEC3004B5EEA = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -448,6 +692,8 @@
 				3B8CFBD52354C2A500F146C9 /* EZ Chorus */,
 				3BADC15A236861FE00A08F19 /* EZ Spacer */,
 				3B5BE7FB236DEEC3004B5EEA /* EZ Delay */,
+				3B1E03D723759D8A00DDFC03 /* EZFilter */,
+				3B1E03F123759DC000DDFC03 /* EZCrusher */,
 			);
 		};
 /* End PBXProject section */
@@ -463,10 +709,29 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B1E03D623759D8A00DDFC03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E042723759DEA00DDFC03 /* Assets.xcassets in Resources */,
+				3B1E03E123759D8A00DDFC03 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E03F023759DC000DDFC03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E042823759DEA00DDFC03 /* Assets.xcassets in Resources */,
+				3B1E03FB23759DC000DDFC03 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B5BE7FA236DEEC3004B5EEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0D001023723E4E00AC1843 /* Assets.xcassets in Resources */,
 				3B5BE805236DEEC3004B5EEA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +759,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0D000F23723E4D00AC1843 /* Assets.xcassets in Resources */,
 				3BADC164236861FE00A08F19 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,16 +767,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B1E03D423759D8A00DDFC03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E041D23759DE100DDFC03 /* MLKnob.swift in Sources */,
+				3B1E042523759DE400DDFC03 /* EZAUViewController.swift in Sources */,
+				3B1E041023759DDD00DDFC03 /* Fader.swift in Sources */,
+				3B1E041F23759DE100DDFC03 /* EZFXStyleKit.swift in Sources */,
+				3B1E042A23759E2900DDFC03 /* EZFilterAUViewController.swift in Sources */,
+				3B1E042023759DE100DDFC03 /* ToggleButton.swift in Sources */,
+				3B1E040C23759DDD00DDFC03 /* EQCircle.swift in Sources */,
+				3B1E040A23759DDD00DDFC03 /* XYPadViewTouches.swift in Sources */,
+				3B1E041E23759DE100DDFC03 /* MLControl.swift in Sources */,
+				3B1E041123759DDD00DDFC03 /* ControlPoint.swift in Sources */,
+				3B1E040823759DDD00DDFC03 /* XYPadViewSetup.swift in Sources */,
+				3B1E040923759DDD00DDFC03 /* XYPadRecordedPaths.swift in Sources */,
+				3B1E040D23759DDD00DDFC03 /* VisualiserLayer.swift in Sources */,
+				3B1E040B23759DDD00DDFC03 /* XYPadSetValues.swift in Sources */,
+				3B1E040E23759DDD00DDFC03 /* TouchHotSpot.swift in Sources */,
+				3B1E040723759DDD00DDFC03 /* XYPadView.swift in Sources */,
+				3B1E040F23759DDD00DDFC03 /* LayerRemover.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1E03EE23759DC000DDFC03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1E042123759DE200DDFC03 /* MLKnob.swift in Sources */,
+				3B1E042623759DE400DDFC03 /* EZAUViewController.swift in Sources */,
+				3B1E041B23759DDD00DDFC03 /* Fader.swift in Sources */,
+				3B1E042323759DE200DDFC03 /* EZFXStyleKit.swift in Sources */,
+				3B1E042423759DE200DDFC03 /* ToggleButton.swift in Sources */,
+				3B1E041723759DDD00DDFC03 /* EQCircle.swift in Sources */,
+				3B1E041523759DDD00DDFC03 /* XYPadViewTouches.swift in Sources */,
+				3B1E042223759DE200DDFC03 /* MLControl.swift in Sources */,
+				3B1E041C23759DDD00DDFC03 /* ControlPoint.swift in Sources */,
+				3B1E041323759DDD00DDFC03 /* XYPadViewSetup.swift in Sources */,
+				3B1E041423759DDD00DDFC03 /* XYPadRecordedPaths.swift in Sources */,
+				3B1E041823759DDD00DDFC03 /* VisualiserLayer.swift in Sources */,
+				3B1E041623759DDD00DDFC03 /* XYPadSetValues.swift in Sources */,
+				3B1E041923759DDD00DDFC03 /* TouchHotSpot.swift in Sources */,
+				3B1E041223759DDD00DDFC03 /* XYPadView.swift in Sources */,
+				3B1E041A23759DDD00DDFC03 /* LayerRemover.swift in Sources */,
+				3B1E042C23759E3600DDFC03 /* EZCrusherAUViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B5BE7F8236DEEC3004B5EEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3B5BE816236DEF02004B5EEA /* Fader.swift in Sources */,
+				3B545A472372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
+				3B0DFFF92372257700AC1843 /* EQCircle.swift in Sources */,
+				3B4384AC23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
+				3B4384B2237464E000FF23F3 /* ToggleButton.swift in Sources */,
 				3B5BE817236DEF02004B5EEA /* ControlPoint.swift in Sources */,
 				3B5BE802236DEEC3004B5EEA /* EZDelayAUViewController.swift in Sources */,
 				3B5BE814236DEF02004B5EEA /* TouchHotSpot.swift in Sources */,
+				3B4384A123742A3300FF23F3 /* MLControl.swift in Sources */,
+				3B0DFFFF2372258500AC1843 /* VisualiserLayer.swift in Sources */,
+				3B0D0009237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
+				3B545A4D2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
 				3B5BE812236DEEFF004B5EEA /* EZAUViewController.swift in Sources */,
+				3B0D00042372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */,
+				3B4384A623742A5A00FF23F3 /* MLKnob.swift in Sources */,
 				3B5BE813236DEF02004B5EEA /* XYPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,12 +844,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */,
+				3B545A442372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
+				3B4384AF237464E000FF23F3 /* ToggleButton.swift in Sources */,
+				3B0D00012372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
+				3B4384A923742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
+				3B4384A323742A5A00FF23F3 /* MLKnob.swift in Sources */,
 				3BADC0DD2367197100A08F19 /* EZAUViewController.swift in Sources */,
+				3B4384A023742A3300FF23F3 /* MLControl.swift in Sources */,
 				3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */,
 				3BB70E9D235DB73500D99388 /* LayerRemover.swift in Sources */,
 				3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */,
+				3B0DFFFC2372258500AC1843 /* VisualiserLayer.swift in Sources */,
 				3BB70E9A235DB68E00D99388 /* TouchHotSpot.swift in Sources */,
 				3BB70E8D235A119C00D99388 /* XYPadView.swift in Sources */,
+				3B0D0006237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
+				3B545A4A2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
+				3B0DFFF62372257700AC1843 /* EQCircle.swift in Sources */,
 				3BB70E95235CB12500D99388 /* ControlPoint.swift in Sources */,
 				3BB70E92235A3DF700D99388 /* Fader.swift in Sources */,
 			);
@@ -536,11 +870,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BADC0DE2367197B00A08F19 /* EZAUViewController.swift in Sources */,
+				3B545A452372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
+				3B0DFFF72372257700AC1843 /* EQCircle.swift in Sources */,
+				3B4384AA23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
+				3B4384B0237464E000FF23F3 /* ToggleButton.swift in Sources */,
 				3BADC0E023671AB600A08F19 /* EZChorusAUViewController.swift in Sources */,
 				3BB70E9E235DB73500D99388 /* LayerRemover.swift in Sources */,
 				3BB70E96235CB12500D99388 /* ControlPoint.swift in Sources */,
+				3B43849F23742A3300FF23F3 /* MLControl.swift in Sources */,
+				3B0DFFFD2372258500AC1843 /* VisualiserLayer.swift in Sources */,
+				3B0D0007237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
+				3B545A4B2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
 				3BB70E93235A3DF700D99388 /* Fader.swift in Sources */,
+				3B0D00022372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3BB70E9B235DB68E00D99388 /* TouchHotSpot.swift in Sources */,
+				3B4384A423742A5A00FF23F3 /* MLKnob.swift in Sources */,
 				3BB70E8E235A119C00D99388 /* XYPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,11 +894,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BADC174236862B500A08F19 /* Fader.swift in Sources */,
+				3B545A462372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
+				3B0DFFF82372257700AC1843 /* EQCircle.swift in Sources */,
+				3B4384AB23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
+				3B4384B1237464E000FF23F3 /* ToggleButton.swift in Sources */,
 				3BADC175236862B500A08F19 /* ControlPoint.swift in Sources */,
 				3BADC161236861FE00A08F19 /* EZSpacerAUViewController.swift in Sources */,
 				3BADC172236862B500A08F19 /* TouchHotSpot.swift in Sources */,
+				3B43849E23742A3300FF23F3 /* MLControl.swift in Sources */,
+				3B0DFFFE2372258500AC1843 /* VisualiserLayer.swift in Sources */,
+				3B0D0008237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
+				3B545A4C2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
 				3BADC170236862B200A08F19 /* EZAUViewController.swift in Sources */,
+				3B0D00032372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3BADC173236862B500A08F19 /* LayerRemover.swift in Sources */,
+				3B4384A523742A5A00FF23F3 /* MLKnob.swift in Sources */,
 				3BADC171236862B500A08F19 /* XYPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +916,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B1E03E523759D8A00DDFC03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1E03D723759D8A00DDFC03 /* EZFilter */;
+			targetProxy = 3B1E03E423759D8A00DDFC03 /* PBXContainerItemProxy */;
+		};
+		3B1E03FF23759DC000DDFC03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1E03F123759DC000DDFC03 /* EZCrusher */;
+			targetProxy = 3B1E03FE23759DC000DDFC03 /* PBXContainerItemProxy */;
+		};
 		3B5BE809236DEEC3004B5EEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B5BE7FB236DEEC3004B5EEA /* EZ Delay */;
@@ -580,6 +944,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3B1E03DF23759D8A00DDFC03 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E03E023759D8A00DDFC03 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1E03F923759DC000DDFC03 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E03FA23759DC000DDFC03 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		3B5BE803236DEEC3004B5EEA /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -623,6 +1003,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B1E03E723759D8A00DDFC03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B1E03E823759D8A00DDFC03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B1E040223759DC000DDFC03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZCrusher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZCrusher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B1E040323759DC000DDFC03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZCrusher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZCrusher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3B5BE80B236DEEC3004B5EEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -947,6 +1415,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B1E03EA23759D8A00DDFC03 /* Build configuration list for PBXNativeTarget "EZFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1E03E723759D8A00DDFC03 /* Debug */,
+				3B1E03E823759D8A00DDFC03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B1E040123759DC000DDFC03 /* Build configuration list for PBXNativeTarget "EZCrusher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1E040223759DC000DDFC03 /* Debug */,
+				3B1E040323759DC000DDFC03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B5BE80E236DEEC3004B5EEA /* Build configuration list for PBXNativeTarget "EZ Delay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

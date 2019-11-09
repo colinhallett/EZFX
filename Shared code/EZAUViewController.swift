@@ -14,22 +14,11 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         return audioUnit!
     }
     
-    
     @IBOutlet weak var xyPad: XYPadView!
-    @IBAction func isActiveSwitch(_ sender: UISwitch) {
-        isActiveParameter?.setValue(sender.isOn ? 1 : 0, originator: parameterObserverToken)
-       }
-    @IBOutlet weak var isActiveSwitchOutlet: UISwitch!
     
-    @IBAction func mixSlider(_ sender: UISlider) {
-        mixParameter?.setValue(sender.value, originator: parameterObserverToken)
-    }
-    
-    @IBOutlet weak var mixSliderOutlet: UISlider!
-    
-    @IBAction func loopingSwitch(_ sender: UISwitch) {
-        xyPad.isLooping = sender.isOn
-    }
+    @IBOutlet weak var mixKnob: MLKnob!
+    @IBOutlet weak var toggleFXButton: ToggleButton!
+    @IBOutlet weak var toggleLoopButton: ToggleButton!
     
     @IBOutlet weak var lowLevel: UILabel!
     @IBOutlet weak var bp1Level: UILabel!
@@ -44,10 +33,9 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        xyPad.setupPadArea()
+        //xyPad.setupPadArea()
     }
-   
-   
+    
     var audioUnit: EZAUBase? {
         didSet {
             DispatchQueue.main.async {
@@ -123,7 +111,6 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     }
     
     func setupParameters () {
-        print ("setup params")
        
         guard let tree = audioUnit?.parameterTree else {return}
       
@@ -136,6 +123,23 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     }
     
     func connectUIToAudioUnit() {
+        mixKnob.value = Double(mixParameter?.value ?? 0.0)
+        mixKnob.callback = {value in
+            self.mixParameter?.setValue(AUValue(value), originator: self.parameterObserverToken)
+        }
+        mixKnob.knobName = "Mix"
+        mixKnob.knobNameLogic = {value in
+            return String((value * 100).rounded()) + "%"
+        }
+        
+        toggleLoopButton.callback = {toggle in
+            self.xyPad.isLooping = toggle
+        }
+        toggleFXButton.toggleOn = isActiveParameter?.value ?? 1.0 > 0.5 ? true : false
+        toggleFXButton.callback = {toggle in
+            self.isActiveParameter?.setValue(toggle ? 1 : 0, originator: self.parameterObserverToken)
+        }
+        
         guard let paramTree = audioUnit?.parameterTree else {
                    NSLog("The audio unit has no parameters!")
                    return
@@ -158,10 +162,12 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
                         strongSelf.xyPad.updateYPoint(newY: newValue)
                     case strongSelf.isActiveParameter!.address:
                         let newValue = Double(value)
-                        strongSelf.isActiveSwitchOutlet.isOn = newValue > 0.5 ? true : false
+                        //strongSelf.isActiveSwitchOutlet.isOn = newValue > 0.5 ? true : false
+                        strongSelf.toggleFXButton.toggleOn = newValue > 0.5 ? true : false
                    case strongSelf.mixParameter!.address:
                         let newValue = Float(value)
-                        strongSelf.mixSliderOutlet.setValue(newValue, animated: true)
+                        strongSelf.mixKnob.value = Double(newValue)
+                       // strongSelf.mixSliderOutlet.setValue(newValue, animated: true)
                     //set slider
                    default:
                         NSLog("address not found")
@@ -181,18 +187,25 @@ extension EZAUViewController : XYPadDelegate {
         let newValue = ((1 - value) - 0.5)
         yValueParameter?.setValue(AUValue(newValue), originator: parameterObserverToken)
     }
+    
+    func checkThreshold(input: Float, threshold: Float) -> Float {
+        return input < threshold ? 0 : input //(input > threshold ? input : (input < 0.01 ? 0 : input))
+    }
     func dLinkCallback() {
         guard let audioUnit = audioUnit else {return}
-        let lAmp = audioUnit.lowAmplitude
-       /* let bp1Amp = audioUnit.bp1Amp
-        let bp2Amp = audioUnit.bp2Amp
-        let bp3Amp = audioUnit.bp3Amp
-        let bp4Amp = audioUnit.bp4Amp
-        let bp5Amp = audioUnit.bp5Amp
-        let bp6Amp = audioUnit.bp6Amp
-        let bp7Amp = audioUnit.bp7Amp
-        let bp8Amp = audioUnit.bp8Amp
-        let highAmp = audioUnit.highHighAmplitude
+        let scaleFactor: Float = 1
+        let threshold: Float = 0.01
+        
+        let lAmp =  Float(0)//checkThreshold(input: audioUnit.lowAmplitude * scaleFactor, threshold: threshold)
+        let bp1Amp = checkThreshold(input: audioUnit.bp1Amp * scaleFactor, threshold: threshold)
+        let bp2Amp = Float(0)// checkThreshold(input: audioUnit.bp2Amp * scaleFactor, threshold: threshold)
+        let bp3Amp =  Float(0)//checkThreshold(input: audioUnit.bp3Amp * scaleFactor, threshold: threshold)
+        let bp4Amp = checkThreshold(input: audioUnit.bp4Amp * scaleFactor, threshold: threshold)
+        let bp5Amp =  Float(0)//checkThreshold(input: audioUnit.bp5Amp * scaleFactor, threshold: threshold)
+        let bp6Amp =  checkThreshold(input: audioUnit.bp6Amp * scaleFactor, threshold: threshold)
+        let bp7Amp =  Float(0)//checkThreshold(input: audioUnit.bp7Amp * scaleFactor, threshold: threshold)
+        let bp8Amp =  Float(0)//checkThreshold(input: audioUnit.bp8Amp * scaleFactor, threshold: threshold)
+        let highAmp =  checkThreshold(input: audioUnit.highHighAmplitude * scaleFactor, threshold: threshold)
         
         lowLevel.text = String(lAmp)
         bp1Level.text = String(bp1Amp)
@@ -203,10 +216,15 @@ extension EZAUViewController : XYPadDelegate {
         bp6Level.text = String(bp6Amp)
         bp7Level.text = String(bp7Amp)
         bp8Level.text = String(bp8Amp)
-        highLevel.text = String(highAmp)*/
+        highLevel.text = String(highAmp)
+        
+        xyPad.circleValues = [lAmp, bp1Amp, bp2Amp, bp3Amp, bp4Amp, bp5Amp, bp6Amp, bp7Amp, bp8Amp, highAmp]
+       // xyPad.visualiserLayer.values = [lAmp, bp1Amp, bp2Amp, bp3Amp, bp4Amp, bp5Amp, bp6Amp, bp7Amp, bp8Amp, highAmp]
         DispatchQueue.main.async {
             self.xyPad.setBackgroundColor(amount: lAmp)
+            
         }
+       
         
     }
 }

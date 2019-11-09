@@ -9,46 +9,48 @@
 import Foundation
 import UIKit
 
-class Fader : CALayer {
+class Fader : CAEmitterLayer {
     
     init(position: CGPoint, size: CGSize) {
         super.init()
-        //self.position = position
-        let newPos = CGPoint(x: position.x - size.width / 2, y: position.y - size.height / 2)
-        let circle = CAShapeLayer()
-        let path = CGPath(ellipseIn: CGRect(origin: newPos, size: size), transform: nil)
-        circle.opacity = 0.4
-        circle.path = path
-        circle.fillColor = UIColor.blue.cgColor
-        addSublayer(circle)
-        /*
-        let emitter = CAEmitterLayer()
-        emitter.emitterPosition = newPos
-            
+        name = "emitter"
+        emitterPosition = position
+        opacity = 0.5
         let cell = CAEmitterCell()
-        cell.birthRate = 10
-        cell.lifetime = 2
-        cell.velocity = 10
-        cell.scale = 0.03
+        cell.name = "childCell"
+        cell.birthRate = 1
+        cell.lifetime = 1.5
+        cell.velocity = 50
+        cell.scale = 0.3
         cell.lifetimeRange = 0.5
         cell.spin = 5
         cell.spinRange = 2
+        cell.repeatCount = 0
+        
         cell.emissionRange = CGFloat.pi * CGFloat.random(in: -2...2)
-        cell.contents = UIImage(named: "emitter.png")!.cgImage
-        emitter.emitterCells = [cell]
-        addSublayer(emitter)*/
+        if let image = UIImage(named: "emitter.png") {
+            cell.contents = image.cgImage
+        }
+        emitterCells = [cell]
     }
     
     func fade() {
-        let fade = CABasicAnimation(keyPath: #keyPath(opacity))
+        let fade = CAKeyframeAnimation(keyPath: "opacity")
         //fade.fromValue = 1.0
-        fade.toValue = 0.0
-        fade.duration = 2
-        fade.fillMode = .forwards
-        fade.isRemovedOnCompletion = false
+        fade.values = [0.5, 0.0]
+        fade.duration = 1
+        opacity = 0.0
+        
+        //fade.fillMode = .forwards
+        //fade.isRemovedOnCompletion = false
         let layerRemover = LayerRemover(for: self)
         fade.delegate = layerRemover
+        let birthRateFade = CAKeyframeAnimation(keyPath: "emitterCells.childCell.birthRate")
+        birthRateFade.values = [1.0, 0.0]
+        birthRateFade.duration = 1
+        emitterCells![0].birthRate = 0
         add(fade, forKey: "fade")
+        add(birthRateFade, forKey: "brFade")
     }
     
     required init?(coder: NSCoder) {

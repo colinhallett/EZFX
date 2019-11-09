@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="654.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ICd-e2-gGz">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ICd-e2-gGz">
                                 <rect key="frame" x="31" y="224.5" width="42" height="205"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tl6-mH-a4i">
@@ -85,40 +85,49 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-qq-hNy">
-                                <rect key="frame" x="18.5" y="792" width="170" height="31"/>
-                                <connections>
-                                    <action selector="mixSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="yvZ-zV-PXS"/>
-                                </connections>
-                            </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViR-aO-fGf">
-                                <rect key="frame" x="286" y="791.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="isActiveSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="V2C-nD-bXB"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-TY-jHK">
-                                <rect key="frame" x="345" y="791.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="loopingSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="pIb-nJ-xad"/>
-                                </connections>
-                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-bp-KZZ">
+                                <rect key="frame" x="0.0" y="654.5" width="414" height="207.5"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-jZ-BDL" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="83" height="207.5"/>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-L1-zF0" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
+                                        <rect key="frame" x="228.5" y="0.0" width="82.5" height="207.5"/>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-mM-msW" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
+                                        <rect key="frame" x="311" y="0.0" width="83" height="207.5"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1y2-mM-msW" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="453-mm-LCS"/>
+                                    <constraint firstItem="1y2-mM-msW" firstAttribute="leading" secondItem="ZUs-L1-zF0" secondAttribute="trailing" id="6Cg-lR-ejW"/>
+                                    <constraint firstAttribute="trailing" secondItem="1y2-mM-msW" secondAttribute="trailing" constant="20" id="7Hy-Ge-3gM"/>
+                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="height" secondItem="dfo-bp-KZZ" secondAttribute="height" id="999-8r-o2E"/>
+                                    <constraint firstItem="ZUs-L1-zF0" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="NhG-MG-bKv"/>
+                                    <constraint firstItem="ZUs-L1-zF0" firstAttribute="height" secondItem="LDJ-jZ-BDL" secondAttribute="height" id="OTN-OT-JQ6"/>
+                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="Q5E-9D-6UZ"/>
+                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="width" secondItem="dfo-bp-KZZ" secondAttribute="width" multiplier="0.2" id="fdM-js-H36">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="-100"/>
+                                    </constraint>
+                                    <constraint firstItem="ZUs-L1-zF0" firstAttribute="width" secondItem="LDJ-jZ-BDL" secondAttribute="width" id="ogu-fD-kOa"/>
+                                    <constraint firstItem="1y2-mM-msW" firstAttribute="width" secondItem="ZUs-L1-zF0" secondAttribute="width" id="q6D-Ra-VN8"/>
+                                    <constraint firstItem="1y2-mM-msW" firstAttribute="height" secondItem="ZUs-L1-zF0" secondAttribute="height" id="sal-n5-xXL"/>
+                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="leading" secondItem="dfo-bp-KZZ" secondAttribute="leading" constant="20" id="xRe-Za-I8e"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="CN8-dc-SKy" firstAttribute="trailing" secondItem="Qna-Td-m5b" secondAttribute="trailing" id="0Zb-og-cHa"/>
                             <constraint firstItem="ICd-e2-gGz" firstAttribute="centerX" secondItem="CN8-dc-SKy" secondAttribute="centerX" multiplier="0.25" id="0aP-6D-qUH"/>
-                            <constraint firstItem="Qna-Td-m5b" firstAttribute="bottom" secondItem="VPe-qq-hNy" secondAttribute="bottom" constant="40" id="1ch-Cc-j15"/>
-                            <constraint firstItem="ViR-aO-fGf" firstAttribute="centerX" secondItem="CN8-dc-SKy" secondAttribute="centerX" multiplier="1.5" id="5Ja-HT-hue"/>
                             <constraint firstItem="CN8-dc-SKy" firstAttribute="height" secondItem="Qna-Td-m5b" secondAttribute="height" multiplier="0.8" id="7GJ-ut-GLt"/>
-                            <constraint firstItem="VPe-qq-hNy" firstAttribute="centerX" secondItem="CN8-dc-SKy" secondAttribute="centerX" multiplier="0.5" id="AOp-hb-kPn"/>
-                            <constraint firstItem="1pn-TY-jHK" firstAttribute="leading" secondItem="ViR-aO-fGf" secondAttribute="trailing" constant="10" id="FkB-Sc-b6j"/>
+                            <constraint firstItem="Qna-Td-m5b" firstAttribute="bottom" secondItem="dfo-bp-KZZ" secondAttribute="bottom" id="GGZ-gp-ZUC"/>
                             <constraint firstItem="CN8-dc-SKy" firstAttribute="top" secondItem="2bl-J9-sdT" secondAttribute="top" id="Gsm-qe-bEn"/>
                             <constraint firstItem="CN8-dc-SKy" firstAttribute="leading" secondItem="Qna-Td-m5b" secondAttribute="leading" id="PG5-5t-Bes"/>
                             <constraint firstItem="ICd-e2-gGz" firstAttribute="centerY" secondItem="CN8-dc-SKy" secondAttribute="centerY" id="YZd-FH-uTl"/>
-                            <constraint firstItem="VPe-qq-hNy" firstAttribute="width" secondItem="CN8-dc-SKy" secondAttribute="width" multiplier="0.4" id="iuh-gS-fDN"/>
-                            <constraint firstItem="1pn-TY-jHK" firstAttribute="centerY" secondItem="ViR-aO-fGf" secondAttribute="centerY" id="oAa-TW-TDq"/>
-                            <constraint firstItem="ViR-aO-fGf" firstAttribute="centerY" secondItem="VPe-qq-hNy" secondAttribute="centerY" id="xhW-YQ-G5p"/>
+                            <constraint firstAttribute="trailing" secondItem="dfo-bp-KZZ" secondAttribute="trailing" id="bZC-3V-mLk"/>
+                            <constraint firstItem="dfo-bp-KZZ" firstAttribute="leading" secondItem="2bl-J9-sdT" secondAttribute="leading" id="dJI-P9-QPY"/>
+                            <constraint firstItem="dfo-bp-KZZ" firstAttribute="top" secondItem="CN8-dc-SKy" secondAttribute="bottom" id="dbv-1d-PnE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qna-Td-m5b"/>
                     </view>
@@ -132,9 +141,10 @@
                         <outlet property="bp7Level" destination="Ubq-0E-ayh" id="gjK-OM-yeh"/>
                         <outlet property="bp8Level" destination="53Y-Kt-bpY" id="yKb-4A-FlE"/>
                         <outlet property="highLevel" destination="wq7-k3-UO3" id="4YO-56-1mM"/>
-                        <outlet property="isActiveSwitchOutlet" destination="ViR-aO-fGf" id="fKP-4x-drp"/>
                         <outlet property="lowLevel" destination="Tl6-mH-a4i" id="lFh-P9-JSK"/>
-                        <outlet property="mixSliderOutlet" destination="VPe-qq-hNy" id="CRU-Is-Jzq"/>
+                        <outlet property="mixKnob" destination="LDJ-jZ-BDL" id="0H5-KU-ko8"/>
+                        <outlet property="toggleFXButton" destination="ZUs-L1-zF0" id="7pO-1W-Cfu"/>
+                        <outlet property="toggleLoopButton" destination="1y2-mM-msW" id="PRQ-or-uZS"/>
                         <outlet property="xyPad" destination="CN8-dc-SKy" id="VtW-L8-GNf"/>
                     </connections>
                 </viewController>
