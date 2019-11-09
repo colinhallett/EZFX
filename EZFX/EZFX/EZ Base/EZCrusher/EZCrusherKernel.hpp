@@ -33,6 +33,9 @@ public:
     
 public:
 
+    sp_paulstretch *timeStretch;
+    sp_ftbl *ft;
+    sp_tblrec *tblrec;
 };
 
 #endif /* __cplusplus */

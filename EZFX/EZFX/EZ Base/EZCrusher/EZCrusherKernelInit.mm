@@ -26,6 +26,15 @@ void EZCrusherKernel::resetFX() {
 }
 
 void EZCrusherKernel::initSPAndSetValues() {
+    sp_ftbl_create(sp, &ft, 44100 );
+       sp_ftbl_init(sp, ft, 44100 );
+    
+    
+    sp_paulstretch_create(&timeStretch);
+    sp_paulstretch_init(sp, timeStretch, ft, 1.5, 10);
+    
+    sp_tblrec_create(&tblrec);
+    sp_tblrec_init(sp, tblrec, ft);
     
 }
    
