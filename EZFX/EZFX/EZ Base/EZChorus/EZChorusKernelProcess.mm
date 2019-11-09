@@ -22,6 +22,7 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
             outL[i] = inL[i];
             outR[i] = inR[i];
+            calculateAmplitudes(outL[i], outR[i]);
         }
         resetFX();
         return;
