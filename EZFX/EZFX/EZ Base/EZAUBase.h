@@ -22,7 +22,7 @@
 @property (nonatomic) float isActive;
 @property (nonatomic) float mix;
 @property (readonly) float lowAmplitude;
-/*@property (readonly) float bp1Amp;
+@property (readonly) float bp1Amp;
 @property (readonly) float bp2Amp;
 @property (readonly) float bp3Amp;
 @property (readonly) float bp4Amp;
@@ -30,7 +30,7 @@
 @property (readonly) float bp6Amp;
 @property (readonly) float bp7Amp;
 @property (readonly) float bp8Amp;
-@property (readonly) float highHighAmplitude;*/
+@property (readonly) float highHighAmplitude;
 
 - (NSArray *)standardParameters;
 - (void)setKernelPtr:(void *)ptr;

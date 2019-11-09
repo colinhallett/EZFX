@@ -32,7 +32,7 @@
 - (float)lowAmplitude {
     return kernelPtr->lowAmplitude;
 }
-/*
+
 - (float)bp1Amp {
     return kernelPtr->bp1Amp;
 }
@@ -59,7 +59,7 @@
 }
 - (float)highHighAmplitude {
     return kernelPtr->highCutAmplitude;
-}*/
+}
 
 - (BOOL)isSetUp { return kernelPtr->resetted; }
 

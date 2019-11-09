@@ -15,12 +15,12 @@ struct EZKernelBase::TrackerData {
     sp_butlp *lowCutL;
     sp_butlp *lowCutR;
     
-  /*  sp_rms *bp1RMSL;
+    sp_rms *bp1RMSL;
     sp_rms *bp1RMSR;
     sp_butbp *bp1L;
-    sp_butbp *bp1R;*/
+    sp_butbp *bp1R;
     
-    /*sp_rms *bp2RMSL;
+    sp_rms *bp2RMSL;
     sp_rms *bp2RMSR;
     sp_butbp *bp2L;
     sp_butbp *bp2R;
@@ -53,7 +53,7 @@ struct EZKernelBase::TrackerData {
     sp_rms *bp8RMSL;
     sp_rms *bp8RMSR;
     sp_butbp *bp8L;
-    sp_butbp *bp8R;*/
+    sp_butbp *bp8R;
     
     sp_rms *highCutRMSL;
     sp_rms *highCutRMSR;
@@ -189,9 +189,16 @@ void EZKernelBase::initTracker() {
     sp_rms_init(sp, trackerData->lowRMSR);
     sp_butlp_init(sp, trackerData->lowCutL);
     sp_butlp_init(sp, trackerData->lowCutR);
-/*
+
     initBP(&trackerData->bp1L, &trackerData->bp1R, &trackerData->bp1RMSL, &trackerData->bp1RMSR);
-    */
+    initBP(&trackerData->bp2L, &trackerData->bp2R, &trackerData->bp2RMSL, &trackerData->bp2RMSR);
+    initBP(&trackerData->bp3L, &trackerData->bp3R, &trackerData->bp3RMSL, &trackerData->bp3RMSR);
+    initBP(&trackerData->bp4L, &trackerData->bp4R, &trackerData->bp4RMSL, &trackerData->bp4RMSR);
+    initBP(&trackerData->bp5L, &trackerData->bp5R, &trackerData->bp5RMSL, &trackerData->bp5RMSR);
+    initBP(&trackerData->bp6L, &trackerData->bp6R, &trackerData->bp6RMSL, &trackerData->bp6RMSR);
+    initBP(&trackerData->bp7L, &trackerData->bp7R, &trackerData->bp7RMSL, &trackerData->bp7RMSR);
+    initBP(&trackerData->bp8L, &trackerData->bp8R, &trackerData->bp8RMSL, &trackerData->bp8RMSR);
+    
     sp_rms_create(&trackerData->highCutRMSL);
     sp_rms_create(&trackerData->highCutRMSR);
     sp_buthp_create(&trackerData->highCutL);
@@ -201,15 +208,32 @@ void EZKernelBase::initTracker() {
     sp_buthp_init(sp, trackerData->highCutL);
     sp_buthp_init(sp, trackerData->highCutR);
     
+    float bandWidth = 1000;
+    trackerData->bp1L->bw = bandWidth;
+    trackerData->bp1R->bw = bandWidth;
+    trackerData->bp2L->bw = bandWidth;
+    trackerData->bp2R->bw = bandWidth;
+    trackerData->bp3L->bw = bandWidth;
+    trackerData->bp3R->bw = bandWidth;
+    trackerData->bp4L->bw = bandWidth;
+    trackerData->bp4R->bw = bandWidth;
+    trackerData->bp5L->bw = bandWidth;
+    trackerData->bp5R->bw = bandWidth;
+    trackerData->bp6L->bw = bandWidth;
+    trackerData->bp6R->bw = bandWidth;
+    trackerData->bp7L->bw = bandWidth;
+    trackerData->bp7R->bw = bandWidth;
+    trackerData->bp8L->bw = bandWidth;
+    trackerData->bp8R->bw = bandWidth;
     
     float freqs[10] = {50.f, 100.f, 200.f, 400.f, 800.f, 1600.f, 3200.f, 6400.f, 12800.f, 15000.f};
     
     trackerData->lowCutL->freq = 50.f;
     trackerData->lowCutR->freq = 50.f;
- /*   trackerData->bp1L->freq = 100.f;
-    trackerData->bp1R->freq = 100.f;*/
+    trackerData->bp1L->freq = 100.f;
+    trackerData->bp1R->freq = 100.f;
     
-    /*trackerData->bp2L->freq = freqs[2];
+    trackerData->bp2L->freq = freqs[2];
     trackerData->bp2R->freq = freqs[2];
     
     trackerData->bp3L->freq = freqs[3];
@@ -228,7 +252,7 @@ void EZKernelBase::initTracker() {
     trackerData->bp7R->freq = freqs[7];
     
     trackerData->bp8L->freq = freqs[8];
-    trackerData->bp8R->freq = freqs[8];*/
+    trackerData->bp8R->freq = freqs[8];
     
     trackerData->highCutL->freq = 15000.f;
     trackerData->highCutR->freq = 15000.f;
@@ -289,14 +313,14 @@ float EZKernelBase::computeBP(sp_butbp *filL, sp_butbp *filR, sp_rms *rmsL, sp_r
 
 void EZKernelBase::calculateAmplitudes(float inputL, float inputR) {
     lowAmplitude = computeLP(trackerData->lowCutL, trackerData->lowCutR, trackerData->lowRMSL, trackerData->lowRMSR, inputL, inputR);
-   /*
-    bp1Amp = computeBP(trackerData->bp1L, trackerData->bp1R, trackerData->bp1RMSL, trackerData->bp1RMSL, inputL, inputR);*/
-   /* bp2Amp = computeBP(trackerData->bp2L, trackerData->bp2R, trackerData->bp2RMSL, trackerData->bp2RMSL, inputL, inputR);
+   
+    bp1Amp = computeBP(trackerData->bp1L, trackerData->bp1R, trackerData->bp1RMSL, trackerData->bp1RMSL, inputL, inputR);
+    bp2Amp = computeBP(trackerData->bp2L, trackerData->bp2R, trackerData->bp2RMSL, trackerData->bp2RMSL, inputL, inputR);
     bp3Amp = computeBP(trackerData->bp3L, trackerData->bp3R, trackerData->bp3RMSL, trackerData->bp3RMSL, inputL, inputR);
     bp4Amp = computeBP(trackerData->bp4L, trackerData->bp4R, trackerData->bp4RMSL, trackerData->bp4RMSL, inputL, inputR);
     bp5Amp = computeBP(trackerData->bp5L, trackerData->bp5R, trackerData->bp5RMSL, trackerData->bp5RMSL, inputL, inputR);
     bp6Amp = computeBP(trackerData->bp6L, trackerData->bp6R, trackerData->bp6RMSL, trackerData->bp6RMSL, inputL, inputR);
     bp7Amp = computeBP(trackerData->bp7L, trackerData->bp7R, trackerData->bp7RMSL, trackerData->bp7RMSL, inputL, inputR);
-    bp8Amp = computeBP(trackerData->bp8L, trackerData->bp8R, trackerData->bp8RMSL, trackerData->bp8RMSL, inputL, inputR);*/
+    bp8Amp = computeBP(trackerData->bp8L, trackerData->bp8R, trackerData->bp8RMSL, trackerData->bp8RMSL, inputL, inputR);
     highCutAmplitude = computeHP(trackerData->highCutL, trackerData->highCutR, trackerData->highCutRMSL, trackerData->highCutRMSR, inputL, inputR);
 }
