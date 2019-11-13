@@ -78,14 +78,14 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         *reverb->eq1_freq = 10000 - (9000 * xStrength * powf(lfoOne, 4));
         sp_zitarev_compute(sp, reverb, &inputSaturatorOutL, &inputSaturatorOutR, &reverbOutL, &reverbOutR);
     
-        reverbOutL *= rampedOutputLevel;
-        reverbOutR *= rampedOutputLevel;
-        
         float mainOutL = 0;
         float mainOutR = 0;
         
         sp_crossfade_compute(sp, mixL, &mainInL, &reverbOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &reverbOutR, &mainOutR);
+        
+        mainOutL *= rampedOutputLevel;
+        mainOutR *= rampedOutputLevel;
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

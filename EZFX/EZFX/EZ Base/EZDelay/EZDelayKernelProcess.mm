@@ -84,14 +84,14 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         
        // delayOutRR += delayFillInOut;
         
-        delayOutL *= rampedOutputLevel;
-        delayOutRR *= rampedOutputLevel;
-        
         float mainOutL = 0;
         float mainOutR = 0;
         
         sp_crossfade_compute(sp, mixL, &mainInL, &delayOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &delayOutRR, &mainOutR);
+        
+        mainOutL *= rampedOutputLevel;
+        mainOutR *= rampedOutputLevel;
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

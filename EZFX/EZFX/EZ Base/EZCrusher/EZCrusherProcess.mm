@@ -94,13 +94,13 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         sp_compressor_compute(sp, compL, &hpfOutL, &compOutL);
         sp_compressor_compute(sp, compL, &hpfOutR, &compOutR);
         
-        compOutL *= rampedOutputLevel;
-        compOutR *= rampedOutputLevel;
-        
         float mainOutL, mainOutR;
         
         sp_crossfade_compute(sp, mixL, &mainInL, &compOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &compOutR, &mainOutR);
+        
+        mainOutL *= rampedOutputLevel;
+        mainOutR *= rampedOutputLevel;
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;
