@@ -16,11 +16,15 @@
 @property AUParameter *yValueAUParameter;
 @property AUParameter *isActiveAUParameter;
 @property AUParameter *mixAUParameter;
+@property AUParameter *inputLevelAUParameter;
+@property AUParameter *outputLevelAUParameter;
 
 @property (nonatomic) float xValue;
 @property (nonatomic) float yValue;
 @property (nonatomic) float isActive;
 @property (nonatomic) float mix;
+@property (nonatomic) float inputLevel;
+@property (nonatomic) float outputLevel;
 @property (readonly) float lowAmplitude;
 @property (readonly) float bp1Amp;
 @property (readonly) float bp2Amp;
@@ -39,5 +43,7 @@
 -(void)setYValue:(float)yValue;
 -(void)setIsActive:(float)isActive;
 -(void)setMix:(float)mix;
+-(void)setInputLevel:(float)inputLevel;
+-(void)setOutputLevel:(float)outputLevel;
 
 @end

@@ -29,6 +29,10 @@
 -(void)setMix:(float)mix {
     kernelPtr->setMix(mix);
 }
+-(void)setOutputLevel:(float)outputLevel {
+    kernelPtr->setOutputLevel(outputLevel);
+}
+
 - (float)lowAmplitude {
     return kernelPtr->lowAmplitude;
 }
@@ -105,21 +109,47 @@
                   flags:flags
            valueStrings:nil
     dependentParameters:nil];
+    _outputLevelAUParameter = [AUParameterTree createParameterWithIdentifier:@"outputLevel"
+                   name:@"Output Level"
+                address:EZKernelBase::outputLevelAddress
+                    min:-80.0
+                    max:20.0
+                   unit:kAudioUnitParameterUnit_Decibels
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    _inputLevelAUParameter = [AUParameterTree createParameterWithIdentifier:@"inputLevel"
+                   name:@"Input Level"
+                address:EZKernelBase::inputLevelAddress
+                    min:-80.0
+                    max:20.0
+                   unit:kAudioUnitParameterUnit_Decibels
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
     
     _xValueAUParameter.value = 0.0;
     _yValueAUParameter.value = 0.0;
     _isActiveAUParameter.value = 1.0;
-    _mixAUParameter.value = 1.0;
+    _mixAUParameter.value = 0.75;
+    _inputLevelAUParameter.value = 0;
+    _outputLevelAUParameter.value = 0;
     
     kernelPtr->setParameter(EZKernelBase::xValueAddress,  _xValueAUParameter.value);
     kernelPtr->setParameter(EZKernelBase::yValueAddress,  _yValueAUParameter.value);
     kernelPtr->setParameter(EZKernelBase::isActiveAddress,  _isActiveAUParameter.value);
     kernelPtr->setParameter(EZKernelBase::mixAddress, _mixAUParameter.value);
+    kernelPtr->setParameter(EZKernelBase::inputLevelAddress, _inputLevelAUParameter.value);
+    kernelPtr->setParameter(EZKernelBase::outputLevelAddress, _outputLevelAUParameter.value);
     
     return @[_xValueAUParameter,
             _yValueAUParameter,
             _isActiveAUParameter,
-            _mixAUParameter];
+            _mixAUParameter,
+            _inputLevelAUParameter,
+            _outputLevelAUParameter];
     
 }
 

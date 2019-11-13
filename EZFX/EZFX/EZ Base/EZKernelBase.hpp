@@ -21,7 +21,58 @@ static inline float expValue(float value, float expValue) {
 
 class EZKernelBase : public AKSoundpipeKernel {
 public:
-    struct TrackerData;
+    //struct TrackerData;
+    struct TrackerData {
+        sp_rms *lowRMSL;
+        sp_rms *lowRMSR;
+        sp_butlp *lowCutL;
+        sp_butlp *lowCutR;
+        
+        sp_rms *bp1RMSL;
+        sp_rms *bp1RMSR;
+        sp_butbp *bp1L;
+        sp_butbp *bp1R;
+        
+        sp_rms *bp2RMSL;
+        sp_rms *bp2RMSR;
+        sp_butbp *bp2L;
+        sp_butbp *bp2R;
+        
+        sp_rms *bp3RMSL;
+        sp_rms *bp3RMSR;
+        sp_butbp *bp3L;
+        sp_butbp *bp3R;
+        
+        sp_rms *bp4RMSL;
+        sp_rms *bp4RMSR;
+        sp_butbp *bp4L;
+        sp_butbp *bp4R;
+        
+        sp_rms *bp5RMSL;
+        sp_rms *bp5RMSR;
+        sp_butbp *bp5L;
+        sp_butbp *bp5R;
+        
+        sp_rms *bp6RMSL;
+        sp_rms *bp6RMSR;
+        sp_butbp *bp6L;
+        sp_butbp *bp6R;
+        
+        sp_rms *bp7RMSL;
+        sp_rms *bp7RMSR;
+        sp_butbp *bp7L;
+        sp_butbp *bp7R;
+        
+        sp_rms *bp8RMSL;
+        sp_rms *bp8RMSR;
+        sp_butbp *bp8L;
+        sp_butbp *bp8R;
+        
+        sp_rms *highCutRMSL;
+        sp_rms *highCutRMSR;
+        sp_buthp *highCutL;
+        sp_buthp *highCutR;
+    };
     std::shared_ptr<TrackerData> trackerData;
  
 public:
@@ -30,6 +81,8 @@ public:
     float yValue = 0.0;
     float mix = 1.0;
     float isActive = 1.0;
+    float inputLevel = 0.5;
+    float outputLevel = 1.0;
     
     bool resetted = false; 
     bool fxResetted = false;
@@ -38,12 +91,20 @@ public:
     ParameterRamper yValueRamper = 0.0;
     ParameterRamper isActiveRamper = 1.0;
     ParameterRamper mixRamper = 1.0;
+    ParameterRamper outputLevelRamper = 1.0;
+    ParameterRamper inputLevelRamper = 0.5;
     
     sp_crossfade *mixL;
     sp_crossfade *mixR;
     
     enum EZAddresses {
-        xValueAddress, yValueAddress, isActiveAddress, mixAddress
+        xValueAddress = 0,
+        yValueAddress,
+        isActiveAddress,
+        mixAddress,
+        outputLevelAddress,
+        inputLevelAddress,
+        amountOfEZAddresses
     };
     
     // Uses the ParameterAddress as a key
@@ -68,6 +129,8 @@ public:
     void setYValue(float value);
     void setIsActive(float value);
     void setMix(float value);
+    void setOutputLevel(float value);
+    void setInputLevel(float value);
     
     void calculateAmplitudes(float inputL, float inputR);
     
@@ -85,6 +148,8 @@ public:
     
     sp_port *internalXRamper;
     sp_port *internalYRamper;
+    sp_port *internalOutputLevelRamper;
+    sp_port *internalInputLevelRamper;
     
     void initRamper();
     void resetRamper();
