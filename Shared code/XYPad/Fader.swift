@@ -11,7 +11,7 @@ import UIKit
 
 class Fader : CAEmitterLayer {
     
-    init(position: CGPoint, size: CGSize) {
+    init(position: CGPoint, size: CGSize, type: XYPadType) {
         super.init()
         name = "emitter"
         emitterPosition = position
@@ -26,9 +26,21 @@ class Fader : CAEmitterLayer {
         cell.spin = 5
         cell.spinRange = 2
         cell.repeatCount = 0
-        
+        var emitter = "BlueEmitter.png"
+        switch type {
+            case .Chorus:
+                emitter = "OrangeEmitter.png"
+            case .Spacer:
+                emitter = "BlueEmitter.png"
+            case .Crusher:
+                emitter = "RedEmitter.png"
+            case .Filter:
+                emitter = "PurpleEmitter.png"
+            case .Delay:
+                emitter = "GreenEmitter.png"
+        }
         cell.emissionRange = CGFloat.pi * CGFloat.random(in: -2...2)
-        if let image = UIImage(named: "emitter.png") {
+        if let image = UIImage(named: emitter) {
             cell.contents = image.cgImage
         }
         emitterCells = [cell]

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,15 +13,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EZCrusherAUViewController" customModule="EZCrusher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dkv-gK-1kg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-L0-sJl" customClass="XYPadView" customModule="EZ_Delay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="654.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-L0-sJl" customClass="XYPadView" customModule="EZCrusher" customModuleProvider="target">
+                                <rect key="frame" x="44" y="0.0" width="808" height="314.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewType">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LyF-i3-31S">
-                                <rect key="frame" x="31" y="224.5" width="42" height="205"/>
+                                <rect key="frame" x="91" y="54.5" width="42" height="205"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3th-RT-Ju7">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -85,33 +91,37 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nic-tU-uCM">
-                                <rect key="frame" x="0.0" y="654.5" width="414" height="207.5"/>
+                                <rect key="frame" x="0.0" y="314.5" width="896" height="78.5"/>
                                 <subviews>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyQ-e4-vOp" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="83" height="207.5"/>
-                                    </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-lx-GES" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
-                                        <rect key="frame" x="228.5" y="0.0" width="82.5" height="207.5"/>
-                                    </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7b-al-ztU" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
-                                        <rect key="frame" x="311" y="0.0" width="83" height="207.5"/>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-yX-CmR">
+                                        <rect key="frame" x="0.0" y="0.0" width="896" height="78.5"/>
+                                        <subviews>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyQ-e4-vOp" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="78.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7J-7K-kE0" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="151.5" y="0.0" width="138" height="78.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-BE-tPM" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="303.5" y="0.0" width="137.5" height="78.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-Np-fna" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="455" y="0.0" width="137.5" height="78.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-lx-GES" customClass="ToggleButton" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="606.5" y="0.0" width="138" height="78.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7b-al-ztU" customClass="ToggleButton" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="758.5" y="0.0" width="137.5" height="78.5"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="r7b-al-ztU" firstAttribute="leading" secondItem="mmz-lx-GES" secondAttribute="trailing" id="1xB-SX-VaU"/>
-                                    <constraint firstItem="CyQ-e4-vOp" firstAttribute="leading" secondItem="nic-tU-uCM" secondAttribute="leading" constant="20" id="4do-Bs-wF8"/>
-                                    <constraint firstItem="r7b-al-ztU" firstAttribute="centerY" secondItem="nic-tU-uCM" secondAttribute="centerY" id="Eup-Qo-IP5"/>
-                                    <constraint firstItem="mmz-lx-GES" firstAttribute="width" secondItem="CyQ-e4-vOp" secondAttribute="width" id="KNJ-z7-1cQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="r7b-al-ztU" secondAttribute="trailing" constant="20" id="QpQ-sC-m5g"/>
-                                    <constraint firstItem="CyQ-e4-vOp" firstAttribute="width" secondItem="nic-tU-uCM" secondAttribute="width" multiplier="0.2" id="VhT-Ib-YP8">
-                                        <variation key="heightClass=compact-widthClass=regular" constant="-100"/>
-                                    </constraint>
-                                    <constraint firstItem="CyQ-e4-vOp" firstAttribute="centerY" secondItem="nic-tU-uCM" secondAttribute="centerY" id="cC0-hn-wgL"/>
-                                    <constraint firstItem="r7b-al-ztU" firstAttribute="width" secondItem="mmz-lx-GES" secondAttribute="width" id="clr-IT-9Lg"/>
-                                    <constraint firstItem="mmz-lx-GES" firstAttribute="centerY" secondItem="nic-tU-uCM" secondAttribute="centerY" id="hnB-HU-y18"/>
-                                    <constraint firstItem="mmz-lx-GES" firstAttribute="height" secondItem="CyQ-e4-vOp" secondAttribute="height" id="ieQ-mF-gaf"/>
-                                    <constraint firstItem="CyQ-e4-vOp" firstAttribute="height" secondItem="nic-tU-uCM" secondAttribute="height" id="qE8-Hg-t1o"/>
-                                    <constraint firstItem="r7b-al-ztU" firstAttribute="height" secondItem="mmz-lx-GES" secondAttribute="height" id="xEQ-se-9dX"/>
+                                    <constraint firstItem="1wb-yX-CmR" firstAttribute="width" secondItem="nic-tU-uCM" secondAttribute="width" id="97L-aY-WN5"/>
+                                    <constraint firstItem="1wb-yX-CmR" firstAttribute="centerX" secondItem="nic-tU-uCM" secondAttribute="centerX" id="GgJ-MH-Fu1"/>
+                                    <constraint firstItem="1wb-yX-CmR" firstAttribute="height" secondItem="nic-tU-uCM" secondAttribute="height" id="lxQ-ch-Ghw"/>
+                                    <constraint firstItem="1wb-yX-CmR" firstAttribute="centerY" secondItem="nic-tU-uCM" secondAttribute="centerY" id="vfU-mD-dAs"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -140,8 +150,11 @@
                         <outlet property="bp7Level" destination="c7e-xh-ufE" id="7Ah-G1-QMf"/>
                         <outlet property="bp8Level" destination="Kkb-g9-QE4" id="a8x-GZ-bae"/>
                         <outlet property="highLevel" destination="NYG-SG-hvD" id="z2i-gG-4cR"/>
+                        <outlet property="inputLevelKnob" destination="A7J-7K-kE0" id="aQC-d3-Ggf"/>
                         <outlet property="lowLevel" destination="3th-RT-Ju7" id="6YV-kR-nRQ"/>
                         <outlet property="mixKnob" destination="CyQ-e4-vOp" id="j44-jD-CP4"/>
+                        <outlet property="noiseLevelKnob" destination="9FB-Np-fna" id="AE0-pC-OxS"/>
+                        <outlet property="outputLevelKnob" destination="Cab-BE-tPM" id="d8m-3y-uTQ"/>
                         <outlet property="toggleFXButton" destination="mmz-lx-GES" id="lel-2a-1dU"/>
                         <outlet property="toggleLoopButton" destination="r7b-al-ztU" id="vRN-Pp-7Yd"/>
                         <outlet property="xyPad" destination="4gg-L0-sJl" id="Xlq-Hb-v0g"/>

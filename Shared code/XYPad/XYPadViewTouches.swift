@@ -35,7 +35,9 @@ extension XYPadView {
                 recordedPaths.removeAll()
                 startPlayback = false
             }
-            let location = touch.location(in: self)
+            var location = touch.location(in: self)
+            location.x = location.x < circleRadius ? circleRadius : (location.x > width - circleRadius ? width - circleRadius : location.x)
+            location.y = location.y < circleRadius ? circleRadius : (location.y > height - circleRadius ? height - circleRadius : location.y)
             handleTouch(point: location)
             addHotSpot(point: location)
         }
@@ -45,8 +47,8 @@ extension XYPadView {
         for touch in touches {
             var location = touch.location(in: self)
             
-            location.x = location.x < 0 ? 0 : (location.x > width ? width : location.x)
-            location.y = location.y < 0 ? 0 : (location.y > height ? height : location.y)
+            location.x = location.x < circleRadius ? circleRadius : (location.x > width - circleRadius ? width - circleRadius : location.x)
+            location.y = location.y < circleRadius ? circleRadius : (location.y > height - circleRadius ? height - circleRadius : location.y)
             handleTouch(point: location)
             
             //addHotSpot(point: location)
@@ -56,8 +58,8 @@ extension XYPadView {
         super.touchesEnded(touches, with: event)
         for touch in touches {
             var location = touch.location(in: self)
-            location.x = location.x < 0 ? 0 : (location.x > width ? width : location.x)
-            location.y = location.y < 0 ? 0 : (location.y > height ? height : location.y)
+            location.x = location.x < circleRadius ? circleRadius : (location.x > width - circleRadius ? width - circleRadius : location.x)
+            location.y = location.y < circleRadius ? circleRadius : (location.y > height - circleRadius ? height - circleRadius : location.y)
             handleTouch(point: location)
             
             if let pres = circle.presentation() {

@@ -25,14 +25,15 @@ class VisualiserLayer : CALayer {
         UIColor(red:0.84, green:0.86, blue:0.95, alpha:1.0), // 8
         UIColor(red:1.0, green:1.0, blue:1.00, alpha:1.0)] //9
     
-    init(frame: CGRect) {
+    init(frame: CGRect, type: XYPadType) {
         super.init()
       /*  let test = EQCircle(frame: frame, color: UIColor.blue)
         test.position = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
         print (test)
         addSublayer(test)*/
-        for color in circleColors {
-            let newCircle = EQCircle(frame: frame, color: color)
+        
+        for nothing in circleColors {
+            let newCircle = EQCircle(frame: frame, type: type)
             newCircle.position = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
             eqCircles.append(newCircle)
             addSublayer(newCircle)

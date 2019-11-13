@@ -45,10 +45,17 @@ public class MLControl: UIView {
         set(newValue) {
             _value = onlyIntegers ? round(newValue) : newValue
             _value = range.clamp(_value)
-            controlValue = CGFloat(newValue.normalized(from: range, taper: taper))
+         //   controlValue = CGFloat(newValue.normalized(from: range, taper: taper))
+            controlValue = CGFloat(_value.normalized(from: range, taper: taper))
             let newName = knobNameLogic(newValue)
+            
             if newName != "" {
                 knobText = newName
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+                    if self.knobText == newName {
+                        self.knobText = self.knobName
+                    }
+                }
             }
         }
     }

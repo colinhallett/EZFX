@@ -12,10 +12,11 @@ import UIKit
 class EQCircle : CAEmitterLayer {
     
     var initalScale: CGFloat = 1
+    var initialVelocity: CGFloat = 30
     var initalBirthRate: Float = 3
     var maxOpacity: Float = 10
     var imageSize: CGSize!
-    init(frame: CGRect, color: UIColor) {
+    init(frame: CGRect, type: XYPadType) {
         super.init()
         emitterSize = frame.size
         emitterMode = .volume
@@ -23,13 +24,13 @@ class EQCircle : CAEmitterLayer {
         emitterShape = .point
         //emitterPosition = newPo
         let cell = CAEmitterCell()
-        cell.color = color.cgColor
+        //cell.color = color.cgColor
         cell.name = "childCell"
         cell.birthRate = initalBirthRate
         cell.lifetime = 5
         cell.lifetimeRange = 3
         cell.velocityRange = 50
-        cell.velocity = 30
+        cell.velocity = initialVelocity
         cell.scale = initalScale
         cell.scaleRange = 0.03
         cell.scaleSpeed = 0.005
@@ -40,8 +41,21 @@ class EQCircle : CAEmitterLayer {
         //cell.blueRange = 3
        // cell.redSpeed = 0.2
         //cell.redRange = 2
+        var emitter = "BlueEmitter.png"
+        switch type {
+            case .Chorus:
+                emitter = "OrangeEmitter.png"
+            case .Spacer:
+                emitter = "BlueEmitter.png"
+            case .Crusher:
+                emitter = "RedEmitter.png"
+            case .Filter:
+                emitter = "PurpleEmitter.png"
+            case .Delay:
+                emitter = "GreenEmitter.png"
+        }
         cell.emissionRange = CGFloat.pi * 2// CGFloat.random(in: -10...10)
-        if let image = UIImage(named: "emitter.png") {
+        if let image = UIImage(named: emitter) {
             imageSize = image.size
             let widthScale = frame.size.width / imageSize.width
             let heightScale = frame.size.height / imageSize.height
@@ -93,6 +107,8 @@ class EQCircle : CAEmitterLayer {
         let widthScale = frame.size.width / imageSize.width
         let heightScale = frame.size.height / imageSize.height
         initalScale = widthScale > heightScale ? widthScale : heightScale
+        initialVelocity = initialVelocity * 30;
+        setValue(initialVelocity, forKey: "emitterCells.childCell.velocity")
         setValue(initalScale, forKeyPath: "emitterCells.childCell.scale")
     }
     required init?(coder: NSCoder) {

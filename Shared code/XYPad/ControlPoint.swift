@@ -11,13 +11,26 @@ import UIKit
 
 class ControlPoint : CALayer {
     
-    init(size: CGSize, origin: CGPoint) {
+    init(size: CGSize, origin: CGPoint, type: XYPadType) {
         super.init()
+        var emitter = "BlueEmitter.png"
+        switch type {
+            case .Chorus:
+                emitter = "OrangeEmitter.png"
+            case .Spacer:
+                emitter = "BlueEmitter.png"
+            case .Crusher:
+                emitter = "RedEmitter.png"
+            case .Filter:
+                emitter = "PurpleEmitter.png"
+            case .Delay:
+                emitter = "GreenEmitter.png"
+        }
         
         let newOrigin = CGPoint(x: origin.x - size.width / 2 , y: origin.y - size.height / 2)
         let imageLayer = CALayer()
         imageLayer.frame = CGRect(origin: newOrigin, size: size)
-        if let image = UIImage(named: "emitter.png") {
+        if let image = UIImage(named: emitter) {
            /* let heightScale = size.height / image.size.height / size.height
             let widthScale = size.width / image.size.width
             let scale = widthScale > heightScale ? widthScale : heightScale
@@ -26,6 +39,7 @@ class ControlPoint : CALayer {
             imageLayer.contentsGravity = CALayerContentsGravity.center
             imageLayer.contents = image.cgImage
             addSublayer(imageLayer)
+            
         }
        /* let circle = CAShapeLayer()
         

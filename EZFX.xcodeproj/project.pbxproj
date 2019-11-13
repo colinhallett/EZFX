@@ -69,6 +69,12 @@
 		3B1E042823759DEA00DDFC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
 		3B1E042A23759E2900DDFC03 /* EZFilterAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E042923759E2900DDFC03 /* EZFilterAUViewController.swift */; };
 		3B1E042C23759E3600DDFC03 /* EZCrusherAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E042B23759E3600DDFC03 /* EZCrusherAUViewController.swift */; };
+		3B1E04352376E61D00DDFC03 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E04342376E61D00DDFC03 /* Helpers.swift */; };
+		3B1E04362376E61D00DDFC03 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E04342376E61D00DDFC03 /* Helpers.swift */; };
+		3B1E04372376E61D00DDFC03 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E04342376E61D00DDFC03 /* Helpers.swift */; };
+		3B1E04382376E61D00DDFC03 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E04342376E61D00DDFC03 /* Helpers.swift */; };
+		3B1E04392376E61D00DDFC03 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E04342376E61D00DDFC03 /* Helpers.swift */; };
+		3B1E043A2376E61D00DDFC03 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E04342376E61D00DDFC03 /* Helpers.swift */; };
 		3B43849E23742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
 		3B43849F23742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
 		3B4384A023742A3300FF23F3 /* MLControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43849C23742A3300FF23F3 /* MLControl.swift */; };
@@ -285,6 +291,7 @@
 		3B1E03FC23759DC000DDFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1E042923759E2900DDFC03 /* EZFilterAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZFilterAUViewController.swift; sourceTree = "<group>"; };
 		3B1E042B23759E3600DDFC03 /* EZCrusherAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZCrusherAUViewController.swift; sourceTree = "<group>"; };
+		3B1E04342376E61D00DDFC03 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3B43849C23742A3300FF23F3 /* MLControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLControl.swift; sourceTree = "<group>"; };
 		3B4384A223742A5A00FF23F3 /* MLKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLKnob.swift; sourceTree = "<group>"; };
 		3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZFXStyleKit.swift; sourceTree = "<group>"; };
@@ -391,6 +398,14 @@
 				3B1E03FC23759DC000DDFC03 /* Info.plist */,
 			);
 			path = EZCrusher;
+			sourceTree = "<group>";
+		};
+		3B1E04332376E60E00DDFC03 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3B1E04342376E61D00DDFC03 /* Helpers.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		3B4384A723742AFA00FF23F3 /* StyleKit */ = {
@@ -515,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				3BADC0DC2367197100A08F19 /* EZAUViewController.swift */,
+				3B1E04332376E60E00DDFC03 /* Helper */,
 				3B4384A723742AFA00FF23F3 /* StyleKit */,
 				3BADC0DA2367196100A08F19 /* XYPad */,
 			);
@@ -784,6 +800,7 @@
 				3B1E040823759DDD00DDFC03 /* XYPadViewSetup.swift in Sources */,
 				3B1E040923759DDD00DDFC03 /* XYPadRecordedPaths.swift in Sources */,
 				3B1E040D23759DDD00DDFC03 /* VisualiserLayer.swift in Sources */,
+				3B1E04392376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B1E040B23759DDD00DDFC03 /* XYPadSetValues.swift in Sources */,
 				3B1E040E23759DDD00DDFC03 /* TouchHotSpot.swift in Sources */,
 				3B1E040723759DDD00DDFC03 /* XYPadView.swift in Sources */,
@@ -808,6 +825,7 @@
 				3B1E041423759DDD00DDFC03 /* XYPadRecordedPaths.swift in Sources */,
 				3B1E041823759DDD00DDFC03 /* VisualiserLayer.swift in Sources */,
 				3B1E041623759DDD00DDFC03 /* XYPadSetValues.swift in Sources */,
+				3B1E043A2376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B1E041923759DDD00DDFC03 /* TouchHotSpot.swift in Sources */,
 				3B1E041223759DDD00DDFC03 /* XYPadView.swift in Sources */,
 				3B1E041A23759DDD00DDFC03 /* LayerRemover.swift in Sources */,
@@ -832,6 +850,7 @@
 				3B0D0009237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
 				3B545A4D2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
 				3B5BE812236DEEFF004B5EEA /* EZAUViewController.swift in Sources */,
+				3B1E04382376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B0D00042372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */,
 				3B4384A623742A5A00FF23F3 /* MLKnob.swift in Sources */,
@@ -846,6 +865,7 @@
 				3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */,
 				3B545A442372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
 				3B4384AF237464E000FF23F3 /* ToggleButton.swift in Sources */,
+				3B1E04352376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B0D00012372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3B4384A923742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
 				3B4384A323742A5A00FF23F3 /* MLKnob.swift in Sources */,
@@ -882,6 +902,7 @@
 				3B0D0007237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
 				3B545A4B2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
 				3BB70E93235A3DF700D99388 /* Fader.swift in Sources */,
+				3B1E04362376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B0D00022372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3BB70E9B235DB68E00D99388 /* TouchHotSpot.swift in Sources */,
 				3B4384A423742A5A00FF23F3 /* MLKnob.swift in Sources */,
@@ -906,6 +927,7 @@
 				3B0D0008237234D300AC1843 /* XYPadViewSetup.swift in Sources */,
 				3B545A4C2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */,
 				3BADC170236862B200A08F19 /* EZAUViewController.swift in Sources */,
+				3B1E04372376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B0D00032372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3BADC173236862B500A08F19 /* LayerRemover.swift in Sources */,
 				3B4384A523742A5A00FF23F3 /* MLKnob.swift in Sources */,

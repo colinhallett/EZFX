@@ -61,14 +61,14 @@ extension XYPadView {
     }
     
     func setupCircle() {
-        circle = ControlPoint(size: CGSize(width: circleDiameter, height: circleDiameter), origin: CGPoint())
+        circle = ControlPoint(size: CGSize(width: circleDiameter, height: circleDiameter), origin: CGPoint(), type: type)
         circle.frame.origin = posInView
         layer.addSublayer(circle)
         
     }
     
     func setupVisualiserLayer() {
-        visualiserLayer = VisualiserLayer(frame: bounds)
+        visualiserLayer = VisualiserLayer(frame: bounds, type: type)
         visualiserLayer.bounds = bounds
         visualiserLayer.masksToBounds = true
         CATransaction.begin()

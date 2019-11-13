@@ -9,7 +9,24 @@
 import Foundation
 import UIKit
 
+enum XYPadType: Int {
+    case Chorus = 0,
+    Spacer = 1,
+    Crusher = 2,
+    Filter = 3,
+    Delay = 4
+}
+
 class XYPadView: UIView {
+
+    @IBInspectable var viewType: Int = 0
+    
+    var type: XYPadType {
+        get {
+            let newType = XYPadType(rawValue: viewType)
+            return newType!
+        }
+    }
     
     var posInView = CGPoint()
     override var bounds: CGRect {
@@ -87,10 +104,15 @@ class XYPadView: UIView {
     ///init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        sharedInit()
+        
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         sharedInit()
     }
     

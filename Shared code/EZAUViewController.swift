@@ -17,6 +17,8 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     @IBOutlet weak var xyPad: XYPadView!
     
     @IBOutlet weak var mixKnob: MLKnob!
+    @IBOutlet weak var inputLevelKnob: MLKnob!
+    @IBOutlet weak var outputLevelKnob: MLKnob!
     @IBOutlet weak var toggleFXButton: ToggleButton!
     @IBOutlet weak var toggleLoopButton: ToggleButton!
     
@@ -47,10 +49,12 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         }
     }
     
-    private var xValueParameter: AUParameter?
-    private var yValueParameter: AUParameter?
-    private var isActiveParameter: AUParameter?
-    private var mixParameter: AUParameter?
+    var xValueParameter: AUParameter?
+    var yValueParameter: AUParameter?
+    var isActiveParameter: AUParameter?
+    var mixParameter: AUParameter?
+    var inputLevelParameter: AUParameter?
+    var outputLevelParameter: AUParameter?
     
     var parameterObserverToken: AUParameterObserverToken?
     
@@ -99,6 +103,28 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
             }
         }
     }
+    @objc open dynamic var inputLevel: Double = 0.8 {
+        willSet {
+            guard inputLevel != newValue else { return }
+            if audioUnit?.isSetUp == true {
+                inputLevelParameter?.value = AUValue(newValue)
+                return
+            } else {
+                audioUnit?.inputLevel = AUValue(newValue)
+            }
+        }
+    }
+    @objc open dynamic var outputLevel: Double = 0.8 {
+        willSet {
+            guard outputLevel != newValue else { return }
+            if audioUnit?.isSetUp == true {
+                outputLevelParameter?.value = AUValue(newValue)
+                return
+            } else {
+                audioUnit?.outputLevel = AUValue(newValue)
+            }
+        }
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,11 +144,13 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         yValueParameter = tree["yValue"]
         isActiveParameter = tree["isActive"]
         mixParameter = tree["mix"]
+        inputLevelParameter = tree["inputLevel"]
+        outputLevelParameter = tree["outputLevel"]
         
         audioUnit?.rampDuration = 0.00001
     }
     
-    func connectUIToAudioUnit() {
+    func setupKnobs() {
         mixKnob.value = Double(mixParameter?.value ?? 0.0)
         mixKnob.callback = {value in
             self.mixParameter?.setValue(AUValue(value), originator: self.parameterObserverToken)
@@ -130,6 +158,32 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         mixKnob.knobName = "Mix"
         mixKnob.knobNameLogic = {value in
             return String((value * 100).rounded()) + "%"
+        }
+        
+        let newOutputLevel = convertToRange(number: Double(outputLevelParameter?.value ?? 0.0), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
+        outputLevelKnob.value = newOutputLevel
+        outputLevelKnob.callback = {value in
+            let newValue = convertToRange(number: value, inputRange: 0..<1.0, outputRange: -80.0..<20.0)
+            self.outputLevelParameter?.setValue(AUValue(newValue), originator: self.parameterObserverToken)
+        }
+        outputLevelKnob.knobName = "Output Gain"
+        outputLevelKnob.knobNameLogic = {value in
+            let newValue = (convertToRange(number: value, inputRange: 0..<1.0, outputRange: -80.0..<20.0) * 100).rounded() / 100
+            
+            return String(newValue) + " dB"
+        }
+        
+        let newInputLevel = convertToRange(number: Double(inputLevelParameter?.value ?? 0.0), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
+        inputLevelKnob.value = newInputLevel
+        inputLevelKnob.callback = {value in
+            let newValue = convertToRange(number: value, inputRange: 0..<1.0, outputRange: -80.0..<20.0)
+            self.inputLevelParameter?.setValue(AUValue(newValue), originator: self.parameterObserverToken)
+        }
+        inputLevelKnob.knobName = "Input Gain"
+        inputLevelKnob.knobNameLogic = {value in
+            let newValue = (convertToRange(number: value, inputRange: 0..<1.0, outputRange: -80.0..<20.0) * 100).rounded() / 100
+            
+            return String(newValue) + " dB"
         }
         
         toggleLoopButton.callback = {toggle in
@@ -140,17 +194,24 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
             self.isActiveParameter?.setValue(toggle ? 1 : 0, originator: self.parameterObserverToken)
         }
         
-        guard let paramTree = audioUnit?.parameterTree else {
-                   NSLog("The audio unit has no parameters!")
-                   return
-               }
+        let newXValue = Double(xValueParameter?.value ?? 0) + 0.5
+        xyPad.updateXPoint(newX: newXValue)
+        let newYValue = Double(yValueParameter?.value ?? 0) + 0.5
+        xyPad.updateYPoint(newY: newYValue)
+    }
+    
+    func setupParamterObservationToken() {
         
-           parameterObserverToken = paramTree.token(byAddingParameterObserver: { [weak self] address, value in
+        guard let paramTree = audioUnit?.parameterTree else {
+           NSLog("The audio unit has no parameters!")
+           return
+        }
+        
+        parameterObserverToken =     paramTree.token(byAddingParameterObserver: { [weak self] address, value in
                guard let strongSelf = self else {
                    NSLog("self is nil; returning")
                    return
                }
-               
                DispatchQueue.main.async {
                    switch address {
                     case strongSelf.xValueParameter!.address:
@@ -169,14 +230,29 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
                         strongSelf.mixKnob.value = Double(newValue)
                        // strongSelf.mixSliderOutlet.setValue(newValue, animated: true)
                     //set slider
+                    case strongSelf.inputLevelParameter!.address:
+                        strongSelf.inputLevelKnob.value = convertToRange(number: Double(value), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
+                    case strongSelf.outputLevelParameter!.address:
+                        strongSelf.outputLevelKnob.value = convertToRange(number: Double(value), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
                    default:
                         NSLog("address not found")
                 }
             }
         })
     }
+
+    func connectUIToAudioUnit() {
+        setupParamterObservationToken()
+        setupKnobs()
+        setDefaults()
+    }
     
+    func setDefaults() {
+        
+    }
+
 }
+
 
 extension EZAUViewController : XYPadDelegate {
     func setXValue(value: Double) {
@@ -193,18 +269,18 @@ extension EZAUViewController : XYPadDelegate {
     }
     func dLinkCallback() {
         guard let audioUnit = audioUnit else {return}
-        let scaleFactor: Float = 1
+        let scaleFactor: Float = 5
         let threshold: Float = 0.01
         
-        let lAmp =  Float(0)//checkThreshold(input: audioUnit.lowAmplitude * scaleFactor, threshold: threshold)
+        let lAmp = checkThreshold(input: audioUnit.lowAmplitude * scaleFactor, threshold: threshold)
         let bp1Amp = checkThreshold(input: audioUnit.bp1Amp * scaleFactor, threshold: threshold)
-        let bp2Amp = Float(0)// checkThreshold(input: audioUnit.bp2Amp * scaleFactor, threshold: threshold)
-        let bp3Amp =  Float(0)//checkThreshold(input: audioUnit.bp3Amp * scaleFactor, threshold: threshold)
+        let bp2Amp =  checkThreshold(input: audioUnit.bp2Amp * scaleFactor, threshold: threshold)
+        let bp3Amp =  checkThreshold(input: audioUnit.bp3Amp * scaleFactor, threshold: threshold)
         let bp4Amp = checkThreshold(input: audioUnit.bp4Amp * scaleFactor, threshold: threshold)
-        let bp5Amp =  Float(0)//checkThreshold(input: audioUnit.bp5Amp * scaleFactor, threshold: threshold)
+        let bp5Amp =   checkThreshold(input: audioUnit.bp5Amp * scaleFactor, threshold: threshold)
         let bp6Amp =  checkThreshold(input: audioUnit.bp6Amp * scaleFactor, threshold: threshold)
-        let bp7Amp =  Float(0)//checkThreshold(input: audioUnit.bp7Amp * scaleFactor, threshold: threshold)
-        let bp8Amp =  Float(0)//checkThreshold(input: audioUnit.bp8Amp * scaleFactor, threshold: threshold)
+        let bp7Amp =  checkThreshold(input: audioUnit.bp7Amp * scaleFactor, threshold: threshold)
+        let bp8Amp =  checkThreshold(input: audioUnit.bp8Amp * scaleFactor, threshold: threshold)
         let highAmp =  checkThreshold(input: audioUnit.highHighAmplitude * scaleFactor, threshold: threshold)
         
         lowLevel.text = String(lAmp)

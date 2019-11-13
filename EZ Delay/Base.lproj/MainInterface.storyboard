@@ -19,6 +19,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CN8-dc-SKy" customClass="XYPadView" customModule="EZ_Delay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="654.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewType">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ICd-e2-gGz">
                                 <rect key="frame" x="31" y="224.5" width="42" height="205"/>
@@ -88,31 +93,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-bp-KZZ">
                                 <rect key="frame" x="0.0" y="654.5" width="414" height="207.5"/>
                                 <subviews>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-jZ-BDL" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="83" height="207.5"/>
-                                    </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-L1-zF0" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
-                                        <rect key="frame" x="228.5" y="0.0" width="82.5" height="207.5"/>
-                                    </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-mM-msW" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
-                                        <rect key="frame" x="311" y="0.0" width="83" height="207.5"/>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="08e-cs-sB7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="207.5"/>
+                                        <subviews>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-jZ-BDL" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="207.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uv-bk-gpe" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
+                                                <rect key="frame" x="85" y="0.0" width="74.5" height="207.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-oI-QFp" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
+                                                <rect key="frame" x="169.5" y="0.0" width="75" height="207.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-L1-zF0" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
+                                                <rect key="frame" x="254.5" y="0.0" width="74.5" height="207.5"/>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-mM-msW" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
+                                                <rect key="frame" x="339" y="0.0" width="75" height="207.5"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="1y2-mM-msW" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="453-mm-LCS"/>
-                                    <constraint firstItem="1y2-mM-msW" firstAttribute="leading" secondItem="ZUs-L1-zF0" secondAttribute="trailing" id="6Cg-lR-ejW"/>
-                                    <constraint firstAttribute="trailing" secondItem="1y2-mM-msW" secondAttribute="trailing" constant="20" id="7Hy-Ge-3gM"/>
-                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="height" secondItem="dfo-bp-KZZ" secondAttribute="height" id="999-8r-o2E"/>
-                                    <constraint firstItem="ZUs-L1-zF0" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="NhG-MG-bKv"/>
-                                    <constraint firstItem="ZUs-L1-zF0" firstAttribute="height" secondItem="LDJ-jZ-BDL" secondAttribute="height" id="OTN-OT-JQ6"/>
-                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="Q5E-9D-6UZ"/>
-                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="width" secondItem="dfo-bp-KZZ" secondAttribute="width" multiplier="0.2" id="fdM-js-H36">
-                                        <variation key="heightClass=compact-widthClass=regular" constant="-100"/>
-                                    </constraint>
-                                    <constraint firstItem="ZUs-L1-zF0" firstAttribute="width" secondItem="LDJ-jZ-BDL" secondAttribute="width" id="ogu-fD-kOa"/>
-                                    <constraint firstItem="1y2-mM-msW" firstAttribute="width" secondItem="ZUs-L1-zF0" secondAttribute="width" id="q6D-Ra-VN8"/>
-                                    <constraint firstItem="1y2-mM-msW" firstAttribute="height" secondItem="ZUs-L1-zF0" secondAttribute="height" id="sal-n5-xXL"/>
-                                    <constraint firstItem="LDJ-jZ-BDL" firstAttribute="leading" secondItem="dfo-bp-KZZ" secondAttribute="leading" constant="20" id="xRe-Za-I8e"/>
+                                    <constraint firstItem="08e-cs-sB7" firstAttribute="centerX" secondItem="dfo-bp-KZZ" secondAttribute="centerX" id="4lG-Ad-g5n"/>
+                                    <constraint firstItem="08e-cs-sB7" firstAttribute="height" secondItem="dfo-bp-KZZ" secondAttribute="height" id="5yh-Nq-CXO"/>
+                                    <constraint firstItem="08e-cs-sB7" firstAttribute="centerY" secondItem="dfo-bp-KZZ" secondAttribute="centerY" id="Umo-6e-ghq"/>
+                                    <constraint firstItem="08e-cs-sB7" firstAttribute="width" secondItem="dfo-bp-KZZ" secondAttribute="width" id="aQG-k5-Y9e"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -141,8 +147,10 @@
                         <outlet property="bp7Level" destination="Ubq-0E-ayh" id="gjK-OM-yeh"/>
                         <outlet property="bp8Level" destination="53Y-Kt-bpY" id="yKb-4A-FlE"/>
                         <outlet property="highLevel" destination="wq7-k3-UO3" id="4YO-56-1mM"/>
+                        <outlet property="inputLevelKnob" destination="3Uv-bk-gpe" id="qNI-NC-DPv"/>
                         <outlet property="lowLevel" destination="Tl6-mH-a4i" id="lFh-P9-JSK"/>
                         <outlet property="mixKnob" destination="LDJ-jZ-BDL" id="0H5-KU-ko8"/>
+                        <outlet property="outputLevelKnob" destination="ITK-oI-QFp" id="Hnf-hM-EZR"/>
                         <outlet property="toggleFXButton" destination="ZUs-L1-zF0" id="7pO-1W-Cfu"/>
                         <outlet property="toggleLoopButton" destination="1y2-mM-msW" id="PRQ-or-uZS"/>
                         <outlet property="xyPad" destination="CN8-dc-SKy" id="VtW-L8-GNf"/>

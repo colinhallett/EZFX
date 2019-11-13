@@ -19,7 +19,7 @@ extension XYPadView {
     }
     
     func createFade(point: CGPoint) {
-        let emission = Fader(position: CGPoint(x: point.x /*- circleDiameter / 2*/, y: point.y /*- circleDiameter / 2*/), size: CGSize(width: circleDiameter, height: circleDiameter))
+        let emission = Fader(position: CGPoint(x: point.x /*- circleDiameter / 2*/, y: point.y /*- circleDiameter / 2*/), size: CGSize(width: circleDiameter, height: circleDiameter), type: type)
         layer.addSublayer(emission)
         emission.fade()
     }
