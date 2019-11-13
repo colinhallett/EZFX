@@ -36,16 +36,8 @@ float EZKernelBase::computeBP(sp_butbp *filL, sp_butbp *filR, sp_rms *rmsL, sp_r
     return ((rmsOutL + rmsOutR) / 2);
 }
 
-void EZKernelBase::calculateAmplitudes(float inputL, float inputR) {
-    lowAmplitude = computeLP(trackerData->lowCutL, trackerData->lowCutR, trackerData->lowRMSL, trackerData->lowRMSR, inputL, inputR);
-   
+void EZKernelBase::calculateAmplitudes(float inputL, float inputR) {   
     bp1Amp = computeBP(trackerData->bp1L, trackerData->bp1R, trackerData->bp1RMSL, trackerData->bp1RMSL, inputL, inputR);
-    bp2Amp = computeBP(trackerData->bp2L, trackerData->bp2R, trackerData->bp2RMSL, trackerData->bp2RMSL, inputL, inputR);
-    bp3Amp = computeBP(trackerData->bp3L, trackerData->bp3R, trackerData->bp3RMSL, trackerData->bp3RMSL, inputL, inputR);
     bp4Amp = computeBP(trackerData->bp4L, trackerData->bp4R, trackerData->bp4RMSL, trackerData->bp4RMSL, inputL, inputR);
-    bp5Amp = computeBP(trackerData->bp5L, trackerData->bp5R, trackerData->bp5RMSL, trackerData->bp5RMSL, inputL, inputR);
-    bp6Amp = computeBP(trackerData->bp6L, trackerData->bp6R, trackerData->bp6RMSL, trackerData->bp6RMSL, inputL, inputR);
-    bp7Amp = computeBP(trackerData->bp7L, trackerData->bp7R, trackerData->bp7RMSL, trackerData->bp7RMSL, inputL, inputR);
     bp8Amp = computeBP(trackerData->bp8L, trackerData->bp8R, trackerData->bp8RMSL, trackerData->bp8RMSL, inputL, inputR);
-    highCutAmplitude = computeHP(trackerData->highCutL, trackerData->highCutR, trackerData->highCutRMSL, trackerData->highCutRMSR, inputL, inputR);
 }
