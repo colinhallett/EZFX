@@ -31,20 +31,20 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     }
     
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
-        float mainInL = inL[i];
-        float mainInR = inR[i];
-        
         float xVal = EZKernelBase::xValue;
         float yVal = EZKernelBase::yValue;
         float outputLevel = EZKernelBase::outputLevel;
         float rampedXValue = 0;
         float rampedYValue = 0;
+        float rampedInputLevel = 0;
         float rampedOutputLevel = 0;
         float rampedLFOMod = 0;
         float rampedLFORate = 0;
+        
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
+        sp_port_compute(sp, internalInputLevelRamper, &inputLevel, &rampedInputLevel);
         sp_port_compute(sp, lfoModInternalRamper, &lfoMod, &rampedLFOMod);
         sp_port_compute(sp, lfoRateInternalRamper, &lfoRate, &rampedLFORate);
         
@@ -52,6 +52,12 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float yPos = rampedYValue;
         float xValExp = expValue(xPos, 3);
        // float dFromO = distanceFromOrigin(xPos, yPos);
+        
+        float mainInL = inL[i];
+        float mainInR = inR[i];
+        
+        float inputLevelOutL = mainInL * rampedInputLevel;
+        float inputLevelOutR = mainInR * rampedInputLevel;
         
         lfoPhasor->freq = rampedLFORate + 0.001f;
         
@@ -69,8 +75,8 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float filterOutL, filterOutR = 0;
 
         
-        sp_moogladder_compute(sp, filterL, &mainInL, &filterOutL);
-        sp_moogladder_compute(sp, filterR, &mainInR, &filterOutR);
+        sp_moogladder_compute(sp, filterL, &inputLevelOutL, &filterOutL);
+        sp_moogladder_compute(sp, filterR, &inputLevelOutR, &filterOutR);
         
         filterOutL *= rampedOutputLevel;
         filterOutR *= rampedOutputLevel;

@@ -37,16 +37,21 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         float rampedXValue = 0;
         float rampedYValue = 0;
         float rampedOutputLevel = 0;
+        float rampedInputLevel = 0;
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
-        
+        sp_port_compute(sp, internalInputLevelRamper, &inputLevel, &rampedInputLevel);
         float expXVal = expValue(rampedXValue, 2);
         //float yPos = rampedYValue - 0.5;
        // float dFromO = distanceFromOrigin(xPos, yPos);
         
+        
         float mainInL = inL[i];
         float mainInR = inR[i];
+        
+        float inputLevelOutL = mainInL * rampedInputLevel;
+        float inputLevelOutR = mainInR * rampedInputLevel;
         
         float delayFeedback = rampedYValue;
         float delayTime = expXVal * 5;
@@ -64,9 +69,9 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         
         vDelayRR->feedback = vDelayFillIn->feedback = 0;
         
-        sp_vdelay_compute(sp, vDelayL, &mainInL, &delayOutL);
+        sp_vdelay_compute(sp, vDelayL, &inputLevelOutL, &delayOutL);
         
-        sp_vdelay_compute(sp, vDelayR, &mainInR, &delayOutR);
+        sp_vdelay_compute(sp, vDelayR, &inputLevelOutR, &delayOutR);
         
    //     sp_vdelay_compute(sp, vDelayFillIn, &mainInR, &delayFillInOut);
         
