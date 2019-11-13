@@ -108,7 +108,7 @@ void EZKernelBase::initTracker() {
     sp_buthp_init(sp, trackerData->highCutL);
     sp_buthp_init(sp, trackerData->highCutR);
     
-    float bandWidth = 1000;
+    float bandWidth = 5000;
     trackerData->bp1L->bw = bandWidth;
     trackerData->bp1R->bw = bandWidth;
     trackerData->bp2L->bw = bandWidth;
@@ -130,8 +130,8 @@ void EZKernelBase::initTracker() {
     
     trackerData->lowCutL->freq = 50.f;
     trackerData->lowCutR->freq = 50.f;
-    trackerData->bp1L->freq = 100.f;
-    trackerData->bp1R->freq = 100.f;
+    trackerData->bp1L->freq = 200.0f;
+    trackerData->bp1R->freq = 200.f;
     
     trackerData->bp2L->freq = freqs[2];
     trackerData->bp2R->freq = freqs[2];
@@ -139,8 +139,8 @@ void EZKernelBase::initTracker() {
     trackerData->bp3L->freq = freqs[3];
     trackerData->bp3R->freq = freqs[3];
     
-    trackerData->bp4L->freq = freqs[4];
-    trackerData->bp4R->freq = freqs[4];
+    trackerData->bp4L->freq = 4000.0f;
+    trackerData->bp4R->freq = 4000.0f;
     
     trackerData->bp5L->freq = freqs[5];
     trackerData->bp5R->freq = freqs[5];
@@ -151,8 +151,8 @@ void EZKernelBase::initTracker() {
     trackerData->bp7L->freq = freqs[7];
     trackerData->bp7R->freq = freqs[7];
     
-    trackerData->bp8L->freq = freqs[8];
-    trackerData->bp8R->freq = freqs[8];
+    trackerData->bp8L->freq = 10000.0f;
+    trackerData->bp8R->freq = 10000.0f;
     
     trackerData->highCutL->freq = 15000.f;
     trackerData->highCutR->freq = 15000.f;

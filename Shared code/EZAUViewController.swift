@@ -270,37 +270,11 @@ extension EZAUViewController : XYPadDelegate {
     func dLinkCallback() {
         guard let audioUnit = audioUnit else {return}
         let scaleFactor: Float = 5
-        let threshold: Float = 0.01
+        let threshold: Float = 0.0001
         
-        let lAmp = checkThreshold(input: audioUnit.lowAmplitude * scaleFactor, threshold: threshold)
         let bp1Amp = checkThreshold(input: audioUnit.bp1Amp * scaleFactor, threshold: threshold)
-        let bp2Amp =  checkThreshold(input: audioUnit.bp2Amp * scaleFactor, threshold: threshold)
-        let bp3Amp =  checkThreshold(input: audioUnit.bp3Amp * scaleFactor, threshold: threshold)
         let bp4Amp = checkThreshold(input: audioUnit.bp4Amp * scaleFactor, threshold: threshold)
-        let bp5Amp =   checkThreshold(input: audioUnit.bp5Amp * scaleFactor, threshold: threshold)
-        let bp6Amp =  checkThreshold(input: audioUnit.bp6Amp * scaleFactor, threshold: threshold)
-        let bp7Amp =  checkThreshold(input: audioUnit.bp7Amp * scaleFactor, threshold: threshold)
         let bp8Amp =  checkThreshold(input: audioUnit.bp8Amp * scaleFactor, threshold: threshold)
-        let highAmp =  checkThreshold(input: audioUnit.highHighAmplitude * scaleFactor, threshold: threshold)
-        
-        lowLevel.text = String(lAmp)
-        bp1Level.text = String(bp1Amp)
-        bp2Level.text = String(bp2Amp)
-        bp3Level.text = String(bp3Amp)
-        bp4Level.text = String(bp4Amp)
-        bp5Level.text = String(bp5Amp)
-        bp6Level.text = String(bp6Amp)
-        bp7Level.text = String(bp7Amp)
-        bp8Level.text = String(bp8Amp)
-        highLevel.text = String(highAmp)
-        
-        xyPad.circleValues = [lAmp, bp1Amp, bp2Amp, bp3Amp, bp4Amp, bp5Amp, bp6Amp, bp7Amp, bp8Amp, highAmp]
-       // xyPad.visualiserLayer.values = [lAmp, bp1Amp, bp2Amp, bp3Amp, bp4Amp, bp5Amp, bp6Amp, bp7Amp, bp8Amp, highAmp]
-        DispatchQueue.main.async {
-            self.xyPad.setBackgroundColor(amount: lAmp)
-            
-        }
-       
-        
+        xyPad.circleValues = [bp1Amp, bp4Amp, bp8Amp]
     }
 }
