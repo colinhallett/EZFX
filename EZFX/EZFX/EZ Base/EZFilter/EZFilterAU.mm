@@ -38,7 +38,37 @@
     
     [self setKernelPtr:&_kernel];
     
-    NSArray *children = [self standardParameters];
+    AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
+    
+    _lfoModAUParameter = [AUParameterTree createParameterWithIdentifier:@"lfoMod"
+                   name:@"LFO Mod"
+                address:EZFilterKernel::lfoModAddress
+                    min:0.0
+                    max:1.0
+                   unit:kAudioUnitParameterUnit_Generic
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    _lfoRateAUParameter = [AUParameterTree createParameterWithIdentifier:@"lfoRate"
+                   name:@"LFO Rate"
+                address:EZFilterKernel::lfoRateAddress
+                    min:0.0
+                    max:80.0
+                   unit:kAudioUnitParameterUnit_Hertz
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    
+    _lfoModAUParameter.value = 0.0;
+    _kernel.setParameter(EZFilterKernel::lfoModAddress, _lfoModAUParameter.value);
+    
+    _lfoRateAUParameter.value = 10.0;
+    _kernel.setParameter(EZFilterKernel::lfoRateAddress, _lfoModAUParameter.value);
+    
+    
+    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_lfoModAUParameter, _lfoRateAUParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     
@@ -54,6 +84,13 @@
 
 - (void) reset {
     _kernel.reset();
+}
+
+- (void)setLfoRate:(float)filterRate {
+    
+}
+- (void) setLfoMod:(float)filterMod {
+    
 }
 
 - (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {

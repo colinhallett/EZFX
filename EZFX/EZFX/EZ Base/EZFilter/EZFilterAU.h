@@ -14,4 +14,12 @@
 
 - (void)reset;
 
+@property AUParameter *lfoModAUParameter;
+@property AUParameter *lfoRateAUParameter;
+
+@property (nonatomic) float lfoMod;
+@property (nonatomic) float lfoRate;
+
+-(void)setLfoMod:(float)filterMod;
+-(void)setLfoRate:(float)filterRate;
 @end

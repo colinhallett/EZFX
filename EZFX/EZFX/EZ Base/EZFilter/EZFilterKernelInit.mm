@@ -23,6 +23,8 @@ void EZFilterKernel::resetFX() {
         sp_phasor_destroy(&lfoPhasor);
         sp_moogladder_destroy(&filterL);
         sp_moogladder_destroy(&filterR);
+        sp_port_destroy(&lfoModInternalRamper);
+        sp_port_destroy(&lfoRateInternalRamper);
         initSPAndSetValues();
         EZKernelBase::fxResetted = true;
     }
@@ -40,5 +42,10 @@ void EZFilterKernel::initSPAndSetValues() {
     sp_moogladder_create(&filterR);
     sp_moogladder_init(sp, filterR);
     filterR->res = 0;
+    
+    sp_port_create(&lfoModInternalRamper);
+    sp_port_init(sp, lfoModInternalRamper, 0.01);
+    sp_port_create(&lfoRateInternalRamper);
+    sp_port_init(sp, lfoRateInternalRamper, 0.01);
 }
    

@@ -30,7 +30,30 @@ public:
     
     void resetFX();
     
+    enum EZFilterAddress {
+        lfoModAddress = amountOfEZAddresses,
+        lfoRateAddress = amountOfEZAddresses + 1
+    };
+    // Uses the ParameterAddress as a key
+    void setParameter(AUParameterAddress address, float value);
+
+    // Uses the ParameterAddress as a key
+    float getParameter(AUParameterAddress address);
+    
+    void startRamp(AUParameterAddress address, AUValue value, AUAudioFrameCount duration) override;
+    
+    void getAndSteps();
+    
 public:
+    float lfoMod = 0;
+    float lfoRate = 0;
+    
+    ParameterRamper lfoModRamper = 0.0;
+    ParameterRamper lfoRateRamper = 0.0;
+    
+    sp_port *lfoModInternalRamper;
+    sp_port *lfoRateInternalRamper;
+    
     sp_phasor * lfoPhasor;
     float lfoOne = 0;
     
