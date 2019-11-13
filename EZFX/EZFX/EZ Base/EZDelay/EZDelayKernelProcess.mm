@@ -33,10 +33,13 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
         float xVal = EZKernelBase::xValue;
         float yVal = EZKernelBase::yValue;
+        float outputLevel = EZKernelBase::outputLevel;
         float rampedXValue = 0;
         float rampedYValue = 0;
+        float rampedOutputLevel = 0;
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
+        sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
         
         float expXVal = expValue(rampedXValue, 2);
         //float yPos = rampedYValue - 0.5;
@@ -70,6 +73,9 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         sp_vdelay_compute(sp, vDelayRR, &delayOutR, &delayOutRR);
         
        // delayOutRR += delayFillInOut;
+        
+        delayOutL *= rampedOutputLevel;
+        delayOutRR *= rampedOutputLevel;
         
         float mainOutL = 0;
         float mainOutR = 0;

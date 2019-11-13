@@ -33,10 +33,13 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
         float xVal = EZKernelBase::xValue;
         float yVal = EZKernelBase::yValue;
+        float outputLevel = EZKernelBase::outputLevel;
         float rampedXValue = 0;
         float rampedYValue = 0;
+        float rampedOutputLevel = 0;
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
+        sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
         
         float xPos = rampedXValue - 0.5;
         float yPos = rampedYValue - 0.5;
@@ -109,6 +112,8 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         chorusFlangeOutL = leftFlangeLine.push(chorusOneFilterL);
         chorusFlangeOutR = rightFlangeLine.push(chorusOneFilterR);
         
+        chorusFlangeOutL *= rampedOutputLevel;
+        chorusFlangeOutR *= rampedOutputLevel;
         float mainOutL = 0;
         float mainOutR = 0;
         
