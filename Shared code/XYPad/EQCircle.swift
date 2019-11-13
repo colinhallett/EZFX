@@ -14,7 +14,7 @@ class EQCircle : CAEmitterLayer {
     var initalScale: CGFloat = 1
     var initialVelocity: CGFloat = 30
     var initalBirthRate: Float = 3
-    var maxOpacity: Float = 10
+    var maxOpacity: Float = 1
     var imageSize: CGSize!
     init(frame: CGRect, type: XYPadType) {
         super.init()
@@ -36,7 +36,7 @@ class EQCircle : CAEmitterLayer {
         cell.scaleSpeed = 0.005
         cell.spin = 20
         cell.spinRange = 2
-        cell.alphaSpeed = -1/5
+        cell.alphaSpeed = -1
         //cell.blueSpeed = 0.2
         //cell.blueRange = 3
        // cell.redSpeed = 0.2
@@ -89,15 +89,22 @@ class EQCircle : CAEmitterLayer {
     }
     
     func amplitudeAnimation(value: Double, updateRate: Double) {
+        if value < 0.0001 {
+           // return
+        }
         let value = CGFloat(value)
         setValue(Float(initalBirthRate * Float(value)) + 1, forKeyPath: "emitterCells.childCell.birthRate")
-        let opacityAni = CAKeyframeAnimation(keyPath: "opacity")
+        removeAnimation(forKey: "circleAni")
+       /* let opacityAni = CAKeyframeAnimation(keyPath: "opacity")
         opacityAni.values = [self.opacity, maxOpacity * Float(value)]
         opacityAni.timingFunction = CAMediaTimingFunction(name: .easeOut)
-        self.opacity = maxOpacity * Float(value)
+        self.opacity = maxOpacity * Float(value)*/
+        let opacityAni = CAKeyframeAnimation(keyPath: "opacity")
+        opacityAni.values = [maxOpacity * Float(value)]
+        //self.opacity = maxOpacity * Float(value)
         let group = CAAnimationGroup()
         group.animations = [opacityAni]
-        group.duration = 1
+        group.duration = 5
         
         self.add(group, forKey: "circleAni")
     }

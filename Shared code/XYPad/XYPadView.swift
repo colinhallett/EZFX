@@ -130,28 +130,32 @@ class XYPadView: UIView {
            displayLink.add(to: .main, forMode: .default)
        }
     
-   @objc func displayCallback() {
-       delegate?.dLinkCallback()
-       let frames = 0
+    @objc func displayCallback() {
+        
+        let frames = 0
+       // counter += 1
         let deltaTime = displayLink.timestamp - currentTime
-        visualiserLayer.setValues(newValues: circleValues, deltaTime: Float(deltaTime))
-       if counter == Int(frames) {
-           visualiserLayer.startAnimation(updateRate: Double(frames))
-           counter = 0
-       }
-       //counter += 1
+        
+        if counter == Int(frames) {
+            delegate?.dLinkCallback()
+            visualiserLayer.startAnimation(updateRate: Double(frames))
+            visualiserLayer.setValues(newValues: circleValues, deltaTime: Float(deltaTime))
+            
+            counter = 0
+        }
        
-       let timeElapsed = displayLink.timestamp - currentTimeDuration
        
-       if startPlayback {
-           if recordedPaths.isNotEmpty && completedPath {
-               completedPath = false
-               currentTimeDuration = displayLink.timestamp
-               if let path = nextPath() {
-                   updateValue(point: CGPoint(x: CGFloat(path.value.xValue) * width, y: CGFloat(path.value.yValue) * height))
-                   createFade(point: CGPoint(x: CGFloat(path.value.xValue) * width, y: CGFloat(path.value.yValue) * height))
-               }
-           }
+        let timeElapsed = displayLink.timestamp - currentTimeDuration
+        
+        if startPlayback {
+            if recordedPaths.isNotEmpty && completedPath {
+                completedPath = false
+                currentTimeDuration = displayLink.timestamp
+                if let path = nextPath() {
+                    updateValue(point: CGPoint(x: CGFloat(path.value.xValue) * width, y: CGFloat(path.value.yValue) * height))
+                    createFade(point: CGPoint(x: CGFloat(path.value.xValue) * width, y: CGFloat(path.value.yValue) * height))
+                }
+            }
            if timeElapsed > targetTimeDuration {
                completedPath = true
            }

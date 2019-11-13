@@ -24,7 +24,9 @@ class VisualiserLayer : CALayer {
         test.position = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
         print (test)
         addSublayer(test)*/
-        
+        for index in 0..<averages.count {
+            averages[index] = [Float].init(zeros: maxAverage)
+        }
         for _ in 0..<3 {
             let newCircle = EQCircle(frame: frame, type: type)
             newCircle.position = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
@@ -50,21 +52,50 @@ class VisualiserLayer : CALayer {
         CATransaction.commit()
     }
     
+    var averages: [[Float]] = [[Float](), [Float](), [Float]()]
+    var averageIndex = 0
+    let maxAverage = 5
+    
     func setValues (newValues: [Float], deltaTime: Float) {
+        
+        averages[0][averageIndex] = newValues[0]
+        averages[1][averageIndex] = newValues[1]
+        averages[2][averageIndex] = newValues[2]
+        averageIndex += 1
+        if averageIndex == maxAverage {
+            averageIndex = 0
+        }
+        
+        var calculatedAverage: [Float] = [0, 0, 0]
+        
         var index = 0
+        for average in averages {
+            
+            var sum: Float = 0
+            for average in average {
+                sum += average
+            }
+            calculatedAverage[index] = sum / Float(average.count)
+            values[index] = calculatedAverage[index]
+            index += 1
+        }
+        
+        /*
+        var index = 0
+        let amountOfChange: Float = 0.00001
         for value in newValues {
             if value > values[index] {
-                values[index] += 1 * deltaTime
+                values[index] += amountOfChange * deltaTime
             } else if value < values[index] {
-                values[index] -= 1 * deltaTime
+                values[index] -= amountOfChange * deltaTime
             }
             if values[index] < 0 {
                 values[index] = 0
             } else if values[index] > 1 {
-                values[index] = 1
+                //values[index] = 1
             }
             index += 1
-        }
+        }*/
     }
     func startAnimation(updateRate: Double) {
         for i in 0..<values.count {
