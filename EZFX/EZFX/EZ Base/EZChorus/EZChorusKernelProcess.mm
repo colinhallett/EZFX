@@ -52,6 +52,10 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float inputLevelOutL = mainInL * rampedInputLevel;
         float inputLevelOutR = mainInR * rampedInputLevel;
         
+        float inputSaturatorOutL, inputSaturatorOutR;
+        sp_saturator_compute(sp, inputSaturatorL, &inputLevelOutL, &inputSaturatorOutL);
+        sp_saturator_compute(sp, inputSaturatorR, &inputLevelOutR, &inputSaturatorOutR);
+        
         float xPos = rampedXValue - 0.5;
         float yPos = rampedYValue - 0.5;
         float dFromO = distanceFromOrigin(xPos, yPos);//sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
@@ -66,8 +70,8 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         filterL->freq = filterFreq;
         filterR->freq = filterFreq;
        
-        float chorusOneInL = inputLevelOutL;
-        float chorusOneInR = inputLevelOutR;
+        float chorusOneInL = inputSaturatorOutL;
+        float chorusOneInR = inputSaturatorOutR;
         float chorusOneOutL = 0.0f;
         float chorusOneOutR = 0.0f;
         

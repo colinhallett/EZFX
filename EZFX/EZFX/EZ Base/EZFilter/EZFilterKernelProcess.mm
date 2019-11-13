@@ -59,6 +59,10 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float inputLevelOutL = mainInL * rampedInputLevel;
         float inputLevelOutR = mainInR * rampedInputLevel;
         
+        float inputSaturatorOutL, inputSaturatorOutR;
+        sp_saturator_compute(sp, inputSaturatorL, &inputLevelOutL, &inputSaturatorOutL);
+        sp_saturator_compute(sp, inputSaturatorR, &inputLevelOutR, &inputSaturatorOutR);
+        
         lfoPhasor->freq = rampedLFORate + 0.001f;
         
         float phasorOut = 0;
@@ -75,8 +79,8 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float filterOutL, filterOutR = 0;
 
         
-        sp_moogladder_compute(sp, filterL, &inputLevelOutL, &filterOutL);
-        sp_moogladder_compute(sp, filterR, &inputLevelOutR, &filterOutR);
+        sp_moogladder_compute(sp, filterL, &inputSaturatorOutL, &filterOutL);
+        sp_moogladder_compute(sp, filterR, &inputSaturatorOutR, &filterOutR);
         
         filterOutL *= rampedOutputLevel;
         filterOutR *= rampedOutputLevel;

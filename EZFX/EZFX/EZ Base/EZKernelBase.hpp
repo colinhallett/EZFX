@@ -97,6 +97,9 @@ public:
     sp_crossfade *mixL;
     sp_crossfade *mixR;
     
+    sp_saturator *inputSaturatorL;
+    sp_saturator *inputSaturatorR;
+    
     enum EZAddresses {
         xValueAddress = 0,
         yValueAddress,
@@ -124,6 +127,10 @@ public:
     void resetCrossfade();
     
     void initCrossfade();
+    
+    void initSaturator();
+    
+    void resetSaturator();
     
     void setXValue(float value);
     void setYValue(float value);

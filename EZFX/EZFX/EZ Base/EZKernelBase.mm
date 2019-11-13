@@ -21,6 +21,7 @@ void EZKernelBase::init(int channelCount, double sampleRate)  {
     initCrossfade();
     initTracker();
     initRamper();
+    initSaturator();
 }
 
 void EZKernelBase::reset() {
@@ -34,6 +35,7 @@ void EZKernelBase::reset() {
         resetCrossfade();
         resetTracker();
         resetRamper();
+        resetSaturator();
     }
     
     resetted = true;
@@ -67,6 +69,21 @@ void EZKernelBase::initCrossfade() {
     sp_crossfade_init(sp, mixL);
     sp_crossfade_create(&mixR);
     sp_crossfade_init(sp, mixR);
+}
+
+void EZKernelBase::initSaturator() {
+    sp_saturator_create(&inputSaturatorL);
+    sp_saturator_create(&inputSaturatorR);
+    sp_saturator_init(sp, inputSaturatorL);
+    sp_saturator_init(sp, inputSaturatorR);
+    inputSaturatorL->drive = 1.0;
+    inputSaturatorR->drive = 1.0;
+}
+
+void EZKernelBase::resetSaturator() {
+    sp_saturator_destroy(&inputSaturatorL);
+    sp_saturator_destroy(&inputSaturatorR);
+    initSaturator();
 }
 
 void EZKernelBase::initBP(sp_butbp **filL, sp_butbp **filR, sp_rms **rmsL, sp_rms **rmsR) {

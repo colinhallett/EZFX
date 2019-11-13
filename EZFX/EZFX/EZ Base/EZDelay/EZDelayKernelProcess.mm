@@ -53,6 +53,11 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         float inputLevelOutL = mainInL * rampedInputLevel;
         float inputLevelOutR = mainInR * rampedInputLevel;
         
+        float inputSaturatorOutL, inputSaturatorOutR;
+        sp_saturator_compute(sp, inputSaturatorL, &inputLevelOutL, &inputSaturatorOutL);
+        sp_saturator_compute(sp, inputSaturatorR, &inputLevelOutR, &inputSaturatorOutR);
+        
+        
         float delayFeedback = rampedYValue;
         float delayTime = expXVal * 5;
         
@@ -69,9 +74,9 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         
         vDelayRR->feedback = vDelayFillIn->feedback = 0;
         
-        sp_vdelay_compute(sp, vDelayL, &inputLevelOutL, &delayOutL);
+        sp_vdelay_compute(sp, vDelayL, &inputSaturatorOutL, &delayOutL);
         
-        sp_vdelay_compute(sp, vDelayR, &inputLevelOutR, &delayOutR);
+        sp_vdelay_compute(sp, vDelayR, &inputSaturatorOutR, &delayOutR);
         
    //     sp_vdelay_compute(sp, vDelayFillIn, &mainInR, &delayFillInOut);
         
