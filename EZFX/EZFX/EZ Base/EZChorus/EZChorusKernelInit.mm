@@ -20,9 +20,6 @@ void EZChorusKernel::init(int channelCount, double sampleRate) {
 void EZChorusKernel::resetFX() {
     if (!EZKernelBase::fxResetted) {
         EZKernelBase::reset();
-        sp_revsc_destroy(&reverb);
-        sp_crossfade_destroy(&reverbCrossfadeL);
-        sp_crossfade_destroy(&reverbCrossfadeR);
         sp_delay_destroy(&delayL);
         sp_delay_destroy(&delayR);
         sp_pshift_destroy(&pshiftL);
@@ -38,18 +35,6 @@ void EZChorusKernel::resetFX() {
 }
 
 void EZChorusKernel::initSPAndSetValues() {
-    sp_revsc_create(&reverb);
-    sp_crossfade_create(&reverbCrossfadeL);
-    sp_crossfade_create(&reverbCrossfadeR);
-    sp_revsc_init(getSpData(), reverb);
-    sp_crossfade_init(getSpData(), reverbCrossfadeL);
-    sp_crossfade_init(getSpData(), reverbCrossfadeR);
-    
-    reverb->feedback = reverbTime;
-    reverb->lpfreq = 15000;
-    reverbCrossfadeL->pos = reverbStrength;
-    reverbCrossfadeR->pos = reverbStrength;
-    
     modFreqHz = 1.0f;
     modDepthFraction = 0.0f;
     minDelayMs = kChorusMinDelayMs;

@@ -31,9 +31,6 @@ public:
     void resetFX();
     
 public:
-    sp_revsc *reverb;
-    sp_crossfade *reverbCrossfadeL;
-    sp_crossfade *reverbCrossfadeR;
     
     AudioKitCore::AdjustableDelayLine leftDelayLine, rightDelayLine;
     AudioKitCore::FunctionTableOscillator modOscillator;
@@ -53,8 +50,6 @@ public:
     sp_crossfade *crossfadeL;
     sp_crossfade *crossfadeR;
     
-    float reverbTime = 0.0f;
-    float reverbStrength = 0.0f;
 };
 
 #endif /* __cplusplus */

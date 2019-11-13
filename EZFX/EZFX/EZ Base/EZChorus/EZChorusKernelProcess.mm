@@ -36,18 +36,26 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float outputLevel = EZKernelBase::outputLevel;
         float rampedXValue = 0;
         float rampedYValue = 0;
+        float rampedInputLevel = 0;
         float rampedOutputLevel = 0;
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
+        sp_port_compute(sp, internalInputLevelRamper, &inputLevel, &rampedInputLevel);
+        float mainInL = inL[i];
+        float mainInR = inR[i];
+        if (EZKernelBase::isActive <= 0.5) {
+            mainInL = 0;
+            mainInR = 0;
+        }
+        
+        float inputLevelOutL = mainInL * rampedInputLevel;
+        float inputLevelOutR = mainInR * rampedInputLevel;
         
         float xPos = rampedXValue - 0.5;
         float yPos = rampedYValue - 0.5;
         float dFromO = distanceFromOrigin(xPos, yPos);//sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
            
-        reverb->feedback = dFromO;
-        reverbCrossfadeL->pos = 1 - dFromO;
-        reverbCrossfadeR->pos = dFromO;//EZKernelBase::yValue;
         modOscillator.setFrequency(dFromO * 20.0f);
         flangeOscillator.setFrequency((1 - rampedYValue) * 10.0f);
         flangeModDepthFraction = dFromO;
@@ -57,24 +65,9 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float filterFreq = 15000.0f * dFromO + 5000;
         filterL->freq = filterFreq;
         filterR->freq = filterFreq;
-        
-        float mainInL = inL[i];
-        float mainInR = inR[i];
-        if (EZKernelBase::isActive <= 0.5) {
-            mainInL = 0;
-            mainInR = 0;
-        }
-        float reverbOutL = 0.0f;
-        float reverbOutR = 0.0f;
-        sp_revsc_compute(sp, reverb, &mainInL, &mainInR, &reverbOutL, &reverbOutR);
-        
-        float reverbMixL = 0.0f;
-        float reverbMixR = 0.0f;
-        sp_crossfade_compute(sp, reverbCrossfadeL, &mainInL, &reverbOutL, &reverbMixL);
-        sp_crossfade_compute(sp, reverbCrossfadeR, &mainInR, &reverbOutR, &reverbMixR);
        
-        float chorusOneInL = mainInL;
-        float chorusOneInR = mainInR;
+        float chorusOneInL = inputLevelOutL;
+        float chorusOneInR = inputLevelOutR;
         float chorusOneOutL = 0.0f;
         float chorusOneOutR = 0.0f;
         
