@@ -13,5 +13,10 @@
 @interface EZCrusherAU : EZAUBase
 
 - (void)reset;
+@property AUParameter *noiseLevelParameter;
+
+@property (nonatomic) float noiseLevel;
+
+-(void)setNoiseLevel:(float)noiseLevel;
 
 @end

@@ -31,11 +31,45 @@ public:
     
     void resetFX();
     
-public:
+    enum EZCrusherAddress {
+        noiseLevelAddress = amountOfEZAddresses
+    };
+    // Uses the ParameterAddress as a key
+    void setParameter(AUParameterAddress address, float value);
 
-    sp_paulstretch *timeStretch;
-    sp_ftbl *ft;
-    sp_tblrec *tblrec;
+    // Uses the ParameterAddress as a key
+    float getParameter(AUParameterAddress address);
+    
+    void startRamp(AUParameterAddress address, AUValue value, AUAudioFrameCount duration) override;
+    
+    void getAndSteps();
+    
+public:
+    float noiseLevel = 0;
+    ParameterRamper noiseLevelRamper = 0.0;
+    sp_port *noiseLevelInternalRamper;
+    
+    sp_buthp *outputHpfL;
+    sp_buthp *outputHpfR;
+    
+    sp_saturator *saturatorL;
+    sp_saturator *saturatorR;
+    
+    sp_dist *distL;
+    sp_dist *distR;
+    
+    sp_bitcrush *bitcrushL;
+    sp_bitcrush *bitcrushR;
+    
+    sp_pinknoise *pinkNoise;
+    sp_buthp *noiseHpf;
+    sp_jitter *randomiser;
+    
+    sp_compressor *compL;
+    sp_compressor *compR;
+    
+  
+    
 };
 
 #endif /* __cplusplus */

@@ -16,10 +16,7 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
     float *outL = (float *)outBufferListPtr->mBuffers[0].mData + bufferOffset;
     float *outR = (float *)outBufferListPtr->mBuffers[1].mData + bufferOffset;
     
-    EZKernelBase::standardEZFXGetAndSteps();
-    float xPos = EZKernelBase::xValue - 0.5;
-    float yPos = EZKernelBase::yValue - 0.5;
-   // float dFromO = distanceFromOrigin(xPos, yPos);
+    getAndSteps();
     
     if (EZKernelBase::isActive == 0) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
@@ -36,34 +33,75 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
     for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
         float mainInL = inL[i];
         float mainInR = inR[i];
-        float trigger = 1;
-       /* if (i == 0) {
-            trigger = 0;
-        }*/
-        float tblrecOut = 0;
-        SPFLOAT tick = (i == 0 ? 1 : 0);
-
-        sp_tblrec_compute(sp, tblrec, &mainInL, &tick, &tblrecOut);
        
         float xVal = EZKernelBase::xValue;
         float yVal = EZKernelBase::yValue;
+        float outputLevel = EZKernelBase::outputLevel;
         float rampedXValue = 0;
         float rampedYValue = 0;
+        float rampedOutputLevel = 0;
+        float rampedNoiseLevel = 0;
+        float rampedInputLevel = 0;
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
-       
+        sp_port_compute(sp, internalInputLevelRamper, &inputLevel, &rampedInputLevel);
+        sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
+        sp_port_compute(sp, noiseLevelInternalRamper, &noiseLevel, &rampedNoiseLevel);
+        
+        float inputLevelOutL = mainInL * rampedInputLevel;
+        float inputLevelOutR = mainInR * rampedInputLevel;
+        
+        rampedNoiseLevel = expValue(rampedNoiseLevel, 4) * 0.25;
         float xPos = rampedXValue - 0.5;
         float yPos = rampedYValue - 0.5;
-        //float dFromO = distanceFromOrigin(xPos, yPos);//sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
-        timeStretch->stretch = rampedXValue * 40;
-        float paulstretchOut = 0.0f;
-        sp_paulstretch_compute(sp, timeStretch, NULL, &paulstretchOut);
+        float dFromO = distanceFromOrigin(xPos, yPos);
         
-        float mainOutL = 0;
-        float mainOutR = 0;
+        float noiseOut, noiseHpfOut, randomOut;
+        pinkNoise->amp = rampedNoiseLevel;
         
-        sp_crossfade_compute(sp, mixL, &mainInL, &paulstretchOut, &mainOutL);
-        sp_crossfade_compute(sp, mixR, &mainInR, &paulstretchOut, &mainOutR);
+        sp_pinknoise_compute(sp, pinkNoise, NULL, &noiseOut);
+        sp_buthp_compute(sp, noiseHpf, &noiseOut, &noiseHpfOut);
+        sp_jitter_compute(sp, randomiser, NULL, &randomOut);
+        
+        //noiseHpfOut *= (randomOut);
+        float saturatorInL = inputLevelOutL + noiseHpfOut;
+        float saturatorInR = inputLevelOutR + noiseHpfOut;
+        
+        float saturatorDrive = 20 * rampedXValue + 0.5;
+        float saturatorOffset = 1 * rampedYValue;
+        saturatorL->drive = saturatorDrive;
+        saturatorL->dcoffset = saturatorOffset;
+        saturatorR->drive = saturatorDrive;
+        saturatorR->dcoffset = saturatorOffset;
+        
+        float saturatorOutL, saturatorOutR;
+        sp_saturator_compute(sp, saturatorL, &saturatorInL, &saturatorOutL);
+        sp_saturator_compute(sp, saturatorR, &saturatorInR, &saturatorOutR);
+        
+        float hpfOutL, hpfOutR;
+        
+        sp_buthp_compute(sp, outputHpfL, &saturatorOutL, &hpfOutL);
+        sp_buthp_compute(sp, outputHpfR, &saturatorOutR, &hpfOutR);
+        
+        float compOutL, compOutR;
+        float compRatio = rampedYValue * 20;
+        float compThresh = 0 - rampedYValue * 40;
+        *compL->ratio = compRatio;
+        *compL->thresh = compThresh;
+        *compR->ratio = compRatio;
+        *compR->thresh = compThresh;
+        
+        sp_compressor_compute(sp, compL, &hpfOutL, &compOutL);
+        sp_compressor_compute(sp, compL, &hpfOutR, &compOutR);
+        
+        compOutL *= rampedOutputLevel;
+        compOutR *= rampedOutputLevel;
+        
+        float mainOutL, mainOutR;
+        
+        sp_crossfade_compute(sp, mixL, &mainInL, &compOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &compOutR, &mainOutR);
+        
         outL[i] = mainOutL;
         outR[i] = mainOutR;
         calculateAmplitudes(mainOutL, mainOutR);

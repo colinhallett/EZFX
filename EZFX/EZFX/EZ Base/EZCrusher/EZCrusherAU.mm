@@ -38,7 +38,23 @@
     
     [self setKernelPtr:&_kernel];
     
-    NSArray *children = [self standardParameters];
+    AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
+    
+    _noiseLevelParameter = [AUParameterTree createParameterWithIdentifier:@"noiseLevel"
+                   name:@"LFO Rate"
+                address:EZCrusherKernel::noiseLevelAddress
+                    min:0.0
+                    max:1.0
+                   unit:kAudioUnitParameterUnit_Percent
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    
+    _noiseLevelParameter.value = 0.0;
+    _kernel.setParameter(EZCrusherKernel::noiseLevelAddress, _noiseLevelParameter.value);
+    
+    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_noiseLevelParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     
