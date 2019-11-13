@@ -13,7 +13,7 @@ class EQCircle : CAEmitterLayer {
     
     var initalScale: CGFloat = 1
     var initialVelocity: CGFloat = 30
-    var initalBirthRate: Float = 3
+    var initalBirthRate: Float = 1
     var maxOpacity: Float = 1
     var imageSize: CGSize!
     init(frame: CGRect, type: XYPadType) {
@@ -93,7 +93,8 @@ class EQCircle : CAEmitterLayer {
            // return
         }
         let value = CGFloat(value)
-        setValue(Float(initalBirthRate * Float(value)) + 1, forKeyPath: "emitterCells.childCell.birthRate")
+        let newBirthrate: Float = initalBirthRate * Float(value) + 1
+        setValue(newBirthrate > 2 ? 2 : newBirthrate, forKeyPath: "emitterCells.childCell.birthRate")
         removeAnimation(forKey: "circleAni")
        /* let opacityAni = CAKeyframeAnimation(keyPath: "opacity")
         opacityAni.values = [self.opacity, maxOpacity * Float(value)]
