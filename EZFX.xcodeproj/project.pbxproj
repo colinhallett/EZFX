@@ -122,6 +122,12 @@
 		3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B8CFBEA2354C35B00F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B8CFBEB2354C35B00F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BA8DD70237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
+		3BA8DD71237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
+		3BA8DD72237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
+		3BA8DD73237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
+		3BA8DD74237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
+		3BA8DD75237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
 		3BADC0DD2367197100A08F19 /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
 		3BADC0DE2367197B00A08F19 /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
 		3BADC0E023671AB600A08F19 /* EZChorusAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DF23671AB600A08F19 /* EZChorusAUViewController.swift */; };
@@ -315,6 +321,7 @@
 		3B8CFBDE2354C2A500F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B8CFBE02354C2A500F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8CFC132354CE3100F146C9 /* EZFX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZFX-Bridging-Header.h"; sourceTree = "<group>"; };
+		3BA8DD6F237D6C46005AC211 /* EZSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSelector.swift; sourceTree = "<group>"; };
 		3BADC0DC2367197100A08F19 /* EZAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZAUViewController.swift; sourceTree = "<group>"; };
 		3BADC0DF23671AB600A08F19 /* EZChorusAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZChorusAUViewController.swift; sourceTree = "<group>"; };
 		3BADC15B236861FE00A08F19 /* EZ Spacer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Spacer.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -413,6 +420,7 @@
 			children = (
 				3B4384A223742A5A00FF23F3 /* MLKnob.swift */,
 				3B43849C23742A3300FF23F3 /* MLControl.swift */,
+				3BA8DD6F237D6C46005AC211 /* EZSelector.swift */,
 				3B4384A823742AFA00FF23F3 /* EZFXStyleKit.swift */,
 				3B4384AE237464E000FF23F3 /* ToggleButton.swift */,
 			);
@@ -788,6 +796,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1E041D23759DE100DDFC03 /* MLKnob.swift in Sources */,
+				3BA8DD74237D6C46005AC211 /* EZSelector.swift in Sources */,
 				3B1E042523759DE400DDFC03 /* EZAUViewController.swift in Sources */,
 				3B1E041023759DDD00DDFC03 /* Fader.swift in Sources */,
 				3B1E041F23759DE100DDFC03 /* EZFXStyleKit.swift in Sources */,
@@ -813,6 +822,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1E042123759DE200DDFC03 /* MLKnob.swift in Sources */,
+				3BA8DD75237D6C46005AC211 /* EZSelector.swift in Sources */,
 				3B1E042623759DE400DDFC03 /* EZAUViewController.swift in Sources */,
 				3B1E041B23759DDD00DDFC03 /* Fader.swift in Sources */,
 				3B1E042323759DE200DDFC03 /* EZFXStyleKit.swift in Sources */,
@@ -838,6 +848,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5BE816236DEF02004B5EEA /* Fader.swift in Sources */,
+				3BA8DD73237D6C46005AC211 /* EZSelector.swift in Sources */,
 				3B545A472372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
 				3B0DFFF92372257700AC1843 /* EQCircle.swift in Sources */,
 				3B4384AC23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
@@ -865,6 +876,7 @@
 				3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */,
 				3B545A442372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
 				3B4384AF237464E000FF23F3 /* ToggleButton.swift in Sources */,
+				3BA8DD70237D6C46005AC211 /* EZSelector.swift in Sources */,
 				3B1E04352376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B0D00012372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3B4384A923742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
@@ -890,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BADC0DE2367197B00A08F19 /* EZAUViewController.swift in Sources */,
+				3BA8DD71237D6C46005AC211 /* EZSelector.swift in Sources */,
 				3B545A452372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
 				3B0DFFF72372257700AC1843 /* EQCircle.swift in Sources */,
 				3B4384AA23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
@@ -915,6 +928,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BADC174236862B500A08F19 /* Fader.swift in Sources */,
+				3BA8DD72237D6C46005AC211 /* EZSelector.swift in Sources */,
 				3B545A462372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
 				3B0DFFF82372257700AC1843 /* EQCircle.swift in Sources */,
 				3B4384AB23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,

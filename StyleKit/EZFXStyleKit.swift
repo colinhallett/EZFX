@@ -758,6 +758,90 @@ public class EZFXStyleKit : NSObject {
 
     }
 
+    @objc dynamic public class func drawSelectionButton(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 77, height: 79), resizing: ResizingBehavior = .aspectFit, selectionText: String = "Low Pass Filter", selected: Bool = false) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        //// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 77, height: 79), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 77, y: resizedFrame.height / 79)
+        let resizedShadowScale: CGFloat = min(resizedFrame.width / 77, resizedFrame.height / 79)
+
+
+        //// Color Declarations
+        let gradientColor4 = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha: 1.000)
+        let strokeColor6 = UIColor(red: 0.290, green: 0.286, blue: 0.286, alpha: 1.000)
+        let selectionOn = UIColor(red: 0.569, green: 0.569, blue: 0.569, alpha: 0.462)
+
+        //// Shadow Declarations
+        let shadow3 = NSShadow()
+        shadow3.shadowColor = UIColor.white.withAlphaComponent(0.41)
+        shadow3.shadowOffset = CGSize(width: 2, height: 3)
+        shadow3.shadowBlurRadius = 5
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.black.withAlphaComponent(0.48)
+        shadow.shadowOffset = CGSize(width: 3, height: 3)
+        shadow.shadowBlurRadius = 5
+
+        //// Group_34
+        //// Rectangle_
+        context.saveGState()
+        context.setShadow(offset: CGSize(width: shadow.shadowOffset.width * resizedShadowScale, height: shadow.shadowOffset.height * resizedShadowScale), blur: shadow.shadowBlurRadius * resizedShadowScale, color: (shadow.shadowColor as! UIColor).cgColor)
+        context.beginTransparencyLayer(auxiliaryInfo: nil)
+
+
+        //// Rectangle 8 Drawing
+        let rectangle8Path = UIBezierPath(roundedRect: CGRect(x: 7.7, y: 10.7, width: 61.5, height: 61.5), cornerRadius: 1.5)
+        gradientColor4.setFill()
+        rectangle8Path.fill()
+        context.saveGState()
+        context.setShadow(offset: CGSize(width: shadow3.shadowOffset.width * resizedShadowScale, height: shadow3.shadowOffset.height * resizedShadowScale), blur: shadow3.shadowBlurRadius * resizedShadowScale, color: (shadow3.shadowColor as! UIColor).cgColor)
+        strokeColor6.setStroke()
+        rectangle8Path.lineWidth = 0.5
+        rectangle8Path.stroke()
+        context.restoreGState()
+
+
+        if (selected) {
+            //// Rectangle Drawing
+            let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 7.75, y: 10.75, width: 61.5, height: 61.5), cornerRadius: 1.5)
+            selectionOn.setFill()
+            rectanglePath.fill()
+            context.saveGState()
+            context.setShadow(offset: CGSize(width: shadow3.shadowOffset.width * resizedShadowScale, height: shadow3.shadowOffset.height * resizedShadowScale), blur: shadow3.shadowBlurRadius * resizedShadowScale, color: (shadow3.shadowColor as! UIColor).cgColor)
+            strokeColor6.setStroke()
+            rectanglePath.lineWidth = 0.5
+            rectanglePath.stroke()
+            context.restoreGState()
+        }
+
+
+        //// Text Drawing
+        let textRect = CGRect(x: 9, y: 11, width: 58, height: 61)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .center
+        let textFontAttributes = [
+            .font: UIFont.systemFont(ofSize: 11),
+            .foregroundColor: UIColor.white,
+            .paragraphStyle: textStyle,
+        ] as [NSAttributedString.Key: Any]
+
+        let textTextHeight: CGFloat = selectionText.boundingRect(with: CGSize(width: textRect.width, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).height
+        context.saveGState()
+        context.clip(to: textRect)
+        selectionText.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        context.restoreGState()
+
+
+        context.endTransparencyLayer()
+        context.restoreGState()
+        
+        context.restoreGState()
+
+    }
+
 
 
 
