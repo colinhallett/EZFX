@@ -109,15 +109,14 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         chorusFlangeOutL = leftFlangeLine.push(chorusOneFilterL);
         chorusFlangeOutR = rightFlangeLine.push(chorusOneFilterR);
         
+        chorusFlangeOutL *= rampedOutputLevel;
+        chorusFlangeOutR *= rampedOutputLevel;
        
         float mainOutL = 0;
         float mainOutR = 0;
         
         sp_crossfade_compute(sp, mixL, &mainInL, &chorusFlangeOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &chorusFlangeOutR, &mainOutR);
-        
-        mainOutL *= rampedOutputLevel;
-        mainOutR *= rampedOutputLevel;
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

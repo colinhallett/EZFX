@@ -82,13 +82,13 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         sp_moogladder_compute(sp, filterL, &inputSaturatorOutL, &filterOutL);
         sp_moogladder_compute(sp, filterR, &inputSaturatorOutR, &filterOutR);
         
+        filterOutL *= rampedOutputLevel;
+        filterOutR *= rampedOutputLevel;
+        
         float mainOutL, mainOutR;
         
         sp_crossfade_compute(sp, mixL, &mainInL, &filterOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &filterOutR, &mainOutR);
-           
-        mainOutL *= rampedOutputLevel;
-        mainOutR *= rampedOutputLevel;
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

@@ -45,8 +45,7 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         float expXVal = expValue(rampedXValue, 2);
         //float yPos = rampedYValue - 0.5;
        // float dFromO = distanceFromOrigin(xPos, yPos);
-        
-        
+
         float mainInL = inL[i];
         float mainInR = inR[i];
         
@@ -78,20 +77,16 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         
         sp_vdelay_compute(sp, vDelayR, &inputSaturatorOutR, &delayOutR);
         
-   //     sp_vdelay_compute(sp, vDelayFillIn, &mainInR, &delayFillInOut);
-        
         sp_vdelay_compute(sp, vDelayRR, &delayOutR, &delayOutRR);
         
-       // delayOutRR += delayFillInOut;
+        delayOutL *= rampedOutputLevel;
+        delayOutRR *= rampedOutputLevel;
         
         float mainOutL = 0;
         float mainOutR = 0;
         
         sp_crossfade_compute(sp, mixL, &mainInL, &delayOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &delayOutRR, &mainOutR);
-        
-        mainOutL *= rampedOutputLevel;
-        mainOutR *= rampedOutputLevel;
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;
