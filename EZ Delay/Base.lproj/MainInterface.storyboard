@@ -98,12 +98,27 @@
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-jZ-BDL" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uv-bk-gpe" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
                                                 <rect key="frame" x="85" y="0.0" width="74.5" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-oI-QFp" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
                                                 <rect key="frame" x="169.5" y="0.0" width="75" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-L1-zF0" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
                                                 <rect key="frame" x="254.5" y="0.0" width="74.5" height="207.5"/>

@@ -98,18 +98,43 @@
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Pw-El-ENi" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50.5" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFf-RC-1U0" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
                                                 <rect key="frame" x="60.5" y="0.0" width="50.5" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWe-2K-9vn" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
                                                 <rect key="frame" x="121" y="0.0" width="50.5" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAY-Gd-WbQ" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
                                                 <rect key="frame" x="181.5" y="0.0" width="51" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tg2-x7-Phx" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
                                                 <rect key="frame" x="242.5" y="0.0" width="50.5" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-6X-XUj" customClass="ToggleButton" customModule="EZFilter" customModuleProvider="target">
                                                 <rect key="frame" x="303" y="0.0" width="50.5" height="207.5"/>

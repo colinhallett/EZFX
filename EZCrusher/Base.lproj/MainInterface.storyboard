@@ -98,15 +98,35 @@
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyQ-e4-vOp" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="137.5" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7J-7K-kE0" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
                                                 <rect key="frame" x="151.5" y="0.0" width="138" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-BE-tPM" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
                                                 <rect key="frame" x="303.5" y="0.0" width="137.5" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-Np-fna" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
                                                 <rect key="frame" x="455" y="0.0" width="137.5" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-lx-GES" customClass="ToggleButton" customModule="EZCrusher" customModuleProvider="target">
                                                 <rect key="frame" x="606.5" y="0.0" width="138" height="78.5"/>

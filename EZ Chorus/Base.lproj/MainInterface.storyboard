@@ -98,12 +98,27 @@
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZD-q2-hzV" customClass="MLKnob" customModule="EZ_Chorus" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="153.5" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-jA-bce" customClass="MLKnob" customModule="EZ_Chorus" customModuleProvider="target">
                                                 <rect key="frame" x="163.5" y="0.0" width="153.5" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEp-gE-54N" customClass="MLKnob" customModule="EZ_Chorus" customModuleProvider="target">
                                                 <rect key="frame" x="327" y="0.0" width="154" height="78.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saQ-Q2-mR5" customClass="ToggleButton" customModule="EZ_Chorus" customModuleProvider="target">
                                                 <rect key="frame" x="491" y="0.0" width="153.5" height="78.5"/>

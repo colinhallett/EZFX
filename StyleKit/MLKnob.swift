@@ -11,9 +11,27 @@ import UIKit
 @IBDesignable
 class MLKnob: MLControl {
 
+    @IBInspectable var typeInt: Int = 0
+    
+    var type: XYPadType {
+        get {
+            return XYPadType.init(rawValue: typeInt)!
+        }
+    }
+    
     public override func draw(_ rect: CGRect) {
-        EZFXStyleKit.drawMLKnob(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height), resizing: .aspectFit, knobValue: controlValue, knobName: knobText)
-       
+        switch type {
+        case .Chorus:
+            EZFXStyleKit.drawEZOrangeKnob(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height), resizing: .aspectFit, knobValue: controlValue, knobName: knobText)
+        case .Spacer:
+            EZFXStyleKit.drawEZBlueKnob(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height), resizing: .aspectFit, knobValue: controlValue, knobName: knobText)
+        case .Crusher:
+            EZFXStyleKit.drawEZRedKnob(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height), resizing: .aspectFit, knobValue: controlValue, knobName: knobText)
+        case .Filter:
+            EZFXStyleKit.drawEZPurpleKnob(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height), resizing: .aspectFit, knobValue: controlValue, knobName: knobText)
+        case .Delay:
+            EZFXStyleKit.drawEZGreenKnob(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height), resizing: .aspectFit, knobValue: controlValue, knobName: knobText)
+        }
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
