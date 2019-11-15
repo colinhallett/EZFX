@@ -19,8 +19,6 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     @IBOutlet weak var mixKnob: MLKnob!
     @IBOutlet weak var inputLevelKnob: MLKnob!
     @IBOutlet weak var outputLevelKnob: MLKnob!
-    @IBOutlet weak var toggleFXButton: ToggleButton!
-    @IBOutlet weak var toggleLoopButton: ToggleButton!
     
     @IBOutlet weak var lowLevel: UILabel!
     @IBOutlet weak var bp1Level: UILabel!
@@ -186,14 +184,6 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
             return String(newValue) + " dB"
         }
         
-        toggleLoopButton.callback = {toggle in
-            self.xyPad.isLooping = toggle
-        }
-        toggleFXButton.toggleOn = isActiveParameter?.value ?? 1.0 > 0.5 ? true : false
-        toggleFXButton.callback = {toggle in
-            self.isActiveParameter?.setValue(toggle ? 1 : 0, originator: self.parameterObserverToken)
-        }
-        
         let newXValue = Double(xValueParameter?.value ?? 0) + 0.5
         xyPad.updateXPoint(newX: newXValue)
         let newYValue = Double(yValueParameter?.value ?? 0) + 0.5
@@ -221,10 +211,6 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
                     case strongSelf.yValueParameter!.address:
                         let newValue = 1 - (Double(value) + 0.5)
                         strongSelf.xyPad.updateYPoint(newY: newValue)
-                    case strongSelf.isActiveParameter!.address:
-                        let newValue = Double(value)
-                        //strongSelf.isActiveSwitchOutlet.isOn = newValue > 0.5 ? true : false
-                        strongSelf.toggleFXButton.toggleOn = newValue > 0.5 ? true : false
                    case strongSelf.mixParameter!.address:
                         let newValue = Float(value)
                         strongSelf.mixKnob.value = Double(newValue)
