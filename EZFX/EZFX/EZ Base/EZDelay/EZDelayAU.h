@@ -12,6 +12,10 @@
 
 @interface EZDelayAU : EZAUBase
 
+@property AUParameter *delayTypeAUParameter;
+
+@property (nonatomic) float delayType;
+
 - (void)reset;
 
 @end

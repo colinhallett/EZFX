@@ -30,12 +30,36 @@ public:
     
     void resetFX();
     
+    enum EZDelayAddress {
+        delayTypeAddress = amountOfEZAddresses
+    };
+    // Uses the ParameterAddress as a key
+    void setParameter(AUParameterAddress address, float value);
+
+    // Uses the ParameterAddress as a key
+    float getParameter(AUParameterAddress address);
+    
+    void startRamp(AUParameterAddress address, AUValue value, AUAudioFrameCount duration) override;
+    
+    void getAndSteps();
+    
+public:
+    
+    int delayType = 0;
+    
 private:
 
-    sp_vdelay *vDelayL;
-    sp_vdelay *vDelayR;
-    sp_vdelay *vDelayRR;
-    sp_vdelay *vDelayFillIn;
+    sp_vdelay *pingPongDelayL;
+    sp_vdelay *pinkPongDelayFillIn;
+    sp_vdelay *pingPongDelayR;
+    
+    sp_vdelay *simpleDelayL;
+    sp_vdelay *simpleDelayR;
+    
+    sp_vdelay *reversedDelayL;
+    sp_vdelay *reversedDelayR;
+    sp_reverse *reverseL;
+    sp_reverse *reverseR;
     
 };
 

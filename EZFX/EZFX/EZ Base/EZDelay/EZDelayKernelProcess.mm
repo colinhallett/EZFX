@@ -16,7 +16,7 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
     float *outL = (float *)outBufferListPtr->mBuffers[0].mData + bufferOffset;
     float *outR = (float *)outBufferListPtr->mBuffers[1].mData + bufferOffset;
     
-    EZKernelBase::standardEZFXGetAndSteps();
+    getAndSteps();
   
     if (EZKernelBase::isActive == 0) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
@@ -57,36 +57,90 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         sp_saturator_compute(sp, inputSaturatorR, &inputLevelOutR, &inputSaturatorOutR);
         
         
-        float delayFeedback = rampedYValue;
-        float delayTime = expXVal * 5;
+        float delayFeedback = rampedYValue - 0.0001;
+        float delayTime = expXVal * 5 + 0.0001;
+        //simple delay
         
-        float delayOutL = 0.f;
-        float delayOutR = 0.f;
-        float delayOutRR = 0.f;
-        float delayFillInOut = 0.f;
+        float simpleDelayOutL, simpleDelayOutR;
         
-        vDelayL->del = vDelayR->del = delayTime * 2.f;
+        simpleDelayL->del = delayTime;
+        simpleDelayR->del = delayTime;
         
-        vDelayRR->del = vDelayFillIn->del = delayTime;
+        simpleDelayL->feedback = delayFeedback;
+        simpleDelayR->feedback = delayFeedback;
         
-        vDelayL->feedback = vDelayR->feedback = delayFeedback;
+        sp_vdelay_compute(sp, simpleDelayL, &inputSaturatorOutL, &simpleDelayOutL);
+        sp_vdelay_compute(sp, simpleDelayR, &inputSaturatorOutR, &simpleDelayOutR);
         
-        vDelayRR->feedback = vDelayFillIn->feedback = 0;
+        //ping pong delay
         
-        sp_vdelay_compute(sp, vDelayL, &inputSaturatorOutL, &delayOutL);
+        float pingPongOutL = 0.f;
+        float pingPongFillIn = 0.f;
+        float pingPongOutR = 0.f;
         
-        sp_vdelay_compute(sp, vDelayR, &inputSaturatorOutR, &delayOutR);
+        pingPongDelayL->del = pinkPongDelayFillIn->del = delayTime * 2.f;
         
-        sp_vdelay_compute(sp, vDelayRR, &delayOutR, &delayOutRR);
+        pingPongDelayR->del = delayTime;
         
-        delayOutL *= rampedOutputLevel;
-        delayOutRR *= rampedOutputLevel;
+        pingPongDelayL->feedback = pinkPongDelayFillIn->feedback = delayFeedback;
+        
+        pingPongDelayR->feedback =  0;
+        
+        sp_vdelay_compute(sp, pingPongDelayL, &inputSaturatorOutL, &pingPongOutL);
+        
+        sp_vdelay_compute(sp, pinkPongDelayFillIn, &inputSaturatorOutR, &pingPongFillIn);
+        
+        sp_vdelay_compute(sp, pingPongDelayR, &pingPongFillIn, &pingPongOutR);
+        
+        //reverse delay:
+        float reverseDelayOutL, reverseDelayOutR;
+        
+        reversedDelayL->del = delayTime;
+        reversedDelayR->del = delayTime;
+        
+        reversedDelayL->feedback = delayFeedback;
+        reversedDelayR->feedback = delayFeedback;
+        
+        sp_vdelay_compute(sp, reversedDelayL, &inputSaturatorOutL, &reverseDelayOutL);
+        sp_vdelay_compute(sp, reversedDelayR, &inputSaturatorOutR, &reverseDelayOutR);
+        
+        float reverseOutL, reverseOutR;
+        
+        reverseL->delay = delayTime;
+        reverseR->delay = delayTime;
+        
+        sp_reverse_compute(sp, reverseL, &reverseDelayOutL, &reverseOutL);
+        sp_reverse_compute(sp, reverseR, &reverseDelayOutR, &reverseOutR);
+        
+        //switch
+        float mainDelayOutL, mainDelayOutR;
+        
+        switch (delayType) {
+            case 0:
+                mainDelayOutL = simpleDelayOutL;
+                mainDelayOutR = simpleDelayOutR;
+                break;
+            case 1:
+                mainDelayOutL = pingPongOutL;
+                mainDelayOutR = pingPongOutR;
+                break;
+            case 2:
+                mainDelayOutL = reverseOutL;
+                mainDelayOutR = reverseOutR;
+                break;
+            default:
+                mainDelayOutL = 0;
+                mainDelayOutR = 0;
+        }
+        
+        mainDelayOutL *= rampedOutputLevel;
+        mainDelayOutR *= rampedOutputLevel;
         
         float mainOutL = 0;
         float mainOutR = 0;
         
-        sp_crossfade_compute(sp, mixL, &mainInL, &delayOutL, &mainOutL);
-        sp_crossfade_compute(sp, mixR, &mainInR, &delayOutRR, &mainOutR);
+        sp_crossfade_compute(sp, mixL, &mainInL, &mainDelayOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &mainDelayOutR, &mainOutR);
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

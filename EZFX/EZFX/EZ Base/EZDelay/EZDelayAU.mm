@@ -38,7 +38,24 @@
     
     [self setKernelPtr:&_kernel];
     
-    NSArray *children = [self standardParameters];
+    AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
+    
+    _delayTypeAUParameter = [AUParameterTree createParameterWithIdentifier:@"delayType"
+                   name:@"Delay Type"
+                address:EZDelayKernel::delayTypeAddress
+                    min:0
+                    max:2
+                   unit:kAudioUnitParameterUnit_Indexed
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    
+    _delayTypeAUParameter.value = 0.0;
+    _kernel.setParameter(EZDelayKernel::delayTypeAddress, _delayTypeAUParameter.value);
+    
+    NSArray *children = [[self standardParameters]
+        arrayByAddingObjectsFromArray:@[_delayTypeAUParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     
