@@ -16,10 +16,13 @@
 
 @property AUParameter *lfoModAUParameter;
 @property AUParameter *lfoRateAUParameter;
+@property AUParameter *filterTypeAUParameter;
 
 @property (nonatomic) float lfoMod;
 @property (nonatomic) float lfoRate;
+@property (nonatomic) float filterType;
 
 -(void)setLfoMod:(float)filterMod;
 -(void)setLfoRate:(float)filterRate;
+-(void)setFilterType:(float)filterType;
 @end

@@ -60,6 +60,16 @@
                   flags:flags
            valueStrings:nil
     dependentParameters:nil];
+    _filterTypeAUParameter = [AUParameterTree createParameterWithIdentifier:@"filterType"
+                   name:@"Filter Type"
+                address:EZFilterKernel::filterTypeAddress
+                    min:0
+                    max:4
+                   unit:kAudioUnitParameterUnit_Indexed
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
     
     _lfoModAUParameter.value = 0.0;
     _kernel.setParameter(EZFilterKernel::lfoModAddress, _lfoModAUParameter.value);
@@ -67,8 +77,11 @@
     _lfoRateAUParameter.value = 10.0;
     _kernel.setParameter(EZFilterKernel::lfoRateAddress, _lfoModAUParameter.value);
     
+    _filterTypeAUParameter.value = 0;
+    _kernel.setParameter(EZFilterKernel::filterTypeAddress, _filterTypeAUParameter.value);
     
-    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_lfoModAUParameter, _lfoRateAUParameter]];
+    
+    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_lfoModAUParameter, _lfoRateAUParameter, _filterTypeAUParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     
@@ -92,7 +105,9 @@
 - (void) setLfoMod:(float)filterMod {
     
 }
-
+- (void) setFilterType:(float)filterType{
+    
+}
 - (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {
     if (![super allocateRenderResourcesAndReturnError:outError]) {
            return NO;

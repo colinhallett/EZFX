@@ -32,7 +32,8 @@ public:
     
     enum EZFilterAddress {
         lfoModAddress = amountOfEZAddresses,
-        lfoRateAddress = amountOfEZAddresses + 1
+        lfoRateAddress = amountOfEZAddresses + 1,
+        filterTypeAddress = amountOfEZAddresses + 2
     };
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value);
@@ -54,11 +55,28 @@ public:
     sp_port *lfoModInternalRamper;
     sp_port *lfoRateInternalRamper;
     
+    int filterType = 0;
+    
     sp_phasor * lfoPhasor;
     float lfoOne = 0;
     
-    sp_moogladder *filterL;
-    sp_moogladder *filterR;
+    sp_moogladder *lpfL;
+    sp_moogladder *lpfR;
+    
+    sp_reson *bwL;
+    sp_reson *bwR;
+    
+    sp_buthp *hpfL;
+    sp_buthp *hpfR;
+    
+    sp_streson *stringL;
+    sp_streson *stringR;
+    
+    sp_tbvcf *lpf303L;
+    sp_tbvcf *lpf303R;
+    
+    sp_wpkorg35 *lpf35L;
+    sp_wpkorg35 *lpf35R;
 };
 
 #endif /* __cplusplus */

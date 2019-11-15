@@ -16,6 +16,10 @@ void EZFilterKernel::setParameter(AUParameterAddress address, float value) {
         case lfoRateAddress:
             lfoRateRamper.setUIValue(clamp(value, 0.0f, 200.0f));
             break;
+        case filterTypeAddress:
+            filterType = int(value);
+            //filterTypeRamper.setUIValue(clamp(value, 0.0f, 2.0f));
+            break;
         default:
             EZKernelBase::setParameter(address, value);
     }
@@ -28,6 +32,8 @@ float EZFilterKernel::getParameter(AUParameterAddress address) {
             return lfoModRamper.getUIValue();
         case lfoRateAddress:
             return lfoRateRamper.getUIValue();
+        case filterTypeAddress:
+            return filterType;
         default:
             return EZKernelBase::getParameter(address);
     }
@@ -40,6 +46,9 @@ void EZFilterKernel::startRamp(AUParameterAddress address, AUValue value, AUAudi
             break;
         case lfoRateAddress:
             lfoRateRamper.startRamp(clamp(value, 0.0f, 200.0f), duration);
+            break;
+        case filterTypeAddress:
+            filterType = int(value); //filterTypeRamper.startRamp(clamp(value, 0.0f, 2.0f), duration);
             break;
         default:
             EZKernelBase::startRamp(address, value, duration);
