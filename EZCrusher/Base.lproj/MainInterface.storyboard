@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="896" height="78.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyQ-e4-vOp" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="78.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="78.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="2"/>
@@ -105,7 +105,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7J-7K-kE0" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
-                                                <rect key="frame" x="151.5" y="0.0" width="138" height="78.5"/>
+                                                <rect key="frame" x="182" y="0.0" width="168" height="78.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="2"/>
@@ -113,7 +113,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-BE-tPM" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
-                                                <rect key="frame" x="303.5" y="0.0" width="137.5" height="78.5"/>
+                                                <rect key="frame" x="364" y="0.0" width="168" height="78.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="2"/>
@@ -121,18 +121,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-Np-fna" customClass="MLKnob" customModule="EZCrusher" customModuleProvider="target">
-                                                <rect key="frame" x="455" y="0.0" width="137.5" height="78.5"/>
+                                                <rect key="frame" x="546" y="0.0" width="168" height="78.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-lx-GES" customClass="ToggleButton" customModule="EZCrusher" customModuleProvider="target">
-                                                <rect key="frame" x="606.5" y="0.0" width="138" height="78.5"/>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7b-al-ztU" customClass="ToggleButton" customModule="EZCrusher" customModuleProvider="target">
-                                                <rect key="frame" x="758.5" y="0.0" width="137.5" height="78.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-2O-VIS" customClass="EZSelector" customModule="EZCrusher" customModuleProvider="target">
+                                                <rect key="frame" x="728" y="0.0" width="168" height="78.5"/>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -169,14 +166,13 @@
                         <outlet property="bp6Level" destination="v6r-LA-oTx" id="8Qg-TE-yhB"/>
                         <outlet property="bp7Level" destination="c7e-xh-ufE" id="7Ah-G1-QMf"/>
                         <outlet property="bp8Level" destination="Kkb-g9-QE4" id="a8x-GZ-bae"/>
+                        <outlet property="distSelector" destination="eIB-2O-VIS" id="bUz-6G-FDV"/>
                         <outlet property="highLevel" destination="NYG-SG-hvD" id="z2i-gG-4cR"/>
                         <outlet property="inputLevelKnob" destination="A7J-7K-kE0" id="aQC-d3-Ggf"/>
                         <outlet property="lowLevel" destination="3th-RT-Ju7" id="6YV-kR-nRQ"/>
                         <outlet property="mixKnob" destination="CyQ-e4-vOp" id="j44-jD-CP4"/>
                         <outlet property="noiseLevelKnob" destination="9FB-Np-fna" id="AE0-pC-OxS"/>
                         <outlet property="outputLevelKnob" destination="Cab-BE-tPM" id="d8m-3y-uTQ"/>
-                        <outlet property="toggleFXButton" destination="mmz-lx-GES" id="lel-2a-1dU"/>
-                        <outlet property="toggleLoopButton" destination="r7b-al-ztU" id="vRN-Pp-7Yd"/>
                         <outlet property="xyPad" destination="4gg-L0-sJl" id="Xlq-Hb-v0g"/>
                     </connections>
                 </viewController>

@@ -14,9 +14,11 @@ public class EZFilterAUViewController: EZAUViewController {
     
     private var lfoRateParameter: AUParameter?
     private var lfoModParameter: AUParameter?
+    private var filterTypeParameter: AUParameter?
      
     @IBOutlet weak var lfoRateKnob: MLKnob!
     @IBOutlet weak var lfoModKnob: MLKnob!
+    @IBOutlet weak var filterSelection: EZSelector!
        
    @objc open dynamic var lfoRate: Double = 1.0 {
        willSet {
@@ -42,6 +44,18 @@ public class EZFilterAUViewController: EZAUViewController {
         }
     }
     
+    @objc open dynamic var filterType: Int = 1 {
+        willSet {
+            guard filterType != newValue else { return }
+            if audioUnit?.isSetUp == true {
+                filterTypeParameter?.value = AUValue(newValue)
+                return
+            } else {
+                //audioUnit?.lfoRate = AUValue(newValue)
+            }
+        }
+    }
+    
     public override func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
         audioUnit = try EZFilterAU(componentDescription: componentDescription, options: [])
         
@@ -54,9 +68,15 @@ public class EZFilterAUViewController: EZAUViewController {
         guard let tree = audioUnit?.parameterTree else {return}
         lfoModParameter = tree["lfoMod"]
         lfoRateParameter = tree["lfoRate"]
+        filterTypeParameter = tree["filterType"]
     }
     override func setupKnobs() {
         super.setupKnobs()
+        filterSelection.selectionNames = ["LPF1", "LPF2", "String", "BPF", "HPF"]
+        filterSelection.callback = {value in self.filterTypeParameter?.setValue(AUValue(value), originator: self.parameterObserverToken)
+        }
+        
+        
         let lfoRateValue = convertToRange(number: Double(lfoRateParameter?.value ?? 0.0), inputRange: 0..<80.0, outputRange: 0..<1.0)
         lfoRateKnob.value = lfoRateValue
         lfoRateKnob.callback = {value in
@@ -103,10 +123,6 @@ public class EZFilterAUViewController: EZAUViewController {
             case strongSelf.yValueParameter!.address:
                 let newValue = 1 - (Double(value) + 0.5)
                 strongSelf.xyPad.updateYPoint(newY: newValue)
-            case strongSelf.isActiveParameter!.address:
-                let newValue = Double(value)
-                   //strongSelf.isActiveSwitchOutlet.isOn = newValue > 0.5 ? true : false
-                strongSelf.toggleFXButton.toggleOn = newValue > 0.5 ? true : false
             case strongSelf.mixParameter!.address:
                 let newValue = Float(value)
                 strongSelf.mixKnob.value = Double(newValue)
@@ -118,6 +134,8 @@ public class EZFilterAUViewController: EZAUViewController {
                 strongSelf.lfoModKnob.value = Double(value)
             case strongSelf.lfoRateParameter!.address:
                strongSelf.lfoRateKnob.value = convertToRange(number: Double(value), inputRange: 0..<80.0, outputRange: 0..<1.0)
+            case strongSelf.filterTypeParameter!.address:
+                strongSelf.filterSelection.currentSelection = Int(value)
             default:
                    NSLog("address not found")
                 }

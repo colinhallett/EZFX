@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="207.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN1-nj-ptN" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="207.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
@@ -105,7 +105,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwG-Fk-gz0" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="85" y="0.0" width="74.5" height="207.5"/>
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
@@ -113,18 +113,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2Q-yt-neC" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="169.5" y="0.0" width="75" height="207.5"/>
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUM-2z-VKl" customClass="ToggleButton" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="254.5" y="0.0" width="74.5" height="207.5"/>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wI-oB-uGB" customClass="ToggleButton" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="339" y="0.0" width="75" height="207.5"/>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -166,8 +160,6 @@
                         <outlet property="lowLevel" destination="NZl-Ju-W4E" id="HA4-Lr-DIn"/>
                         <outlet property="mixKnob" destination="UN1-nj-ptN" id="b4A-n5-FSl"/>
                         <outlet property="outputLevelKnob" destination="B2Q-yt-neC" id="xLo-GP-nCa"/>
-                        <outlet property="toggleFXButton" destination="bUM-2z-VKl" id="QlR-bS-mmQ"/>
-                        <outlet property="toggleLoopButton" destination="5wI-oB-uGB" id="iHJ-08-B3l"/>
                         <outlet property="xyPad" destination="YBA-MM-DUV" id="6Kr-Un-LP4"/>
                     </connections>
                 </viewController>

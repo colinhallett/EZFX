@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="207.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-jZ-BDL" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="207.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="4"/>
@@ -105,7 +105,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uv-bk-gpe" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
-                                                <rect key="frame" x="85" y="0.0" width="74.5" height="207.5"/>
+                                                <rect key="frame" x="106" y="0.0" width="96" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="4"/>
@@ -113,18 +113,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-oI-QFp" customClass="MLKnob" customModule="EZ_Delay" customModuleProvider="target">
-                                                <rect key="frame" x="169.5" y="0.0" width="75" height="207.5"/>
+                                                <rect key="frame" x="212" y="0.0" width="96" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-L1-zF0" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
-                                                <rect key="frame" x="254.5" y="0.0" width="74.5" height="207.5"/>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-mM-msW" customClass="ToggleButton" customModule="EZ_Delay" customModuleProvider="target">
-                                                <rect key="frame" x="339" y="0.0" width="75" height="207.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-yN-nSw" customClass="EZSelector" customModule="EZ_Delay" customModuleProvider="target">
+                                                <rect key="frame" x="318" y="0.0" width="96" height="207.5"/>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -161,13 +158,12 @@
                         <outlet property="bp6Level" destination="W2d-T9-n0U" id="XbB-OS-bju"/>
                         <outlet property="bp7Level" destination="Ubq-0E-ayh" id="gjK-OM-yeh"/>
                         <outlet property="bp8Level" destination="53Y-Kt-bpY" id="yKb-4A-FlE"/>
+                        <outlet property="delaySelection" destination="tRC-yN-nSw" id="iNZ-ar-Ulx"/>
                         <outlet property="highLevel" destination="wq7-k3-UO3" id="4YO-56-1mM"/>
                         <outlet property="inputLevelKnob" destination="3Uv-bk-gpe" id="qNI-NC-DPv"/>
                         <outlet property="lowLevel" destination="Tl6-mH-a4i" id="lFh-P9-JSK"/>
                         <outlet property="mixKnob" destination="LDJ-jZ-BDL" id="0H5-KU-ko8"/>
                         <outlet property="outputLevelKnob" destination="ITK-oI-QFp" id="Hnf-hM-EZR"/>
-                        <outlet property="toggleFXButton" destination="ZUs-L1-zF0" id="7pO-1W-Cfu"/>
-                        <outlet property="toggleLoopButton" destination="1y2-mM-msW" id="PRQ-or-uZS"/>
                         <outlet property="xyPad" destination="CN8-dc-SKy" id="VtW-L8-GNf"/>
                     </connections>
                 </viewController>

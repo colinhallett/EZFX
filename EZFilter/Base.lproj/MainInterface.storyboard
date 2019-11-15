@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="207.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Pw-El-ENi" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="207.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="3"/>
@@ -105,7 +105,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFf-RC-1U0" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="60.5" y="0.0" width="50.5" height="207.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="61" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="3"/>
@@ -113,7 +113,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWe-2K-9vn" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="121" y="0.0" width="50.5" height="207.5"/>
+                                                <rect key="frame" x="141.5" y="0.0" width="60.5" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="3"/>
@@ -121,7 +121,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAY-Gd-WbQ" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="181.5" y="0.0" width="51" height="207.5"/>
+                                                <rect key="frame" x="212" y="0.0" width="60.5" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="3"/>
@@ -129,18 +129,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tg2-x7-Phx" customClass="MLKnob" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="207.5"/>
+                                                <rect key="frame" x="282.5" y="0.0" width="61" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-6X-XUj" customClass="ToggleButton" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="303" y="0.0" width="50.5" height="207.5"/>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-4z-wyq" customClass="ToggleButton" customModule="EZFilter" customModuleProvider="target">
-                                                <rect key="frame" x="363.5" y="0.0" width="50.5" height="207.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6so-ak-Vtx" customClass="EZSelector" customModule="EZFilter" customModuleProvider="target">
+                                                <rect key="frame" x="353.5" y="0.0" width="60.5" height="207.5"/>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -177,6 +174,7 @@
                         <outlet property="bp6Level" destination="TCB-VX-0zf" id="YZD-Yg-Fm9"/>
                         <outlet property="bp7Level" destination="d3p-Wy-sf9" id="2qY-xK-RDg"/>
                         <outlet property="bp8Level" destination="aVP-xT-bXI" id="0no-6y-7RB"/>
+                        <outlet property="filterSelection" destination="6so-ak-Vtx" id="8qU-FJ-6j8"/>
                         <outlet property="highLevel" destination="nYU-wt-v2n" id="Xrg-0D-RuE"/>
                         <outlet property="inputLevelKnob" destination="BFf-RC-1U0" id="XTB-of-bKL"/>
                         <outlet property="lfoModKnob" destination="IAY-Gd-WbQ" id="MSh-wd-U7V"/>
@@ -184,8 +182,6 @@
                         <outlet property="lowLevel" destination="3Ma-Hg-BHR" id="JyB-Jm-akr"/>
                         <outlet property="mixKnob" destination="8Pw-El-ENi" id="t1D-CI-FIE"/>
                         <outlet property="outputLevelKnob" destination="UWe-2K-9vn" id="xpr-ye-Zna"/>
-                        <outlet property="toggleFXButton" destination="jQD-6X-XUj" id="cpx-hL-cLk"/>
-                        <outlet property="toggleLoopButton" destination="gzD-4z-wyq" id="91K-HK-BlA"/>
                         <outlet property="xyPad" destination="Jes-yL-aaB" id="r1s-02-LWv"/>
                     </connections>
                 </viewController>

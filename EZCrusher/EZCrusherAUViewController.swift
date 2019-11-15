@@ -12,8 +12,10 @@ import AudioKit
 public class EZCrusherAUViewController: EZAUViewController {
     
     private var noiseLevelParameter: AUParameter?
-        
+    private var distTypeParameter: AUParameter?
+    
     @IBOutlet weak var noiseLevelKnob: MLKnob!
+    @IBOutlet weak var distSelector: EZSelector!
     
     @objc open dynamic var noiseLevel: Double = 0.0 {
         willSet {
@@ -37,9 +39,14 @@ public class EZCrusherAUViewController: EZAUViewController {
         super.setupParameters()
         guard let tree = audioUnit?.parameterTree else {return}
         noiseLevelParameter = tree["noiseLevel"]
+        distTypeParameter = tree["distType"]
     }
     override func setupKnobs() {
         super.setupKnobs()
+        distSelector.selectionNames = ["Saturator", "Distortion", "Bitcrush", "Phase"]
+        distSelector.callback = {value in self.distTypeParameter?.setValue(AUValue(value), originator: self.parameterObserverToken)
+        }
+        
         noiseLevelKnob.value = Double(noiseLevelParameter?.value ?? 0.0)
         noiseLevelKnob.callback = {value in
             self.noiseLevelParameter?.setValue(AUValue(value), originator:
@@ -72,10 +79,6 @@ public class EZCrusherAUViewController: EZAUViewController {
             case strongSelf.yValueParameter!.address:
                 let newValue = 1 - (Double(value) + 0.5)
                 strongSelf.xyPad.updateYPoint(newY: newValue)
-            case strongSelf.isActiveParameter!.address:
-                let newValue = Double(value)
-                   //strongSelf.isActiveSwitchOutlet.isOn = newValue > 0.5 ? true : false
-                strongSelf.toggleFXButton.toggleOn = newValue > 0.5 ? true : false
             case strongSelf.mixParameter!.address:
                 let newValue = Float(value)
                 strongSelf.mixKnob.value = Double(newValue)
@@ -85,6 +88,8 @@ public class EZCrusherAUViewController: EZAUViewController {
                 strongSelf.outputLevelKnob.value = convertToRange(number: Double(value), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
             case strongSelf.noiseLevelParameter!.address:
                 strongSelf.noiseLevelKnob.value = Double(value)
+            case strongSelf.distTypeParameter!.address:
+                strongSelf.distSelector.currentSelection = Int(value)
             default:
                    NSLog("address not found")
                 }
