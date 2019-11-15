@@ -13,6 +13,9 @@ void EZCrusherKernel::setParameter(AUParameterAddress address, float value) {
         case noiseLevelAddress:
             noiseLevelRamper.setUIValue(clamp(value, 0.0f, 1.0f));
             break;
+        case distTypeAddress:
+            distType = int(value);
+            break;
         default:
             EZKernelBase::setParameter(address, value);
     }
@@ -23,6 +26,8 @@ float EZCrusherKernel::getParameter(AUParameterAddress address) {
     switch (address) {
         case noiseLevelAddress:
             return noiseLevelRamper.getUIValue();
+        case distTypeAddress:
+            return distType;
         default:
             return EZKernelBase::getParameter(address);
     }
@@ -32,6 +37,9 @@ void EZCrusherKernel::startRamp(AUParameterAddress address, AUValue value, AUAud
     switch (address) {
         case noiseLevelAddress:
             noiseLevelRamper.startRamp(clamp(value, 0.0f, 1.0f), duration);
+            break;
+        case distTypeAddress:
+            distType = int(value);
             break;
         default:
             EZKernelBase::startRamp(address, value, duration);

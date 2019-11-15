@@ -14,6 +14,7 @@
 
 - (void)reset;
 @property AUParameter *noiseLevelParameter;
+@property AUParameter *distTypeParameter;
 
 @property (nonatomic) float noiseLevel;
 

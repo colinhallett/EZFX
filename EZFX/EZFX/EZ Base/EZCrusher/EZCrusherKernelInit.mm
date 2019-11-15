@@ -24,6 +24,16 @@ void EZCrusherKernel::resetFX() {
         sp_buthp_destroy(&outputHpfR);
         sp_saturator_destroy(&saturatorL);
         sp_saturator_destroy(&saturatorR);
+        sp_dist_destroy(&distL);
+        sp_dist_destroy(&distR);
+        sp_clip_destroy(&distClipL);
+        sp_clip_destroy(&distClipR);
+        sp_bitcrush_destroy(&bitcrushL);
+        sp_bitcrush_destroy(&bitcrushR);
+        sp_pdhalf_destroy(&phaseDist);
+        sp_tabread_destroy(&tab);
+        sp_ftbl_destroy(&fTable);
+        sp_phasor_destroy(&phasor);
         sp_port_destroy(&noiseLevelInternalRamper);
         sp_pinknoise_destroy(&pinkNoise);
         sp_buthp_destroy(&noiseHpf);
@@ -50,6 +60,33 @@ void EZCrusherKernel::initSPAndSetValues() {
     sp_saturator_init(sp, saturatorL);
     sp_saturator_create(&saturatorR);
     sp_saturator_init(sp, saturatorR);
+    //dist
+    sp_dist_create(&distL);
+    sp_dist_init(sp, distL);
+    sp_dist_create(&distR);
+    sp_dist_init(sp, distR);
+    sp_clip_create(&distClipL);
+    sp_clip_init(sp, distClipL);
+    sp_clip_create(&distClipR);
+    sp_clip_init(sp, distClipR);
+    distClipL->lim = 5;
+    distClipR->lim = 5;
+    //bit crush
+    sp_bitcrush_create(&bitcrushL);
+    sp_bitcrush_init(sp, bitcrushL);
+    sp_bitcrush_create(&bitcrushR);
+    sp_bitcrush_init(sp, bitcrushR);
+    //phase
+    sp_pdhalf_create(&phaseDist);
+    sp_ftbl_create(sp, &fTable, 2048);
+    sp_gen_sine(sp, fTable);
+    sp_tabread_create(&tab);
+    sp_phasor_create(&phasor);
+    
+    sp_pdhalf_init(sp, phaseDist);
+    sp_tabread_init(sp, tab, fTable, 1);
+    sp_phasor_init(sp, phasor, 0);
+    
     //noise
     sp_pinknoise_create(&pinkNoise);
     sp_pinknoise_init(sp, pinkNoise);

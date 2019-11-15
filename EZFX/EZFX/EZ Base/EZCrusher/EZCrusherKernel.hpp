@@ -32,7 +32,8 @@ public:
     void resetFX();
     
     enum EZCrusherAddress {
-        noiseLevelAddress = amountOfEZAddresses
+        noiseLevelAddress = amountOfEZAddresses,
+        distTypeAddress = amountOfEZAddresses + 1
     };
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value);
@@ -45,6 +46,9 @@ public:
     void getAndSteps();
     
 public:
+    
+    int distType = 0;
+    
     float noiseLevel = 0;
     ParameterRamper noiseLevelRamper = 0.0;
     sp_port *noiseLevelInternalRamper;
@@ -57,9 +61,16 @@ public:
     
     sp_dist *distL;
     sp_dist *distR;
+    sp_clip *distClipL;
+    sp_clip *distClipR;
     
     sp_bitcrush *bitcrushL;
     sp_bitcrush *bitcrushR;
+    
+    sp_pdhalf *phaseDist;
+    sp_phasor *phasor;
+    sp_tabread *tab;
+    sp_ftbl *fTable;
     
     sp_pinknoise *pinkNoise;
     sp_buthp *noiseHpf;
