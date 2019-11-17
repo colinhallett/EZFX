@@ -12,7 +12,7 @@ import AudioKit
 public class EZChorusAUViewController: EZAUViewController {
     
     public override func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
-        audioUnit = try EZChorusAU(componentDescription: componentDescription, options: [])
+        audioUnit = try EZChorusAU(componentDescription: componentDescription, options: [.loadOutOfProcess])
         
         setupParameters()
         
