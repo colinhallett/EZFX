@@ -12,7 +12,7 @@ import UIKit
 extension XYPadView {
     func setupPadArea() {
         if height == frame.height || width == frame.width {
-           // return
+            return
         }
         if padArea != nil {
             padArea.removeFromSuperlayer()

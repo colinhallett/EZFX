@@ -255,7 +255,7 @@ extension EZAUViewController : XYPadDelegate {
     }
     func dLinkCallback() {
         guard let audioUnit = audioUnit else {return}
-        let scaleFactor: Float = 10
+        let scaleFactor: Float = 20
         let threshold: Float = 0.001
         
         let bp1Amp = checkThreshold(input: audioUnit.bp1Amp * scaleFactor, threshold: threshold)

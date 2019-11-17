@@ -77,7 +77,7 @@ class XYPadView: UIView {
     var targetOpacity: Float = 0
     var currentTime: CFTimeInterval = -1
     
-    var circleValues = [Float]()
+    var circleValues = [Float].init(zeros: 3)
     
     ///recording paths
       
@@ -122,6 +122,7 @@ class XYPadView: UIView {
         setupVisualiserLayer()
         setupDisplayLink()
         setupPadArea()
+        clipsToBounds = true
     }
  
     ///display link

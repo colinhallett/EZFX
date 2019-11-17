@@ -52,7 +52,7 @@ class VisualiserLayer : CALayer {
         CATransaction.commit()
     }
     
-    var averages: [[Float]] = [[Float](), [Float](), [Float]()]
+    var averages: [[Float]] = [[Float].init(zeros: 5), [Float].init(zeros: 5), [Float].init(zeros: 5)]
     var averageIndex = 0
     let maxAverage = 5
     
