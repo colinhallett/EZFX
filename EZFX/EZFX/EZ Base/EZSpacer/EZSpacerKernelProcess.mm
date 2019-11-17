@@ -16,8 +16,8 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     float *outL = (float *)outBufferListPtr->mBuffers[0].mData + bufferOffset;
     float *outR = (float *)outBufferListPtr->mBuffers[1].mData + bufferOffset;
     
-    EZKernelBase::standardEZFXGetAndSteps();
-    lfoPhasor->freq = 0.02;//xStrength * 10.0f;
+    getAndSteps();
+    lfoPhasor->freq = 0.02;
     
     if (EZKernelBase::isActive == 0) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
@@ -41,10 +41,12 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float rampedYValue = 0;
         float rampedInputLevel = 0;
         float rampedOutputLevel = 0;
+        float rampedPredelayTime = 0;
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
         sp_port_compute(sp, internalInputLevelRamper, &inputLevel, &rampedInputLevel);
+        sp_port_compute(sp, predelayInternalRamper, &predelay, &rampedPredelayTime);
         
         float xPos = rampedXValue - 0.5;
         float yPos = rampedYValue  - 0.5;
@@ -53,8 +55,8 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float xStrength = (2 * (xPos > 0 ? xPos : 0)) * (yPos > 0 ? 1 : 0);
         *reverb->rt60_low = yValueExp * 2000.0f + 1;
         *reverb->rt60_mid = yValueExp * 2000.0f + 1;
-        *reverb->hf_damping = 20000.0f * rampedXValue;
-        *reverb->in_delay = rampedXValue * 700;
+        *reverb->hf_damping = 20000.0f * rampedXValue + 10;
+        *reverb->in_delay = rampedPredelayTime + 0.001; 
         *reverb->eq1_freq = 315;
         *reverb->eq1_level = xStrength;
         //*reverb->mix = (xPos * xPos) * 4;

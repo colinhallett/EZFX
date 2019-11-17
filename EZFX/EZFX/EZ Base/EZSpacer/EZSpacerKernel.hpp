@@ -34,7 +34,26 @@ public:
     
     void resetFX();
     
+     enum EZSpacerAddress {
+            predelayAddress = amountOfEZAddresses
+        };
+    
+    // Uses the ParameterAddress as a key
+    void setParameter(AUParameterAddress address, float value);
+
+    // Uses the ParameterAddress as a key
+    float getParameter(AUParameterAddress address);
+    
+    void startRamp(AUParameterAddress address, AUValue value, AUAudioFrameCount duration) override;
+    
+    void getAndSteps();
+        
 public:
+        
+    float predelay = 0;
+    ParameterRamper predelayRamper = 0.0;
+    sp_port *predelayInternalRamper;
+    
     sp_zitarev *reverb;
     
     sp_phasor * lfoPhasor;

@@ -38,7 +38,24 @@
     
     [self setKernelPtr:&_kernel];
     
-    NSArray *children = [self standardParameters];
+    AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
+    
+    _predelayParameter = [AUParameterTree createParameterWithIdentifier:@"predelay"
+                   name:@"Predelay Time"
+                address:EZSpacerKernel::predelayAddress
+                    min:0.0
+                    max:730.0
+                   unit:kAudioUnitParameterUnit_Milliseconds
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    
+    _predelayParameter.value = 0.0;
+    _kernel.setParameter(EZSpacerKernel::predelayAddress, _predelayParameter.value);
+    
+    NSArray *children = [[self standardParameters]
+            arrayByAddingObjectsFromArray:@[_predelayParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     

@@ -12,6 +12,8 @@
 
 @interface EZSpacerAU : EZAUBase
 
+@property AUParameter *predelayParameter;
+
 - (void)reset;
 
 @end

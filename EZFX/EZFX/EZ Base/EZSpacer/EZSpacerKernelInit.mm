@@ -24,6 +24,8 @@ void EZSpacerKernel::resetFX() {
         
         sp_phasor_destroy(&lfoPhasor);
         
+        sp_port_destroy(&predelayInternalRamper);
+        
         initSPAndSetValues();
         EZKernelBase::fxResetted = true;
     }
@@ -42,6 +44,9 @@ void EZSpacerKernel::initSPAndSetValues() {
     
     sp_phasor_create(&lfoPhasor);
     sp_phasor_init(sp, lfoPhasor, 1);
+    
+    sp_port_create(&predelayInternalRamper);
+    sp_port_init(sp, predelayInternalRamper, 0.01);
 }
    
 
