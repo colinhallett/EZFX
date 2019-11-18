@@ -19,6 +19,8 @@ open class EZChorus: AKNode, AKToggleable, AKComponent, AKInput {
     fileprivate var yValueParameter: AUParameter?
     fileprivate var isActiveParameter: AUParameter?
     fileprivate var mixParameter: AUParameter?
+    fileprivate var inputLevelParameter: AUParameter?
+    fileprivate var outputLevelParameter: AUParameter?
     
     public typealias AKAudioUnitType = EZChorusAU
     
@@ -27,6 +29,7 @@ open class EZChorus: AKNode, AKToggleable, AKComponent, AKInput {
     // MARK: - Properties
     private var internalAU: AKAudioUnitType?
     
+    /*
     @objc open dynamic var mixValue: Double = 1.0 {
         willSet {
             guard mixValue != newValue else { return }
@@ -70,12 +73,10 @@ open class EZChorus: AKNode, AKToggleable, AKComponent, AKInput {
                 internalAU?.isActive = AUValue(newValue)
             }
         }
-    }
+    }*/
     
-    @objc public init(
-        _ input: AKNode? = nil
-        ) {
-
+    @objc public init( _ input: AKNode? = nil)
+    {
         _Self.register()
 
         super.init()
@@ -94,15 +95,18 @@ open class EZChorus: AKNode, AKToggleable, AKComponent, AKInput {
         internalAU?.yValue = 0.5
         internalAU?.isActive = 1.0
         internalAU?.mix = 1.0
+        internalAU?.inputLevel = 0.0
+        internalAU?.outputLevel = 0.0
+        
         
         guard let tree = internalAU?.parameterTree else {return}
-        
+        print (tree.allParameters)
         xValueParameter = tree["xValue"]
         yValueParameter = tree["yValue"]
         isActiveParameter = tree["isActive"]
         mixParameter = tree["mix"]
-        
-        
+        inputLevelParameter = tree["inputLevel"]
+        outputLevelParameter = tree["outputLevel"]
     }
 
     
