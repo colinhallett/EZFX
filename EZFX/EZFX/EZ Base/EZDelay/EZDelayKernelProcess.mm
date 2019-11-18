@@ -139,6 +139,11 @@ void EZDelayKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buff
         float mainOutL = 0;
         float mainOutR = 0;
         
+        float rampedMix = 0;
+        sp_port_compute(sp, mixInternalRamper, &mix, &rampedMix);
+        mixL->pos = rampedMix;
+        mixR->pos = rampedMix;
+        
         sp_crossfade_compute(sp, mixL, &mainInL, &mainDelayOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &mainDelayOutR, &mainOutR);
         

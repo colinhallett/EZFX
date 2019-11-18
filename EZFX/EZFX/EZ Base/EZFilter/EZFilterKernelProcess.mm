@@ -164,6 +164,11 @@ void EZFilterKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         
         float mainOutL, mainOutR;
         
+        float rampedMix = 0;
+        sp_port_compute(sp, mixInternalRamper, &mix, &rampedMix);
+        mixL->pos = rampedMix;
+        mixR->pos = rampedMix;
+        
         sp_crossfade_compute(sp, mixL, &mainInL, &filterOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &filterOutR, &mainOutR);
         

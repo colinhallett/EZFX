@@ -82,6 +82,4 @@ void EZKernelBase::standardEZFXGetAndSteps() {
     mix = mixRamper.getAndStep();
     outputLevel = powf(10, outputLevelRamper.getAndStep() / 20);
     inputLevel = powf(10, inputLevelRamper.getAndStep() / 20);
-    mixL->pos = mix;
-    mixR->pos = mix;
 }

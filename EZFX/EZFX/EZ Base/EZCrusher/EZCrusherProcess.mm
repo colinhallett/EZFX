@@ -170,6 +170,11 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         */
         float mainOutL, mainOutR;
         
+        float rampedMix = 0;
+        sp_port_compute(sp, mixInternalRamper, &mix, &rampedMix);
+        mixL->pos = rampedMix;
+        mixR->pos = rampedMix;
+        
         sp_crossfade_compute(sp, mixL, &mainInL, &hpfOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &hpfOutR, &mainOutR);
         

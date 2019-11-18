@@ -86,6 +86,11 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float mainOutL = 0;
         float mainOutR = 0;
         
+        float rampedMix = 0;
+        sp_port_compute(sp, mixInternalRamper, &mix, &rampedMix);
+        mixL->pos = rampedMix;
+        mixR->pos = rampedMix;
+        
         sp_crossfade_compute(sp, mixL, &mainInL, &reverbOutL, &mainOutL);
         sp_crossfade_compute(sp, mixR, &mainInR, &reverbOutR, &mainOutR);
         

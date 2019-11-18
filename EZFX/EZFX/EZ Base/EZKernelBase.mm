@@ -32,10 +32,10 @@ void EZKernelBase::reset() {
     inputLevelRamper.reset();
     outputLevelRamper.reset();
     if (sp) {
-        resetCrossfade();
+     /*   resetCrossfade();
         resetTracker();
         resetRamper();
-        resetSaturator();
+        resetSaturator();*/
     }
     
     resetted = true;
@@ -62,6 +62,7 @@ void EZKernelBase::resetRamper() {
 void EZKernelBase::resetCrossfade() {
     sp_crossfade_destroy(&mixL);
     sp_crossfade_destroy(&mixR);
+    sp_port_destroy(&mixInternalRamper);
     initCrossfade();
 }
 void EZKernelBase::initCrossfade() {
@@ -69,6 +70,8 @@ void EZKernelBase::initCrossfade() {
     sp_crossfade_init(sp, mixL);
     sp_crossfade_create(&mixR);
     sp_crossfade_init(sp, mixR);
+    sp_port_create(&mixInternalRamper);
+    sp_port_init(sp, mixInternalRamper, 0.01);
 }
 
 void EZKernelBase::initSaturator() {

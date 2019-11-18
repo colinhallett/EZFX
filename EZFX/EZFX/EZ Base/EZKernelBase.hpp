@@ -94,6 +94,7 @@ public:
     ParameterRamper outputLevelRamper = 1.0;
     ParameterRamper inputLevelRamper = 0.5;
     
+    sp_port *mixInternalRamper;
     sp_crossfade *mixL;
     sp_crossfade *mixR;
     
