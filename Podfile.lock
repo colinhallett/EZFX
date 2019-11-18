@@ -1,0 +1,16 @@
+PODS:
+  - Audiobus (3.0.7)
+
+DEPENDENCIES:
+  - Audiobus
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Audiobus
+
+SPEC CHECKSUMS:
+  Audiobus: a9322f4712ef2efc3a7a40fa83c09b4c223a42ef
+
+PODFILE CHECKSUM: 26b88c28ee27360262812762741f6d0b4f250b2a
+
+COCOAPODS: 1.7.1

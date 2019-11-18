@@ -110,6 +110,36 @@
 		3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
 		3B5BE816236DEF02004B5EEA /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
 		3B5BE817236DEF02004B5EEA /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
+		3B6096B02382C7A8009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096AF2382C7A8009826B6 /* ViewController.swift */; };
+		3B6096B32382C7A8009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096B12382C7A8009826B6 /* Main.storyboard */; };
+		3B6096B52382C7A9009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096B42382C7A9009826B6 /* Assets.xcassets */; };
+		3B6096B82382C7A9009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096B62382C7A9009826B6 /* LaunchScreen.storyboard */; };
+		3B6096CB2382F93E009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096CA2382F93E009826B6 /* ViewController.swift */; };
+		3B6096CE2382F93E009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096CC2382F93E009826B6 /* Main.storyboard */; };
+		3B6096D02382F93F009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096CF2382F93F009826B6 /* Assets.xcassets */; };
+		3B6096D32382F93F009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096D12382F93F009826B6 /* LaunchScreen.storyboard */; };
+		3B6096E32382F949009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096E22382F949009826B6 /* ViewController.swift */; };
+		3B6096E62382F949009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096E42382F949009826B6 /* Main.storyboard */; };
+		3B6096E82382F94A009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096E72382F94A009826B6 /* Assets.xcassets */; };
+		3B6096EB2382F94A009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096E92382F94A009826B6 /* LaunchScreen.storyboard */; };
+		3B6096FB2382F959009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096FA2382F959009826B6 /* ViewController.swift */; };
+		3B6096FE2382F959009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096FC2382F959009826B6 /* Main.storyboard */; };
+		3B6097002382F95A009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096FF2382F95A009826B6 /* Assets.xcassets */; };
+		3B6097032382F95A009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097012382F95A009826B6 /* LaunchScreen.storyboard */; };
+		3B6097132382F963009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097122382F963009826B6 /* ViewController.swift */; };
+		3B6097162382F963009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097142382F963009826B6 /* Main.storyboard */; };
+		3B6097182382F964009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097172382F964009826B6 /* Assets.xcassets */; };
+		3B60971B2382F964009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097192382F964009826B6 /* LaunchScreen.storyboard */; };
+		3B6097292382FBEE009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3B60972A2382FBEE009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3B60972B2382FBEE009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3B60972C2382FBEE009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3B60972D2382FBEF009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3B60972E2382FBEF009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3B60972F2382FBEF009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3B6097302382FBEF009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3B6097312382FBF0009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3B6097322382FBF0009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
 		3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */; };
 		3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */; };
 		3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB82354C1BE00F146C9 /* ViewController.swift */; };
@@ -234,6 +264,56 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B6096BE2382C7D3009826B6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6097202382F973009826B6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6097212382F978009826B6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6097222382F97E009826B6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6097232382F982009826B6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B8CFBD12354C25500F146C9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +365,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B0944BF2382B3FB00742919 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3B0D00002372328C00AC1843 /* XYPadViewTouches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadViewTouches.swift; sourceTree = "<group>"; };
 		3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadViewSetup.swift; sourceTree = "<group>"; };
 		3B0DFFF52372257700AC1843 /* EQCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQCircle.swift; sourceTree = "<group>"; };
@@ -308,6 +389,38 @@
 		3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDelayAUViewController.swift; sourceTree = "<group>"; };
 		3B5BE804236DEEC3004B5EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B5BE806236DEEC3004B5EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6096A92382C7A7009826B6 /* EZ Chorus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Chorus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6096AF2382C7A8009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B6096B22382C7A8009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B6096B42382C7A9009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B6096B72382C7A9009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B6096B92382C7A9009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6096C42382F93E009826B6 /* EZ Delay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Delay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6096CA2382F93E009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B6096CD2382F93E009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B6096CF2382F93F009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B6096D22382F93F009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B6096D42382F93F009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6096DC2382F949009826B6 /* EZ Spacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Spacer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6096E22382F949009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B6096E52382F949009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B6096E72382F94A009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B6096EA2382F94A009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B6096EC2382F94A009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6096F42382F959009826B6 /* EZ Crusher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Crusher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6096FA2382F959009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B6096FD2382F959009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B6096FF2382F95A009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B6097022382F95A009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B6097042382F95A009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B60970C2382F963009826B6 /* EZ Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6097122382F963009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B6097152382F963009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B6097172382F964009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B60971A2382F964009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B60971C2382F964009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6097252382FBB6009826B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B6097272382FBBC009826B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B8CFBB12354C1BE00F146C9 /* EZFX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZFX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +473,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B6096A62382C7A7009826B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096C12382F93E009826B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096D92382F949009826B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096F12382F959009826B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6097092382F963009826B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B8CFBAE2354C1BE00F146C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,6 +535,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3229A14AD33ACB8D82FADD24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3B1E03D923759D8A00DDFC03 /* EZFilter */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +592,75 @@
 			path = "EZ Delay";
 			sourceTree = "<group>";
 		};
+		3B6096AA2382C7A7009826B6 /* EZChorusStandalone */ = {
+			isa = PBXGroup;
+			children = (
+				3B6096AF2382C7A8009826B6 /* ViewController.swift */,
+				3B6096B12382C7A8009826B6 /* Main.storyboard */,
+				3B6096B42382C7A9009826B6 /* Assets.xcassets */,
+				3B6096B62382C7A9009826B6 /* LaunchScreen.storyboard */,
+				3B6096B92382C7A9009826B6 /* Info.plist */,
+			);
+			path = EZChorusStandalone;
+			sourceTree = "<group>";
+		};
+		3B6096C52382F93E009826B6 /* EZDelayStandalone */ = {
+			isa = PBXGroup;
+			children = (
+				3B6096CA2382F93E009826B6 /* ViewController.swift */,
+				3B6096CC2382F93E009826B6 /* Main.storyboard */,
+				3B6096CF2382F93F009826B6 /* Assets.xcassets */,
+				3B6096D12382F93F009826B6 /* LaunchScreen.storyboard */,
+				3B6096D42382F93F009826B6 /* Info.plist */,
+			);
+			path = EZDelayStandalone;
+			sourceTree = "<group>";
+		};
+		3B6096DD2382F949009826B6 /* EZSpacerStandalone */ = {
+			isa = PBXGroup;
+			children = (
+				3B6096E22382F949009826B6 /* ViewController.swift */,
+				3B6096E42382F949009826B6 /* Main.storyboard */,
+				3B6096E72382F94A009826B6 /* Assets.xcassets */,
+				3B6096E92382F94A009826B6 /* LaunchScreen.storyboard */,
+				3B6096EC2382F94A009826B6 /* Info.plist */,
+			);
+			path = EZSpacerStandalone;
+			sourceTree = "<group>";
+		};
+		3B6096F52382F959009826B6 /* EZCrusherStandalone */ = {
+			isa = PBXGroup;
+			children = (
+				3B6096FA2382F959009826B6 /* ViewController.swift */,
+				3B6096FC2382F959009826B6 /* Main.storyboard */,
+				3B6096FF2382F95A009826B6 /* Assets.xcassets */,
+				3B6097012382F95A009826B6 /* LaunchScreen.storyboard */,
+				3B6097042382F95A009826B6 /* Info.plist */,
+			);
+			path = EZCrusherStandalone;
+			sourceTree = "<group>";
+		};
+		3B60970D2382F963009826B6 /* EZFilterStandalone */ = {
+			isa = PBXGroup;
+			children = (
+				3B6097122382F963009826B6 /* ViewController.swift */,
+				3B6097142382F963009826B6 /* Main.storyboard */,
+				3B6097172382F964009826B6 /* Assets.xcassets */,
+				3B6097192382F964009826B6 /* LaunchScreen.storyboard */,
+				3B60971C2382F964009826B6 /* Info.plist */,
+			);
+			path = EZFilterStandalone;
+			sourceTree = "<group>";
+		};
+		3B6097242382FB8E009826B6 /* Standalone Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3B6097252382FBB6009826B6 /* AppDelegate.swift */,
+				3B6097272382FBBC009826B6 /* SceneDelegate.swift */,
+			);
+			path = "Standalone Delegates";
+			sourceTree = "<group>";
+		};
 		3B8CFBA82354C1BE00F146C9 = {
 			isa = PBXGroup;
 			children = (
@@ -450,8 +674,14 @@
 				3B5BE7FD236DEEC3004B5EEA /* EZ Delay */,
 				3B1E03D923759D8A00DDFC03 /* EZFilter */,
 				3B1E03F323759DC000DDFC03 /* EZCrusher */,
+				3B6096AA2382C7A7009826B6 /* EZChorusStandalone */,
+				3B6096C52382F93E009826B6 /* EZDelayStandalone */,
+				3B6096DD2382F949009826B6 /* EZSpacerStandalone */,
+				3B6096F52382F959009826B6 /* EZCrusherStandalone */,
+				3B60970D2382F963009826B6 /* EZFilterStandalone */,
 				3B8CFBB22354C1BE00F146C9 /* Products */,
 				3B8CFBCE2354C25500F146C9 /* Frameworks */,
+				3229A14AD33ACB8D82FADD24 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -464,6 +694,11 @@
 				3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */,
 				3B1E03D823759D8A00DDFC03 /* EZFilter.appex */,
 				3B1E03F223759DC000DDFC03 /* EZCrusher.appex */,
+				3B6096A92382C7A7009826B6 /* EZ Chorus.app */,
+				3B6096C42382F93E009826B6 /* EZ Delay.app */,
+				3B6096DC2382F949009826B6 /* EZ Spacer.app */,
+				3B6096F42382F959009826B6 /* EZ Crusher.app */,
+				3B60970C2382F963009826B6 /* EZ Filter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -492,6 +727,7 @@
 		3B8CFBCE2354C25500F146C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B0944BF2382B3FB00742919 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -538,6 +774,7 @@
 			isa = PBXGroup;
 			children = (
 				3BADC0DC2367197100A08F19 /* EZAUViewController.swift */,
+				3B6097242382FB8E009826B6 /* Standalone Delegates */,
 				3B1E04332376E60E00DDFC03 /* Helper */,
 				3B4384A723742AFA00FF23F3 /* StyleKit */,
 				3BADC0DA2367196100A08F19 /* XYPad */,
@@ -601,6 +838,96 @@
 			productName = "EZ Delay";
 			productReference = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		3B6096A82382C7A7009826B6 /* EZChorusStandalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6096BD2382C7A9009826B6 /* Build configuration list for PBXNativeTarget "EZChorusStandalone" */;
+			buildPhases = (
+				3B6096A52382C7A7009826B6 /* Sources */,
+				3B6096A62382C7A7009826B6 /* Frameworks */,
+				3B6096A72382C7A7009826B6 /* Resources */,
+				3B6096BE2382C7D3009826B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZChorusStandalone;
+			productName = EZChorusStandalone;
+			productReference = 3B6096A92382C7A7009826B6 /* EZ Chorus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B6096C32382F93E009826B6 /* EZDelayStandalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6096D52382F93F009826B6 /* Build configuration list for PBXNativeTarget "EZDelayStandalone" */;
+			buildPhases = (
+				3B6096C02382F93E009826B6 /* Sources */,
+				3B6096C12382F93E009826B6 /* Frameworks */,
+				3B6096C22382F93E009826B6 /* Resources */,
+				3B6097202382F973009826B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZDelayStandalone;
+			productName = EZDelayStandalone;
+			productReference = 3B6096C42382F93E009826B6 /* EZ Delay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B6096DB2382F949009826B6 /* EZSpacerStandalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6096ED2382F94A009826B6 /* Build configuration list for PBXNativeTarget "EZSpacerStandalone" */;
+			buildPhases = (
+				3B6096D82382F949009826B6 /* Sources */,
+				3B6096D92382F949009826B6 /* Frameworks */,
+				3B6096DA2382F949009826B6 /* Resources */,
+				3B6097212382F978009826B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZSpacerStandalone;
+			productName = EZSpacerStandalone;
+			productReference = 3B6096DC2382F949009826B6 /* EZ Spacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B6096F32382F959009826B6 /* EZCrusherStandalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6097052382F95A009826B6 /* Build configuration list for PBXNativeTarget "EZCrusherStandalone" */;
+			buildPhases = (
+				3B6096F02382F959009826B6 /* Sources */,
+				3B6096F12382F959009826B6 /* Frameworks */,
+				3B6096F22382F959009826B6 /* Resources */,
+				3B6097222382F97E009826B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZCrusherStandalone;
+			productName = EZCrusherStandalone;
+			productReference = 3B6096F42382F959009826B6 /* EZ Crusher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B60970B2382F963009826B6 /* EZFilterStandalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B60971D2382F964009826B6 /* Build configuration list for PBXNativeTarget "EZFilterStandalone" */;
+			buildPhases = (
+				3B6097082382F963009826B6 /* Sources */,
+				3B6097092382F963009826B6 /* Frameworks */,
+				3B60970A2382F963009826B6 /* Resources */,
+				3B6097232382F982009826B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZFilterStandalone;
+			productName = EZFilterStandalone;
+			productReference = 3B60970C2382F963009826B6 /* EZ Filter.app */;
+			productType = "com.apple.product-type.application";
 		};
 		3B8CFBB02354C1BE00F146C9 /* EZFX */ = {
 			isa = PBXNativeTarget;
@@ -681,6 +1008,21 @@
 					3B5BE7FB236DEEC3004B5EEA = {
 						CreatedOnToolsVersion = 11.1;
 					};
+					3B6096A82382C7A7009826B6 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3B6096C32382F93E009826B6 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3B6096DB2382F949009826B6 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3B6096F32382F959009826B6 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3B60970B2382F963009826B6 = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					3B8CFBB02354C1BE00F146C9 = {
 						CreatedOnToolsVersion = 11.1;
 						LastSwiftMigration = 1110;
@@ -718,6 +1060,11 @@
 				3B5BE7FB236DEEC3004B5EEA /* EZ Delay */,
 				3B1E03D723759D8A00DDFC03 /* EZFilter */,
 				3B1E03F123759DC000DDFC03 /* EZCrusher */,
+				3B6096A82382C7A7009826B6 /* EZChorusStandalone */,
+				3B6096C32382F93E009826B6 /* EZDelayStandalone */,
+				3B6096DB2382F949009826B6 /* EZSpacerStandalone */,
+				3B6096F32382F959009826B6 /* EZCrusherStandalone */,
+				3B60970B2382F963009826B6 /* EZFilterStandalone */,
 			);
 		};
 /* End PBXProject section */
@@ -757,6 +1104,56 @@
 			files = (
 				3B0D001023723E4E00AC1843 /* Assets.xcassets in Resources */,
 				3B5BE805236DEEC3004B5EEA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096A72382C7A7009826B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6096B82382C7A9009826B6 /* LaunchScreen.storyboard in Resources */,
+				3B6096B52382C7A9009826B6 /* Assets.xcassets in Resources */,
+				3B6096B32382C7A8009826B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096C22382F93E009826B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6096D32382F93F009826B6 /* LaunchScreen.storyboard in Resources */,
+				3B6096D02382F93F009826B6 /* Assets.xcassets in Resources */,
+				3B6096CE2382F93E009826B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096DA2382F949009826B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6096EB2382F94A009826B6 /* LaunchScreen.storyboard in Resources */,
+				3B6096E82382F94A009826B6 /* Assets.xcassets in Resources */,
+				3B6096E62382F949009826B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096F22382F959009826B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6097032382F95A009826B6 /* LaunchScreen.storyboard in Resources */,
+				3B6097002382F95A009826B6 /* Assets.xcassets in Resources */,
+				3B6096FE2382F959009826B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B60970A2382F963009826B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60971B2382F964009826B6 /* LaunchScreen.storyboard in Resources */,
+				3B6097182382F964009826B6 /* Assets.xcassets in Resources */,
+				3B6097162382F963009826B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,6 +1263,56 @@
 				3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */,
 				3B4384A623742A5A00FF23F3 /* MLKnob.swift in Sources */,
 				3B5BE813236DEF02004B5EEA /* XYPadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096A52382C7A7009826B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6097292382FBEE009826B6 /* AppDelegate.swift in Sources */,
+				3B6096B02382C7A8009826B6 /* ViewController.swift in Sources */,
+				3B60972A2382FBEE009826B6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096C02382F93E009826B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60972B2382FBEE009826B6 /* AppDelegate.swift in Sources */,
+				3B6096CB2382F93E009826B6 /* ViewController.swift in Sources */,
+				3B60972C2382FBEE009826B6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096D82382F949009826B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B60972E2382FBEF009826B6 /* SceneDelegate.swift in Sources */,
+				3B60972D2382FBEF009826B6 /* AppDelegate.swift in Sources */,
+				3B6096E32382F949009826B6 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6096F02382F959009826B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6097302382FBEF009826B6 /* SceneDelegate.swift in Sources */,
+				3B60972F2382FBEF009826B6 /* AppDelegate.swift in Sources */,
+				3B6096FB2382F959009826B6 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B6097082382F963009826B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6097322382FBF0009826B6 /* SceneDelegate.swift in Sources */,
+				3B6097312382FBF0009826B6 /* AppDelegate.swift in Sources */,
+				3B6097132382F963009826B6 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1449,86 @@
 				3B5BE804236DEEC3004B5EEA /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096B12382C7A8009826B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096B22382C7A8009826B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096B62382C7A9009826B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096B72382C7A9009826B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096CC2382F93E009826B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096CD2382F93E009826B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096D12382F93F009826B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096D22382F93F009826B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096E42382F949009826B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096E52382F949009826B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096E92382F94A009826B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096EA2382F94A009826B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6096FC2382F959009826B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6096FD2382F959009826B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6097012382F95A009826B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6097022382F95A009826B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6097142382F963009826B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6097152382F963009826B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B6097192382F964009826B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B60971A2382F964009826B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */ = {
@@ -1166,6 +1693,196 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B6096BA2382C7A9009826B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZChorusStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZChorusStandalone;
+				PRODUCT_NAME = "EZ Chorus";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B6096BB2382C7A9009826B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZChorusStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZChorusStandalone;
+				PRODUCT_NAME = "EZ Chorus";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B6096D62382F93F009826B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZDelayStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZDelayStandalone;
+				PRODUCT_NAME = "EZ Delay";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B6096D72382F93F009826B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZDelayStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZDelayStandalone;
+				PRODUCT_NAME = "EZ Delay";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B6096EE2382F94A009826B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZSpacerStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZSpacerStandalone;
+				PRODUCT_NAME = "EZ Spacer";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B6096EF2382F94A009826B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZSpacerStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZSpacerStandalone;
+				PRODUCT_NAME = "EZ Spacer";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B6097062382F95A009826B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZCrusherStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZCrusherStandalone;
+				PRODUCT_NAME = "EZ Crusher";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B6097072382F95A009826B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZCrusherStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZCrusherStandalone;
+				PRODUCT_NAME = "EZ Crusher";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B60971E2382F964009826B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZFilterStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFilterStandalone;
+				PRODUCT_NAME = "EZ Filter";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B60971F2382F964009826B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = EZFilterStandalone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFilterStandalone;
+				PRODUCT_NAME = "EZ Filter";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1474,6 +2191,51 @@
 			buildConfigurations = (
 				3B5BE80B236DEEC3004B5EEA /* Debug */,
 				3B5BE80C236DEEC3004B5EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6096BD2382C7A9009826B6 /* Build configuration list for PBXNativeTarget "EZChorusStandalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6096BA2382C7A9009826B6 /* Debug */,
+				3B6096BB2382C7A9009826B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6096D52382F93F009826B6 /* Build configuration list for PBXNativeTarget "EZDelayStandalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6096D62382F93F009826B6 /* Debug */,
+				3B6096D72382F93F009826B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6096ED2382F94A009826B6 /* Build configuration list for PBXNativeTarget "EZSpacerStandalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6096EE2382F94A009826B6 /* Debug */,
+				3B6096EF2382F94A009826B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6097052382F95A009826B6 /* Build configuration list for PBXNativeTarget "EZCrusherStandalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6097062382F95A009826B6 /* Debug */,
+				3B6097072382F95A009826B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B60971D2382F964009826B6 /* Build configuration list for PBXNativeTarget "EZFilterStandalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B60971E2382F964009826B6 /* Debug */,
+				3B60971F2382F964009826B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
