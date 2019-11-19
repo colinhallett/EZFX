@@ -140,6 +140,12 @@
 		3B6097302382FBEF009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
 		3B6097312382FBF0009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
 		3B6097322382FBF0009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3B64902B238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
+		3B64902C238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
+		3B64902D238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
+		3B64902E238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
+		3B64902F238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
+		3B649030238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
 		3B8A9B682354F41D00F0A312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */; };
 		3B8CFBB52354C1BE00F146C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */; };
 		3B8CFBB92354C1BE00F146C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8CFBB82354C1BE00F146C9 /* ViewController.swift */; };
@@ -421,6 +427,7 @@
 		3B60971C2382F964009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B6097252382FBB6009826B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B6097272382FBBC009826B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3B64902A238415AA00C46768 /* CrosshairLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosshairLayer.swift; sourceTree = "<group>"; };
 		3B8A9B672354F41D00F0A312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B8CFBB12354C1BE00F146C9 /* EZFX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZFX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8CFBB42354C1BE00F146C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -752,6 +759,7 @@
 				3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */,
 				3B0DFFF52372257700AC1843 /* EQCircle.swift */,
 				3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */,
+				3B64902A238415AA00C46768 /* CrosshairLayer.swift */,
 				3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */,
 				3BB70E9C235DB73500D99388 /* LayerRemover.swift */,
 				3BB70E91235A3DF700D99388 /* Fader.swift */,
@@ -1198,6 +1206,7 @@
 				3B1E041023759DDD00DDFC03 /* Fader.swift in Sources */,
 				3B1E041F23759DE100DDFC03 /* EZFXStyleKit.swift in Sources */,
 				3B1E042A23759E2900DDFC03 /* EZFilterAUViewController.swift in Sources */,
+				3B64902F238415AA00C46768 /* CrosshairLayer.swift in Sources */,
 				3B1E042023759DE100DDFC03 /* ToggleButton.swift in Sources */,
 				3B1E040C23759DDD00DDFC03 /* EQCircle.swift in Sources */,
 				3B1E040A23759DDD00DDFC03 /* XYPadViewTouches.swift in Sources */,
@@ -1224,6 +1233,7 @@
 				3B1E041B23759DDD00DDFC03 /* Fader.swift in Sources */,
 				3B1E042323759DE200DDFC03 /* EZFXStyleKit.swift in Sources */,
 				3B1E042423759DE200DDFC03 /* ToggleButton.swift in Sources */,
+				3B649030238415AA00C46768 /* CrosshairLayer.swift in Sources */,
 				3B1E041723759DDD00DDFC03 /* EQCircle.swift in Sources */,
 				3B1E041523759DDD00DDFC03 /* XYPadViewTouches.swift in Sources */,
 				3B1E042223759DE200DDFC03 /* MLControl.swift in Sources */,
@@ -1250,6 +1260,7 @@
 				3B0DFFF92372257700AC1843 /* EQCircle.swift in Sources */,
 				3B4384AC23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
 				3B4384B2237464E000FF23F3 /* ToggleButton.swift in Sources */,
+				3B64902E238415AA00C46768 /* CrosshairLayer.swift in Sources */,
 				3B5BE817236DEF02004B5EEA /* ControlPoint.swift in Sources */,
 				3B5BE802236DEEC3004B5EEA /* EZDelayAUViewController.swift in Sources */,
 				3B5BE814236DEF02004B5EEA /* TouchHotSpot.swift in Sources */,
@@ -1324,6 +1335,7 @@
 				3B545A442372D55500D8BCA9 /* XYPadRecordedPaths.swift in Sources */,
 				3B4384AF237464E000FF23F3 /* ToggleButton.swift in Sources */,
 				3BA8DD70237D6C46005AC211 /* EZSelector.swift in Sources */,
+				3B64902B238415AA00C46768 /* CrosshairLayer.swift in Sources */,
 				3B1E04352376E61D00DDFC03 /* Helpers.swift in Sources */,
 				3B0D00012372328C00AC1843 /* XYPadViewTouches.swift in Sources */,
 				3B4384A923742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
@@ -1354,6 +1366,7 @@
 				3B0DFFF72372257700AC1843 /* EQCircle.swift in Sources */,
 				3B4384AA23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
 				3B4384B0237464E000FF23F3 /* ToggleButton.swift in Sources */,
+				3B64902C238415AA00C46768 /* CrosshairLayer.swift in Sources */,
 				3BADC0E023671AB600A08F19 /* EZChorusAUViewController.swift in Sources */,
 				3BB70E9E235DB73500D99388 /* LayerRemover.swift in Sources */,
 				3BB70E96235CB12500D99388 /* ControlPoint.swift in Sources */,
@@ -1380,6 +1393,7 @@
 				3B0DFFF82372257700AC1843 /* EQCircle.swift in Sources */,
 				3B4384AB23742AFB00FF23F3 /* EZFXStyleKit.swift in Sources */,
 				3B4384B1237464E000FF23F3 /* ToggleButton.swift in Sources */,
+				3B64902D238415AA00C46768 /* CrosshairLayer.swift in Sources */,
 				3BADC175236862B500A08F19 /* ControlPoint.swift in Sources */,
 				3BADC161236861FE00A08F19 /* EZSpacerAUViewController.swift in Sources */,
 				3BADC172236862B500A08F19 /* TouchHotSpot.swift in Sources */,

@@ -42,6 +42,12 @@ extension XYPadView {
         crosshair.zPosition = 1
         layer.addSublayer(crosshair)
         */
+        if crosshair != nil {
+            crosshair.removeFromSuperlayer()
+        }
+        crosshair = CrosshairLayer(width: width, height: height, value: CGPoint(x: xValue, y: yValue))
+        layer.addSublayer(crosshair)
+        
         if circle != nil {
             posInView = CGPoint(x: CGFloat(xValue) * width, y:  CGFloat(yValue) * height)
             setCirclePosition(immediate: true)

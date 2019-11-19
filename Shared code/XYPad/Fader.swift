@@ -11,6 +11,7 @@ import UIKit
 
 class Fader : CAEmitterLayer {
     
+    let initalBirthrate: Float = 2
     init(position: CGPoint, size: CGSize, type: XYPadType) {
         super.init()
         name = "emitter"
@@ -18,10 +19,12 @@ class Fader : CAEmitterLayer {
         opacity = 0.5
         let cell = CAEmitterCell()
         cell.name = "childCell"
-        cell.birthRate = 1
+        cell.birthRate = initalBirthrate
         cell.lifetime = 1.5
         cell.velocity = 50
-        cell.scale = 0.3
+        cell.scale = 0.05
+        cell.alphaRange = 2
+        cell.alphaSpeed = Float(CGFloat.pi * CGFloat.random(in: -2...2))
         cell.lifetimeRange = 0.5
         cell.spin = 5
         cell.spinRange = 2
@@ -58,7 +61,7 @@ class Fader : CAEmitterLayer {
         let layerRemover = LayerRemover(for: self)
         fade.delegate = layerRemover
         let birthRateFade = CAKeyframeAnimation(keyPath: "emitterCells.childCell.birthRate")
-        birthRateFade.values = [1.0, 0.0]
+        birthRateFade.values = [initalBirthrate, 0.0]
         birthRateFade.duration = 1
         emitterCells![0].birthRate = 0
         add(fade, forKey: "fade")

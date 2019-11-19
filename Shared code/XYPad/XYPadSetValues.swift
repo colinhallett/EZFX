@@ -15,7 +15,16 @@ extension XYPadView {
         CATransaction.begin()
         CATransaction.setAnimationDuration(time)
         circle.frame.origin = CGPoint(x: posInView.x, y: posInView.y)
+        crosshair.updatePosition(value: CGPoint(x: xValue, y: yValue))
         CATransaction.commit()
+    }
+    
+    func fadeInCrosshair(){
+        crosshair.fadeIn()
+    }
+    
+    func fadeOutCrosshair() {
+        crosshair.fadeOut()
     }
     
     func createFade(point: CGPoint) {

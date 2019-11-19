@@ -42,6 +42,7 @@ extension XYPadView {
             location.y = location.y < circleRadius ? circleRadius : (location.y > height - circleRadius ? height - circleRadius : location.y)*/
             handleTouch(point: location)
             addHotSpot(point: location)
+            fadeInCrosshair()
         }
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -73,6 +74,7 @@ extension XYPadView {
             if isLooping {
                 startPlayback = true
             }
+            fadeOutCrosshair()
         }
     }
     

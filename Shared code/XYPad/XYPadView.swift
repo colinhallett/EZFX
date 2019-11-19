@@ -61,7 +61,7 @@ class XYPadView: UIView {
     var padArea: CAShapeLayer!
     var circle: ControlPoint!
     
-    var crosshair: CAShapeLayer!
+    var crosshair: CrosshairLayer!
     
     var circleDiameter: CGFloat = 40
     var circleRadius: CGFloat {
