@@ -39,7 +39,23 @@
     
     [self setKernelPtr:&_kernel];
     
-    NSArray *children = [self standardParameters];
+    AudioUnitParameterOptions flags = kAudioUnitParameterFlag_IsWritable | kAudioUnitParameterFlag_IsReadable;
+    
+    _modulationTypeParameter = [AUParameterTree createParameterWithIdentifier:@"modulationType"
+                   name:@"Modulation Type"
+                address:EZChorusKernel::modulationTypeAddress
+                    min:0
+                    max:3
+                   unit:kAudioUnitParameterUnit_Indexed
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    
+    _modulationTypeParameter.value = 0.0;
+    _kernel.setParameter(EZChorusKernel::modulationTypeAddress, _modulationTypeParameter.value);
+    
+    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_modulationTypeParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     

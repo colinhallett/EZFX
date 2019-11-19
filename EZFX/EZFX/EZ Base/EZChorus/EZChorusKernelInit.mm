@@ -39,14 +39,14 @@ void EZChorusKernel::initSPAndSetValues() {
     modDepthFraction = 0.0f;
     minDelayMs = kChorusMinDelayMs;
     maxDelayMs = kChorusMaxDelayMs;
-    modOscillator.init(sampleRate, modFreqHz);
-    modOscillator.waveTable.sinusoid();
+    chorusModOscillator.init(sampleRate, modFreqHz);
+    chorusModOscillator.waveTable.sinusoid();
     delayRangeMs = 0.5f * (maxDelayMs - minDelayMs);
     midDelayMs = 0.5f * (minDelayMs + maxDelayMs);
-    leftDelayLine.init(sampleRate, maxDelayMs);
-    rightDelayLine.init(sampleRate, maxDelayMs);
-    leftDelayLine.setDelayMs(minDelayMs);
-    rightDelayLine.setDelayMs(minDelayMs);
+    chorusDelayLineL.init(sampleRate, maxDelayMs);
+    chorusDelayLineR.init(sampleRate, maxDelayMs);
+    chorusDelayLineL.setDelayMs(minDelayMs);
+    chorusDelayLineR.setDelayMs(minDelayMs);
     sp_delay_create(&delayL);
     sp_delay_init(sp, delayL, 0.01);
     sp_delay_create(&delayR);
@@ -69,7 +69,7 @@ void EZChorusKernel::initSPAndSetValues() {
     midFlangeMs = 0.5f * (minFlangeMs + maxFlangeMs);
     leftFlangeLine.init(sampleRate, maxFlangeMs);
     rightFlangeLine.init(sampleRate, maxFlangeMs);
-    leftDelayLine.setDelayMs(minFlangeMs);
+    chorusDelayLineL.setDelayMs(minFlangeMs);
     rightFlangeLine.setDelayMs(minFlangeMs);
     sp_phaser_create(&phaser);
     sp_phaser_init(sp, phaser);
@@ -78,9 +78,9 @@ void EZChorusKernel::initSPAndSetValues() {
     sp_crossfade_create(&crossfadeR);
     sp_crossfade_init(sp, crossfadeR);
     
-    leftDelayLine.setFeedback(0.4);
-    rightDelayLine.setFeedback(0.4);
-    modOscillator.setFrequency(0.93);
+    chorusDelayLineL.setFeedback(0.4);
+    chorusDelayLineR.setFeedback(0.4);
+    chorusModOscillator.setFrequency(0.93);
     dryWetMix = 1.0;
     modDepthFraction = 0.05;
     delayL->feedback = 0.01;
@@ -106,6 +106,12 @@ void EZChorusKernel::initSPAndSetValues() {
     flangeModDepthFraction = 0.2;
     crossfadeL->pos = 0.5;
     crossfadeR->pos = 0.5;
+    
+    *phaser->NotchFreq = 1.1;
+    *phaser->Notch_width = 5000;
+    *phaser->MaxNotch1Freq = 10000;//2000
+    *phaser->MinNotch1Freq = 20;
+    *phaser->invert = 1;
 }
    
 

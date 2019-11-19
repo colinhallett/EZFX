@@ -30,10 +30,24 @@ public:
     
     void resetFX();
     
+    enum EZChorusAddress {
+        modulationTypeAddress = amountOfEZAddresses
+    };
+    // Uses the ParameterAddress as a key
+    void setParameter(AUParameterAddress address, float value);
+
+    // Uses the ParameterAddress as a key
+    float getParameter(AUParameterAddress address);
+    
+    void startRamp(AUParameterAddress address, AUValue value, AUAudioFrameCount duration) override;
+    
+    
 public:
     
-    AudioKitCore::AdjustableDelayLine leftDelayLine, rightDelayLine;
-    AudioKitCore::FunctionTableOscillator modOscillator;
+    int modulationType = 0;
+    
+    AudioKitCore::AdjustableDelayLine chorusDelayLineL, chorusDelayLineR;
+    AudioKitCore::FunctionTableOscillator chorusModOscillator;
     float minDelayMs, maxDelayMs, midDelayMs, delayRangeMs;
     float modFreqHz, modDepthFraction, dryWetMix;
     sp_delay *delayL;

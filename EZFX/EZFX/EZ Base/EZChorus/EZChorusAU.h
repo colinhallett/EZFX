@@ -14,4 +14,6 @@
 
 - (void)reset;
 
+@property AUParameter *modulationTypeParameter;
+
 @end
