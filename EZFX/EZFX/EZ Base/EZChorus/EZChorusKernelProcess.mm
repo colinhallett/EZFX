@@ -16,7 +16,7 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
     float *outL = (float *)outBufferListPtr->mBuffers[0].mData + bufferOffset;
     float *outR = (float *)outBufferListPtr->mBuffers[1].mData + bufferOffset;
     
-    EZKernelBase::standardEZFXGetAndSteps();
+    getAndStep();
     
     if (EZKernelBase::isActive <= 0.5) {
         for (AUAudioFrameCount i = 0; i < frameCount; ++i) {
@@ -56,23 +56,30 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         sp_saturator_compute(sp, inputSaturatorL, &inputLevelOutL, &inputSaturatorOutL);
         sp_saturator_compute(sp, inputSaturatorR, &inputLevelOutR, &inputSaturatorOutR);
         
-        float xPos = rampedXValue - 0.5;
-        float yPos = rampedYValue - 0.5;
-        float dFromO = distanceFromOrigin(xPos, yPos);//sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
+        //input hpf
+        float hpfOutL, hpfOutR;
+        
+        sp_buthp_compute(sp, inputHPFL, &inputSaturatorOutL, &hpfOutL);
+        sp_buthp_compute(sp, inputHPFR, &inputSaturatorOutR, &hpfOutR);
+        
+        
+       // float xPos = rampedXValue - 0.5;
+       // float yPos = rampedYValue - 0.5;
+       // float dFromO = distanceFromOrigin(xPos, yPos);//sqrt(pow(xPos, 2) + pow(yPos, 2)) * 1.41;
         
         //chorus
         chorusModOscillator.setFrequency(rampedYValue * 10.0f + 0.0001);
-        
+        chorusModDepthFraction = rampedXValue * 0.2 + 0.001;
         float chorusOutL, chorusOutR;
         
-        float chorusOneInL = inputSaturatorOutL;
-        float chorusOneInR = inputSaturatorOutR;
+        float chorusOneInL = hpfOutL;
+        float chorusOneInR = hpfOutR;
         
         float modLeft, modRight;
         chorusModOscillator.getSamples(&modLeft, &modRight);
        
-        float leftDelayMs = midDelayMs + delayRangeMs * modDepthFraction * modLeft;
-        float rightDelayMs = midDelayMs + delayRangeMs * modDepthFraction * modRight;
+        float leftDelayMs = midDelayMs + delayRangeMs * chorusModDepthFraction * modLeft;
+        float rightDelayMs = midDelayMs + delayRangeMs * chorusModDepthFraction * modRight;
         chorusDelayLineL.setDelayMs(leftDelayMs);
         chorusDelayLineR.setDelayMs(rightDelayMs);
         chorusOutL = chorusDelayLineL.push(chorusOneInL);
@@ -81,23 +88,26 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         //phase
         float phaseOutL, phaseOutR;
         
-        *phaser->depth = rampedYValue;//dFromO * 0.8 + 0.1;
-        *phaser->feedback_gain = rampedXValue * 0.8 + 0.1;
+       // *phaser->depth = rampedYValue;//dFromO * 0.8 + 0.1;
+        //*phaser->feedback_gain = rampedXValue * 0.8 + 0.1;
        // *phaser->NotchFreq = 1.2 + 3.6 * rampedYValue;
        // *phaser->Notch_width = 100 + 489 * rampedXValue;
-       // *phaser->MaxNotch1Freq = 3000 + 2000 * dFromO;
+         *phaser->MaxNotch1Freq = 2000 + 8000 * rampedYValue;
         //*phaser->MinNotch1Freq = 1000 + 2000 * dFromO;
         *phaser->lfobpm = 1 + 30 * rampedXValue;
-        sp_phaser_compute(sp, phaser, &inputSaturatorOutL, &inputSaturatorOutR, &phaseOutL, &phaseOutR);
+        sp_phaser_compute(sp, phaser, &hpfOutL, &hpfOutR, &phaseOutL, &phaseOutR);
        
         //flange
         float flangeOutL, flangeOutR;
         float flangeL, flangeR;
-        flangeOscillator.setFrequency(rampedYValue * 20.0f + 0.01);
-        leftFlangeLine.setFeedback(0.2 * rampedXValue + 0.05);
-        rightFlangeLine.setFeedback(0.3 * rampedXValue + 0.05);
         
-        flangeModDepthFraction = 0.2 * rampedYValue + 0.05;
+        float flangeFeedback = 0.95 - 1.9 * rampedXValue;
+        
+        flangeOscillator.setFrequency(rampedYValue * 9.9 + 0.1);
+        leftFlangeLine.setFeedback(flangeFeedback);
+        rightFlangeLine.setFeedback(flangeFeedback);
+        
+        //flangeModDepthFraction = rampedYValue;
 
         
        flangeOscillator.getSamples(&flangeL, &flangeR);
@@ -107,14 +117,9 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
        
        leftFlangeLine.setDelayMs(leftFlangeMs);
        rightFlangeLine.setDelayMs(rightFlangeMs);
-       flangeOutL = leftFlangeLine.push(inputSaturatorOutL);
-       flangeOutR = rightFlangeLine.push(inputSaturatorOutR);
+       flangeOutL = leftFlangeLine.push(hpfOutL);
+       flangeOutR = rightFlangeLine.push(hpfOutR);
        
-        
-        //panner
-        float pannerOutL, pannerOutR;
-        pannerOutL = pannerOutR = 0;
-        
         //switch
         float fxOutL, fxOutR;
         
@@ -131,25 +136,23 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
                 fxOutL = flangeOutL;
                 fxOutR = flangeOutR;
                 break;
-            case 3:
-                fxOutL = pannerOutL;
-                fxOutR = pannerOutR;
-                break;
             default:
                 fxOutL = 0;
                 fxOutR = 0;
         }
         
         //after switch
-        float delayFDB = 0.6 * rampedYValue;
+       /* float delayFDB = 0.6 * rampedYValue;
         delayL->time = 0.02 * rampedXValue;
         delayR->time = 0.04 - 0.04 * rampedXValue;
         delayL->feedback = delayFDB;
         delayR->feedback = delayFDB;
-        float filterFreq = 7000; //* dFromO + 5000;
+        float filterFreq = 7000; // dFromO + 5000;
         filterL->freq = filterFreq;
-        filterR->freq = filterFreq;
+        filterR->freq = filterFreq;*/
         
+        float widenAmount;
+        sp_port_compute(sp, internalWidenRamper, &widen, &widenAmount);
         float chorusOneDelayL = 0.0f;
         float chorusOneDelayR = 0.0f;
         sp_delay_compute(sp, delayL, &fxOutL, &chorusOneDelayL);
@@ -163,8 +166,16 @@ void EZChorusKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         sp_butlp_compute(sp, filterL, &chorusOnePShiftL, &chorusOneFilterL);
         sp_butlp_compute(sp, filterR, &chorusOnePShiftR, &chorusOneFilterR);
         
-        float finalOutL = chorusOneFilterL * rampedOutputLevel;
-        float finalOutR = chorusOneFilterR * rampedOutputLevel;
+        float afterCrossfadeOutL, afterCrossfadeOutR;
+        
+        afterFXCrossfadeL->pos = widenAmount * 0.75;
+        afterFXCrossfadeR->pos = widenAmount * 0.75;
+        
+        sp_crossfade_compute(sp, afterFXCrossfadeL, &fxOutL, &chorusOneFilterL, &afterCrossfadeOutL);
+        sp_crossfade_compute(sp, afterFXCrossfadeR, &fxOutR, &chorusOneFilterR, &afterCrossfadeOutR);
+        
+        float finalOutL = afterCrossfadeOutL * rampedOutputLevel;
+        float finalOutR = afterCrossfadeOutR * rampedOutputLevel;
         
         float mainOutL = 0;
         float mainOutR = 0;
