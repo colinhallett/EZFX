@@ -15,5 +15,6 @@
 - (void)reset;
 
 @property AUParameter *modulationTypeParameter;
+@property AUParameter *widenParameter;
 
 @end

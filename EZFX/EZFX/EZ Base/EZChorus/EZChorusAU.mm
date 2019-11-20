@@ -45,8 +45,18 @@
                    name:@"Modulation Type"
                 address:EZChorusKernel::modulationTypeAddress
                     min:0
-                    max:3
+                    max:2
                    unit:kAudioUnitParameterUnit_Indexed
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
+    _widenParameter = [AUParameterTree createParameterWithIdentifier:@"widen"
+                   name:@"Widen"
+                address:EZChorusKernel::widenAddress
+                    min:0.0
+                    max:1.0
+                   unit:kAudioUnitParameterUnit_Generic
                unitName:nil
                   flags:flags
            valueStrings:nil
@@ -55,7 +65,10 @@
     _modulationTypeParameter.value = 0.0;
     _kernel.setParameter(EZChorusKernel::modulationTypeAddress, _modulationTypeParameter.value);
     
-    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_modulationTypeParameter]];
+    _widenParameter.value = 0.0;
+    _kernel.setParameter(EZChorusKernel::widenAddress, _widenParameter.value);
+    
+    NSArray *children = [[self standardParameters] arrayByAddingObjectsFromArray:@[_modulationTypeParameter, _widenParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     

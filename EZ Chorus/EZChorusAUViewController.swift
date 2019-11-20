@@ -12,7 +12,9 @@ import AudioKit
 public class EZChorusAUViewController: EZAUViewController {
     
     private var modulationTypeParameter: AUParameter?
+    private var widenParameter: AUParameter?
        
+    @IBOutlet weak var widenKnob: MLKnob!
     @IBOutlet weak var modulationSelector: EZSelector!
     
     public override func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
@@ -27,12 +29,21 @@ public class EZChorusAUViewController: EZAUViewController {
         super.setupParameters()
         guard let tree = audioUnit?.parameterTree else {return}
         modulationTypeParameter = tree["modulationType"]
+        widenParameter = tree["widen"]
     }
     
     override func setupKnobs() {
         super.setupKnobs()
-        modulationSelector.selectionNames = ["Chorus", "Phaser", "Flanger", "Panner"]
+        modulationSelector.selectionNames = ["Chorus", "Phaser", "Flanger"]
         modulationSelector.callback = {value in self.modulationTypeParameter?.setValue(AUValue(value), originator: self.parameterObserverToken)
+        }
+        widenKnob.value = Double(widenParameter?.value ?? 0.0)
+        widenKnob.callback = {value in
+            self.widenParameter?.setValue(AUValue(value), originator:  self.parameterObserverToken)
+        }
+        widenKnob.knobName = "Widen"
+        widenKnob.knobNameLogic = {value in
+            return String(Int(value * 100)) + "%"
         }
     }
     
@@ -66,6 +77,9 @@ public class EZChorusAUViewController: EZAUViewController {
                 strongSelf.outputLevelKnob.value = convertToRange(number: Double(value), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
             case strongSelf.modulationTypeParameter!.address:
                 strongSelf.modulationSelector.currentSelection = Int(value)
+            case strongSelf.widenParameter!.address:
+                let newValue = Float(value)
+                strongSelf.widenKnob.value = Double(newValue)
             default:
                    NSLog("address not found")
                 }
