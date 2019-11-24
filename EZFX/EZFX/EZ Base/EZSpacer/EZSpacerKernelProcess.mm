@@ -42,6 +42,7 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float rampedInputLevel = 0;
         float rampedOutputLevel = 0;
         float rampedPredelayTime = 0;
+        
         sp_port_compute(sp, internalXRamper, &xVal, &rampedXValue);
         sp_port_compute(sp, internalYRamper, &yVal, &rampedYValue);
         sp_port_compute(sp, internalOutputLevelRamper, &outputLevel, &rampedOutputLevel);
@@ -51,14 +52,23 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float xPos = rampedXValue - 0.5;
         float yPos = rampedYValue  - 0.5;
        // float dFromO = distanceFromOrigin(xPos, yPos);
-        float yValueExp = powf(2, (powf(rampedYValue, 5))) - 1;
+        float reverbTime = 0;
+        if (rampedYValue > 0.8) {
+            reverbTime = 10000 * expValue(rampedYValue, 6) + 0.05;
+        } else {
+            reverbTime = 1000 * expValue(rampedYValue, 6) + 0.05;
+        }
         float xStrength = (2 * (xPos > 0 ? xPos : 0)) * (yPos > 0 ? 1 : 0);
-        *reverb->rt60_low = yValueExp * 2000.0f + 1;
-        *reverb->rt60_mid = yValueExp * 2000.0f + 1;
-        *reverb->hf_damping = 20000.0f * rampedXValue + 10;
+        
+        float rampedBrightness = 0;
+        sp_port_compute(sp, brightnessInternalRamper, &brightness, &rampedBrightness);
+        
+        *reverb->rt60_low = reverbTime;
+        *reverb->rt60_mid = reverbTime;
+        *reverb->hf_damping = 20000.0f * rampedBrightness + 100;
         *reverb->in_delay = rampedPredelayTime + 0.001; 
-        *reverb->eq1_freq = 315;
-        *reverb->eq1_level = xStrength;
+        //*reverb->eq1_freq = 315;
+        //*reverb->eq1_level = xStrength;
         //*reverb->mix = (xPos * xPos) * 4;
         
         sp_phasor_compute(getSpData(), lfoPhasor, nil, &lfoOne);
@@ -70,18 +80,25 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         float inputLevelOutL = mainInL * rampedInputLevel;
         float inputLevelOutR = mainInR * rampedInputLevel;
         
+        //saturator
         float inputSaturatorOutL, inputSaturatorOutR;
         sp_saturator_compute(sp, inputSaturatorL, &inputLevelOutL, &inputSaturatorOutL);
         sp_saturator_compute(sp, inputSaturatorR, &inputLevelOutR, &inputSaturatorOutR);
         
+        //reverb
         float reverbOutL = 0;
         float reverbOutR = 0;
         
         *reverb->eq1_freq = 10000 - (9000 * xStrength * powf(lfoOne, 4));
         sp_zitarev_compute(sp, reverb, &inputSaturatorOutL, &inputSaturatorOutR, &reverbOutL, &reverbOutR);
         
-        reverbOutL *= rampedOutputLevel;
-        reverbOutR *= rampedOutputLevel;
+        //stereo pan
+        float stereoPanOutL, stereoPanOutR;
+        stereoPan->pan = 2 * xPos;
+        sp_panst_compute(sp, stereoPan, &reverbOutL, &reverbOutR, &stereoPanOutL, &stereoPanOutR);
+        
+        stereoPanOutL *= rampedOutputLevel;
+        stereoPanOutR *= rampedOutputLevel;
         
         float mainOutL = 0;
         float mainOutR = 0;
@@ -91,8 +108,8 @@ void EZSpacerKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount buf
         mixL->pos = rampedMix;
         mixR->pos = rampedMix;
         
-        sp_crossfade_compute(sp, mixL, &mainInL, &reverbOutL, &mainOutL);
-        sp_crossfade_compute(sp, mixR, &mainInR, &reverbOutR, &mainOutR);
+        sp_crossfade_compute(sp, mixL, &mainInL, &stereoPanOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &stereoPanOutR, &mainOutR);
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

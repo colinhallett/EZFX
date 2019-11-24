@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d0x-sx-uLO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="H42-d2-kqm">
+            <objects>
+                <viewController title="About" id="Ftp-x0-T9D" customClass="EZStandaloneAboutVC" customModule="EZ_Delay" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H8x-nI-eYy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-WR-qgD">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZDelayLogo" translatesAutoresizingMaskIntoConstraints="NO" id="52w-gs-hl1">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnM-UT-FOp">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                        <string key="text">EZ Delay
+
+www.kailin.co.uk
+
+with thanks to AudioKit
+
+©2019 Colin Hallett
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aPg-WR-qgD" firstAttribute="top" secondItem="zlm-8i-8ke" secondAttribute="top" constant="20" id="3jb-bN-R4j"/>
+                            <constraint firstItem="zlm-8i-8ke" firstAttribute="trailing" secondItem="aPg-WR-qgD" secondAttribute="trailing" constant="20" id="EiF-PB-tU4"/>
+                            <constraint firstItem="zlm-8i-8ke" firstAttribute="bottom" secondItem="aPg-WR-qgD" secondAttribute="bottom" constant="20" id="GH6-nd-5gG"/>
+                            <constraint firstItem="aPg-WR-qgD" firstAttribute="leading" secondItem="zlm-8i-8ke" secondAttribute="leading" constant="20" id="cdC-ww-fet"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zlm-8i-8ke"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" id="l4H-hH-fzw"/>
+                    <connections>
+                        <outlet property="textField" destination="bnM-UT-FOp" id="hqv-GN-ZBT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfT-LE-iSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="364"/>
+        </scene>
+        <!--Introduction-->
+        <scene sceneID="y1X-Zm-BB4">
+            <objects>
+                <viewController title="Introduction" id="nnp-ED-6NP" customClass="EZStandaloneIntroVC" customModule="EZ_Delay" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6MP-8o-rQl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kPW-z2-yhT">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JT7-Cn-znA">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">EZ Delay is an Audio Unit for iOS. It is based around three different types of delay effects – simple – which simply repeats the signal; ping pong - which bounces the signal between the left and right channels; and reversed which reverses the input before applying a delay. 
+
+This application is a container for the AU and its documentation. EZ Delay needs to be used within an AU host or DAW application. 
+
+EZ Delay is designed to be instantly usable, whilst giving a deep range of sounds. The interface is simple and is made for experimentation and playfulness.
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZReverb1" translatesAutoresizingMaskIntoConstraints="NO" id="Wv1-ca-4PS">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JIH-8l-3SV" firstAttribute="bottom" secondItem="kPW-z2-yhT" secondAttribute="bottom" constant="20" id="dQA-ux-mfN"/>
+                            <constraint firstItem="kPW-z2-yhT" firstAttribute="leading" secondItem="JIH-8l-3SV" secondAttribute="leading" constant="20" id="feI-bF-jYk"/>
+                            <constraint firstItem="kPW-z2-yhT" firstAttribute="top" secondItem="JIH-8l-3SV" secondAttribute="top" constant="20" id="rIe-5W-yd3"/>
+                            <constraint firstItem="JIH-8l-3SV" firstAttribute="trailing" secondItem="kPW-z2-yhT" secondAttribute="trailing" constant="20" id="yuG-jg-bcb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JIH-8l-3SV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Intro" id="Ydk-MT-jYQ"/>
+                    <connections>
+                        <outlet property="textField" destination="JT7-Cn-znA" id="H6N-dW-WsV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1W-ld-hDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.279648609077597" y="-1348.828125"/>
+        </scene>
+        <!--Controls-->
+        <scene sceneID="1wK-yP-bFz">
+            <objects>
+                <viewController title="Controls" id="oO0-2O-Mu5" customClass="EZStandaloneControlsVC" customModule="EZ_Delay" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cok-ap-Rql">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="M3O-BR-qQM">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-Vt-WcH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="729"/>
+                                        <string key="text">All three delays share the same basic controls – the XY Pad, mix, and input/output gain controls. 
+
+XY Pad – The XY pad is at the heart of EZ Delay. It is designed for experimentation and aims to move the user away from knob fiddling and over tweaking. Moving the control along the x-axis controls the time of each repeat, and along the y-axis controls how many times the repeat is heard (feedback). A maximum y value will cause the sound to get louder, and should be used with care, especially with short delay times. 
+
+Mix – Controls the gain of the input signal (dry) and affected signal (wet). 0% is only dry, and 100% is only wet. 
+
+Input and output gain – Input gain controls the level of the signal before going into the FX – by pushing this up, the sound will begin to develop a saturated analogue style warmth. You can then rebalance the signal with the output gain, which doesn’t affect the sound, only its level. 
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NEo-At-PWi" firstAttribute="bottom" secondItem="M3O-BR-qQM" secondAttribute="bottom" constant="20" id="Dhg-K9-AVd"/>
+                            <constraint firstItem="NEo-At-PWi" firstAttribute="trailing" secondItem="M3O-BR-qQM" secondAttribute="trailing" constant="20" id="IIV-vB-sqy"/>
+                            <constraint firstItem="M3O-BR-qQM" firstAttribute="leading" secondItem="NEo-At-PWi" secondAttribute="leading" constant="20" id="fzV-T3-d1V"/>
+                            <constraint firstItem="M3O-BR-qQM" firstAttribute="top" secondItem="NEo-At-PWi" secondAttribute="top" constant="20" id="gsI-iQ-2do"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NEo-At-PWi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Controls" id="e5H-Cv-hme"/>
+                    <connections>
+                        <outlet property="textField" destination="P2h-Vt-WcH" id="3NF-gB-LNP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkF-pw-IfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="-511.39430284857576"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fZB-vh-kqX">
+            <objects>
+                <tabBarController id="d0x-sx-uLO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="73s-zK-gEU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nnp-ED-6NP" kind="relationship" relationship="viewControllers" id="nfW-Xk-qN6"/>
+                        <segue destination="oO0-2O-Mu5" kind="relationship" relationship="viewControllers" id="nxJ-mb-KVu"/>
+                        <segue destination="Ftp-x0-T9D" kind="relationship" relationship="viewControllers" id="F7W-ks-Efc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSJ-Tt-IX6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="-245"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EZDelayLogo" width="1024" height="1024"/>
+        <image name="EZReverb1" width="1672" height="1688"/>
+    </resources>
+</document>

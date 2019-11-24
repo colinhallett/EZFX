@@ -72,7 +72,7 @@ public class EZFilterAUViewController: EZAUViewController {
     }
     override func setupKnobs() {
         super.setupKnobs()
-        filterSelection.selectionNames = ["LPF1", "LPF2", "String", "BPF", "HPF"]
+        filterSelection.selectionNames = ["LPF1", "LPF2", "Resonant", "BPF", "HPF"]
         filterSelection.callback = {value in self.filterTypeParameter?.setValue(AUValue(value), originator: self.parameterObserverToken)
         }
         

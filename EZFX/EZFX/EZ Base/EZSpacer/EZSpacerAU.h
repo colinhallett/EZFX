@@ -13,6 +13,7 @@
 @interface EZSpacerAU : EZAUBase
 
 @property AUParameter *predelayParameter;
+@property AUParameter *brightnessParameter;
 
 - (void)reset;
 

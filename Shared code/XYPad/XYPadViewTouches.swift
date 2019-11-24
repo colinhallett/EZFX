@@ -12,10 +12,10 @@ import UIKit
 extension XYPadView {
     
     func handleTouch(point: CGPoint) {
-        if isLooping {
+      /*  if isLooping {
             let recordedPath = RecordedPath(value: RecordedPath.Value(xValue: Double(point.x / width), yValue: Double(point.y / height)), timeStamp: displayLink.timestamp)
             recordedPaths.append(recordedPath)
-        }
+        }*/
         posInView = CGPoint(x: point.x, y: point.y)
         updateValue(point: posInView)
         createFade(point: posInView)

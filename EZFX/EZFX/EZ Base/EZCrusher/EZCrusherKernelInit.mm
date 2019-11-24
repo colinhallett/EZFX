@@ -35,17 +35,24 @@ void EZCrusherKernel::resetFX() {
         sp_ftbl_destroy(&fTable);
         sp_phasor_destroy(&phasor);
         sp_port_destroy(&noiseLevelInternalRamper);
+        noiseLevelRamper.reset();
         sp_pinknoise_destroy(&pinkNoise);
         sp_buthp_destroy(&noiseHpf);
-        sp_jitter_destroy(&randomiser);
         sp_compressor_destroy(&compL);
         sp_compressor_destroy(&compR);
+        sp_bal_destroy(&balanceL);
+        sp_bal_destroy(&balanceR);
+        sp_pareq_destroy(&brightL);
+        sp_pareq_destroy(&brightR);
+        sp_clip_destroy(&brightClipL);
+        sp_clip_destroy(&brightClipR);
         initSPAndSetValues();
         EZKernelBase::fxResetted = true;
     }
 }
 
 void EZCrusherKernel::initSPAndSetValues() {
+    noiseLevelRamper.init();
     sp_port_create(&noiseLevelInternalRamper);
     sp_port_init(sp, noiseLevelInternalRamper, 0.01);
     //dist hpf
@@ -55,11 +62,31 @@ void EZCrusherKernel::initSPAndSetValues() {
     sp_buthp_init(sp, outputHpfR);
     outputHpfL->freq = 50;
     outputHpfR->freq = 50;
+    
+    //bright
+    sp_pareq_create(&brightL);
+    sp_pareq_init(sp, brightL);
+    sp_pareq_create(&brightR);
+    sp_pareq_init(sp, brightR);
+    
+    brightL->fc = 1000;
+    brightL->v = 4;
+    brightL->q = 1.2;
+    brightR->fc = 1000;
+    brightR->v = 4;
+    brightR->q = 1.2;
+    
+    sp_clip_create(&brightClipL);
+    sp_clip_init(sp, brightClipL);
+    sp_clip_create(&brightClipR);
+    sp_clip_init(sp, brightClipR);
+    
     // saturator
     sp_saturator_create(&saturatorL);
     sp_saturator_init(sp, saturatorL);
     sp_saturator_create(&saturatorR);
     sp_saturator_init(sp, saturatorR);
+    
     //dist
     sp_dist_create(&distL);
     sp_dist_init(sp, distL);
@@ -93,26 +120,25 @@ void EZCrusherKernel::initSPAndSetValues() {
     sp_buthp_create(&noiseHpf);
     sp_buthp_init(sp, noiseHpf);
     noiseHpf->freq = 3000;
-    sp_jitter_create(&randomiser);
-    sp_jitter_init(sp, randomiser);
-    randomiser->amp = 0.8;
-    
-    randomiser->cpsMin = 20;
-    randomiser->cpsMax = 30;
     
     sp_compressor_create(&compL);
     sp_compressor_init(sp, compL);
     sp_compressor_create(&compR);
     sp_compressor_init(sp, compR);
     
-    *compL->ratio = 4.0f;
-    *compL->atk = 0.1f;
-    *compL->rel = 0.3f;
+    *compL->ratio = 5.0f;
+    *compL->atk = 0.002f;
+    *compL->rel = 0.1f;
     *compL->thresh = -15.f;
-    *compR->ratio = 4.0f;
-    *compR->atk = 0.1f;
-    *compR->rel = 0.3f;
+    *compR->ratio = 5.0f;
+    *compR->atk = 0.002f;
+    *compR->rel = 0.1f;
     *compR->thresh = -15.f;
+    
+    sp_bal_create(&balanceL);
+    sp_bal_init(sp, balanceL);
+    sp_bal_create(&balanceR);
+    sp_bal_init(sp, balanceR);
 }
    
 

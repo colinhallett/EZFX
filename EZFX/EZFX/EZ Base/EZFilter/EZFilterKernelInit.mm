@@ -31,6 +31,8 @@ void EZFilterKernel::resetFX() {
         sp_streson_destroy(&stringR);
         sp_wpkorg35_destroy(&lpf35L);
         sp_wpkorg35_destroy(&lpf35R);
+        lfoRateRamper.reset();
+        lfoModRamper.reset();
         sp_port_destroy(&lfoModInternalRamper);
         sp_port_destroy(&lfoRateInternalRamper);
         initSPAndSetValues();
@@ -72,6 +74,8 @@ void EZFilterKernel::initSPAndSetValues() {
     sp_wpkorg35_create(&lpf35R);
     sp_wpkorg35_init(sp, lpf35R);
     
+    lfoModRamper.init();
+    lfoRateRamper.init();
     sp_port_create(&lfoModInternalRamper);
     sp_port_init(sp, lfoModInternalRamper, 0.01);
     sp_port_create(&lfoRateInternalRamper);

@@ -25,71 +25,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-zS-8gJ">
-                                <rect key="frame" x="31" y="224.5" width="42" height="205"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-Hg-BHR">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-0y-ksf">
-                                        <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSc-kf-HFk">
-                                        <rect key="frame" x="0.0" y="41" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byT-nQ-Bwr">
-                                        <rect key="frame" x="0.0" y="61.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3O-UR-5Oe">
-                                        <rect key="frame" x="0.0" y="82" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-CK-s4x">
-                                        <rect key="frame" x="0.0" y="102.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCB-VX-0zf">
-                                        <rect key="frame" x="0.0" y="123" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3p-Wy-sf9">
-                                        <rect key="frame" x="0.0" y="143.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVP-xT-bXI">
-                                        <rect key="frame" x="0.0" y="164" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYU-wt-v2n">
-                                        <rect key="frame" x="0.0" y="184.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1B6-a1-VHd">
                                 <rect key="frame" x="0.0" y="654.5" width="414" height="207.5"/>
                                 <subviews>
@@ -155,10 +90,8 @@
                             <constraint firstItem="1B6-a1-VHd" firstAttribute="leading" secondItem="RfU-QA-sai" secondAttribute="leading" id="43u-8K-ImN"/>
                             <constraint firstItem="Jes-yL-aaB" firstAttribute="top" secondItem="RfU-QA-sai" secondAttribute="top" id="6A2-4y-E33"/>
                             <constraint firstItem="1B6-a1-VHd" firstAttribute="top" secondItem="Jes-yL-aaB" secondAttribute="bottom" id="MoE-dz-cGV"/>
-                            <constraint firstItem="KPf-zS-8gJ" firstAttribute="centerX" secondItem="Jes-yL-aaB" secondAttribute="centerX" multiplier="0.25" id="ZMg-Fo-vwX"/>
                             <constraint firstItem="Jes-yL-aaB" firstAttribute="height" secondItem="8PQ-vo-KxQ" secondAttribute="height" multiplier="0.8" id="dcW-U0-dXl"/>
                             <constraint firstAttribute="trailing" secondItem="1B6-a1-VHd" secondAttribute="trailing" id="kMx-Ae-pm3"/>
-                            <constraint firstItem="KPf-zS-8gJ" firstAttribute="centerY" secondItem="Jes-yL-aaB" secondAttribute="centerY" id="l8r-qF-pwv"/>
                             <constraint firstItem="8PQ-vo-KxQ" firstAttribute="bottom" secondItem="1B6-a1-VHd" secondAttribute="bottom" id="nD3-EY-i4c"/>
                             <constraint firstItem="Jes-yL-aaB" firstAttribute="leading" secondItem="8PQ-vo-KxQ" secondAttribute="leading" id="o6r-YF-s93"/>
                             <constraint firstItem="Jes-yL-aaB" firstAttribute="trailing" secondItem="8PQ-vo-KxQ" secondAttribute="trailing" id="xFn-vZ-jlb"/>
@@ -166,20 +99,10 @@
                         <viewLayoutGuide key="safeArea" id="8PQ-vo-KxQ"/>
                     </view>
                     <connections>
-                        <outlet property="bp1Level" destination="NtS-0y-ksf" id="ggr-hF-WxK"/>
-                        <outlet property="bp2Level" destination="vSc-kf-HFk" id="sfu-2F-FTf"/>
-                        <outlet property="bp3Level" destination="byT-nQ-Bwr" id="0r9-D4-CvD"/>
-                        <outlet property="bp4Level" destination="i3O-UR-5Oe" id="tmi-iZ-M3a"/>
-                        <outlet property="bp5Level" destination="Pca-CK-s4x" id="8zB-Td-cgS"/>
-                        <outlet property="bp6Level" destination="TCB-VX-0zf" id="YZD-Yg-Fm9"/>
-                        <outlet property="bp7Level" destination="d3p-Wy-sf9" id="2qY-xK-RDg"/>
-                        <outlet property="bp8Level" destination="aVP-xT-bXI" id="0no-6y-7RB"/>
                         <outlet property="filterSelection" destination="6so-ak-Vtx" id="8qU-FJ-6j8"/>
-                        <outlet property="highLevel" destination="nYU-wt-v2n" id="Xrg-0D-RuE"/>
                         <outlet property="inputLevelKnob" destination="BFf-RC-1U0" id="XTB-of-bKL"/>
                         <outlet property="lfoModKnob" destination="IAY-Gd-WbQ" id="MSh-wd-U7V"/>
                         <outlet property="lfoRateKnob" destination="Tg2-x7-Phx" id="aZo-eZ-zeB"/>
-                        <outlet property="lowLevel" destination="3Ma-Hg-BHR" id="JyB-Jm-akr"/>
                         <outlet property="mixKnob" destination="8Pw-El-ENi" id="t1D-CI-FIE"/>
                         <outlet property="outputLevelKnob" destination="UWe-2K-9vn" id="xpr-ye-Zna"/>
                         <outlet property="xyPad" destination="Jes-yL-aaB" id="r1s-02-LWv"/>

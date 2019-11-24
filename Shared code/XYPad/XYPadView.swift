@@ -127,12 +127,15 @@ class XYPadView: UIView {
  
     ///display link
     func setupDisplayLink() {
-           displayLink = CADisplayLink(target: self, selector: #selector(displayCallback))
-           displayLink.add(to: .main, forMode: .default)
-       }
+        
+       displayLink = CADisplayLink(target: self, selector: #selector(displayCallback))
+       displayLink.add(to: .main, forMode: .default)
+   }
+    
+    
     
     @objc func displayCallback() {
-        
+       
         let frames = 0
        // counter += 1
         let deltaTime = displayLink.timestamp - currentTime
@@ -145,7 +148,7 @@ class XYPadView: UIView {
             counter = 0
         }
        
-       
+       /*
         let timeElapsed = displayLink.timestamp - currentTimeDuration
         
         if startPlayback {
@@ -167,7 +170,7 @@ class XYPadView: UIView {
                   // createFade(point: pres.frame.origin)
                }
            }
-       }
+       }*/
    }
     
     ///background set color

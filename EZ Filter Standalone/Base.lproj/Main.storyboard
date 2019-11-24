@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dEn-4l-BaU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controls-->
+        <scene sceneID="M0N-vg-ZHN">
+            <objects>
+                <viewController title="Controls" id="fK0-IM-P9P" customClass="EZStandaloneControlsVC" customModule="EZ_Filter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwv-Ss-i8I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="nD4-sD-Azz">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-ck-zbE">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="729"/>
+                                        <string key="text">All five filters share the same basic controls – the XY Pad, LFO mod, LFO rate mix, and input/output gain controls. 
+
+XY Pad – The XY pad is at the heart of EZ Filter. It is designed for experimentation and aims to move the user away from knob fiddling and over tweaking. Moving the control along the x-axis controls the fundamental frequency of the filter, and along the y-axis controls the resonance of the filter. A high resonance will cause the sound the become distorted and intense. 
+
+LFO Mod and LFO Rate – LFO, or low frequency oscillation, modulates the frequency of the filter, which can give the sound an undulating, moving feeling. Mod controls how wide the LFO sweeps, and rate controls how quickly it sweeps. 
+
+Mix – Controls the gain of the input signal (dry) and affected signal (wet). 0% is only dry, and 100% is only wet. 
+
+Input and output gain – Input gain controls the level of the signal before going into the FX – by pushing this up, the sound will begin to develop a saturated analogue style warmth. You can then rebalance the signal with the output gain, which doesn’t affect the sound, only its level. 
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nD4-sD-Azz" firstAttribute="top" secondItem="T68-iu-SCz" secondAttribute="top" constant="20" id="3HW-qe-q5w"/>
+                            <constraint firstItem="nD4-sD-Azz" firstAttribute="leading" secondItem="T68-iu-SCz" secondAttribute="leading" constant="20" id="TOB-iS-6gK"/>
+                            <constraint firstItem="T68-iu-SCz" firstAttribute="trailing" secondItem="nD4-sD-Azz" secondAttribute="trailing" constant="20" id="bqB-zV-nUH"/>
+                            <constraint firstItem="T68-iu-SCz" firstAttribute="bottom" secondItem="nD4-sD-Azz" secondAttribute="bottom" constant="20" id="mhZ-Nd-J9p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T68-iu-SCz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Controls" id="wPZ-cU-rFi"/>
+                    <connections>
+                        <outlet property="textField" destination="lc8-ck-zbE" id="qly-8h-9cL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6Y-St-ar9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="-511.39430284857576"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="oHh-eU-Epu">
+            <objects>
+                <viewController title="About" id="iAq-D2-vkV" customClass="EZStandaloneAboutVC" customModule="EZ_Filter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Nu-ef-d8k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BGe-gH-s1K">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZFilterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RAI-so-dGd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6K-qP-Ca5">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                        <string key="text">EZ Filter
+
+www.kailin.co.uk
+
+with thanks to AudioKit
+
+©2019 Colin Hallett
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fRI-5t-A9q" firstAttribute="trailing" secondItem="BGe-gH-s1K" secondAttribute="trailing" constant="20" id="35V-iE-nZO"/>
+                            <constraint firstItem="BGe-gH-s1K" firstAttribute="leading" secondItem="fRI-5t-A9q" secondAttribute="leading" constant="20" id="45r-BJ-kyE"/>
+                            <constraint firstItem="BGe-gH-s1K" firstAttribute="top" secondItem="fRI-5t-A9q" secondAttribute="top" constant="20" id="HiO-ga-nFe"/>
+                            <constraint firstItem="fRI-5t-A9q" firstAttribute="bottom" secondItem="BGe-gH-s1K" secondAttribute="bottom" constant="20" id="lOv-KO-Cob"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fRI-5t-A9q"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" id="r6t-ZS-nIW"/>
+                    <connections>
+                        <outlet property="textField" destination="o6K-qP-Ca5" id="UbZ-Kx-apz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cqx-mI-bMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="364"/>
+        </scene>
+        <!--Introduction-->
+        <scene sceneID="Rbg-Te-H1D">
+            <objects>
+                <viewController title="Introduction" id="6Y5-wc-zI9" customClass="EZStandaloneIntroVC" customModule="EZ_Filter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLj-Vv-EMM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="t0V-GN-7tR">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTO-DT-3mz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">EZ Filter is an Audio Unit for iOS. It is based around five different types of filter effects. Each changes the frequency of the input sound in different ways. 
+
+There are two low-pass filters, which only allow low frequencies through; a bandwidth filter, which only allows sounds from the specified frequency; a high-pass filter, which takes out low frequencies; and a resonant filter, which adds tones to the sound, and can turn percussive beats into pitched instruments. 
+
+This application is a container for the AU and its documentation. EZ Filter needs to be used within an AU host or DAW application. 
+
+EZ Filter is designed to be instantly usable, whilst giving a deep range of sounds. The interface is simple and is made for experimentation and playfulness.
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZReverb1" translatesAutoresizingMaskIntoConstraints="NO" id="HQh-ki-NJb">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gfQ-wg-4II" firstAttribute="bottom" secondItem="t0V-GN-7tR" secondAttribute="bottom" constant="20" id="5P9-8J-zFa"/>
+                            <constraint firstItem="t0V-GN-7tR" firstAttribute="leading" secondItem="gfQ-wg-4II" secondAttribute="leading" constant="20" id="OwT-6Z-sId"/>
+                            <constraint firstItem="gfQ-wg-4II" firstAttribute="trailing" secondItem="t0V-GN-7tR" secondAttribute="trailing" constant="20" id="kZo-o3-aHj"/>
+                            <constraint firstItem="t0V-GN-7tR" firstAttribute="top" secondItem="gfQ-wg-4II" secondAttribute="top" constant="20" id="yvB-EX-jKR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gfQ-wg-4II"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Intro" id="J9K-Ed-hZw"/>
+                    <connections>
+                        <outlet property="textField" destination="dTO-DT-3mz" id="j8X-0Y-22H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5L-iX-u9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.279648609077597" y="-1348.828125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2zR-sE-MZh">
+            <objects>
+                <tabBarController id="dEn-4l-BaU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="KY8-wI-cmH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6Y5-wc-zI9" kind="relationship" relationship="viewControllers" id="Xzt-1t-AfA"/>
+                        <segue destination="fK0-IM-P9P" kind="relationship" relationship="viewControllers" id="AlE-ei-pPl"/>
+                        <segue destination="iAq-D2-vkV" kind="relationship" relationship="viewControllers" id="8mM-9I-KVY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q09-e2-8w0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="-245"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EZFilterLogo" width="1024" height="1024"/>
+        <image name="EZReverb1" width="1672" height="1688"/>
+    </resources>
+</document>

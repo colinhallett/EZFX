@@ -14,7 +14,7 @@ extension XYPadView {
         if height == frame.height || width == frame.width {
             return
         }
-        if padArea != nil {
+       /* if padArea != nil {
             padArea.removeFromSuperlayer()
         }
         padArea = CAShapeLayer()
@@ -23,7 +23,7 @@ extension XYPadView {
         padArea.strokeColor = nil//UIColor.white.cgColor
         padArea.fillColor = nil//UIColor.black.cgColor
         padArea.zPosition = -1
-        layer.addSublayer(padArea)
+        layer.addSublayer(padArea)*/
         width = bounds.width
         height = bounds.height
        /* if crosshair != nil {

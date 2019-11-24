@@ -59,12 +59,14 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         float yPos = rampedYValue - 0.5;
         float dFromO = distanceFromOrigin(xPos, yPos);*/
         
-        float noiseOut, noiseHpfOut, randomOut;
+        float noiseOut, noiseHpfOut;
         pinkNoise->amp = rampedNoiseLevel;
         
         sp_pinknoise_compute(sp, pinkNoise, NULL, &noiseOut);
+       
         sp_buthp_compute(sp, noiseHpf, &noiseOut, &noiseHpfOut);
-        sp_jitter_compute(sp, randomiser, NULL, &randomOut);
+        //noiseHpfOut *= rampedNoiseLevel;
+        
         
         float noiseMainOutL = inputLevelOutL + noiseHpfOut;
         float noiseMainOutR = inputLevelOutR + noiseHpfOut;
@@ -73,32 +75,38 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         sp_clip_compute(sp, distClipL, &noiseMainOutL, &clipOutL);
         sp_clip_compute(sp, distClipL, &noiseMainOutR, &clipOutR);
         
+        float brightOutL, brightOutR;
+        
+        brightL->fc = 50 + 1000 * rampedYValue;
+        brightR->fc = 50 + 1000 * rampedYValue;
+        
+        sp_pareq_compute(sp, brightL, &clipOutL, &brightOutL);
+        sp_pareq_compute(sp, brightR, &clipOutR, &brightOutR);
         //saturator
     
         float saturatorDrive = 10 * rampedXValue + 0.5;
-        float saturatorOffset = rampedYValue * 0.5 + 0.5;
+        //float saturatorOffset = rampedYValue * 0.5 + 0.5;
         saturatorL->drive = saturatorDrive;
-        saturatorL->dcoffset = saturatorOffset;
+      //  saturatorL->dcoffset = saturatorOffset;
         saturatorR->drive = saturatorDrive;
-        saturatorR->dcoffset = saturatorOffset;
+     //   saturatorR->dcoffset = saturatorOffset;
         
         float saturatorOutL, saturatorOutR;
-        sp_saturator_compute(sp, saturatorL, &clipOutL, &saturatorOutL);
-        sp_saturator_compute(sp, saturatorR, &clipOutR, &saturatorOutR);
+        sp_saturator_compute(sp, saturatorL, &brightOutL, &saturatorOutL);
+        sp_saturator_compute(sp, saturatorR, &brightOutR, &saturatorOutR);
         
         //distortion
-       
-        
+        float brightClipOutL, brightClipOutR;
         float distortionOutL, distortionOutR;
+        
+        sp_clip_compute(sp, brightClipL, &brightOutL, &brightClipOutL);
+        sp_clip_compute(sp, brightClipR, &brightOutR, &brightClipOutR);
         distL->pregain = 20 * rampedXValue + 0.1;
         distR->pregain = 20 * rampedXValue + 0.1;
-        distL->shape1 = rampedYValue;
-        distR->shape1 = rampedYValue;
-        distL->shape2 = 1 - rampedYValue;
-        distR->shape2 = 1 - rampedYValue;
         
-        sp_dist_compute(sp, distL, &clipOutL, &distortionOutL);
-        sp_dist_compute(sp, distR, &clipOutR, &distortionOutR);
+        sp_dist_compute(sp, distL, &brightClipOutL, &distortionOutL);
+        sp_dist_compute(sp, distR, &brightClipOutR, &distortionOutR);
+        
         //bitcrush
         float bitCrushOutL, bitCrushOutR;
         bitcrushL->bitdepth = 16 - (15 * rampedYValue);
@@ -109,7 +117,7 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         sp_bitcrush_compute(sp, bitcrushL, &clipOutL, &bitCrushOutL);
         sp_bitcrush_compute(sp, bitcrushR, &clipOutR, &bitCrushOutR);
         //phase
-        phasor->freq = 1000 * rampedYValue + 0.1;
+        phasor->freq = 5000 * rampedYValue + 50;
         phaseDist->amount = rampedXValue * 2 - 1;
         float ph, pd, temp;
         
@@ -150,13 +158,15 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         
         sp_buthp_compute(sp, outputHpfL, &crusherOutL, &hpfOutL);
         sp_buthp_compute(sp, outputHpfR, &crusherOutR, &hpfOutR);
-      
-        hpfOutL *= rampedOutputLevel;
-        hpfOutR *= rampedOutputLevel;
-        /*
+       
+       // hpfOutL *= rampedOutputLevel;
+       // hpfOutR *= rampedOutputLevel;
+        
         float compOutL, compOutR;
-        float compRatio = rampedYValue * 5;
-        float compThresh = 0 - rampedYValue * 10;
+        float compRatio = rampedYValue * 6 + 1;
+        float compAmount = rampedYValue * 40;
+        float compThresh = -0.0001 - compAmount;
+        
         *compL->ratio = compRatio;
         *compL->thresh = compThresh;
         *compR->ratio = compRatio;
@@ -165,9 +175,27 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         sp_compressor_compute(sp, compL, &hpfOutL, &compOutL);
         sp_compressor_compute(sp, compL, &hpfOutR, &compOutR);
         
-        compOutL *= rampedOutputLevel;
-        compOutR *= rampedOutputLevel;
+       /* float rmsOutL, rmsOutR;
+        float rmsCompOutL, rmsCompOutR;
+        
+        sp_rms_compute(sp, rmsL, &clipOutL, &rmsOutL);
+        sp_rms_compute(sp, rmsR, &clipOutR, &rmsOutR);
+        
+        sp_rms_compute(sp, rmsCompL, &compOutL, &rmsCompOutL);
+        sp_rms_compute(sp, rmsCompR, &compOutR, &rmsCompOutR);
+        
+        float ratioL = rmsOutL / rmsCompOutL;
+        float ratioR = rmsOutR / rmsCompOutR;
         */
+        float balanceOutL, balanceOutR;
+        
+        sp_bal_compute(sp, balanceL, &hpfOutL, &clipOutL, &balanceOutL);
+        sp_bal_compute(sp, balanceR, &hpfOutR, &clipOutR, &balanceOutR);
+        
+        
+        float finalOutL = balanceOutL * rampedOutputLevel;
+        float finalOutR = balanceOutR * rampedOutputLevel;
+        
         float mainOutL, mainOutR;
         
         float rampedMix = 0;
@@ -175,8 +203,8 @@ void EZCrusherKernel::process(AUAudioFrameCount frameCount, AUAudioFrameCount bu
         mixL->pos = rampedMix;
         mixR->pos = rampedMix;
         
-        sp_crossfade_compute(sp, mixL, &mainInL, &hpfOutL, &mainOutL);
-        sp_crossfade_compute(sp, mixR, &mainInR, &hpfOutR, &mainOutR);
+        sp_crossfade_compute(sp, mixL, &mainInL, &finalOutL, &mainOutL);
+        sp_crossfade_compute(sp, mixR, &mainInR, &finalOutR, &mainOutR);
         
         outL[i] = mainOutL;
         outR[i] = mainOutR;

@@ -11,7 +11,7 @@ import UIKit
 
 class Fader : CAEmitterLayer {
     
-    let initalBirthrate: Float = 2
+    let initalBirthrate: Float = 1
     init(position: CGPoint, size: CGSize, type: XYPadType) {
         super.init()
         name = "emitter"

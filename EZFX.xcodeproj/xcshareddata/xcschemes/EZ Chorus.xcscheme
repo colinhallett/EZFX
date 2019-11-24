@@ -16,22 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B8CFBD52354C2A500F146C9"
-               BuildableName = "EZ Chorus.appex"
+               BuildableName = "EZ Chorus AU.appex"
                BlueprintName = "EZ Chorus"
-               ReferencedContainer = "container:EZFX.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B8CFBB02354C1BE00F146C9"
-               BuildableName = "EZFX.app"
-               BlueprintName = "EZFX"
                ReferencedContainer = "container:EZFX.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -62,15 +48,6 @@
          BundleIdentifier = "com.kymatica.AUM"
          RemotePath = "/var/containers/Bundle/Application/7FC412C1-C7B0-4A45-8BE2-19ED198A1B30/AUM.app">
       </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B8CFBB02354C1BE00F146C9"
-            BuildableName = "EZFX.app"
-            BlueprintName = "EZFX"
-            ReferencedContainer = "container:EZFX.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -79,16 +56,15 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B8CFBB02354C1BE00F146C9"
-            BuildableName = "EZFX.app"
-            BlueprintName = "EZFX"
+            BlueprintIdentifier = "3B8CFBD52354C2A500F146C9"
+            BuildableName = "EZ Chorus AU.appex"
+            BlueprintName = "EZ Chorus"
             ReferencedContainer = "container:EZFX.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

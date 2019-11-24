@@ -12,8 +12,10 @@ import AudioKit
 public class EZSpacerAUViewController: EZAUViewController {
     
     private var predelayParameter: AUParameter?
+    private var brightnessParameter: AUParameter?
     
     @IBOutlet weak var predelayKnob: MLKnob!
+    @IBOutlet weak var brightnessKnob: MLKnob!
     
     public override func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
         audioUnit = try EZSpacerAU(componentDescription: componentDescription, options: [])
@@ -26,6 +28,7 @@ public class EZSpacerAUViewController: EZAUViewController {
         super.setupParameters()
         guard let tree = audioUnit?.parameterTree else {return}
         predelayParameter = tree["predelay"]
+        brightnessParameter = tree["brightness"]
     }
     
     override func setupKnobs() {
@@ -42,6 +45,15 @@ public class EZSpacerAUViewController: EZAUViewController {
        predelayKnob.knobNameLogic = {value in
         let newValue = convertToRange(number: value, inputRange: 0..<1.0, outputRange: 0..<730.0)
         return String(newValue.rounded()) + "ms"
+        }
+        
+        brightnessKnob.value = Double(brightnessParameter?.value ?? 0.0)
+        brightnessKnob.callback = {value in
+            self.brightnessParameter?.setValue(AUValue(value), originator:  self.parameterObserverToken)
+        }
+        brightnessKnob.knobName = "Colour"
+        brightnessKnob.knobNameLogic = {value in
+            return String(Int(value * 100)) + "%"
         }
     }
     
@@ -75,6 +87,9 @@ public class EZSpacerAUViewController: EZAUViewController {
                 strongSelf.outputLevelKnob.value = convertToRange(number: Double(value), inputRange: -80.0..<20.0, outputRange: 0..<1.0)
             case strongSelf.predelayParameter!.address:
                 strongSelf.predelayKnob.value = convertToRange(number: Double(value), inputRange: 0..<730.0, outputRange: 0..<1.0)
+            case strongSelf.brightnessParameter!.address:
+                let newValue = Float(value)
+                strongSelf.brightnessKnob.value = Double(newValue)
             default:
                    NSLog("address not found")
                 }

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bka-m1-z0Q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controls-->
+        <scene sceneID="QHo-Pb-ZyW">
+            <objects>
+                <viewController title="Controls" id="V2S-R5-9iF" customClass="EZStandaloneControlsVC" customModule="EZ_Crusher_" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yew-FO-zdb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-12-Mkt">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-iK-l0N">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="729"/>
+                                        <string key="text">All four distortion modules share the same basic controls – the XY Pad, noise, mix, and input/output gain controls. 
+
+XY Pad – The XY pad is at the heart of EZ Crusher. It is designed for experimentation and aims to move the user away from knob fiddling and over tweaking. Each module responds differently to the changes in position but for the most part up and right is more intense! 
+
+Noise Level – adds a tape style hiss to the track, to give extra warmth. 
+
+Mix – Controls the gain of the input signal (dry) and affected signal (wet). 0% is only dry, and 100% is only wet. 
+
+Input and output gain – Input gain controls the level of the signal before going into the FX – by pushing this up, you can achieve even more intense distortions. You can then rebalance the signal with the output gain, which doesn’t affect the sound, only its level. 
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="heY-dk-41x" firstAttribute="bottom" secondItem="aNX-12-Mkt" secondAttribute="bottom" constant="20" id="GX6-bB-SUn"/>
+                            <constraint firstItem="aNX-12-Mkt" firstAttribute="top" secondItem="heY-dk-41x" secondAttribute="top" constant="20" id="GmA-aB-SMD"/>
+                            <constraint firstItem="aNX-12-Mkt" firstAttribute="leading" secondItem="heY-dk-41x" secondAttribute="leading" constant="20" id="SwF-2A-Drc"/>
+                            <constraint firstItem="heY-dk-41x" firstAttribute="trailing" secondItem="aNX-12-Mkt" secondAttribute="trailing" constant="20" id="snP-03-69P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="heY-dk-41x"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Controls" id="Qeu-y0-uWK"/>
+                    <connections>
+                        <outlet property="textField" destination="kXX-iK-l0N" id="25s-X7-ytW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbh-th-0xG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="-511.39430284857576"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="BID-bN-j95">
+            <objects>
+                <viewController title="About" id="rHA-aI-STo" customClass="EZStandaloneAboutVC" customModule="EZ_Crusher_" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IyF-cQ-dtf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="872-4N-idg">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZCrusherLogo" translatesAutoresizingMaskIntoConstraints="NO" id="1PR-Wc-gmM">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGN-AD-qgf">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                        <string key="text">EZ Crusher
+
+www.kailin.co.uk
+
+with thanks to AudioKit
+
+©2019 Colin Hallett
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9BX-qS-3uv" firstAttribute="bottom" secondItem="872-4N-idg" secondAttribute="bottom" constant="20" id="JzD-jT-bzP"/>
+                            <constraint firstItem="872-4N-idg" firstAttribute="top" secondItem="9BX-qS-3uv" secondAttribute="top" constant="20" id="SdX-5i-5Nm"/>
+                            <constraint firstItem="872-4N-idg" firstAttribute="leading" secondItem="9BX-qS-3uv" secondAttribute="leading" constant="20" id="XOt-TE-mAq"/>
+                            <constraint firstItem="9BX-qS-3uv" firstAttribute="trailing" secondItem="872-4N-idg" secondAttribute="trailing" constant="20" id="hKu-nu-lPh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9BX-qS-3uv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" id="35L-k9-S7h"/>
+                    <connections>
+                        <outlet property="textField" destination="cGN-AD-qgf" id="fCG-z4-RBl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2z-bg-EQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="364"/>
+        </scene>
+        <!--Introduction-->
+        <scene sceneID="Zgz-Zl-cS8">
+            <objects>
+                <viewController title="Introduction" id="gy4-fs-JaV" customClass="EZStandaloneIntroVC" customModule="EZ_Crusher_" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBe-Mc-yWK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ieo-5y-WWC">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iE-IZ-Eqb">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">EZ Crusher is an Audio Unit for iOS. It is based around four different types of distortion effects. Each degrades and affects the signal in different ways. 
+
+The saturation module will give an analogue style crispy warmth; the distortion is a much more extreme breaking up of the signal; the bitcrush degrades the signal in a digital and harsh way; and the phase distortion creates interesting frequency modulated crunch. 
+
+This application is a container for the AU and its documentation. EZ Crusher needs to be used within an AU host or DAW application. 
+
+EZ Crusher is designed to be instantly usable, whilst giving a deep range of sounds. The interface is simple and is designed for experimentation and playfulness.
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZReverb1" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-lh-0eQ">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yUr-OF-zQp" firstAttribute="bottom" secondItem="Ieo-5y-WWC" secondAttribute="bottom" constant="20" id="1sK-3F-L2h"/>
+                            <constraint firstItem="Ieo-5y-WWC" firstAttribute="top" secondItem="yUr-OF-zQp" secondAttribute="top" constant="20" id="5IE-zw-7tA"/>
+                            <constraint firstItem="yUr-OF-zQp" firstAttribute="trailing" secondItem="Ieo-5y-WWC" secondAttribute="trailing" constant="20" id="iDD-15-3Dn"/>
+                            <constraint firstItem="Ieo-5y-WWC" firstAttribute="leading" secondItem="yUr-OF-zQp" secondAttribute="leading" constant="20" id="raD-IA-BXz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yUr-OF-zQp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Intro" id="9xT-05-2A6"/>
+                    <connections>
+                        <outlet property="textField" destination="7iE-IZ-Eqb" id="wqz-DG-XaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMZ-07-cmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.279648609077597" y="-1348.828125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LM8-yZ-ioQ">
+            <objects>
+                <tabBarController id="bka-m1-z0Q" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="gp6-zw-a8e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gy4-fs-JaV" kind="relationship" relationship="viewControllers" id="ygh-Cn-NAJ"/>
+                        <segue destination="V2S-R5-9iF" kind="relationship" relationship="viewControllers" id="Fqz-JH-RpM"/>
+                        <segue destination="rHA-aI-STo" kind="relationship" relationship="viewControllers" id="bl0-eU-gCV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDa-63-Guc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="-245"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EZCrusherLogo" width="1024" height="1024"/>
+        <image name="EZReverb1" width="1672" height="1688"/>
+    </resources>
+</document>

@@ -50,12 +50,25 @@
                   flags:flags
            valueStrings:nil
     dependentParameters:nil];
+    _brightnessParameter = [AUParameterTree createParameterWithIdentifier:@"brightness"
+                   name:@"Colour"
+                address:EZSpacerKernel::brightnessAddress
+                    min:0.0
+                    max:1.0
+                   unit:kAudioUnitParameterUnit_Generic
+               unitName:nil
+                  flags:flags
+           valueStrings:nil
+    dependentParameters:nil];
     
     _predelayParameter.value = 0.0;
     _kernel.setParameter(EZSpacerKernel::predelayAddress, _predelayParameter.value);
     
+    _brightnessParameter.value = 1.0;
+    _kernel.setParameter(EZSpacerKernel::brightnessAddress, _brightnessParameter.value);
+    
     NSArray *children = [[self standardParameters]
-            arrayByAddingObjectsFromArray:@[_predelayParameter]];
+            arrayByAddingObjectsFromArray:@[_predelayParameter, _brightnessParameter]];
     
     _parameterTree = [AUParameterTree treeWithChildren:children];
     

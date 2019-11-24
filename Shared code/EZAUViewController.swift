@@ -20,17 +20,6 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
     @IBOutlet weak var inputLevelKnob: MLKnob!
     @IBOutlet weak var outputLevelKnob: MLKnob!
     
-    @IBOutlet weak var lowLevel: UILabel!
-    @IBOutlet weak var bp1Level: UILabel!
-    @IBOutlet weak var bp2Level: UILabel!
-    @IBOutlet weak var bp3Level: UILabel!
-    @IBOutlet weak var bp4Level: UILabel!
-    @IBOutlet weak var bp5Level: UILabel!
-    @IBOutlet weak var bp6Level: UILabel!
-    @IBOutlet weak var bp7Level: UILabel!
-    @IBOutlet weak var bp8Level: UILabel!
-    @IBOutlet weak var highLevel: UILabel!
-    
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //xyPad.setupPadArea()
@@ -155,7 +144,7 @@ public class EZAUViewController: AUViewController, AUAudioUnitFactory {
         }
         mixKnob.knobName = "Mix"
         mixKnob.knobNameLogic = {value in
-            return String((value * 100).rounded()) + "%"
+            return String(Int(value * 100)) + "%"
         }
         
         let newOutputLevel = convertToRange(number: Double(outputLevelParameter?.value ?? 0.0), inputRange: -80.0..<20.0, outputRange: 0..<1.0)

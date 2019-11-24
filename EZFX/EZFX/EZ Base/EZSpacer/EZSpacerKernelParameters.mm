@@ -14,6 +14,9 @@ void EZSpacerKernel::setParameter(AUParameterAddress address, float value) {
         case predelayAddress:
             predelayRamper.setUIValue(clamp(value, 0.0f, 1000.0f));
             break;
+        case brightnessAddress:
+            brightnessRamper.setUIValue(clamp(value, 0.0f, 1.0f));
+            break;
         default:
             EZKernelBase::setParameter(address, value);
             break;
@@ -24,6 +27,8 @@ float EZSpacerKernel::getParameter(AUParameterAddress address) {
     switch (address) {
         case predelayAddress:
             return predelayRamper.getUIValue();
+        case brightnessAddress:
+            return brightnessRamper.getUIValue();
         default:
             return EZKernelBase::getParameter(address);
     }
@@ -34,6 +39,9 @@ void EZSpacerKernel::startRamp(AUParameterAddress address, AUValue value, AUAudi
         case predelayAddress:
             predelayRamper.startRamp(clamp(value, 0.0f, 1000.0f), duration);
             break;
+        case brightnessAddress:
+            brightnessRamper.startRamp(clamp(value, 0.0f, 1.0f), duration);
+            break;
         default:
             EZKernelBase::startRamp(address, value, duration);
     }
@@ -41,5 +49,6 @@ void EZSpacerKernel::startRamp(AUParameterAddress address, AUValue value, AUAudi
 
 void EZSpacerKernel::getAndSteps() {
     predelay = predelayRamper.getAndStep();
+    brightness = brightnessRamper.getAndStep();
     EZKernelBase::standardEZFXGetAndSteps();
 }

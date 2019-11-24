@@ -24,7 +24,12 @@ void EZSpacerKernel::resetFX() {
         
         sp_phasor_destroy(&lfoPhasor);
         
+        sp_panst_destroy(&stereoPan);
+        
         sp_port_destroy(&predelayInternalRamper);
+        sp_port_destroy(&brightnessInternalRamper);
+        predelayRamper.reset();
+        brightnessRamper.reset();
         
         initSPAndSetValues();
         EZKernelBase::fxResetted = true;
@@ -37,16 +42,25 @@ void EZSpacerKernel::initSPAndSetValues() {
     sp_zitarev_init(sp, reverb);
     *reverb->level = 0.0;
     *reverb->mix = 1.0;
-    *reverb->rt60_low = 10.0f;
-    *reverb->rt60_mid = 10.0f;
-    *reverb->hf_damping = 10000.0f;
-    *reverb->in_delay = 0;
+   // *reverb->rt60_low = 10.0f;
+   // *reverb->rt60_mid = 10.0f;
+   // *reverb->hf_damping = 10000.0f;
+   // *reverb->in_delay = 0;
+    
+    sp_panst_create(&stereoPan);
+    sp_panst_init(sp, stereoPan);
+    stereoPan->type = 0;
+    stereoPan->pan = 0;
     
     sp_phasor_create(&lfoPhasor);
     sp_phasor_init(sp, lfoPhasor, 1);
     
+    predelayRamper.init();
     sp_port_create(&predelayInternalRamper);
     sp_port_init(sp, predelayInternalRamper, 0.01);
+    brightnessRamper.init();
+    sp_port_create(&brightnessInternalRamper);
+    sp_port_init(sp, brightnessInternalRamper, 0.01);
 }
    
 

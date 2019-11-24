@@ -74,10 +74,17 @@ public:
     
     sp_pinknoise *pinkNoise;
     sp_buthp *noiseHpf;
-    sp_jitter *randomiser;
     
     sp_compressor *compL;
     sp_compressor *compR;
+    
+    sp_pareq *brightL;
+    sp_pareq *brightR;
+    sp_clip *brightClipL;
+    sp_clip *brightClipR;
+    
+    sp_bal *balanceL;
+    sp_bal *balanceR;
     
   
     

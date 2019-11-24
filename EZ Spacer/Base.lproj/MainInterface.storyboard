@@ -25,71 +25,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6A2-3I-frY">
-                                <rect key="frame" x="31" y="224.5" width="42" height="205"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZl-Ju-W4E">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxw-sj-gJr">
-                                        <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swc-rT-5qj">
-                                        <rect key="frame" x="0.0" y="41" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-er-MBp">
-                                        <rect key="frame" x="0.0" y="61.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIZ-Lb-ESP">
-                                        <rect key="frame" x="0.0" y="82" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bki-WM-rV6">
-                                        <rect key="frame" x="0.0" y="102.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voL-Ut-vZ0">
-                                        <rect key="frame" x="0.0" y="123" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfO-Ws-wuV">
-                                        <rect key="frame" x="0.0" y="143.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-kC-OTf">
-                                        <rect key="frame" x="0.0" y="164" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jB-9p-VK2">
-                                        <rect key="frame" x="0.0" y="184.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-IK-BSC">
                                 <rect key="frame" x="0.0" y="654.5" width="414" height="207.5"/>
                                 <subviews>
@@ -97,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="207.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN1-nj-ptN" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="207.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
@@ -105,7 +40,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwG-Fk-gz0" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="106" y="0.0" width="96" height="207.5"/>
+                                                <rect key="frame" x="85" y="0.0" width="74.5" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
@@ -113,7 +48,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2Q-yt-neC" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="212" y="0.0" width="96" height="207.5"/>
+                                                <rect key="frame" x="169.5" y="0.0" width="75" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
@@ -121,7 +56,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSv-Ae-HfL" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
-                                                <rect key="frame" x="318" y="0.0" width="96" height="207.5"/>
+                                                <rect key="frame" x="254.5" y="0.0" width="74.5" height="207.5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lx0-IJ-kdH" customClass="MLKnob" customModule="EZ_Spacer" customModuleProvider="target">
+                                                <rect key="frame" x="339" y="0.0" width="75" height="207.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="typeInt">
                                                         <integer key="value" value="1"/>
@@ -142,7 +85,6 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="height" secondItem="u2v-qu-mbu" secondAttribute="height" multiplier="0.8" id="3PH-tq-p7B"/>
-                            <constraint firstItem="6A2-3I-frY" firstAttribute="centerX" secondItem="YBA-MM-DUV" secondAttribute="centerX" multiplier="0.25" id="Kxu-a3-Oru"/>
                             <constraint firstAttribute="trailing" secondItem="0FJ-IK-BSC" secondAttribute="trailing" id="csM-vt-qQm"/>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="trailing" secondItem="u2v-qu-mbu" secondAttribute="trailing" id="k23-gq-O2X"/>
                             <constraint firstItem="0FJ-IK-BSC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nQR-7e-v0E"/>
@@ -150,22 +92,12 @@
                             <constraint firstItem="u2v-qu-mbu" firstAttribute="bottom" secondItem="0FJ-IK-BSC" secondAttribute="bottom" id="sdX-DE-Hcl"/>
                             <constraint firstItem="0FJ-IK-BSC" firstAttribute="top" secondItem="YBA-MM-DUV" secondAttribute="bottom" id="ur3-jZ-fPw"/>
                             <constraint firstItem="YBA-MM-DUV" firstAttribute="leading" secondItem="u2v-qu-mbu" secondAttribute="leading" id="xf6-6a-GeL"/>
-                            <constraint firstItem="6A2-3I-frY" firstAttribute="centerY" secondItem="YBA-MM-DUV" secondAttribute="centerY" id="zFr-tX-TFo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
                     </view>
                     <connections>
-                        <outlet property="bp1Level" destination="kxw-sj-gJr" id="Q28-V5-QHW"/>
-                        <outlet property="bp2Level" destination="Swc-rT-5qj" id="l7b-Pd-apg"/>
-                        <outlet property="bp3Level" destination="6t4-er-MBp" id="fqC-XR-kPX"/>
-                        <outlet property="bp4Level" destination="JIZ-Lb-ESP" id="FR4-1X-R1S"/>
-                        <outlet property="bp5Level" destination="Bki-WM-rV6" id="ftP-gz-hvv"/>
-                        <outlet property="bp6Level" destination="voL-Ut-vZ0" id="0MS-2J-ucR"/>
-                        <outlet property="bp7Level" destination="dfO-Ws-wuV" id="a2I-R2-15G"/>
-                        <outlet property="bp8Level" destination="hsd-kC-OTf" id="iIu-9i-KwY"/>
-                        <outlet property="highLevel" destination="2jB-9p-VK2" id="ewZ-7c-ntU"/>
+                        <outlet property="brightnessKnob" destination="lx0-IJ-kdH" id="3N5-UF-pe6"/>
                         <outlet property="inputLevelKnob" destination="DwG-Fk-gz0" id="17F-c1-zgH"/>
-                        <outlet property="lowLevel" destination="NZl-Ju-W4E" id="HA4-Lr-DIn"/>
                         <outlet property="mixKnob" destination="UN1-nj-ptN" id="b4A-n5-FSl"/>
                         <outlet property="outputLevelKnob" destination="B2Q-yt-neC" id="xLo-GP-nCa"/>
                         <outlet property="predelayKnob" destination="sSv-Ae-HfL" id="8nf-1J-a7w"/>

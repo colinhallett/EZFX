@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>EZ Chorus</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,17 +28,17 @@
 			<array>
 				<dict>
 					<key>description</key>
-					<string>EZ Chorus</string>
+					<string>EZ Modulator</string>
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
 					<string>ckzh</string>
 					<key>name</key>
-					<string>ckzh: EZ Chorus</string>
+					<string>ckzh: EZ Modulator</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>EZCH</string>
+					<string>EZML</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>

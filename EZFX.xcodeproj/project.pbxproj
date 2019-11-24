@@ -26,11 +26,9 @@
 		3B0DFFFE2372258500AC1843 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
 		3B0DFFFF2372258500AC1843 /* VisualiserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */; };
 		3B1E03E123759D8A00DDFC03 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E03DF23759D8A00DDFC03 /* MainInterface.storyboard */; };
-		3B1E03E623759D8A00DDFC03 /* EZFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B1E03D823759D8A00DDFC03 /* EZFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B1E03EB23759D9500DDFC03 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B1E03EC23759D9500DDFC03 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B1E03FB23759DC000DDFC03 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E03F923759DC000DDFC03 /* MainInterface.storyboard */; };
-		3B1E040023759DC000DDFC03 /* EZCrusher.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B1E03F223759DC000DDFC03 /* EZCrusher.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B1E040423759DCD00DDFC03 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B1E040523759DCD00DDFC03 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B1E040723759DDD00DDFC03 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
@@ -101,7 +99,6 @@
 		3B545A4D2372D59F00D8BCA9 /* XYPadSetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */; };
 		3B5BE802236DEEC3004B5EEA /* EZDelayAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */; };
 		3B5BE805236DEEC3004B5EEA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5BE803236DEEC3004B5EEA /* MainInterface.storyboard */; };
-		3B5BE80A236DEEC3004B5EEA /* EZ Delay.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B5BE80F236DEECE004B5EEA /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B5BE810236DEECE004B5EEA /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B5BE812236DEEFF004B5EEA /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
@@ -110,36 +107,6 @@
 		3B5BE815236DEF02004B5EEA /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
 		3B5BE816236DEF02004B5EEA /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
 		3B5BE817236DEF02004B5EEA /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
-		3B6096B02382C7A8009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096AF2382C7A8009826B6 /* ViewController.swift */; };
-		3B6096B32382C7A8009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096B12382C7A8009826B6 /* Main.storyboard */; };
-		3B6096B52382C7A9009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096B42382C7A9009826B6 /* Assets.xcassets */; };
-		3B6096B82382C7A9009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096B62382C7A9009826B6 /* LaunchScreen.storyboard */; };
-		3B6096CB2382F93E009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096CA2382F93E009826B6 /* ViewController.swift */; };
-		3B6096CE2382F93E009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096CC2382F93E009826B6 /* Main.storyboard */; };
-		3B6096D02382F93F009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096CF2382F93F009826B6 /* Assets.xcassets */; };
-		3B6096D32382F93F009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096D12382F93F009826B6 /* LaunchScreen.storyboard */; };
-		3B6096E32382F949009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096E22382F949009826B6 /* ViewController.swift */; };
-		3B6096E62382F949009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096E42382F949009826B6 /* Main.storyboard */; };
-		3B6096E82382F94A009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096E72382F94A009826B6 /* Assets.xcassets */; };
-		3B6096EB2382F94A009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096E92382F94A009826B6 /* LaunchScreen.storyboard */; };
-		3B6096FB2382F959009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6096FA2382F959009826B6 /* ViewController.swift */; };
-		3B6096FE2382F959009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096FC2382F959009826B6 /* Main.storyboard */; };
-		3B6097002382F95A009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6096FF2382F95A009826B6 /* Assets.xcassets */; };
-		3B6097032382F95A009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097012382F95A009826B6 /* LaunchScreen.storyboard */; };
-		3B6097132382F963009826B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097122382F963009826B6 /* ViewController.swift */; };
-		3B6097162382F963009826B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097142382F963009826B6 /* Main.storyboard */; };
-		3B6097182382F964009826B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097172382F964009826B6 /* Assets.xcassets */; };
-		3B60971B2382F964009826B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6097192382F964009826B6 /* LaunchScreen.storyboard */; };
-		3B6097292382FBEE009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
-		3B60972A2382FBEE009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
-		3B60972B2382FBEE009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
-		3B60972C2382FBEE009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
-		3B60972D2382FBEF009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
-		3B60972E2382FBEF009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
-		3B60972F2382FBEF009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
-		3B6097302382FBEF009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
-		3B6097312382FBF0009826B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
-		3B6097322382FBF0009826B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
 		3B64902B238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
 		3B64902C238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
 		3B64902D238415AA00C46768 /* CrosshairLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64902A238415AA00C46768 /* CrosshairLayer.swift */; };
@@ -155,9 +122,14 @@
 		3B8CFBCF2354C25500F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B8CFBD02354C25500F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBDD2354C2A500F146C9 /* MainInterface.storyboard */; };
-		3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B8CFBEA2354C35B00F146C9 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3B8CFBEB2354C35B00F146C9 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B8F5C8B2385AA180025B6AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F5C8A2385AA180025B6AC /* ViewController.swift */; };
+		3B8F5C8E2385AA180025B6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F5C8C2385AA180025B6AC /* Main.storyboard */; };
+		3B8F5C902385AA190025B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F5C8F2385AA190025B6AC /* Assets.xcassets */; };
+		3B8F5C932385AA190025B6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8F5C912385AA190025B6AC /* LaunchScreen.storyboard */; };
+		3B8F5C992385AA250025B6AC /* EZ Chorus AU.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B8CFBD62354C2A500F146C9 /* EZ Chorus AU.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B8F5C9C2385AA670025B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
 		3BA8DD70237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
 		3BA8DD71237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
 		3BA8DD72237D6C46005AC211 /* EZSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DD6F237D6C46005AC211 /* EZSelector.swift */; };
@@ -169,7 +141,6 @@
 		3BADC0E023671AB600A08F19 /* EZChorusAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DF23671AB600A08F19 /* EZChorusAUViewController.swift */; };
 		3BADC161236861FE00A08F19 /* EZSpacerAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC160236861FE00A08F19 /* EZSpacerAUViewController.swift */; };
 		3BADC164236861FE00A08F19 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BADC162236861FE00A08F19 /* MainInterface.storyboard */; };
-		3BADC169236861FE00A08F19 /* EZ Spacer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BADC15B236861FE00A08F19 /* EZ Spacer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BADC16D2368621600A08F19 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; };
 		3BADC16E2368621600A08F19 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8CFBCD2354C1FD00F146C9 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3BADC170236862B200A08F19 /* EZAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADC0DC2367197100A08F19 /* EZAUViewController.swift */; };
@@ -180,7 +151,6 @@
 		3BADC175236862B500A08F19 /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
 		3BB70E8D235A119C00D99388 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
 		3BB70E8E235A119C00D99388 /* XYPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E8C235A119C00D99388 /* XYPadView.swift */; };
-		3BB70E8F235A3B6E00D99388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
 		3BB70E92235A3DF700D99388 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
 		3BB70E93235A3DF700D99388 /* Fader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E91235A3DF700D99388 /* Fader.swift */; };
 		3BB70E95235CB12500D99388 /* ControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E94235CB12500D99388 /* ControlPoint.swift */; };
@@ -189,30 +159,57 @@
 		3BB70E9B235DB68E00D99388 /* TouchHotSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */; };
 		3BB70E9D235DB73500D99388 /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
 		3BB70E9E235DB73500D99388 /* LayerRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB70E9C235DB73500D99388 /* LayerRemover.swift */; };
+		3BC03C5F2385B8B100B925E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3BC03C612385B8B400B925E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3BC03C782385BA9B00B925E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03C762385BA9B00B925E3 /* Main.storyboard */; };
+		3BC03C7A2385BA9B00B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03C792385BA9B00B925E3 /* Assets.xcassets */; };
+		3BC03C7D2385BA9B00B925E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03C7B2385BA9B00B925E3 /* LaunchScreen.storyboard */; };
+		3BC03C822385BAC800B925E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3BC03C842385BB1B00B925E3 /* EZ Reverb AU.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BADC15B236861FE00A08F19 /* EZ Reverb AU.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BC03C932385BB5B00B925E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03C922385BB5B00B925E3 /* ViewController.swift */; };
+		3BC03C962385BB5B00B925E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03C942385BB5B00B925E3 /* Main.storyboard */; };
+		3BC03C982385BB5C00B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03C972385BB5C00B925E3 /* Assets.xcassets */; };
+		3BC03C9B2385BB5C00B925E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03C992385BB5C00B925E3 /* LaunchScreen.storyboard */; };
+		3BC03CA02385BB6000B925E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3BC03CA12385BB6000B925E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3BC03CA22385BBB300B925E3 /* EZ Filter AU.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B1E03D823759D8A00DDFC03 /* EZ Filter AU.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BC03CB42385BBE100B925E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03CB22385BBE100B925E3 /* Main.storyboard */; };
+		3BC03CB62385BBE100B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03CB52385BBE100B925E3 /* Assets.xcassets */; };
+		3BC03CB92385BBE100B925E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03CB72385BBE100B925E3 /* LaunchScreen.storyboard */; };
+		3BC03CBE2385BC1300B925E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3BC03CBF2385BC1300B925E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3BC03CC02385BC3800B925E3 /* EZ Crusher AU.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B1E03F223759DC000DDFC03 /* EZ Crusher AU.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BC03CCF2385BC6D00B925E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CCE2385BC6D00B925E3 /* ViewController.swift */; };
+		3BC03CD22385BC6D00B925E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03CD02385BC6D00B925E3 /* Main.storyboard */; };
+		3BC03CD42385BC6E00B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03CD32385BC6E00B925E3 /* Assets.xcassets */; };
+		3BC03CD72385BC6E00B925E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC03CD52385BC6E00B925E3 /* LaunchScreen.storyboard */; };
+		3BC03CDC2385BCA200B925E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097252382FBB6009826B6 /* AppDelegate.swift */; };
+		3BC03CDD2385BCA200B925E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3BC03CDE2385BCC300B925E3 /* EZ Delay AU.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay AU.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BC03CE22388352400B925E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6097272382FBBC009826B6 /* SceneDelegate.swift */; };
+		3BC03CE32388449100B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3BC03CE42388449200B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3BC03CE52388449200B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3BC03CE62388449300B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3BC03CE72388449300B925E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8CFBBD2354C1BF00F146C9 /* Assets.xcassets */; };
+		3BC03CE9238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */; };
+		3BC03CEA238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */; };
+		3BC03CEB238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */; };
+		3BC03CEC238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */; };
+		3BC03CED238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */; };
+		3BC03CEF2388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */; };
+		3BC03CF02388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */; };
+		3BC03CF12388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */; };
+		3BC03CF22388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */; };
+		3BC03CF32388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */; };
+		3BC03CF52388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */; };
+		3BC03CF62388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */; };
+		3BC03CF72388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */; };
+		3BC03CF82388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */; };
+		3BC03CF92388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B1E03E423759D8A00DDFC03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B1E03D723759D8A00DDFC03;
-			remoteInfo = EZFilter;
-		};
-		3B1E03FE23759DC000DDFC03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B1E03F123759DC000DDFC03;
-			remoteInfo = EZCrusher;
-		};
-		3B5BE808236DEEC3004B5EEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B5BE7FB236DEEC3004B5EEA;
-			remoteInfo = "EZ Delay";
-		};
 		3B8CFBCC2354C1FD00F146C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */;
@@ -220,19 +217,40 @@
 			remoteGlobalIDString = C42F35001C057E03000E937C;
 			remoteInfo = AudioKit;
 		};
-		3B8CFBE22354C2A500F146C9 /* PBXContainerItemProxy */ = {
+		3B8F5C9A2385AA250025B6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3B8CFBD52354C2A500F146C9;
 			remoteInfo = "EZ Chorus";
 		};
-		3BADC167236861FE00A08F19 /* PBXContainerItemProxy */ = {
+		3BC03C852385BB1B00B925E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3BADC15A236861FE00A08F19;
 			remoteInfo = "EZ Spacer";
+		};
+		3BC03CA32385BBB300B925E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1E03D723759D8A00DDFC03;
+			remoteInfo = EZFilter;
+		};
+		3BC03CC12385BC3800B925E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1E03F123759DC000DDFC03;
+			remoteInfo = EZCrusher;
+		};
+		3BC03CDF2385BCC300B925E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B8CFBA92354C1BE00F146C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B5BE7FB236DEEC3004B5EEA;
+			remoteInfo = "EZ Delay";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -270,56 +288,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B6096BE2382C7D3009826B6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6097202382F973009826B6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6097212382F978009826B6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6097222382F97E009826B6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6097232382F982009826B6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B8CFBD12354C25500F146C9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,11 +305,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3BADC169236861FE00A08F19 /* EZ Spacer.appex in Embed App Extensions */,
-				3B5BE80A236DEEC3004B5EEA /* EZ Delay.appex in Embed App Extensions */,
-				3B1E040023759DC000DDFC03 /* EZCrusher.appex in Embed App Extensions */,
-				3B8CFBE42354C2A500F146C9 /* EZ Chorus.appex in Embed App Extensions */,
-				3B1E03E623759D8A00DDFC03 /* EZFilter.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +320,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B8F5C982385AA250025B6AC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3B8F5C992385AA250025B6AC /* EZ Chorus AU.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BADC16F2368621600A08F19 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +342,50 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BC03C872385BB1B00B925E3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BC03C842385BB1B00B925E3 /* EZ Reverb AU.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CA52385BBB300B925E3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BC03CA22385BBB300B925E3 /* EZ Filter AU.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CC32385BC3800B925E3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BC03CC02385BC3800B925E3 /* EZ Crusher AU.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CE12385BCC300B925E3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BC03CDE2385BCC300B925E3 /* EZ Delay AU.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -376,10 +394,10 @@
 		3B0D0005237234D300AC1843 /* XYPadViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadViewSetup.swift; sourceTree = "<group>"; };
 		3B0DFFF52372257700AC1843 /* EQCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQCircle.swift; sourceTree = "<group>"; };
 		3B0DFFFB2372258500AC1843 /* VisualiserLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualiserLayer.swift; sourceTree = "<group>"; };
-		3B1E03D823759D8A00DDFC03 /* EZFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EZFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1E03D823759D8A00DDFC03 /* EZ Filter AU.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Filter AU.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1E03E023759D8A00DDFC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B1E03E223759D8A00DDFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B1E03F223759DC000DDFC03 /* EZCrusher.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EZCrusher.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1E03F223759DC000DDFC03 /* EZ Crusher AU.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Crusher AU.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1E03FA23759DC000DDFC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B1E03FC23759DC000DDFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1E042923759E2900DDFC03 /* EZFilterAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZFilterAUViewController.swift; sourceTree = "<group>"; };
@@ -391,40 +409,10 @@
 		3B4384AE237464E000FF23F3 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		3B545A432372D55500D8BCA9 /* XYPadRecordedPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadRecordedPaths.swift; sourceTree = "<group>"; };
 		3B545A492372D59F00D8BCA9 /* XYPadSetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPadSetValues.swift; sourceTree = "<group>"; };
-		3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Delay.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5BE7FC236DEEC3004B5EEA /* EZ Delay AU.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Delay AU.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5BE801236DEEC3004B5EEA /* EZDelayAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDelayAUViewController.swift; sourceTree = "<group>"; };
 		3B5BE804236DEEC3004B5EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B5BE806236DEEC3004B5EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B6096A92382C7A7009826B6 /* EZ Chorus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Chorus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6096AF2382C7A8009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B6096B22382C7A8009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B6096B42382C7A9009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B6096B72382C7A9009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B6096B92382C7A9009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B6096C42382F93E009826B6 /* EZ Delay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Delay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6096CA2382F93E009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B6096CD2382F93E009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B6096CF2382F93F009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B6096D22382F93F009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B6096D42382F93F009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B6096DC2382F949009826B6 /* EZ Spacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Spacer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6096E22382F949009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B6096E52382F949009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B6096E72382F94A009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B6096EA2382F94A009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B6096EC2382F94A009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B6096F42382F959009826B6 /* EZ Crusher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Crusher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6096FA2382F959009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B6096FD2382F959009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B6096FF2382F95A009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B6097022382F95A009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B6097042382F95A009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B60970C2382F963009826B6 /* EZ Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6097122382F963009826B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B6097152382F963009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B6097172382F964009826B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B60971A2382F964009826B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3B60971C2382F964009826B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B6097252382FBB6009826B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B6097272382FBBC009826B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B64902A238415AA00C46768 /* CrosshairLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosshairLayer.swift; sourceTree = "<group>"; };
@@ -437,14 +425,20 @@
 		3B8CFBC02354C1BF00F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B8CFBC22354C1BF00F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8CFBC82354C1FC00F146C9 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../AudioKit for development/AudioKit/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
-		3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Chorus.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8CFBD62354C2A500F146C9 /* EZ Chorus AU.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Chorus AU.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8CFBDE2354C2A500F146C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B8CFBE02354C2A500F146C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8CFC132354CE3100F146C9 /* EZFX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZFX-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B8F5C842385AA180025B6AC /* EZ Modulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Modulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8F5C8A2385AA180025B6AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B8F5C8D2385AA180025B6AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B8F5C8F2385AA190025B6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B8F5C922385AA190025B6AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B8F5C942385AA190025B6AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA8DD6F237D6C46005AC211 /* EZSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSelector.swift; sourceTree = "<group>"; };
 		3BADC0DC2367197100A08F19 /* EZAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZAUViewController.swift; sourceTree = "<group>"; };
 		3BADC0DF23671AB600A08F19 /* EZChorusAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZChorusAUViewController.swift; sourceTree = "<group>"; };
-		3BADC15B236861FE00A08F19 /* EZ Spacer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Spacer.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BADC15B236861FE00A08F19 /* EZ Reverb AU.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZ Reverb AU.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BADC160236861FE00A08F19 /* EZSpacerAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSpacerAUViewController.swift; sourceTree = "<group>"; };
 		3BADC163236861FE00A08F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3BADC165236861FE00A08F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -453,6 +447,31 @@
 		3BB70E94235CB12500D99388 /* ControlPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPoint.swift; sourceTree = "<group>"; };
 		3BB70E99235DB68E00D99388 /* TouchHotSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchHotSpot.swift; sourceTree = "<group>"; };
 		3BB70E9C235DB73500D99388 /* LayerRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerRemover.swift; sourceTree = "<group>"; };
+		3BC03C6E2385BA9B00B925E3 /* EZ Reverb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Reverb.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC03C772385BA9B00B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BC03C792385BA9B00B925E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BC03C7C2385BA9B00B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BC03C7E2385BA9B00B925E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC03C8C2385BB5B00B925E3 /* EZ Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC03C922385BB5B00B925E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BC03C952385BB5B00B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BC03C972385BB5C00B925E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BC03C9A2385BB5C00B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BC03C9C2385BB5C00B925E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC03CAA2385BBE100B925E3 /* EZ Crusher .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Crusher .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC03CB32385BBE100B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BC03CB52385BBE100B925E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BC03CB82385BBE100B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BC03CBA2385BBE100B925E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC03CC82385BC6D00B925E3 /* EZ Delay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Delay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC03CCE2385BC6D00B925E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BC03CD12385BC6D00B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BC03CD32385BC6E00B925E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BC03CD62385BC6E00B925E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BC03CD82385BC6E00B925E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZStandaloneIntroVC.swift; sourceTree = "<group>"; };
+		3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZStandaoneControlsVC.swift; sourceTree = "<group>"; };
+		3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZStandaloneAboutVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,41 +499,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B6096A62382C7A7009826B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096C12382F93E009826B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096D92382F949009826B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096F12382F959009826B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6097092382F963009826B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B8CFBAE2354C1BE00F146C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,11 +515,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B8F5C812385AA180025B6AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BADC158236861FE00A08F19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3BADC16D2368621600A08F19 /* AudioKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03C6B2385BA9B00B925E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03C892385BB5B00B925E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CA72385BBE100B925E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CC52385BC6D00B925E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,66 +618,6 @@
 			path = "EZ Delay";
 			sourceTree = "<group>";
 		};
-		3B6096AA2382C7A7009826B6 /* EZChorusStandalone */ = {
-			isa = PBXGroup;
-			children = (
-				3B6096AF2382C7A8009826B6 /* ViewController.swift */,
-				3B6096B12382C7A8009826B6 /* Main.storyboard */,
-				3B6096B42382C7A9009826B6 /* Assets.xcassets */,
-				3B6096B62382C7A9009826B6 /* LaunchScreen.storyboard */,
-				3B6096B92382C7A9009826B6 /* Info.plist */,
-			);
-			path = EZChorusStandalone;
-			sourceTree = "<group>";
-		};
-		3B6096C52382F93E009826B6 /* EZDelayStandalone */ = {
-			isa = PBXGroup;
-			children = (
-				3B6096CA2382F93E009826B6 /* ViewController.swift */,
-				3B6096CC2382F93E009826B6 /* Main.storyboard */,
-				3B6096CF2382F93F009826B6 /* Assets.xcassets */,
-				3B6096D12382F93F009826B6 /* LaunchScreen.storyboard */,
-				3B6096D42382F93F009826B6 /* Info.plist */,
-			);
-			path = EZDelayStandalone;
-			sourceTree = "<group>";
-		};
-		3B6096DD2382F949009826B6 /* EZSpacerStandalone */ = {
-			isa = PBXGroup;
-			children = (
-				3B6096E22382F949009826B6 /* ViewController.swift */,
-				3B6096E42382F949009826B6 /* Main.storyboard */,
-				3B6096E72382F94A009826B6 /* Assets.xcassets */,
-				3B6096E92382F94A009826B6 /* LaunchScreen.storyboard */,
-				3B6096EC2382F94A009826B6 /* Info.plist */,
-			);
-			path = EZSpacerStandalone;
-			sourceTree = "<group>";
-		};
-		3B6096F52382F959009826B6 /* EZCrusherStandalone */ = {
-			isa = PBXGroup;
-			children = (
-				3B6096FA2382F959009826B6 /* ViewController.swift */,
-				3B6096FC2382F959009826B6 /* Main.storyboard */,
-				3B6096FF2382F95A009826B6 /* Assets.xcassets */,
-				3B6097012382F95A009826B6 /* LaunchScreen.storyboard */,
-				3B6097042382F95A009826B6 /* Info.plist */,
-			);
-			path = EZCrusherStandalone;
-			sourceTree = "<group>";
-		};
-		3B60970D2382F963009826B6 /* EZFilterStandalone */ = {
-			isa = PBXGroup;
-			children = (
-				3B6097122382F963009826B6 /* ViewController.swift */,
-				3B6097142382F963009826B6 /* Main.storyboard */,
-				3B6097172382F964009826B6 /* Assets.xcassets */,
-				3B6097192382F964009826B6 /* LaunchScreen.storyboard */,
-				3B60971C2382F964009826B6 /* Info.plist */,
-			);
-			path = EZFilterStandalone;
-			sourceTree = "<group>";
-		};
 		3B6097242382FB8E009826B6 /* Standalone Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,11 +640,11 @@
 				3B5BE7FD236DEEC3004B5EEA /* EZ Delay */,
 				3B1E03D923759D8A00DDFC03 /* EZFilter */,
 				3B1E03F323759DC000DDFC03 /* EZCrusher */,
-				3B6096AA2382C7A7009826B6 /* EZChorusStandalone */,
-				3B6096C52382F93E009826B6 /* EZDelayStandalone */,
-				3B6096DD2382F949009826B6 /* EZSpacerStandalone */,
-				3B6096F52382F959009826B6 /* EZCrusherStandalone */,
-				3B60970D2382F963009826B6 /* EZFilterStandalone */,
+				3B8F5C852385AA180025B6AC /* EZ Modulator */,
+				3BC03C6F2385BA9B00B925E3 /* EZ Spacer Standalone */,
+				3BC03C8D2385BB5B00B925E3 /* EZ Filter Standalone */,
+				3BC03CAB2385BBE100B925E3 /* EZ Crusher Standalone */,
+				3BC03CC92385BC6D00B925E3 /* EZ Delay Standalone */,
 				3B8CFBB22354C1BE00F146C9 /* Products */,
 				3B8CFBCE2354C25500F146C9 /* Frameworks */,
 				3229A14AD33ACB8D82FADD24 /* Pods */,
@@ -696,16 +655,16 @@
 			isa = PBXGroup;
 			children = (
 				3B8CFBB12354C1BE00F146C9 /* EZFX.app */,
-				3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */,
-				3BADC15B236861FE00A08F19 /* EZ Spacer.appex */,
-				3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */,
-				3B1E03D823759D8A00DDFC03 /* EZFilter.appex */,
-				3B1E03F223759DC000DDFC03 /* EZCrusher.appex */,
-				3B6096A92382C7A7009826B6 /* EZ Chorus.app */,
-				3B6096C42382F93E009826B6 /* EZ Delay.app */,
-				3B6096DC2382F949009826B6 /* EZ Spacer.app */,
-				3B6096F42382F959009826B6 /* EZ Crusher.app */,
-				3B60970C2382F963009826B6 /* EZ Filter.app */,
+				3B8CFBD62354C2A500F146C9 /* EZ Chorus AU.appex */,
+				3BADC15B236861FE00A08F19 /* EZ Reverb AU.appex */,
+				3B5BE7FC236DEEC3004B5EEA /* EZ Delay AU.appex */,
+				3B1E03D823759D8A00DDFC03 /* EZ Filter AU.appex */,
+				3B1E03F223759DC000DDFC03 /* EZ Crusher AU.appex */,
+				3B8F5C842385AA180025B6AC /* EZ Modulator.app */,
+				3BC03C6E2385BA9B00B925E3 /* EZ Reverb.app */,
+				3BC03C8C2385BB5B00B925E3 /* EZ Filter.app */,
+				3BC03CAA2385BBE100B925E3 /* EZ Crusher .app */,
+				3BC03CC82385BC6D00B925E3 /* EZ Delay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -749,6 +708,18 @@
 			path = "EZ Chorus";
 			sourceTree = "<group>";
 		};
+		3B8F5C852385AA180025B6AC /* EZ Modulator */ = {
+			isa = PBXGroup;
+			children = (
+				3B8F5C8A2385AA180025B6AC /* ViewController.swift */,
+				3B8F5C8C2385AA180025B6AC /* Main.storyboard */,
+				3B8F5C8F2385AA190025B6AC /* Assets.xcassets */,
+				3B8F5C912385AA190025B6AC /* LaunchScreen.storyboard */,
+				3B8F5C942385AA190025B6AC /* Info.plist */,
+			);
+			path = "EZ Modulator";
+			sourceTree = "<group>";
+		};
 		3BADC0DA2367196100A08F19 /* XYPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,12 +753,61 @@
 			isa = PBXGroup;
 			children = (
 				3BADC0DC2367197100A08F19 /* EZAUViewController.swift */,
+				3BC03CE8238858DC00B925E3 /* EZStandaloneIntroVC.swift */,
+				3BC03CEE2388594E00B925E3 /* EZStandaoneControlsVC.swift */,
+				3BC03CF42388595C00B925E3 /* EZStandaloneAboutVC.swift */,
 				3B6097242382FB8E009826B6 /* Standalone Delegates */,
 				3B1E04332376E60E00DDFC03 /* Helper */,
 				3B4384A723742AFA00FF23F3 /* StyleKit */,
 				3BADC0DA2367196100A08F19 /* XYPad */,
 			);
 			path = "Shared code";
+			sourceTree = "<group>";
+		};
+		3BC03C6F2385BA9B00B925E3 /* EZ Spacer Standalone */ = {
+			isa = PBXGroup;
+			children = (
+				3BC03C762385BA9B00B925E3 /* Main.storyboard */,
+				3BC03C792385BA9B00B925E3 /* Assets.xcassets */,
+				3BC03C7B2385BA9B00B925E3 /* LaunchScreen.storyboard */,
+				3BC03C7E2385BA9B00B925E3 /* Info.plist */,
+			);
+			path = "EZ Spacer Standalone";
+			sourceTree = "<group>";
+		};
+		3BC03C8D2385BB5B00B925E3 /* EZ Filter Standalone */ = {
+			isa = PBXGroup;
+			children = (
+				3BC03C922385BB5B00B925E3 /* ViewController.swift */,
+				3BC03C942385BB5B00B925E3 /* Main.storyboard */,
+				3BC03C972385BB5C00B925E3 /* Assets.xcassets */,
+				3BC03C992385BB5C00B925E3 /* LaunchScreen.storyboard */,
+				3BC03C9C2385BB5C00B925E3 /* Info.plist */,
+			);
+			path = "EZ Filter Standalone";
+			sourceTree = "<group>";
+		};
+		3BC03CAB2385BBE100B925E3 /* EZ Crusher Standalone */ = {
+			isa = PBXGroup;
+			children = (
+				3BC03CB22385BBE100B925E3 /* Main.storyboard */,
+				3BC03CB52385BBE100B925E3 /* Assets.xcassets */,
+				3BC03CB72385BBE100B925E3 /* LaunchScreen.storyboard */,
+				3BC03CBA2385BBE100B925E3 /* Info.plist */,
+			);
+			path = "EZ Crusher Standalone";
+			sourceTree = "<group>";
+		};
+		3BC03CC92385BC6D00B925E3 /* EZ Delay Standalone */ = {
+			isa = PBXGroup;
+			children = (
+				3BC03CCE2385BC6D00B925E3 /* ViewController.swift */,
+				3BC03CD02385BC6D00B925E3 /* Main.storyboard */,
+				3BC03CD32385BC6E00B925E3 /* Assets.xcassets */,
+				3BC03CD52385BC6E00B925E3 /* LaunchScreen.storyboard */,
+				3BC03CD82385BC6E00B925E3 /* Info.plist */,
+			);
+			path = "EZ Delay Standalone";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -808,7 +828,7 @@
 			);
 			name = EZFilter;
 			productName = EZFilter;
-			productReference = 3B1E03D823759D8A00DDFC03 /* EZFilter.appex */;
+			productReference = 3B1E03D823759D8A00DDFC03 /* EZ Filter AU.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		3B1E03F123759DC000DDFC03 /* EZCrusher */ = {
@@ -826,7 +846,7 @@
 			);
 			name = EZCrusher;
 			productName = EZCrusher;
-			productReference = 3B1E03F223759DC000DDFC03 /* EZCrusher.appex */;
+			productReference = 3B1E03F223759DC000DDFC03 /* EZ Crusher AU.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		3B5BE7FB236DEEC3004B5EEA /* EZ Delay */ = {
@@ -844,98 +864,8 @@
 			);
 			name = "EZ Delay";
 			productName = "EZ Delay";
-			productReference = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay.appex */;
+			productReference = 3B5BE7FC236DEEC3004B5EEA /* EZ Delay AU.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		3B6096A82382C7A7009826B6 /* EZChorusStandalone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B6096BD2382C7A9009826B6 /* Build configuration list for PBXNativeTarget "EZChorusStandalone" */;
-			buildPhases = (
-				3B6096A52382C7A7009826B6 /* Sources */,
-				3B6096A62382C7A7009826B6 /* Frameworks */,
-				3B6096A72382C7A7009826B6 /* Resources */,
-				3B6096BE2382C7D3009826B6 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EZChorusStandalone;
-			productName = EZChorusStandalone;
-			productReference = 3B6096A92382C7A7009826B6 /* EZ Chorus.app */;
-			productType = "com.apple.product-type.application";
-		};
-		3B6096C32382F93E009826B6 /* EZDelayStandalone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B6096D52382F93F009826B6 /* Build configuration list for PBXNativeTarget "EZDelayStandalone" */;
-			buildPhases = (
-				3B6096C02382F93E009826B6 /* Sources */,
-				3B6096C12382F93E009826B6 /* Frameworks */,
-				3B6096C22382F93E009826B6 /* Resources */,
-				3B6097202382F973009826B6 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EZDelayStandalone;
-			productName = EZDelayStandalone;
-			productReference = 3B6096C42382F93E009826B6 /* EZ Delay.app */;
-			productType = "com.apple.product-type.application";
-		};
-		3B6096DB2382F949009826B6 /* EZSpacerStandalone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B6096ED2382F94A009826B6 /* Build configuration list for PBXNativeTarget "EZSpacerStandalone" */;
-			buildPhases = (
-				3B6096D82382F949009826B6 /* Sources */,
-				3B6096D92382F949009826B6 /* Frameworks */,
-				3B6096DA2382F949009826B6 /* Resources */,
-				3B6097212382F978009826B6 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EZSpacerStandalone;
-			productName = EZSpacerStandalone;
-			productReference = 3B6096DC2382F949009826B6 /* EZ Spacer.app */;
-			productType = "com.apple.product-type.application";
-		};
-		3B6096F32382F959009826B6 /* EZCrusherStandalone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B6097052382F95A009826B6 /* Build configuration list for PBXNativeTarget "EZCrusherStandalone" */;
-			buildPhases = (
-				3B6096F02382F959009826B6 /* Sources */,
-				3B6096F12382F959009826B6 /* Frameworks */,
-				3B6096F22382F959009826B6 /* Resources */,
-				3B6097222382F97E009826B6 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EZCrusherStandalone;
-			productName = EZCrusherStandalone;
-			productReference = 3B6096F42382F959009826B6 /* EZ Crusher.app */;
-			productType = "com.apple.product-type.application";
-		};
-		3B60970B2382F963009826B6 /* EZFilterStandalone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B60971D2382F964009826B6 /* Build configuration list for PBXNativeTarget "EZFilterStandalone" */;
-			buildPhases = (
-				3B6097082382F963009826B6 /* Sources */,
-				3B6097092382F963009826B6 /* Frameworks */,
-				3B60970A2382F963009826B6 /* Resources */,
-				3B6097232382F982009826B6 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EZFilterStandalone;
-			productName = EZFilterStandalone;
-			productReference = 3B60970C2382F963009826B6 /* EZ Filter.app */;
-			productType = "com.apple.product-type.application";
 		};
 		3B8CFBB02354C1BE00F146C9 /* EZFX */ = {
 			isa = PBXNativeTarget;
@@ -950,11 +880,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */,
-				3BADC168236861FE00A08F19 /* PBXTargetDependency */,
-				3B5BE809236DEEC3004B5EEA /* PBXTargetDependency */,
-				3B1E03E523759D8A00DDFC03 /* PBXTargetDependency */,
-				3B1E03FF23759DC000DDFC03 /* PBXTargetDependency */,
 			);
 			name = EZFX;
 			productName = EZFX;
@@ -976,8 +901,27 @@
 			);
 			name = "EZ Chorus";
 			productName = "EZ Chorus";
-			productReference = 3B8CFBD62354C2A500F146C9 /* EZ Chorus.appex */;
+			productReference = 3B8CFBD62354C2A500F146C9 /* EZ Chorus AU.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		3B8F5C832385AA180025B6AC /* EZ Modulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B8F5C952385AA190025B6AC /* Build configuration list for PBXNativeTarget "EZ Modulator" */;
+			buildPhases = (
+				3B8F5C802385AA180025B6AC /* Sources */,
+				3B8F5C812385AA180025B6AC /* Frameworks */,
+				3B8F5C822385AA180025B6AC /* Resources */,
+				3B8F5C982385AA250025B6AC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B8F5C9B2385AA250025B6AC /* PBXTargetDependency */,
+			);
+			name = "EZ Modulator";
+			productName = "EZ Modulator";
+			productReference = 3B8F5C842385AA180025B6AC /* EZ Modulator.app */;
+			productType = "com.apple.product-type.application";
 		};
 		3BADC15A236861FE00A08F19 /* EZ Spacer */ = {
 			isa = PBXNativeTarget;
@@ -994,8 +938,84 @@
 			);
 			name = "EZ Spacer";
 			productName = "EZ Spacer";
-			productReference = 3BADC15B236861FE00A08F19 /* EZ Spacer.appex */;
+			productReference = 3BADC15B236861FE00A08F19 /* EZ Reverb AU.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		3BC03C6D2385BA9B00B925E3 /* EZ Spacer Standalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BC03C7F2385BA9B00B925E3 /* Build configuration list for PBXNativeTarget "EZ Spacer Standalone" */;
+			buildPhases = (
+				3BC03C6A2385BA9B00B925E3 /* Sources */,
+				3BC03C6B2385BA9B00B925E3 /* Frameworks */,
+				3BC03C6C2385BA9B00B925E3 /* Resources */,
+				3BC03C872385BB1B00B925E3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BC03C862385BB1B00B925E3 /* PBXTargetDependency */,
+			);
+			name = "EZ Spacer Standalone";
+			productName = "EZ Spacer Standalone";
+			productReference = 3BC03C6E2385BA9B00B925E3 /* EZ Reverb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BC03C8B2385BB5B00B925E3 /* EZ Filter Standalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BC03C9D2385BB5C00B925E3 /* Build configuration list for PBXNativeTarget "EZ Filter Standalone" */;
+			buildPhases = (
+				3BC03C882385BB5B00B925E3 /* Sources */,
+				3BC03C892385BB5B00B925E3 /* Frameworks */,
+				3BC03C8A2385BB5B00B925E3 /* Resources */,
+				3BC03CA52385BBB300B925E3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BC03CA42385BBB300B925E3 /* PBXTargetDependency */,
+			);
+			name = "EZ Filter Standalone";
+			productName = "EZ Filter Standalone";
+			productReference = 3BC03C8C2385BB5B00B925E3 /* EZ Filter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BC03CA92385BBE100B925E3 /* EZ Crusher Standalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BC03CBB2385BBE100B925E3 /* Build configuration list for PBXNativeTarget "EZ Crusher Standalone" */;
+			buildPhases = (
+				3BC03CA62385BBE100B925E3 /* Sources */,
+				3BC03CA72385BBE100B925E3 /* Frameworks */,
+				3BC03CA82385BBE100B925E3 /* Resources */,
+				3BC03CC32385BC3800B925E3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BC03CC22385BC3800B925E3 /* PBXTargetDependency */,
+			);
+			name = "EZ Crusher Standalone";
+			productName = "EZ Crusher Standalone";
+			productReference = 3BC03CAA2385BBE100B925E3 /* EZ Crusher .app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BC03CC72385BC6D00B925E3 /* EZ Delay Standalone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BC03CD92385BC6E00B925E3 /* Build configuration list for PBXNativeTarget "EZ Delay Standalone" */;
+			buildPhases = (
+				3BC03CC42385BC6D00B925E3 /* Sources */,
+				3BC03CC52385BC6D00B925E3 /* Frameworks */,
+				3BC03CC62385BC6D00B925E3 /* Resources */,
+				3BC03CE12385BCC300B925E3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BC03CE02385BCC300B925E3 /* PBXTargetDependency */,
+			);
+			name = "EZ Delay Standalone";
+			productName = "EZ Delay Standalone";
+			productReference = 3BC03CC82385BC6D00B925E3 /* EZ Delay.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -1016,21 +1036,6 @@
 					3B5BE7FB236DEEC3004B5EEA = {
 						CreatedOnToolsVersion = 11.1;
 					};
-					3B6096A82382C7A7009826B6 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-					3B6096C32382F93E009826B6 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-					3B6096DB2382F949009826B6 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-					3B6096F32382F959009826B6 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-					3B60970B2382F963009826B6 = {
-						CreatedOnToolsVersion = 11.1;
-					};
 					3B8CFBB02354C1BE00F146C9 = {
 						CreatedOnToolsVersion = 11.1;
 						LastSwiftMigration = 1110;
@@ -1038,7 +1043,22 @@
 					3B8CFBD52354C2A500F146C9 = {
 						CreatedOnToolsVersion = 11.1;
 					};
+					3B8F5C832385AA180025B6AC = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					3BADC15A236861FE00A08F19 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3BC03C6D2385BA9B00B925E3 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3BC03C8B2385BB5B00B925E3 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3BC03CA92385BBE100B925E3 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3BC03CC72385BC6D00B925E3 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
@@ -1068,11 +1088,11 @@
 				3B5BE7FB236DEEC3004B5EEA /* EZ Delay */,
 				3B1E03D723759D8A00DDFC03 /* EZFilter */,
 				3B1E03F123759DC000DDFC03 /* EZCrusher */,
-				3B6096A82382C7A7009826B6 /* EZChorusStandalone */,
-				3B6096C32382F93E009826B6 /* EZDelayStandalone */,
-				3B6096DB2382F949009826B6 /* EZSpacerStandalone */,
-				3B6096F32382F959009826B6 /* EZCrusherStandalone */,
-				3B60970B2382F963009826B6 /* EZFilterStandalone */,
+				3B8F5C832385AA180025B6AC /* EZ Modulator */,
+				3BC03C6D2385BA9B00B925E3 /* EZ Spacer Standalone */,
+				3BC03C8B2385BB5B00B925E3 /* EZ Filter Standalone */,
+				3BC03CA92385BBE100B925E3 /* EZ Crusher Standalone */,
+				3BC03CC72385BC6D00B925E3 /* EZ Delay Standalone */,
 			);
 		};
 /* End PBXProject section */
@@ -1115,56 +1135,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B6096A72382C7A7009826B6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6096B82382C7A9009826B6 /* LaunchScreen.storyboard in Resources */,
-				3B6096B52382C7A9009826B6 /* Assets.xcassets in Resources */,
-				3B6096B32382C7A8009826B6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096C22382F93E009826B6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6096D32382F93F009826B6 /* LaunchScreen.storyboard in Resources */,
-				3B6096D02382F93F009826B6 /* Assets.xcassets in Resources */,
-				3B6096CE2382F93E009826B6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096DA2382F949009826B6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6096EB2382F94A009826B6 /* LaunchScreen.storyboard in Resources */,
-				3B6096E82382F94A009826B6 /* Assets.xcassets in Resources */,
-				3B6096E62382F949009826B6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096F22382F959009826B6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6097032382F95A009826B6 /* LaunchScreen.storyboard in Resources */,
-				3B6097002382F95A009826B6 /* Assets.xcassets in Resources */,
-				3B6096FE2382F959009826B6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B60970A2382F963009826B6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B60971B2382F964009826B6 /* LaunchScreen.storyboard in Resources */,
-				3B6097182382F964009826B6 /* Assets.xcassets in Resources */,
-				3B6097162382F963009826B6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B8CFBAF2354C1BE00F146C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1179,8 +1149,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB70E8F235A3B6E00D99388 /* Assets.xcassets in Resources */,
+				3B8F5C9C2385AA670025B6AC /* Assets.xcassets in Resources */,
 				3B8CFBDF2354C2A500F146C9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8F5C822385AA180025B6AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8F5C932385AA190025B6AC /* LaunchScreen.storyboard in Resources */,
+				3B8F5C902385AA190025B6AC /* Assets.xcassets in Resources */,
+				3BC03CE32388449100B925E3 /* Assets.xcassets in Resources */,
+				3B8F5C8E2385AA180025B6AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,6 +1171,50 @@
 			files = (
 				3B0D000F23723E4D00AC1843 /* Assets.xcassets in Resources */,
 				3BADC164236861FE00A08F19 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03C6C2385BA9B00B925E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03C7D2385BA9B00B925E3 /* LaunchScreen.storyboard in Resources */,
+				3BC03C7A2385BA9B00B925E3 /* Assets.xcassets in Resources */,
+				3BC03CE42388449200B925E3 /* Assets.xcassets in Resources */,
+				3BC03C782385BA9B00B925E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03C8A2385BB5B00B925E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03C9B2385BB5C00B925E3 /* LaunchScreen.storyboard in Resources */,
+				3BC03C982385BB5C00B925E3 /* Assets.xcassets in Resources */,
+				3BC03CE52388449200B925E3 /* Assets.xcassets in Resources */,
+				3BC03C962385BB5B00B925E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CA82385BBE100B925E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CB92385BBE100B925E3 /* LaunchScreen.storyboard in Resources */,
+				3BC03CB62385BBE100B925E3 /* Assets.xcassets in Resources */,
+				3BC03CE62388449300B925E3 /* Assets.xcassets in Resources */,
+				3BC03CB42385BBE100B925E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CC62385BC6D00B925E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CD72385BC6E00B925E3 /* LaunchScreen.storyboard in Resources */,
+				3BC03CD42385BC6E00B925E3 /* Assets.xcassets in Resources */,
+				3BC03CE72388449300B925E3 /* Assets.xcassets in Resources */,
+				3BC03CD22385BC6D00B925E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1277,56 +1302,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B6096A52382C7A7009826B6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6097292382FBEE009826B6 /* AppDelegate.swift in Sources */,
-				3B6096B02382C7A8009826B6 /* ViewController.swift in Sources */,
-				3B60972A2382FBEE009826B6 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096C02382F93E009826B6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B60972B2382FBEE009826B6 /* AppDelegate.swift in Sources */,
-				3B6096CB2382F93E009826B6 /* ViewController.swift in Sources */,
-				3B60972C2382FBEE009826B6 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096D82382F949009826B6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B60972E2382FBEF009826B6 /* SceneDelegate.swift in Sources */,
-				3B60972D2382FBEF009826B6 /* AppDelegate.swift in Sources */,
-				3B6096E32382F949009826B6 /* ViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6096F02382F959009826B6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6097302382FBEF009826B6 /* SceneDelegate.swift in Sources */,
-				3B60972F2382FBEF009826B6 /* AppDelegate.swift in Sources */,
-				3B6096FB2382F959009826B6 /* ViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B6097082382F963009826B6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B6097322382FBF0009826B6 /* SceneDelegate.swift in Sources */,
-				3B6097312382FBF0009826B6 /* AppDelegate.swift in Sources */,
-				3B6097132382F963009826B6 /* ViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B8CFBAD2354C1BE00F146C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1383,6 +1358,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B8F5C802385AA180025B6AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CF52388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */,
+				3BC03C5F2385B8B100B925E3 /* AppDelegate.swift in Sources */,
+				3B8F5C8B2385AA180025B6AC /* ViewController.swift in Sources */,
+				3BC03CE9238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */,
+				3BC03CEF2388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */,
+				3BC03C612385B8B400B925E3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BADC157236861FE00A08F19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1410,33 +1398,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BC03C6A2385BA9B00B925E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CF62388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */,
+				3BC03C822385BAC800B925E3 /* AppDelegate.swift in Sources */,
+				3BC03CEA238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */,
+				3BC03CE22388352400B925E3 /* SceneDelegate.swift in Sources */,
+				3BC03CF02388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03C882385BB5B00B925E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CF72388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */,
+				3BC03CA12385BB6000B925E3 /* SceneDelegate.swift in Sources */,
+				3BC03CA02385BB6000B925E3 /* AppDelegate.swift in Sources */,
+				3BC03CEB238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */,
+				3BC03CF12388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */,
+				3BC03C932385BB5B00B925E3 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CA62385BBE100B925E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CF82388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */,
+				3BC03CBE2385BC1300B925E3 /* AppDelegate.swift in Sources */,
+				3BC03CEC238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */,
+				3BC03CF22388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */,
+				3BC03CBF2385BC1300B925E3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC03CC42385BC6D00B925E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC03CF92388595C00B925E3 /* EZStandaloneAboutVC.swift in Sources */,
+				3BC03CDD2385BCA200B925E3 /* SceneDelegate.swift in Sources */,
+				3BC03CDC2385BCA200B925E3 /* AppDelegate.swift in Sources */,
+				3BC03CED238858DC00B925E3 /* EZStandaloneIntroVC.swift in Sources */,
+				3BC03CF32388594E00B925E3 /* EZStandaoneControlsVC.swift in Sources */,
+				3BC03CCF2385BC6D00B925E3 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B1E03E523759D8A00DDFC03 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B1E03D723759D8A00DDFC03 /* EZFilter */;
-			targetProxy = 3B1E03E423759D8A00DDFC03 /* PBXContainerItemProxy */;
-		};
-		3B1E03FF23759DC000DDFC03 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B1E03F123759DC000DDFC03 /* EZCrusher */;
-			targetProxy = 3B1E03FE23759DC000DDFC03 /* PBXContainerItemProxy */;
-		};
-		3B5BE809236DEEC3004B5EEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B5BE7FB236DEEC3004B5EEA /* EZ Delay */;
-			targetProxy = 3B5BE808236DEEC3004B5EEA /* PBXContainerItemProxy */;
-		};
-		3B8CFBE32354C2A500F146C9 /* PBXTargetDependency */ = {
+		3B8F5C9B2385AA250025B6AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B8CFBD52354C2A500F146C9 /* EZ Chorus */;
-			targetProxy = 3B8CFBE22354C2A500F146C9 /* PBXContainerItemProxy */;
+			targetProxy = 3B8F5C9A2385AA250025B6AC /* PBXContainerItemProxy */;
 		};
-		3BADC168236861FE00A08F19 /* PBXTargetDependency */ = {
+		3BC03C862385BB1B00B925E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3BADC15A236861FE00A08F19 /* EZ Spacer */;
-			targetProxy = 3BADC167236861FE00A08F19 /* PBXContainerItemProxy */;
+			targetProxy = 3BC03C852385BB1B00B925E3 /* PBXContainerItemProxy */;
+		};
+		3BC03CA42385BBB300B925E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1E03D723759D8A00DDFC03 /* EZFilter */;
+			targetProxy = 3BC03CA32385BBB300B925E3 /* PBXContainerItemProxy */;
+		};
+		3BC03CC22385BC3800B925E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1E03F123759DC000DDFC03 /* EZCrusher */;
+			targetProxy = 3BC03CC12385BC3800B925E3 /* PBXContainerItemProxy */;
+		};
+		3BC03CE02385BCC300B925E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B5BE7FB236DEEC3004B5EEA /* EZ Delay */;
+			targetProxy = 3BC03CDF2385BCC300B925E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1465,86 +1503,6 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
-		3B6096B12382C7A8009826B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096B22382C7A8009826B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6096B62382C7A9009826B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096B72382C7A9009826B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6096CC2382F93E009826B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096CD2382F93E009826B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6096D12382F93F009826B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096D22382F93F009826B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6096E42382F949009826B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096E52382F949009826B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6096E92382F94A009826B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096EA2382F94A009826B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6096FC2382F959009826B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6096FD2382F959009826B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6097012382F95A009826B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6097022382F95A009826B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6097142382F963009826B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B6097152382F963009826B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3B6097192382F964009826B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B60971A2382F964009826B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		3B8CFBBA2354C1BE00F146C9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1569,12 +1527,92 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
+		3B8F5C8C2385AA180025B6AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B8F5C8D2385AA180025B6AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B8F5C912385AA190025B6AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B8F5C922385AA190025B6AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		3BADC162236861FE00A08F19 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3BADC163236861FE00A08F19 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03C762385BA9B00B925E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03C772385BA9B00B925E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03C7B2385BA9B00B925E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03C7C2385BA9B00B925E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03C942385BB5B00B925E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03C952385BB5B00B925E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03C992385BB5C00B925E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03C9A2385BB5C00B925E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03CB22385BBE100B925E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03CB32385BBE100B925E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03CB72385BBE100B925E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03CB82385BBE100B925E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03CD02385BC6D00B925E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03CD12385BC6D00B925E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC03CD52385BC6E00B925E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC03CD62385BC6E00B925E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1593,8 +1631,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZFilter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Filter-Standalone.EZFilter";
+				PRODUCT_NAME = "EZ Filter AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1615,8 +1653,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZFilter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Filter-Standalone.EZFilter";
+				PRODUCT_NAME = "EZ Filter AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1637,8 +1675,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZCrusher;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Crusher-Standalone.EZCrusher";
+				PRODUCT_NAME = "EZ Crusher AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1659,8 +1697,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFX.EZCrusher;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Crusher-Standalone.EZCrusher";
+				PRODUCT_NAME = "EZ Crusher AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1681,8 +1719,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Delay";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Delay-Standalone.EZ-Delay";
+				PRODUCT_NAME = "EZ Delay AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1703,200 +1741,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Delay";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Delay-Standalone.EZ-Delay";
+				PRODUCT_NAME = "EZ Delay AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3B6096BA2382C7A9009826B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZChorusStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZChorusStandalone;
-				PRODUCT_NAME = "EZ Chorus";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3B6096BB2382C7A9009826B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZChorusStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZChorusStandalone;
-				PRODUCT_NAME = "EZ Chorus";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3B6096D62382F93F009826B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZDelayStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZDelayStandalone;
-				PRODUCT_NAME = "EZ Delay";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3B6096D72382F93F009826B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZDelayStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZDelayStandalone;
-				PRODUCT_NAME = "EZ Delay";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3B6096EE2382F94A009826B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZSpacerStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZSpacerStandalone;
-				PRODUCT_NAME = "EZ Spacer";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3B6096EF2382F94A009826B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZSpacerStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZSpacerStandalone;
-				PRODUCT_NAME = "EZ Spacer";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3B6097062382F95A009826B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZCrusherStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZCrusherStandalone;
-				PRODUCT_NAME = "EZ Crusher";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3B6097072382F95A009826B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZCrusherStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZCrusherStandalone;
-				PRODUCT_NAME = "EZ Crusher";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3B60971E2382F964009826B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZFilterStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFilterStandalone;
-				PRODUCT_NAME = "EZ Filter";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3B60971F2382F964009826B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 55GAJDT49J;
-				INFOPLIST_FILE = EZFilterStandalone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ckzh.EZFilterStandalone;
-				PRODUCT_NAME = "EZ Filter";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1952,7 +1800,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2006,7 +1854,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2097,8 +1945,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Chorus";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Modulator.EZ-Chorus";
+				PRODUCT_NAME = "EZ Chorus AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -2126,10 +1974,48 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Chorus";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Modulator.EZ-Chorus";
+				PRODUCT_NAME = "EZ Chorus AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B8F5C962385AA190025B6AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Modulator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Modulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B8F5C972385AA190025B6AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Modulator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Modulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2148,8 +2034,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Spacer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Spacer-Standalone.EZ-Spacer";
+				PRODUCT_NAME = "EZ Reverb AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -2170,10 +2056,162 @@
 					"@executable_path/../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZFX.EZ-Spacer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Spacer-Standalone.EZ-Spacer";
+				PRODUCT_NAME = "EZ Reverb AU";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BC03C802385BA9B00B925E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Spacer Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Spacer-Standalone";
+				PRODUCT_NAME = "EZ Reverb";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC03C812385BA9B00B925E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Spacer Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Spacer-Standalone";
+				PRODUCT_NAME = "EZ Reverb";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BC03C9E2385BB5C00B925E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Filter Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Filter-Standalone";
+				PRODUCT_NAME = "EZ Filter";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC03C9F2385BB5C00B925E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Filter Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Filter-Standalone";
+				PRODUCT_NAME = "EZ Filter";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BC03CBC2385BBE100B925E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Crusher Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Crusher-Standalone";
+				PRODUCT_NAME = "EZ Crusher ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC03CBD2385BBE100B925E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Crusher Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Crusher-Standalone";
+				PRODUCT_NAME = "EZ Crusher ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BC03CDA2385BC6E00B925E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Delay Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Delay-Standalone";
+				PRODUCT_NAME = "EZ Delay";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC03CDB2385BC6E00B925E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55GAJDT49J;
+				INFOPLIST_FILE = "EZ Delay Standalone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ckzh.EZ-Delay-Standalone";
+				PRODUCT_NAME = "EZ Delay";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2209,51 +2247,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B6096BD2382C7A9009826B6 /* Build configuration list for PBXNativeTarget "EZChorusStandalone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B6096BA2382C7A9009826B6 /* Debug */,
-				3B6096BB2382C7A9009826B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B6096D52382F93F009826B6 /* Build configuration list for PBXNativeTarget "EZDelayStandalone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B6096D62382F93F009826B6 /* Debug */,
-				3B6096D72382F93F009826B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B6096ED2382F94A009826B6 /* Build configuration list for PBXNativeTarget "EZSpacerStandalone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B6096EE2382F94A009826B6 /* Debug */,
-				3B6096EF2382F94A009826B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B6097052382F95A009826B6 /* Build configuration list for PBXNativeTarget "EZCrusherStandalone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B6097062382F95A009826B6 /* Debug */,
-				3B6097072382F95A009826B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B60971D2382F964009826B6 /* Build configuration list for PBXNativeTarget "EZFilterStandalone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B60971E2382F964009826B6 /* Debug */,
-				3B60971F2382F964009826B6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3B8CFBAC2354C1BE00F146C9 /* Build configuration list for PBXProject "EZFX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2281,11 +2274,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3B8F5C952385AA190025B6AC /* Build configuration list for PBXNativeTarget "EZ Modulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B8F5C962385AA190025B6AC /* Debug */,
+				3B8F5C972385AA190025B6AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3BADC16A236861FE00A08F19 /* Build configuration list for PBXNativeTarget "EZ Spacer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BADC16B236861FE00A08F19 /* Debug */,
 				3BADC16C236861FE00A08F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BC03C7F2385BA9B00B925E3 /* Build configuration list for PBXNativeTarget "EZ Spacer Standalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC03C802385BA9B00B925E3 /* Debug */,
+				3BC03C812385BA9B00B925E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BC03C9D2385BB5C00B925E3 /* Build configuration list for PBXNativeTarget "EZ Filter Standalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC03C9E2385BB5C00B925E3 /* Debug */,
+				3BC03C9F2385BB5C00B925E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BC03CBB2385BBE100B925E3 /* Build configuration list for PBXNativeTarget "EZ Crusher Standalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC03CBC2385BBE100B925E3 /* Debug */,
+				3BC03CBD2385BBE100B925E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BC03CD92385BC6E00B925E3 /* Build configuration list for PBXNativeTarget "EZ Delay Standalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC03CDA2385BC6E00B925E3 /* Debug */,
+				3BC03CDB2385BC6E00B925E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

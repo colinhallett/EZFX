@@ -35,7 +35,8 @@ public:
     void resetFX();
     
      enum EZSpacerAddress {
-            predelayAddress = amountOfEZAddresses
+            predelayAddress = amountOfEZAddresses,
+            brightnessAddress = amountOfEZAddresses + 1
         };
     
     // Uses the ParameterAddress as a key
@@ -54,7 +55,13 @@ public:
     ParameterRamper predelayRamper = 0.0;
     sp_port *predelayInternalRamper;
     
+    float brightness = 0;
+    ParameterRamper brightnessRamper = 0.0;
+    sp_port *brightnessInternalRamper;
+    
     sp_zitarev *reverb;
+    
+    sp_panst *stereoPan; 
     
     sp_phasor * lfoPhasor;
     float lfoOne = 0;

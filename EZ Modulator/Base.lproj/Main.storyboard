@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Y3-hv-r4z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="Axt-qC-xe1">
+            <objects>
+                <viewController title="About" id="BOm-LO-bTO" customClass="EZStandaloneAboutVC" customModule="EZ_Modulator" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gIj-wd-pwy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rob-Mb-zZG">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZChorusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dY7-Nv-qg3">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8A5-C9-syB">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                        <string key="text">EZ Modulator
+
+Check out other EZFX and more: 
+
+www.kailin.co.uk
+
+with thanks to AudioKit
+
+©2019 Colin Hallett
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SwQ-Xb-Ytf" firstAttribute="bottom" secondItem="rob-Mb-zZG" secondAttribute="bottom" constant="20" id="6rx-Mn-3MU"/>
+                            <constraint firstItem="rob-Mb-zZG" firstAttribute="top" secondItem="SwQ-Xb-Ytf" secondAttribute="top" constant="20" id="PXb-lK-9cU"/>
+                            <constraint firstItem="SwQ-Xb-Ytf" firstAttribute="trailing" secondItem="rob-Mb-zZG" secondAttribute="trailing" constant="20" id="dF1-GK-ooj"/>
+                            <constraint firstItem="rob-Mb-zZG" firstAttribute="leading" secondItem="SwQ-Xb-Ytf" secondAttribute="leading" constant="20" id="dyr-Jg-Fiz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SwQ-Xb-Ytf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" id="2oM-vP-ajM"/>
+                    <connections>
+                        <outlet property="textField" destination="8A5-C9-syB" id="yzb-f8-8Dg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIh-cJ-Erd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="364"/>
+        </scene>
+        <!--Introduction-->
+        <scene sceneID="seo-jE-g3B">
+            <objects>
+                <viewController title="Introduction" id="hLM-DB-Hwb" customClass="EZStandaloneIntroVC" customModule="EZ_Modulator" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aov-33-Ug7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fPF-HT-DYY">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUp-jI-KuZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">EZ Modulator is an Audio Unit for iOS. It is based around three different types of modulation effects – chorus, phase and flange. All three are based around subtly (and not so subtly) modulating the input sound, but all differ in the way in which it is affected. 
+
+This application is a container for the AU and its documentation. EZ Modulator needs to be used within an AU host or DAW application. 
+
+EZ Modulator is designed to be instantly usable, whilst giving a deep range of sounds. The interface is simple and is made for experimentation and playfulness. 
+</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZReverb1" translatesAutoresizingMaskIntoConstraints="NO" id="Yfc-Jb-3C5">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y9E-rA-ta6" firstAttribute="bottom" secondItem="fPF-HT-DYY" secondAttribute="bottom" constant="20" id="CfV-gz-2us"/>
+                            <constraint firstItem="y9E-rA-ta6" firstAttribute="trailing" secondItem="fPF-HT-DYY" secondAttribute="trailing" constant="20" id="EbJ-SD-vfm"/>
+                            <constraint firstItem="fPF-HT-DYY" firstAttribute="top" secondItem="y9E-rA-ta6" secondAttribute="top" constant="20" id="ghk-v5-ZEg"/>
+                            <constraint firstItem="fPF-HT-DYY" firstAttribute="leading" secondItem="y9E-rA-ta6" secondAttribute="leading" constant="20" id="lHz-Sd-LLr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y9E-rA-ta6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Intro" id="9rj-YZ-U6Y"/>
+                    <connections>
+                        <outlet property="textField" destination="UUp-jI-KuZ" id="we9-6t-hCK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3G-jO-FxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.279648609077597" y="-1348.828125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vsU-Ko-UYP">
+            <objects>
+                <tabBarController id="5Y3-hv-r4z" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="xnn-8F-WGN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hLM-DB-Hwb" kind="relationship" relationship="viewControllers" id="195-Bg-Svk"/>
+                        <segue destination="Eov-Tz-maw" kind="relationship" relationship="viewControllers" id="zcg-9t-Rtv"/>
+                        <segue destination="BOm-LO-bTO" kind="relationship" relationship="viewControllers" id="KvB-Xq-tfq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D00-LZ-I06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="-245"/>
+        </scene>
+        <!--Controls-->
+        <scene sceneID="jjZ-k3-Pgr">
+            <objects>
+                <viewController title="Controls" id="Eov-Tz-maw" customClass="EZStandaloneControlsVC" customModule="EZ_Modulator" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Lb-wG-suC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-oZ-c6c">
+                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EZReverb1" translatesAutoresizingMaskIntoConstraints="NO" id="6zA-Cf-S1w">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="344.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YH0-7q-Gog">
+                                        <rect key="frame" x="0.0" y="384.5" width="374" height="344.5"/>
+                                        <string key="text">All three modules share the same basic controls – the XY Pad, mix, input/output gain and widen controls. 
+
+XY Pad – The XY pad is at the heart of EZ Modulator. It affects different parameters in each of the three modules. It is designed for experimentation and aims to move the user away from knob fiddling and over tweaking. A basic explanation would be the higher, the more intense! 
+
+Mix – Controls the gain of the input signal (dry) and affected signal (wet). 0% is only dry, and 100% is only wet. Modulation FX often have similar amounts of wet and dry to create an even deeper sound. 
+
+Input and output gain – Input gain controls the level of the signal before going into the FX – by pushing this up, the sound will begin to develop a saturated analogue style warmth. You can then rebalance the signal with the output gain, which doesn’t affect the sound, only it’s level. 
+
+Widen – For those who need extra depth. Widen separates the left and right signals and subtly pitches them – can give a serious width to pads and sustained sounds but can lose clarty and punch when used on short percussive sounds. </string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k3M-Ss-Ef7" firstAttribute="bottom" secondItem="mxS-oZ-c6c" secondAttribute="bottom" constant="20" id="D6j-SL-Gmx"/>
+                            <constraint firstItem="mxS-oZ-c6c" firstAttribute="top" secondItem="k3M-Ss-Ef7" secondAttribute="top" constant="20" id="PcP-7G-Fkq"/>
+                            <constraint firstItem="k3M-Ss-Ef7" firstAttribute="trailing" secondItem="mxS-oZ-c6c" secondAttribute="trailing" constant="20" id="dJf-Uc-Avj"/>
+                            <constraint firstItem="mxS-oZ-c6c" firstAttribute="leading" secondItem="k3M-Ss-Ef7" secondAttribute="leading" constant="20" id="nDL-ae-aeb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k3M-Ss-Ef7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Controls" id="QuZ-US-jpw"/>
+                    <connections>
+                        <outlet property="textField" destination="YH0-7q-Gog" id="ac9-Yt-RMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JI-iX-oqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="-511.39430284857576"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EZChorusLogo" width="1024" height="1024"/>
+        <image name="EZReverb1" width="1672" height="1688"/>
+    </resources>
+</document>

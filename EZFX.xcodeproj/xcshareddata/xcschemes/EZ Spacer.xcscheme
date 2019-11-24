@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BADC15A236861FE00A08F19"
-               BuildableName = "EZ Spacer.appex"
+               BuildableName = "EZ Spacer AU.appex"
                BlueprintName = "EZ Spacer"
                ReferencedContainer = "container:EZFX.xcodeproj">
             </BuildableReference>
@@ -58,7 +58,7 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
-         runnableDebuggingMode = "1"
+         runnableDebuggingMode = "0"
          BundleIdentifier = "com.kymatica.AUM"
          RemotePath = "/var/containers/Bundle/Application/7FC412C1-C7B0-4A45-8BE2-19ED198A1B30/AUM.app">
       </RemoteRunnable>

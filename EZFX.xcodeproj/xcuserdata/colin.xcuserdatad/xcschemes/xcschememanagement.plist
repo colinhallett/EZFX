@@ -14,10 +14,35 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>EZ Crusher Standalone.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>EZ Delay Standalone.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>EZ Delay.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
+		</dict>
+		<key>EZ Filter Standalone.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>EZ Modulator.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>EZ Spacer Standalone.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>EZ Spacer.xcscheme_^#shared#^_</key>
 		<dict>
@@ -29,25 +54,10 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>EZChorusStandalone.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
 		<key>EZCrusher.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
-		</dict>
-		<key>EZCrusherStandalone.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
-		<key>EZDelayStandalone.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>EZFX.xcscheme_^#shared#^_</key>
 		<dict>
@@ -62,21 +72,36 @@
 		<key>EZFilter.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
-		<key>EZFilterStandalone.xcscheme_^#shared#^_</key>
+		<key>test.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
-		</dict>
-		<key>EZSpacerStandalone.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>13</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3B1E03D723759D8A00DDFC03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B1E03F123759DC000DDFC03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B5BE7FB236DEEC3004B5EEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B6096A82382C7A7009826B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B8CFBB02354C1BE00F146C9</key>
 		<dict>
 			<key>primary</key>
@@ -87,7 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3B8F5C832385AA180025B6AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3BADC15A236861FE00A08F19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BC03C6D2385BA9B00B925E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BC03CA92385BBE100B925E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
